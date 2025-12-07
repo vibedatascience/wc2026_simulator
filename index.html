@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA World Cup 2026 Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="FIFA World Cup 2026" class="header-logo">
+            <p class="subtitle">Bracket Simulator</p>
+            <div class="header-actions">
+                <div class="autofill-dropdown-container">
+                    <button class="btn btn-randomize" id="btn-autofill" onclick="toggleAutoFillDropdown(event)">
+                        Auto Fill <svg class="dropdown-caret" viewBox="0 0 10 6" fill="currentColor"><path d="M1 1l4 4 4-4"/></svg>
+                    </button>
+                    <div class="autofill-dropdown" id="autofill-dropdown">
+                        <button class="dropdown-item" onclick="randomizeAll(); document.getElementById('autofill-dropdown').classList.remove('show');">
+                            Random
+                        </button>
+                        <button class="dropdown-item" onclick="favoritesAll(); document.getElementById('autofill-dropdown').classList.remove('show');">
+                            Favorites
+                        </button>
+                        <button class="dropdown-item" onclick="underdogsAll(); document.getElementById('autofill-dropdown').classList.remove('show');">
+                            Underdogs
+                        </button>
+                        <button class="dropdown-item" onclick="championsAll(); document.getElementById('autofill-dropdown').classList.remove('show');">
+                            Champions
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-reset" id="btn-reset" onclick="resetAll()">
+                    <span class="btn-icon">↺</span> Reset
+                </button>
+            </div>
+            <p class="share-hint" id="share-hint" onclick="copyShareLink()">
+                <span class="share-hint-text">Copy link to share bracket</span>
+                <span class="share-hint-copied">Copied!</span>
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="groups-section">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Group Stage</h2>
+                    <p class="section-subtitle">Click teams to set 1st, 2nd, and 3rd place positions</p>
+                </div>
+            </div>
+            <div class="groups-container" id="groups-container">
+                <!-- Groups will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="third-place-section" id="third-place-section">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Best Third-Placed Teams</h2>
+                    <p class="section-subtitle">Click to select 8 teams to advance to the Round of 32</p>
+                </div>
+            </div>
+            <div class="third-place-table-header">
+                <span>#</span>
+                <span>Grp</span>
+                <span>Team</span>
+                <span>Status</span>
+            </div>
+            <div class="third-place-container" id="third-place-container">
+                <!-- Third place teams will be populated by JavaScript -->
+            </div>
+            <div class="third-place-status" id="third-place-status">
+                <span id="selected-count">0</span> of 8 selected
+            </div>
+        </section>
+
+        <section class="knockout-section" id="knockout-section">
+            <div class="section-header">
+                <h2 class="section-title">Knockout Stage</h2>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="bracket" onclick="setKnockoutView('bracket')">Bracket</button>
+                    <button class="view-btn" data-view="list" onclick="setKnockoutView('list')">List</button>
+                </div>
+            </div>
+
+            <!-- Bracket View (CSS Grid based) -->
+            <div class="bracket-view" id="bracket-view">
+                <div class="bracket-container">
+                    <!-- Left Side -->
+                    <div class="bracket-side bracket-left">
+                        <div class="bracket-column r32-col" id="bracket-r32-left"></div>
+                        <div class="bracket-column r16-col" id="bracket-r16-left"></div>
+                        <div class="bracket-column qf-col" id="bracket-qf-left"></div>
+                        <div class="bracket-column sf-col" id="bracket-sf-left"></div>
+                    </div>
+                    <!-- Final -->
+                    <div class="bracket-final">
+                        <div class="final-column" id="bracket-final"></div>
+                        <div class="third-place-column" id="bracket-third"></div>
+                    </div>
+                    <!-- Right Side -->
+                    <div class="bracket-side bracket-right">
+                        <div class="bracket-column sf-col" id="bracket-sf-right"></div>
+                        <div class="bracket-column qf-col" id="bracket-qf-right"></div>
+                        <div class="bracket-column r16-col" id="bracket-r16-right"></div>
+                        <div class="bracket-column r32-col" id="bracket-r32-right"></div>
+                    </div>
+                </div>
+                <!-- Round Labels -->
+                <div class="bracket-labels">
+                    <span>R32</span>
+                    <span>R16</span>
+                    <span>QF</span>
+                    <span>SF</span>
+                    <span>Final</span>
+                    <span>SF</span>
+                    <span>QF</span>
+                    <span>R16</span>
+                    <span>R32</span>
+                </div>
+            </div>
+
+            <!-- List View (existing) -->
+            <div class="list-view" id="list-view" style="display: none;">
+            <div class="knockout-bracket">
+                <!-- Round of 32 -->
+                <div class="bracket-round round-of-32">
+                    <h3 class="round-title">Round of 32</h3>
+                    <div class="matches-column left-column" id="r32-left">
+                        <!-- Left side R32 matches -->
+                    </div>
+                    <div class="matches-column right-column" id="r32-right">
+                        <!-- Right side R32 matches -->
+                    </div>
+                </div>
+
+                <!-- Round of 16 -->
+                <div class="bracket-round round-of-16">
+                    <h3 class="round-title">Round of 16</h3>
+                    <div class="matches-column left-column" id="r16-left">
+                        <!-- Left side R16 matches -->
+                    </div>
+                    <div class="matches-column right-column" id="r16-right">
+                        <!-- Right side R16 matches -->
+                    </div>
+                </div>
+
+                <!-- Quarterfinals -->
+                <div class="bracket-round quarterfinals">
+                    <h3 class="round-title">Quarterfinals</h3>
+                    <div class="matches-column left-column" id="qf-left">
+                        <!-- Left side QF matches -->
+                    </div>
+                    <div class="matches-column right-column" id="qf-right">
+                        <!-- Right side QF matches -->
+                    </div>
+                </div>
+
+                <!-- Semifinals -->
+                <div class="bracket-round semifinals">
+                    <h3 class="round-title">Semifinals</h3>
+                    <div class="matches-column left-column" id="sf-left">
+                        <!-- Left side SF match -->
+                    </div>
+                    <div class="matches-column right-column" id="sf-right">
+                        <!-- Right side SF match -->
+                    </div>
+                </div>
+
+                <!-- Final -->
+                <div class="bracket-round final">
+                    <h3 class="round-title">Final</h3>
+                    <div class="final-match" id="final-match">
+                        <!-- Final match -->
+                    </div>
+                </div>
+
+                <!-- Third Place -->
+                <div class="bracket-round third-place-match">
+                    <h3 class="round-title">Third Place</h3>
+                    <div class="third-place-game" id="third-place-game">
+                        <!-- Third place match -->
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>FIFA World Cup 2026 Bracket Simulator</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
