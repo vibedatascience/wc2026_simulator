@@ -1355,22 +1355,61 @@ function getShareableURL() {
 function copyShareLink() {
     const url = getShareableURL();
     navigator.clipboard.writeText(url).then(() => {
-        const hint = document.getElementById('share-hint');
-        hint.classList.add('copied');
+        const link = document.querySelector('.share-link');
+        link.classList.add('copied');
         setTimeout(() => {
-            hint.classList.remove('copied');
+            link.classList.remove('copied');
         }, 2000);
     });
 }
 
-// Update share hint visibility based on selections
-function updateShareHint() {
-    const hint = document.getElementById('share-hint');
-    if (!hint) return;
+// Download bracket as screenshot
+function downloadBracketScreenshot() {
+    const bracketView = document.getElementById('bracket-view');
+    const downloadLink = document.querySelector('.download-link');
 
-    // Show hint if there are any group selections
+    // Check if bracket view is visible
+    if (bracketView.style.display === 'none') {
+        // Switch to bracket view temporarily
+        setKnockoutView('bracket');
+    }
+
+    // Show loading state
+    downloadLink.classList.add('loading');
+
+    // Wait for any transitions to complete
+    setTimeout(() => {
+        html2canvas(bracketView, {
+            backgroundColor: '#fafafa',
+            scale: 2, // Higher resolution
+            logging: false,
+            useCORS: true,
+            allowTaint: true
+        }).then(canvas => {
+            // Create download link
+            const link = document.createElement('a');
+            link.download = 'wc2026-bracket.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+
+            // Remove loading state
+            downloadLink.classList.remove('loading');
+        }).catch(err => {
+            console.error('Screenshot failed:', err);
+            downloadLink.classList.remove('loading');
+            alert('Failed to generate screenshot. Please try again.');
+        });
+    }, 100);
+}
+
+// Update share actions visibility based on selections
+function updateShareHint() {
+    const shareActions = document.getElementById('share-actions');
+    if (!shareActions) return;
+
+    // Show share actions if there are any group selections
     const hasSelections = Object.keys(state.groupSelections).length > 0;
-    hint.classList.toggle('visible', hasSelections);
+    shareActions.classList.toggle('visible', hasSelections);
 
     // Update URL hash when state changes
     if (hasSelections) {
@@ -1403,6 +1442,7 @@ window.championsAll = championsAll;
 window.resetAll = resetAll;
 window.setKnockoutView = setKnockoutView;
 window.copyShareLink = copyShareLink;
+window.downloadBracketScreenshot = downloadBracketScreenshot;
 window.toggleAutoFillDropdown = toggleAutoFillDropdown;
 
 // Toggle dropdown for auto-fill options

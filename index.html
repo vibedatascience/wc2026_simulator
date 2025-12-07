@@ -8,8 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
 <body>
+    <div class="support-banner">
+        <a href="https://buymeacoffee.com/rahulxc" target="_blank" rel="noopener">Support this project ☕</a>
+    </div>
     <header>
         <div class="header-content">
             <img src="logo.png" alt="FIFA World Cup 2026" class="header-logo">
@@ -38,10 +42,17 @@
                     <span class="btn-icon">↺</span> Reset
                 </button>
             </div>
-            <p class="share-hint" id="share-hint" onclick="copyShareLink()">
-                <span class="share-hint-text">Copy link to share bracket</span>
-                <span class="share-hint-copied">Copied!</span>
-            </p>
+            <div class="share-actions" id="share-actions">
+                <span class="share-link" onclick="copyShareLink()">
+                    <span class="share-link-text">Copy link</span>
+                    <span class="share-link-copied">Copied!</span>
+                </span>
+                <span class="share-divider">·</span>
+                <span class="download-link" onclick="downloadBracketScreenshot()">
+                    <span class="download-link-text">Download bracket</span>
+                    <span class="download-link-loading">Generating...</span>
+                </span>
+            </div>
         </div>
     </header>
 

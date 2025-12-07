@@ -36,6 +36,25 @@ body {
     font-size: 13px;
 }
 
+/* Support Banner */
+.support-banner {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    padding: 0.375rem;
+}
+
+.support-banner a {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.support-banner a:hover {
+    color: var(--text-secondary);
+}
+
 /* Header */
 header {
     background: var(--bg-secondary);
@@ -65,41 +84,65 @@ header {
     margin-top: 0.75rem;
 }
 
-.share-hint {
+.share-actions {
     margin-top: 0.625rem;
     font-size: 0.6875rem;
     color: var(--text-muted);
-    cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease, color 0.15s ease;
+    transition: opacity 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
-.share-hint.visible {
+.share-actions.visible {
     opacity: 1;
     visibility: visible;
 }
 
-.share-hint:hover {
+.share-divider {
+    color: var(--border-color);
+}
+
+.share-link,
+.download-link {
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+.share-link:hover,
+.download-link:hover {
     color: var(--text-secondary);
 }
 
-.share-hint-text {
+.share-link-text,
+.download-link-text {
     text-decoration: underline;
     text-decoration-style: dotted;
     text-underline-offset: 2px;
 }
 
-.share-hint-copied {
+.share-link-copied,
+.download-link-loading {
     display: none;
     color: var(--selected-border);
 }
 
-.share-hint.copied .share-hint-text {
+.share-link.copied .share-link-text {
     display: none;
 }
 
-.share-hint.copied .share-hint-copied {
+.share-link.copied .share-link-copied {
+    display: inline;
+}
+
+.download-link.loading .download-link-text {
+    display: none;
+}
+
+.download-link.loading .download-link-loading {
     display: inline;
 }
 
