@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams Visualized - FIFA World Cup 2026</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGBEPY4N67"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SGBEPY4N67');
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+</head>
+<body>
+    <nav class="mode-tabs">
+        <a href="index.html" class="mode-tab">
+            <span class="mode-tab-icon">✏️</span>Choose Your Own
+        </a>
+        <a href="tournament.html" class="mode-tab">
+            <span class="mode-tab-icon">🎲</span>Simulate Tournament
+        </a>
+        <a href="teams.html" class="mode-tab active">
+            <span class="mode-tab-icon">📊</span>Teams Visualized
+        </a>
+    </nav>
+    <div class="support-banner">
+        <a href="https://buymeacoffee.com/rahulxc" target="_blank" rel="noopener">Support this project ☕</a>
+    </div>
+
+    <header class="sim-header">
+        <div class="sim-header-content">
+            <h1 class="sim-title">Teams Visualized</h1>
+            <p class="sim-subtitle">Squad Analysis & Player Demographics</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Team Selector -->
+        <section class="sim-section">
+            <div class="sim-section-header">
+                <div class="sim-section-title">Select Teams</div>
+                <button class="btn btn-secondary" onclick="selectAllTeams()">Select All</button>
+            </div>
+            <div class="team-selector" id="teamSelector"></div>
+        </section>
+
+        <!-- Squad Strength Rankings -->
+        <section class="sim-section">
+            <div class="sim-section-header">
+                <div class="sim-section-title">Squad Strength Index</div>
+                <span class="sim-section-status status-complete">Weighted by League</span>
+            </div>
+            <div class="chart-container" id="strengthChart"></div>
+        </section>
+
+        <!-- League Distribution -->
+        <section class="sim-section">
+            <div class="sim-section-header">
+                <div class="sim-section-title">League Distribution</div>
+                <div class="chart-legend" id="leagueLegend"></div>
+            </div>
+            <div class="chart-container" id="leagueChart"></div>
+        </section>
+
+        <!-- Age Profiles -->
+        <section class="sim-section">
+            <div class="sim-section-header">
+                <div class="sim-section-title">Age Profiles</div>
+                <div class="chart-legend" id="ageLegend"></div>
+            </div>
+            <div class="chart-container" id="ageChart"></div>
+        </section>
+
+        <!-- Birthplace Map -->
+        <section class="sim-section">
+            <div class="sim-section-header">
+                <div class="sim-section-title">Player Birthplaces</div>
+                <select class="viz-select" id="mapTeamSelect" onchange="updateMap()"></select>
+            </div>
+            <div class="map-container">
+                <div class="map-wrapper" id="birthplaceMap"></div>
+                <div class="map-sidebar" id="birthplaceList"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>FIFA World Cup 2026 - Teams Visualized</p>
+    </footer>
+
+    <script src="teams-data.js"></script>
+    <script src="teams-viz.js"></script>
+</body>
+</html>

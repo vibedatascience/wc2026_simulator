@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Simulator - FIFA World Cup 2026</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGBEPY4N67"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SGBEPY4N67');
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <nav class="mode-tabs">
+        <a href="index.html" class="mode-tab">
+            <span class="mode-tab-icon">✏️</span>Choose Your Own
+        </a>
+        <a href="tournament.html" class="mode-tab active">
+            <span class="mode-tab-icon">🎲</span>Simulate Tournament
+        </a>
+        <a href="teams.html" class="mode-tab">
+            <span class="mode-tab-icon">📊</span>Teams Visualized
+        </a>
+    </nav>
+    <div class="support-banner">
+        <a href="https://buymeacoffee.com/rahulxc" target="_blank" rel="noopener">Support this project ☕</a>
+    </div>
+
+    <header class="sim-header">
+        <div class="sim-header-content">
+            <h1 class="sim-title">FIFA World Cup 2026</h1>
+            <p class="sim-subtitle">Tournament Simulator - AI-Powered Match Predictions</p>
+            <div class="sim-actions">
+                <button class="btn btn-success" id="simulateAllBtn">
+                    Simulate Tournament
+                </button>
+                <button class="btn btn-secondary" id="toggleSettingsBtn" onclick="toggleSimSettings()">
+                    <span class="btn-icon">⚙</span> Settings
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Simulation Settings Panel -->
+    <div class="sim-settings-panel hidden" id="simSettingsPanel">
+        <div class="sim-settings-grid">
+            <div class="sim-setting">
+                <div class="sim-setting-header">
+                    <label for="upsetChance">Upset Factor</label>
+                    <span class="sim-setting-value" id="upsetChanceValue">50%</span>
+                </div>
+                <input type="range" id="upsetChance" min="0" max="100" value="50" oninput="updateSettingValue('upsetChance')">
+                <p class="sim-setting-desc">Higher = more upsets, lower = favorites win more</p>
+            </div>
+            <div class="sim-setting">
+                <div class="sim-setting-header">
+                    <label for="homeAdvantage">Home Advantage</label>
+                    <span class="sim-setting-value" id="homeAdvantageValue">50%</span>
+                </div>
+                <input type="range" id="homeAdvantage" min="0" max="100" value="50" oninput="updateSettingValue('homeAdvantage')">
+                <p class="sim-setting-desc">Boost for USA, Mexico, Canada</p>
+            </div>
+            <div class="sim-setting">
+                <div class="sim-setting-header">
+                    <label for="eliteBoost">Elite Team Boost</label>
+                    <span class="sim-setting-value" id="eliteBoostValue">50%</span>
+                </div>
+                <input type="range" id="eliteBoost" min="0" max="100" value="50" oninput="updateSettingValue('eliteBoost')">
+                <p class="sim-setting-desc">Extra advantage for top 8 FIFA-ranked teams</p>
+            </div>
+            <div class="sim-setting">
+                <div class="sim-setting-header">
+                    <label for="goalVolume">Goal Volume</label>
+                    <span class="sim-setting-value" id="goalVolumeValue">50%</span>
+                </div>
+                <input type="range" id="goalVolume" min="0" max="100" value="50" oninput="updateSettingValue('goalVolume')">
+                <p class="sim-setting-desc">Low = defensive matches, High = high-scoring</p>
+            </div>
+        </div>
+        <div class="sim-settings-presets">
+            <span class="sim-settings-presets-label">Presets:</span>
+            <button class="btn btn-secondary" onclick="applyPreset('realistic')">Realistic</button>
+            <button class="btn btn-secondary" onclick="applyPreset('chaotic')">Chaotic</button>
+            <button class="btn btn-secondary" onclick="applyPreset('favorites')">Favorites Win</button>
+            <button class="btn btn-secondary" onclick="applyPreset('underdogs')">Underdogs Rise</button>
+        </div>
+    </div>
+
+    <div class="sim-stats-bar">
+        <div class="sim-stat">
+            <span>Simulations:</span>
+            <span class="sim-stat-value" id="tournamentSimulationCounter">0</span>
+        </div>
+        <div class="sim-stat">
+            <span>Teams:</span>
+            <span class="sim-stat-value">48</span>
+        </div>
+        <div class="sim-stat">
+            <span>Matches:</span>
+            <span class="sim-stat-value">104</span>
+        </div>
+        <div class="sim-stat">
+            <span>Host:</span>
+            <span class="sim-stat-value">USA/MEX/CAN</span>
+        </div>
+    </div>
+
+    <main>
+        <!-- Group Stage Section -->
+        <section class="sim-section" id="groupStageSection">
+            <div class="sim-section-header">
+                <div class="sim-section-title">
+                    <span>Group Stage</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="view-toggle">
+                        <button class="view-btn active" id="standingsViewBtn" onclick="switchGroupView('standings')">Standings</button>
+                        <button class="view-btn" id="matchResultsViewBtn" onclick="switchGroupView('results')">Results</button>
+                    </div>
+                    <span class="sim-section-status status-pending" id="groupStageStatus">Not started</span>
+                </div>
+            </div>
+            <div id="groupStageContent">
+                <div style="text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">Click "Simulate Tournament" to begin</p>
+                    <p style="font-size: 0.65rem;">AI will simulate all 72 group stage matches</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Third Place Rankings Section -->
+        <section class="sim-section hidden" id="thirdPlaceSection">
+            <div class="sim-section-header">
+                <div class="sim-section-title">
+                    <span>Third-Place Rankings</span>
+                </div>
+                <button class="btn btn-secondary" id="toggle3rdPlace" onclick="toggle3rdPlaceSection()" style="padding: 0.25rem 0.5rem; font-size: 0.6rem;">
+                    <span id="thirdPlaceToggleIcon">&#9650;</span> Hide
+                </button>
+            </div>
+            <div id="thirdPlaceContent">
+                <!-- Third place rankings will be populated -->
+            </div>
+        </section>
+
+        <!-- Knockout Stage Section -->
+        <section class="sim-section hidden" id="knockoutSection">
+            <div class="sim-section-header">
+                <div class="sim-section-title">
+                    <span>Knockout Stage</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div class="view-toggle">
+                        <button class="view-btn active" id="bracketViewBtn" onclick="switchKnockoutView('bracket')">Bracket</button>
+                        <button class="view-btn" id="knockoutMatchesViewBtn" onclick="switchKnockoutView('matches')">Match Results</button>
+                    </div>
+                    <div class="zoom-controls">
+                        <button class="zoom-btn" onclick="zoomBracket(-0.1)">-</button>
+                        <span id="zoomLevel">100%</span>
+                        <button class="zoom-btn" onclick="zoomBracket(0.1)">+</button>
+                        <button class="zoom-btn" onclick="resetZoom()" style="font-size: 0.6rem;">Reset</button>
+                    </div>
+                    <button class="btn btn-secondary" id="downloadBracketBtn" onclick="downloadBracketAsImage()" style="padding: 0.375rem 0.625rem;">
+                        Download
+                    </button>
+                </div>
+            </div>
+            <div id="knockoutContent">
+                <div class="bracket-wrapper">
+                    <!-- Bracket will be populated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Champion Section -->
+        <section class="sim-section hidden" id="championSection">
+            <div id="championContent">
+                <!-- Champion will be displayed -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>FIFA World Cup 2026 Tournament Simulator</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="tournament-sim.js"></script>
+</body>
+</html>

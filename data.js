@@ -306,6 +306,119 @@ const finalMatch = { id: 104, team1: "W101", team2: "W102", date: "July 19", cit
 // Third place
 const thirdPlaceMatch = { id: 103, team1: "L101", team2: "L102", date: "July 18", city: "Miami Gardens" };
 
+// Group stage match schedule with dates, venues, and match numbers
+// Based on official FIFA World Cup 2026 schedule
+const GROUP_MATCHES = {
+    'A': [
+        // Mexico, South Africa, South Korea, UEFA Path D
+        { date: 'June 11', match: 1, team1: 0, team2: 1, venue: 'Estadio Azteca, Mexico City' },
+        { date: 'June 11', match: 2, team1: 2, team2: 3, venue: 'Estadio Akron, Zapopan' },
+        { date: 'June 18', match: 25, team1: 3, team2: 1, venue: 'Mercedes-Benz Stadium, Atlanta' },
+        { date: 'June 18', match: 28, team1: 0, team2: 2, venue: 'Estadio Akron, Zapopan' },
+        { date: 'June 24', match: 53, team1: 3, team2: 0, venue: 'Estadio Azteca, Mexico City' },
+        { date: 'June 24', match: 54, team1: 1, team2: 2, venue: 'Estadio BBVA, Guadalupe' }
+    ],
+    'B': [
+        // Canada, UEFA Path A, Qatar, Switzerland
+        { date: 'June 12', match: 3, team1: 0, team2: 1, venue: 'BMO Field, Toronto' },
+        { date: 'June 13', match: 8, team1: 2, team2: 3, venue: 'Levi\'s Stadium, Santa Clara' },
+        { date: 'June 18', match: 26, team1: 3, team2: 1, venue: 'SoFi Stadium, Inglewood' },
+        { date: 'June 18', match: 27, team1: 0, team2: 2, venue: 'BC Place, Vancouver' },
+        { date: 'June 24', match: 51, team1: 3, team2: 0, venue: 'BC Place, Vancouver' },
+        { date: 'June 24', match: 52, team1: 1, team2: 2, venue: 'Lumen Field, Seattle' }
+    ],
+    'C': [
+        // Brazil, Morocco, Haiti, Scotland
+        { date: 'June 13', match: 5, team1: 0, team2: 1, venue: 'Gillette Stadium, Foxborough' },
+        { date: 'June 13', match: 7, team1: 2, team2: 3, venue: 'MetLife Stadium, East Rutherford' },
+        { date: 'June 19', match: 29, team1: 3, team2: 1, venue: 'Lincoln Financial Field, Philadelphia' },
+        { date: 'June 19', match: 30, team1: 0, team2: 2, venue: 'Gillette Stadium, Foxborough' },
+        { date: 'June 24', match: 49, team1: 3, team2: 0, venue: 'Hard Rock Stadium, Miami Gardens' },
+        { date: 'June 24', match: 50, team1: 1, team2: 2, venue: 'Mercedes-Benz Stadium, Atlanta' }
+    ],
+    'D': [
+        // United States, Paraguay, Australia, UEFA Path C
+        { date: 'June 12', match: 4, team1: 0, team2: 1, venue: 'SoFi Stadium, Inglewood' },
+        { date: 'June 13', match: 6, team1: 2, team2: 3, venue: 'BC Place, Vancouver' },
+        { date: 'June 19', match: 31, team1: 3, team2: 1, venue: 'Levi\'s Stadium, Santa Clara' },
+        { date: 'June 19', match: 32, team1: 0, team2: 2, venue: 'Lumen Field, Seattle' },
+        { date: 'June 25', match: 59, team1: 3, team2: 0, venue: 'SoFi Stadium, Inglewood' },
+        { date: 'June 25', match: 60, team1: 1, team2: 2, venue: 'Levi\'s Stadium, Santa Clara' }
+    ],
+    'E': [
+        // Germany, Curaçao, Ivory Coast, Ecuador
+        { date: 'June 14', match: 9, team1: 0, team2: 1, venue: 'Lincoln Financial Field, Philadelphia' },
+        { date: 'June 14', match: 10, team1: 2, team2: 3, venue: 'NRG Stadium, Houston' },
+        { date: 'June 20', match: 33, team1: 3, team2: 1, venue: 'BMO Field, Toronto' },
+        { date: 'June 20', match: 34, team1: 0, team2: 2, venue: 'Arrowhead Stadium, Kansas City' },
+        { date: 'June 25', match: 55, team1: 3, team2: 0, venue: 'Lincoln Financial Field, Philadelphia' },
+        { date: 'June 25', match: 56, team1: 1, team2: 2, venue: 'MetLife Stadium, East Rutherford' }
+    ],
+    'F': [
+        // Netherlands, Japan, UEFA Path B, Tunisia
+        { date: 'June 14', match: 11, team1: 0, team2: 1, venue: 'AT&T Stadium, Arlington' },
+        { date: 'June 14', match: 12, team1: 2, team2: 3, venue: 'Estadio BBVA, Guadalupe' },
+        { date: 'June 20', match: 35, team1: 3, team2: 1, venue: 'NRG Stadium, Houston' },
+        { date: 'June 20', match: 36, team1: 0, team2: 2, venue: 'Estadio BBVA, Guadalupe' },
+        { date: 'June 25', match: 57, team1: 3, team2: 0, venue: 'AT&T Stadium, Arlington' },
+        { date: 'June 25', match: 58, team1: 1, team2: 2, venue: 'Arrowhead Stadium, Kansas City' }
+    ],
+    'G': [
+        // Belgium, Egypt, Iran, New Zealand
+        { date: 'June 15', match: 15, team1: 0, team2: 1, venue: 'SoFi Stadium, Inglewood' },
+        { date: 'June 15', match: 16, team1: 2, team2: 3, venue: 'Lumen Field, Seattle' },
+        { date: 'June 21', match: 39, team1: 3, team2: 1, venue: 'SoFi Stadium, Inglewood' },
+        { date: 'June 21', match: 40, team1: 0, team2: 2, venue: 'BC Place, Vancouver' },
+        { date: 'June 26', match: 63, team1: 3, team2: 0, venue: 'Lumen Field, Seattle' },
+        { date: 'June 26', match: 64, team1: 1, team2: 2, venue: 'BC Place, Vancouver' }
+    ],
+    'H': [
+        // Spain, Cape Verde, Saudi Arabia, Uruguay
+        { date: 'June 15', match: 13, team1: 0, team2: 1, venue: 'Hard Rock Stadium, Miami Gardens' },
+        { date: 'June 15', match: 14, team1: 2, team2: 3, venue: 'Mercedes-Benz Stadium, Atlanta' },
+        { date: 'June 21', match: 37, team1: 3, team2: 1, venue: 'Hard Rock Stadium, Miami Gardens' },
+        { date: 'June 21', match: 38, team1: 0, team2: 2, venue: 'Mercedes-Benz Stadium, Atlanta' },
+        { date: 'June 26', match: 65, team1: 3, team2: 0, venue: 'NRG Stadium, Houston' },
+        { date: 'June 26', match: 66, team1: 1, team2: 2, venue: 'Estadio Akron, Zapopan' }
+    ],
+    'I': [
+        // France, Senegal, IC Path 2, Norway
+        { date: 'June 16', match: 17, team1: 0, team2: 1, venue: 'MetLife Stadium, East Rutherford' },
+        { date: 'June 16', match: 18, team1: 2, team2: 3, venue: 'Gillette Stadium, Foxborough' },
+        { date: 'June 22', match: 41, team1: 3, team2: 1, venue: 'MetLife Stadium, East Rutherford' },
+        { date: 'June 22', match: 42, team1: 0, team2: 2, venue: 'Lincoln Financial Field, Philadelphia' },
+        { date: 'June 26', match: 61, team1: 3, team2: 0, venue: 'Gillette Stadium, Foxborough' },
+        { date: 'June 26', match: 62, team1: 1, team2: 2, venue: 'BMO Field, Toronto' }
+    ],
+    'J': [
+        // Argentina, Algeria, Austria, Jordan
+        { date: 'June 16', match: 19, team1: 0, team2: 1, venue: 'Arrowhead Stadium, Kansas City' },
+        { date: 'June 16', match: 20, team1: 2, team2: 3, venue: 'Levi\'s Stadium, Santa Clara' },
+        { date: 'June 22', match: 43, team1: 3, team2: 1, venue: 'AT&T Stadium, Arlington' },
+        { date: 'June 22', match: 44, team1: 0, team2: 2, venue: 'Levi\'s Stadium, Santa Clara' },
+        { date: 'June 27', match: 69, team1: 3, team2: 0, venue: 'Arrowhead Stadium, Kansas City' },
+        { date: 'June 27', match: 70, team1: 1, team2: 2, venue: 'AT&T Stadium, Arlington' }
+    ],
+    'K': [
+        // Portugal, IC Path 1, Uzbekistan, Colombia
+        { date: 'June 17', match: 23, team1: 0, team2: 1, venue: 'NRG Stadium, Houston' },
+        { date: 'June 17', match: 24, team1: 2, team2: 3, venue: 'Estadio Azteca, Mexico City' },
+        { date: 'June 23', match: 47, team1: 3, team2: 1, venue: 'NRG Stadium, Houston' },
+        { date: 'June 23', match: 48, team1: 0, team2: 2, venue: 'Estadio Akron, Zapopan' },
+        { date: 'June 27', match: 71, team1: 3, team2: 0, venue: 'Hard Rock Stadium, Miami Gardens' },
+        { date: 'June 27', match: 72, team1: 1, team2: 2, venue: 'Mercedes-Benz Stadium, Atlanta' }
+    ],
+    'L': [
+        // England, Croatia, Ghana, Panama
+        { date: 'June 17', match: 21, team1: 0, team2: 1, venue: 'BMO Field, Toronto' },
+        { date: 'June 17', match: 22, team1: 2, team2: 3, venue: 'AT&T Stadium, Arlington' },
+        { date: 'June 23', match: 45, team1: 3, team2: 1, venue: 'Gillette Stadium, Foxborough' },
+        { date: 'June 23', match: 46, team1: 0, team2: 2, venue: 'BMO Field, Toronto' },
+        { date: 'June 27', match: 67, team1: 3, team2: 0, venue: 'MetLife Stadium, East Rutherford' },
+        { date: 'June 27', match: 68, team1: 1, team2: 2, venue: 'Lincoln Financial Field, Philadelphia' }
+    ]
+};
+
 // Third place match assignments based on which 8 groups qualify
 // Key: sorted string of qualifying group letters (e.g., "ABCDEFGH")
 // Value: object mapping match IDs to group letters
