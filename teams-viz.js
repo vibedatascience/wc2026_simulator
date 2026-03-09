@@ -130,7 +130,7 @@ function renderStrengthChart() {
 
     if (data.length === 0) return;
 
-    const margin = { top: 20, right: 60, bottom: 20, left: 100 };
+    const margin = { top: 20, right: 75, bottom: 20, left: 100 };
     const width = container.clientWidth - margin.left - margin.right;
     const height = data.length * 36;
 
@@ -193,13 +193,14 @@ function renderStrengthChart() {
         .attr('opacity', 1);
 }
 
-// League Distribution Chart
+// League Distribution Chart (normalized to 100%)
 function renderLeagueChart() {
     const container = document.getElementById('leagueChart');
     if (!container) return;
 
     container.innerHTML = '';
 
+    const tiers = [1, 2, 3, 4, 5];
     const data = Array.from(selectedTeams).map(code => {
         const dist = getLeagueDistribution(code);
         const tierCounts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
@@ -207,18 +208,23 @@ function renderLeagueChart() {
             const tier = leagueWeights[league]?.tier || 5;
             tierCounts[tier] += count;
         });
+        const total = Object.values(tierCounts).reduce((a, b) => a + b, 0);
+        // Convert to percentages
+        const pct = {};
+        tiers.forEach(t => { pct[t] = total > 0 ? (tierCounts[t] / total) * 100 : 0; });
         return {
             code,
             name: squadData[code].name,
             flag: squadData[code].flag,
-            ...tierCounts,
-            total: Object.values(tierCounts).reduce((a, b) => a + b, 0)
+            ...pct,
+            total,
+            tier1pct: Math.round(pct[1])
         };
-    });
+    }).sort((a, b) => b.tier1pct - a.tier1pct);
 
     if (data.length === 0) return;
 
-    const margin = { top: 20, right: 40, bottom: 20, left: 100 };
+    const margin = { top: 20, right: 75, bottom: 20, left: 100 };
     const width = container.clientWidth - margin.left - margin.right;
     const height = data.length * 36;
 
@@ -229,11 +235,10 @@ function renderLeagueChart() {
         .append('g')
         .attr('transform', `translate(${margin.left},${margin.top})`);
 
-    const tiers = [1, 2, 3, 4, 5];
     const stack = d3.stack().keys(tiers)(data);
 
     const x = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.total)])
+        .domain([0, 100])
         .range([0, width]);
 
     const y = d3.scaleBand()
@@ -258,7 +263,7 @@ function renderLeagueChart() {
         .transition()
         .duration(600)
         .delay((d, i) => i * 50)
-        .attr('width', d => x(d[1]) - x(d[0]));
+        .attr('width', d => Math.max(0, x(d[1]) - x(d[0])));
 
     // Labels
     svg.selectAll('.label')
@@ -271,18 +276,18 @@ function renderLeagueChart() {
         .attr('text-anchor', 'end')
         .text(d => `${d.flag} ${d.name}`);
 
-    // Totals
+    // Percentage label (tier 1 %)
     svg.selectAll('.total')
         .data(data)
         .join('text')
         .attr('class', 'chart-value')
-        .attr('x', d => x(d.total) + 8)
+        .attr('x', x(100) + 8)
         .attr('y', d => y(d.code) + y.bandwidth() / 2)
         .attr('dy', '0.35em')
-        .text(d => d.total);
+        .text(d => `${d.tier1pct}% T1`);
 }
 
-// Age Distribution Chart
+// Age Distribution Chart (normalized to 100%)
 function renderAgeChart() {
     const container = document.getElementById('ageChart');
     if (!container) return;
@@ -292,18 +297,22 @@ function renderAgeChart() {
     const ageRanges = ['17-21', '22-25', '26-29', '30-33', '34+'];
     const data = Array.from(selectedTeams).map(code => {
         const dist = getAgeDistribution(code);
+        const total = Object.values(dist).reduce((a, b) => a + b, 0);
+        // Convert to percentages
+        const pct = {};
+        ageRanges.forEach(r => { pct[r] = total > 0 ? (dist[r] / total) * 100 : 0; });
         return {
             code,
             name: squadData[code].name,
             flag: squadData[code].flag,
             avgAge: getAverageAge(code),
-            ...dist
+            ...pct
         };
     }).sort((a, b) => parseFloat(a.avgAge) - parseFloat(b.avgAge));
 
     if (data.length === 0) return;
 
-    const margin = { top: 20, right: 60, bottom: 20, left: 100 };
+    const margin = { top: 20, right: 75, bottom: 20, left: 100 };
     const width = container.clientWidth - margin.left - margin.right;
     const height = data.length * 36;
 
@@ -314,10 +323,8 @@ function renderAgeChart() {
         .append('g')
         .attr('transform', `translate(${margin.left},${margin.top})`);
 
-    const maxTotal = d3.max(data, d => ageRanges.reduce((sum, r) => sum + d[r], 0));
-
     const x = d3.scaleLinear()
-        .domain([0, maxTotal])
+        .domain([0, 100])
         .range([0, width]);
 
     const y = d3.scaleBand()
@@ -344,7 +351,7 @@ function renderAgeChart() {
         .transition()
         .duration(600)
         .delay((d, i) => i * 50)
-        .attr('width', d => x(d[1]) - x(d[0]));
+        .attr('width', d => Math.max(0, x(d[1]) - x(d[0])));
 
     // Labels
     svg.selectAll('.label')
@@ -362,7 +369,7 @@ function renderAgeChart() {
         .data(data)
         .join('text')
         .attr('class', 'chart-value')
-        .attr('x', d => x(ageRanges.reduce((sum, r) => sum + d[r], 0)) + 8)
+        .attr('x', x(100) + 8)
         .attr('y', d => y(d.code) + y.bandwidth() / 2)
         .attr('dy', '0.35em')
         .text(d => `${d.avgAge} avg`);

@@ -20,30 +20,24 @@
 </head>
 <body>
     <nav class="mode-tabs">
-        <a href="index.html" class="mode-tab">
-            <span class="mode-tab-icon">✏️</span>Choose Your Own
-        </a>
-        <a href="tournament.html" class="mode-tab active">
-            <span class="mode-tab-icon">🎲</span>Simulate Tournament
-        </a>
-        <a href="teams.html" class="mode-tab">
-            <span class="mode-tab-icon">📊</span>Teams Visualized
-        </a>
+        <a href="index.html" class="mode-tab">Choose Your Own</a>
+        <a href="tournament.html" class="mode-tab active">Simulate Tournament</a>
+        <a href="teams.html" class="mode-tab">Teams Visualized</a>
     </nav>
     <div class="support-banner">
-        <a href="https://buymeacoffee.com/rahulxc" target="_blank" rel="noopener">Support this project ☕</a>
+        <a href="https://buymeacoffee.com/rahulxc" target="_blank" rel="noopener">Support this project</a>
     </div>
 
-    <header class="sim-header">
-        <div class="sim-header-content">
-            <h1 class="sim-title">FIFA World Cup 2026</h1>
-            <p class="sim-subtitle">Tournament Simulator - AI-Powered Match Predictions</p>
-            <div class="sim-actions">
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="FIFA World Cup 2026" class="header-logo">
+            <p class="subtitle">Tournament Simulator</p>
+            <div class="header-actions">
                 <button class="btn btn-success" id="simulateAllBtn">
                     Simulate Tournament
                 </button>
                 <button class="btn btn-secondary" id="toggleSettingsBtn" onclick="toggleSimSettings()">
-                    <span class="btn-icon">⚙</span> Settings
+                    Settings
                 </button>
             </div>
         </div>
@@ -123,7 +117,10 @@
                 <div style="display: flex; align-items: center; gap: 0.75rem;">
                     <div class="view-toggle">
                         <button class="view-btn active" id="standingsViewBtn" onclick="switchGroupView('standings')">Standings</button>
-                        <button class="view-btn" id="matchResultsViewBtn" onclick="switchGroupView('results')">Results</button>
+                        <button class="view-btn" id="byGroupViewBtn" onclick="switchGroupView('byGroup')">By Group</button>
+                        <button class="view-btn" id="byCityViewBtn" onclick="switchGroupView('byCity')">By City</button>
+                        <button class="view-btn" id="calendarViewBtn" onclick="switchGroupView('calendar')">Calendar</button>
+                        <button class="view-btn" id="byTeamViewBtn" onclick="switchGroupView('byTeam')">By Team</button>
                     </div>
                     <span class="sim-section-status status-pending" id="groupStageStatus">Not started</span>
                 </div>
@@ -131,7 +128,7 @@
             <div id="groupStageContent">
                 <div style="text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
                     <p style="font-size: 0.8rem; margin-bottom: 0.5rem;">Click "Simulate Tournament" to begin</p>
-                    <p style="font-size: 0.65rem;">AI will simulate all 72 group stage matches</p>
+                    <p style="font-size: 0.65rem;">Simulates all 72 group stage matches</p>
                 </div>
             </div>
         </section>

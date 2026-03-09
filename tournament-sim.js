@@ -477,14 +477,23 @@ class TournamentSimulator {
             status.textContent = 'Complete';
         }
 
-        // Check current view
-        const standingsBtn = document.getElementById('standingsViewBtn');
-        const isStandingsView = standingsBtn?.classList.contains('active');
+        // Check which view is active
+        const viewButtons = ['standingsViewBtn', 'byGroupViewBtn', 'byCityViewBtn', 'calendarViewBtn', 'byTeamViewBtn'];
+        let activeView = 'standings';
+        for (const id of viewButtons) {
+            if (document.getElementById(id)?.classList.contains('active')) {
+                activeView = id.replace('ViewBtn', '');
+                break;
+            }
+        }
 
-        if (isStandingsView) {
-            this.renderGroupStandings(container);
-        } else {
-            this.renderGroupMatches(container);
+        switch (activeView) {
+            case 'standings': this.renderGroupStandings(container); break;
+            case 'byGroup': this.renderGroupMatches(container); break;
+            case 'byCity': this.renderMatchesByCity(container); break;
+            case 'calendar': this.renderMatchesByCalendar(container); break;
+            case 'byTeam': this.renderMatchesByTeam(container); break;
+            default: this.renderGroupStandings(container);
         }
     }
 
@@ -495,9 +504,9 @@ class TournamentSimulator {
         Object.entries(this.groupStandings).forEach(([groupId, standings]) => {
             html += `
                 <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
-                    <div style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: white; padding: 0.625rem 1rem; font-weight: 600; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
-                        <span>Group ${groupId}</span>
-                        <span style="font-size: 0.65rem; opacity: 0.8;">Complete</span>
+                    <div style="padding: 0.375rem 0.5rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; background: var(--bg-primary);">
+                        <span style="font-size: 0.7rem; font-weight: 600; color: var(--text-primary);">Group ${groupId}</span>
+                        <span style="font-size: 0.6rem; color: var(--success-color);">Complete</span>
                     </div>
                     <table style="width: 100%; border-collapse: collapse; font-size: 0.75rem;">
                         <thead>
@@ -559,7 +568,7 @@ class TournamentSimulator {
         Object.entries(this.groupResults).forEach(([groupId, matches]) => {
             html += `
                 <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
-                    <div style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: white; padding: 0.625rem 1rem; font-weight: 600; font-size: 0.8rem;">
+                    <div style="padding: 0.375rem 0.5rem; border-bottom: 1px solid var(--border-color); background: var(--bg-primary); font-size: 0.7rem; font-weight: 600; color: var(--text-primary);">
                         Group ${groupId} Results
                     </div>
                     <div style="padding: 0.5rem;">
@@ -624,6 +633,268 @@ class TournamentSimulator {
             html += '</div></div>';
         });
 
+        html += '</div>';
+        container.innerHTML = html;
+    }
+
+    // ==========================================
+    // SHARED HELPER: Flatten all group matches with info
+    // ==========================================
+
+    getAllMatchesWithInfo() {
+        const allMatches = [];
+        Object.entries(this.groupResults).forEach(([groupId, matches]) => {
+            const groupMatches = GROUP_MATCHES[groupId];
+            const groupTeams = groups[groupId].teams;
+
+            matches.forEach(result => {
+                let team1Idx = -1, team2Idx = -1;
+                for (let i = 0; i < groupTeams.length; i++) {
+                    const resolved = this.resolveTeam(groupTeams[i]);
+                    if (resolved?.code === result.team1.code) team1Idx = i;
+                    if (resolved?.code === result.team2.code) team2Idx = i;
+                }
+                const matchInfo = groupMatches?.find(m =>
+                    (m.team1 === team1Idx && m.team2 === team2Idx) ||
+                    (m.team1 === team2Idx && m.team2 === team1Idx)
+                );
+                allMatches.push({ result, matchInfo, groupId });
+            });
+        });
+        allMatches.sort((a, b) => (a.matchInfo?.match || 999) - (b.matchInfo?.match || 999));
+        return allMatches;
+    }
+
+    // Render a single match row (shared by city/calendar/team views)
+    renderMatchRow(result, matchInfo, groupId, idx, extra = '') {
+        const isWinner1 = result.score1 > result.score2;
+        const isWinner2 = result.score2 > result.score1;
+        const isDraw = result.score1 === result.score2;
+
+        return `
+            <div class="schedule-match-row" style="background: ${idx % 2 === 0 ? '#fafafa' : '#fff'};">
+                <div class="schedule-match-meta">
+                    <span class="schedule-match-num">M${matchInfo?.match || '?'}</span>
+                    ${extra}
+                    <span>${matchInfo?.date || ''}</span>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; ${isWinner1 ? 'font-weight: 600;' : isDraw ? '' : 'opacity: 0.6;'}">
+                        <span style="font-size: 1.1rem;">${result.team1.flag}</span>
+                        <span style="font-size: 0.75rem; ${isWinner1 ? 'color: #166534;' : ''}">${result.team1.name}</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.25rem; background: #f1f5f9; padding: 0.25rem 0.625rem; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.85rem;">
+                        <span style="${isWinner1 ? 'color: #166534;' : ''}">${result.score1}</span>
+                        <span style="color: #999; font-size: 0.7rem;">-</span>
+                        <span style="${isWinner2 ? 'color: #166534;' : ''}">${result.score2}</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; justify-content: flex-end; ${isWinner2 ? 'font-weight: 600;' : isDraw ? '' : 'opacity: 0.6;'}">
+                        <span style="font-size: 0.75rem; ${isWinner2 ? 'color: #166534;' : ''}">${result.team2.name}</span>
+                        <span style="font-size: 1.1rem;">${result.team2.flag}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // ==========================================
+    // BY CITY VIEW
+    // ==========================================
+
+    renderMatchesByCity(container) {
+        const allMatches = this.getAllMatchesWithInfo();
+
+        // Group by city (parse from venue string after last comma)
+        const byCity = {};
+        allMatches.forEach(m => {
+            const venue = m.matchInfo?.venue || 'Unknown';
+            const parts = venue.split(', ');
+            const city = parts.length > 1 ? parts[parts.length - 1] : venue;
+            if (!byCity[city]) byCity[city] = { matches: [], venue: parts[0] || '' };
+            byCity[city].matches.push(m);
+        });
+
+        const sortedCities = Object.keys(byCity).sort();
+
+        let html = '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1rem; padding: 1rem;">';
+
+        sortedCities.forEach(city => {
+            const { matches, venue } = byCity[city];
+            matches.sort((a, b) => (a.matchInfo?.match || 999) - (b.matchInfo?.match || 999));
+
+            html += `
+                <div class="schedule-card">
+                    <div class="schedule-card-header">
+                        <div>${city}</div>
+                        <div style="font-size: 0.6rem; font-weight: 400; color: var(--text-muted);">${matches.length} matches</div>
+                    </div>
+                    <div class="schedule-card-body">
+            `;
+
+            matches.forEach((m, idx) => {
+                const groupTag = `<span class="schedule-group-tag">Grp ${m.groupId}</span>`;
+                html += this.renderMatchRow(m.result, m.matchInfo, m.groupId, idx, groupTag);
+            });
+
+            html += '</div></div>';
+        });
+
+        html += '</div>';
+        container.innerHTML = html;
+    }
+
+    // ==========================================
+    // CALENDAR VIEW
+    // ==========================================
+
+    renderMatchesByCalendar(container) {
+        const allMatches = this.getAllMatchesWithInfo();
+
+        // Group by date
+        const byDate = {};
+        allMatches.forEach(m => {
+            const date = m.matchInfo?.date || 'Unknown';
+            if (!byDate[date]) byDate[date] = [];
+            byDate[date].push(m);
+        });
+
+        // Sort dates chronologically (format: "June 11", "June 12", etc.)
+        const monthOrder = { January: 0, February: 1, March: 2, April: 3, May: 4, June: 5, July: 6 };
+        const sortedDates = Object.keys(byDate).sort((a, b) => {
+            const [monthA, dayA] = a.split(' ');
+            const [monthB, dayB] = b.split(' ');
+            return (monthOrder[monthA] || 0) - (monthOrder[monthB] || 0) || parseInt(dayA) - parseInt(dayB);
+        });
+
+        let html = '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1rem; padding: 1rem;">';
+
+        sortedDates.forEach(date => {
+            const matches = byDate[date];
+            matches.sort((a, b) => (a.matchInfo?.match || 999) - (b.matchInfo?.match || 999));
+
+            // Get day of week
+            const dateObj = new Date(`${date}, 2026`);
+            const dayOfWeek = dateObj.toLocaleDateString('en-US', { weekday: 'long' });
+
+            html += `
+                <div class="schedule-card">
+                    <div class="schedule-card-header schedule-card-header--calendar">
+                        <div style="font-size: 0.6rem; font-weight: 400; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">${dayOfWeek}</div>
+                        <div>${date}, 2026</div>
+                        <div style="font-size: 0.6rem; font-weight: 400; color: var(--text-muted);">${matches.length} matches</div>
+                    </div>
+                    <div class="schedule-card-body">
+            `;
+
+            matches.forEach((m, idx) => {
+                const groupTag = `<span class="schedule-group-tag">Grp ${m.groupId}</span>`;
+                const venueTag = `<span style="font-size: 0.55rem; color: var(--text-muted);">${m.matchInfo?.venue || ''}</span>`;
+                html += this.renderMatchRow(m.result, m.matchInfo, m.groupId, idx, groupTag);
+                // Add venue below the match
+                html += `<div style="padding: 0 0.75rem 0.375rem; font-size: 0.55rem; color: var(--text-muted); margin-top: -0.25rem;">${m.matchInfo?.venue || ''}</div>`;
+            });
+
+            html += '</div></div>';
+        });
+
+        html += '</div>';
+        container.innerHTML = html;
+    }
+
+    // ==========================================
+    // BY TEAM VIEW
+    // ==========================================
+
+    renderMatchesByTeam(container) {
+        const allMatches = this.getAllMatchesWithInfo();
+
+        // Build a map: teamCode -> { team, groupId, matches[] }
+        const byTeam = {};
+        allMatches.forEach(m => {
+            const { result, matchInfo, groupId } = m;
+
+            [result.team1, result.team2].forEach(team => {
+                const opponent = team.code === result.team1.code ? result.team2 : result.team1;
+                const isTeam1 = team.code === result.team1.code;
+                if (!byTeam[team.code]) byTeam[team.code] = { team, groupId, matches: [] };
+                byTeam[team.code].matches.push({
+                    opponent,
+                    goalsFor: isTeam1 ? result.score1 : result.score2,
+                    goalsAgainst: isTeam1 ? result.score2 : result.score1,
+                    matchInfo,
+                    result
+                });
+            });
+        });
+
+        // Sort by group then by team name
+        const sortedTeams = Object.values(byTeam).sort((a, b) =>
+            a.groupId.localeCompare(b.groupId) || a.team.name.localeCompare(b.team.name)
+        );
+
+        let html = '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; padding: 1rem;">';
+
+        let currentGroup = '';
+        sortedTeams.forEach(({ team, groupId, matches }) => {
+            if (groupId !== currentGroup) {
+                if (currentGroup) html += '</div>';
+                currentGroup = groupId;
+                html += `
+                    </div>
+                    <div style="grid-column: 1 / -1; margin-top: 0.5rem;">
+                        <div style="padding: 0.375rem 1rem; border-bottom: 2px solid var(--border-color); font-weight: 600; font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em;">
+                            Group ${groupId}
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; grid-column: 1 / -1;">
+                `;
+            }
+
+            matches.sort((a, b) => (a.matchInfo?.match || 999) - (b.matchInfo?.match || 999));
+
+            html += `
+                <div class="schedule-card">
+                    <div class="schedule-card-header schedule-card-header--team">
+                        <span style="font-size: 1.25rem;">${team.flag}</span>
+                        <span style="font-size: 0.8rem;">${team.name}</span>
+                    </div>
+                    <div class="schedule-card-body">
+            `;
+
+            matches.forEach((m, idx) => {
+                const won = m.goalsFor > m.goalsAgainst;
+                const lost = m.goalsFor < m.goalsAgainst;
+                const resultLabel = won ? 'W' : lost ? 'L' : 'D';
+                const resultColor = won ? '#166534' : lost ? '#991b1b' : '#92400e';
+
+                html += `
+                    <div class="schedule-match-row" style="background: ${idx % 2 === 0 ? '#fafafa' : '#fff'};">
+                        <div class="schedule-match-meta">
+                            <span class="schedule-match-num">M${m.matchInfo?.match || '?'}</span>
+                            <span>${m.matchInfo?.date || ''}</span>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1;">
+                                <span style="font-size: 0.7rem; color: var(--text-muted);">vs</span>
+                                <span style="font-size: 1rem;">${m.opponent.flag}</span>
+                                <span style="font-size: 0.75rem;">${m.opponent.name}</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.85rem; background: #f1f5f9; padding: 0.25rem 0.5rem; border-radius: 4px;">
+                                    ${m.goalsFor}-${m.goalsAgainst}
+                                </div>
+                                <span style="font-size: 0.65rem; font-weight: 700; color: ${resultColor}; background: ${resultColor}15; padding: 0.125rem 0.375rem; border-radius: 3px;">${resultLabel}</span>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.55rem; color: var(--text-muted); margin-top: 0.25rem;">${m.matchInfo?.venue || ''}</div>
+                    </div>
+                `;
+            });
+
+            html += '</div></div>';
+        });
+
+        if (currentGroup) html += '</div>';
         html += '</div>';
         container.innerHTML = html;
     }
@@ -918,11 +1189,11 @@ class TournamentSimulator {
     renderKnockoutMatchList(container) {
         const renderRound = (title, matches, isFinal = false) => {
             let html = `
-                <div style="margin-bottom: 2rem;">
-                    <div style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: white; padding: 0.625rem 1rem; font-weight: 600; font-size: 0.85rem; border-radius: 8px 8px 0 0; letter-spacing: 0.03em;">
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="padding: 0.5rem 0; font-weight: 600; font-size: 0.75rem; color: var(--text-secondary); border-bottom: 2px solid var(--border-color); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">
                         ${title}
                     </div>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0.5rem; padding: 0.75rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-top: none; border-radius: 0 0 8px 8px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0.5rem;">
             `;
 
             matches.forEach((match, idx) => {
@@ -1065,16 +1336,11 @@ let simulator = new TournamentSimulator();
 
 // View switching functions
 function switchGroupView(view) {
-    const standingsBtn = document.getElementById('standingsViewBtn');
-    const resultsBtn = document.getElementById('matchResultsViewBtn');
+    const allBtns = ['standingsViewBtn', 'byGroupViewBtn', 'byCityViewBtn', 'calendarViewBtn', 'byTeamViewBtn'];
+    const btnMap = { standings: 'standingsViewBtn', byGroup: 'byGroupViewBtn', byCity: 'byCityViewBtn', calendar: 'calendarViewBtn', byTeam: 'byTeamViewBtn' };
 
-    if (view === 'standings') {
-        standingsBtn?.classList.add('active');
-        resultsBtn?.classList.remove('active');
-    } else {
-        standingsBtn?.classList.remove('active');
-        resultsBtn?.classList.add('active');
-    }
+    allBtns.forEach(id => document.getElementById(id)?.classList.remove('active'));
+    document.getElementById(btnMap[view])?.classList.add('active');
 
     if (Object.keys(simulator.groupStandings).length > 0) {
         simulator.renderGroupStage();
@@ -1179,9 +1445,9 @@ function toggleSimSettings() {
     if (panel) {
         panel.classList.toggle('hidden');
         if (btn) {
-            btn.innerHTML = panel.classList.contains('hidden')
-                ? '<span class="btn-icon">⚙</span> Settings'
-                : '<span class="btn-icon">✕</span> Close';
+            btn.textContent = panel.classList.contains('hidden')
+                ? 'Settings'
+                : 'Close';
         }
     }
 }
