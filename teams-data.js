@@ -21334,3 +21334,11 @@ function getBirthplaceData(teamCode) {
         ...player.birthplace
     }));
 }
+
+function getPositionDistribution(teamCode) {
+    const team = squadData[teamCode];
+    if (!team) return { GK: 0, DF: 0, MF: 0, FW: 0 };
+    const dist = { GK: 0, DF: 0, MF: 0, FW: 0 };
+    team.players.forEach(p => { dist[p.position] = (dist[p.position] || 0) + 1; });
+    return dist;
+}
