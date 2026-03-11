@@ -6,7 +6,9 @@ const simSettings = {
     upsetChance: 50,      // 0-100: Higher = more upsets
     homeAdvantage: 50,    // 0-100: Boost for host nations
     eliteBoost: 50,       // 0-100: Extra advantage for top 8 teams
-    goalVolume: 50        // 0-100: Low = defensive, High = high-scoring
+    goalVolume: 50,       // 0-100: Low = defensive, High = high-scoring
+    pedigree: 50,         // 0-100: How much WC history matters in knockouts
+    confedFactor: 50      // 0-100: Confederation strength adjustment
 };
 
 class TournamentSimulator {
@@ -22,12 +24,30 @@ class TournamentSimulator {
         this.champion = null;
         this.thirdPlace = null;
 
-        // Elite teams get boosted stats (top 8 FIFA ranked teams)
-        this.eliteTeams = ['ARG', 'FRA', 'ESP', 'ENG', 'BRA', 'POR', 'NED', 'BEL'];
+        // Elite teams: dynamically computed from top 8 FIFA-ranked teams
+        this.eliteTeams = this.computeEliteTeams(8);
+
+        // Confederation strength multipliers (based on historical WC performance)
+        this.confedStrength = {
+            UEFA: 1.0,       // Strongest historically
+            CONMEBOL: 0.95,  // Very strong
+            CONCACAF: 0.55,  // Decent, USA/MEX occasionally deep runs
+            CAF: 0.45,       // Improving but fewer deep runs
+            AFC: 0.40,       // South Korea 2002 was an outlier
+            OFC: 0.20        // Rarely competitive
+        };
 
         // Playoff selections (default to highest ranked)
         this.playoffSelections = {};
         this.initPlayoffSelections();
+    }
+
+    // Compute elite teams dynamically from FIFA rankings
+    computeEliteTeams(count) {
+        return Object.entries(teamStats)
+            .sort((a, b) => b[1].fifa - a[1].fifa)
+            .slice(0, count)
+            .map(([code]) => code);
     }
 
     // Initialize playoff selections with highest ranked teams
@@ -54,29 +74,55 @@ class TournamentSimulator {
         return team;
     }
 
+    // Calculate tournament pedigree score from WC history
+    // Returns a bonus rating based on titles, finals, semis, quarters
+    getPedigreeBonus(team) {
+        if (!team) return 0;
+        const stats = teamStats[team.code];
+        if (!stats) return 0;
+        // Weighted: titles matter most, then finals, semis, quarters
+        // Max possible ~65 (Brazil: 5*8 + 7*2 + 11*1 + 12*0.5 = 40+14+11+6 = 71)
+        const raw = (stats.titles || 0) * 8 + (stats.finals || 0) * 2 +
+                    (stats.semis || 0) * 1 + (stats.quarters || 0) * 0.5;
+        // Scale to 0-100 rating bonus range
+        return Math.min(raw * 1.4, 100);
+    }
+
+    // Get confederation strength bonus
+    getConfedBonus(team) {
+        if (!team) return 0;
+        const stats = teamStats[team.code];
+        if (!stats) return 0;
+        const strength = this.confedStrength[stats.confed] || 0.3;
+        // Returns 0-50 rating bonus scaled by confedFactor setting
+        return strength * 50;
+    }
+
     // Calculate expected goals using Poisson-based prediction
     calculateExpectedGoals(attackRating, defenseRating, isHome = false) {
         // Base expected goals - adjusted by goal volume setting
-        // goalVolume 0 = 0.9 avg, goalVolume 50 = 1.3 avg, goalVolume 100 = 1.8 avg
-        const baseGoals = 0.9 + (simSettings.goalVolume / 100) * 0.9;
+        // goalVolume 0 = 0.8 avg, goalVolume 50 = 1.25 avg, goalVolume 100 = 1.8 avg
+        const baseGoals = 0.8 + (simSettings.goalVolume / 100) * 1.0;
         let expected = baseGoals;
 
         // Adjust based on attack vs defense ratings
         // Upset chance affects how much rating difference matters
         // upsetChance 100 = ratings barely matter, upsetChance 0 = ratings dominate
-        const ratingImpact = 1.2 - (simSettings.upsetChance / 100) * 0.8; // 0.4 to 1.2
-        const ratingDiff = (attackRating - defenseRating) / 500;
+        // Wider range: 0.2 to 1.5 (was 0.4 to 1.2)
+        const ratingImpact = 1.5 - (simSettings.upsetChance / 100) * 1.3;
+        // Use ratio-based scaling for better spread between mismatched teams
+        const ratingDiff = (attackRating - defenseRating) / 400;
         expected += ratingDiff * ratingImpact;
 
         // Home advantage - scaled by setting
-        // homeAdvantage 0 = no boost, homeAdvantage 100 = +0.3 goals
+        // homeAdvantage 0 = no boost, homeAdvantage 100 = +0.35 goals
         if (isHome) {
-            const homeBoost = (simSettings.homeAdvantage / 100) * 0.3;
+            const homeBoost = (simSettings.homeAdvantage / 100) * 0.35;
             expected += homeBoost;
         }
 
         // Keep in reasonable range
-        return Math.max(0.3, Math.min(3.5, expected));
+        return Math.max(0.25, Math.min(3.5, expected));
     }
 
     // Generate goals from Poisson distribution
@@ -93,6 +139,30 @@ class TournamentSimulator {
         return k - 1;
     }
 
+    // Build effective rating for a team with all bonuses applied
+    getEffectiveRating(team, isKnockout = false) {
+        if (!team) return 1000;
+        let rating = this.getTeamRanking(team);
+
+        // Elite team boost
+        const eliteBoostAmount = simSettings.eliteBoost;
+        if (this.eliteTeams.includes(team.code)) {
+            rating += eliteBoostAmount;
+        }
+
+        // Confederation factor: scales WC-proven confederation strength
+        const confedScale = simSettings.confedFactor / 100;
+        rating += this.getConfedBonus(team) * confedScale;
+
+        // Tournament pedigree: bigger impact in knockout (teams with WC DNA)
+        const pedigreeScale = simSettings.pedigree / 100;
+        const pedigreeBonus = this.getPedigreeBonus(team) * pedigreeScale;
+        // Pedigree matters 40% in groups, 100% in knockouts
+        rating += pedigreeBonus * (isKnockout ? 1.0 : 0.4);
+
+        return rating;
+    }
+
     // Simulate a single match
     simulateMatch(team1, team2, isKnockout = false) {
         const t1 = this.resolveTeam(team1);
@@ -100,22 +170,17 @@ class TournamentSimulator {
 
         if (!t1 || !t2) return null;
 
-        const rating1 = this.getTeamRanking(t1);
-        const rating2 = this.getTeamRanking(t2);
-
-        // Elite team boost - scaled by setting
-        // eliteBoost 0 = no boost, eliteBoost 50 = +50 rating, eliteBoost 100 = +100 rating
-        const eliteBoostAmount = simSettings.eliteBoost;
-        const boost1 = this.eliteTeams.includes(t1.code) ? eliteBoostAmount : 0;
-        const boost2 = this.eliteTeams.includes(t2.code) ? eliteBoostAmount : 0;
+        // Build effective ratings with all factors
+        const rating1 = this.getEffectiveRating(t1, isKnockout);
+        const rating2 = this.getEffectiveRating(t2, isKnockout);
 
         // Host nation advantage
         const isHome1 = t1.host;
         const isHome2 = t2.host;
 
         // Calculate expected goals
-        const xG1 = this.calculateExpectedGoals(rating1 + boost1, rating2 + boost2, isHome1);
-        const xG2 = this.calculateExpectedGoals(rating2 + boost2, rating1 + boost1, isHome2);
+        const xG1 = this.calculateExpectedGoals(rating1, rating2, isHome1);
+        const xG2 = this.calculateExpectedGoals(rating2, rating1, isHome2);
 
         // Generate scores
         let score1 = this.poissonRandom(xG1);
@@ -134,19 +199,16 @@ class TournamentSimulator {
 
         // Handle knockout draws
         if (isKnockout && score1 === score2) {
-            // Extra time - slight chance for goals
             result.extraTime = true;
-            const etChance = 0.35;
 
-            if (Math.random() < etChance) {
-                // Someone scores in extra time
-                const scorerProb = rating1 / (rating1 + rating2);
-                if (Math.random() < scorerProb) {
-                    result.score1++;
-                } else {
-                    result.score2++;
-                }
-            }
+            // Extra time: Poisson-simulated with reduced xG (~30 min vs 90 min)
+            // Teams are more cautious in ET, so scale down to ~35% of regulation xG
+            const etXG1 = xG1 * 0.35;
+            const etXG2 = xG2 * 0.35;
+            const etGoals1 = this.poissonRandom(etXG1);
+            const etGoals2 = this.poissonRandom(etXG2);
+            result.score1 += etGoals1;
+            result.score2 += etGoals2;
 
             // Still tied? Penalties
             if (result.score1 === result.score2) {
@@ -160,27 +222,58 @@ class TournamentSimulator {
         return result;
     }
 
-    // Simulate penalty shootout
+    // Simulate penalty shootout with pressure mechanics
     simulatePenalties(rating1, rating2) {
         let score1 = 0, score2 = 0;
+        let taken1 = 0, taken2 = 0;
 
-        // First 5 rounds
+        // Base conversion ~76% (real WC average), adjusted by rating
+        const baseProb1 = 0.76 + (rating1 - 1500) / 6000;
+        const baseProb2 = 0.76 + (rating2 - 1500) / 6000;
+
+        // First 5 rounds with early termination (like real shootouts)
         for (let i = 0; i < 5; i++) {
+            // Pressure increases with each round (rounds 4-5 are tense)
+            const pressure = i >= 3 ? 0.03 * (i - 2) : 0;
+
             // Team 1 takes
-            const prob1 = 0.75 + (rating1 - 1500) / 5000;
+            taken1++;
+            const prob1 = Math.max(0.5, Math.min(0.92, baseProb1 - pressure));
             if (Math.random() < prob1) score1++;
+
+            // Check if shootout is already decided
+            const remaining1 = 5 - taken1;
+            const remaining2 = 5 - taken2;
+            // Team 2 can't catch up even if they score all remaining
+            if (score1 - score2 > remaining2) break;
 
             // Team 2 takes
-            const prob2 = 0.75 + (rating2 - 1500) / 5000;
+            taken2++;
+            const prob2 = Math.max(0.5, Math.min(0.92, baseProb2 - pressure));
             if (Math.random() < prob2) score2++;
+
+            // Team 1 can't catch up even if they score all remaining
+            if (score2 - score1 > remaining1) break;
         }
 
-        // Sudden death if tied
+        // Sudden death if tied after 5 rounds
+        // Pressure increases each sudden death round (historical ~68% conversion)
+        let sdRound = 0;
         while (score1 === score2) {
-            const prob1 = 0.75 + (rating1 - 1500) / 5000;
-            const prob2 = 0.75 + (rating2 - 1500) / 5000;
-            if (Math.random() < prob1) score1++;
-            if (Math.random() < prob2) score2++;
+            sdRound++;
+            const sdPressure = 0.08 + sdRound * 0.01; // Gets harder each round
+
+            const prob1 = Math.max(0.45, baseProb1 - sdPressure);
+            const prob2 = Math.max(0.45, baseProb2 - sdPressure);
+
+            const t1scores = Math.random() < prob1;
+            const t2scores = Math.random() < prob2;
+
+            if (t1scores) score1++;
+            if (t2scores) score2++;
+
+            // In sudden death, if one scores and other misses, it's over
+            // (both scoring or both missing continues)
         }
 
         return { score1, score2 };
@@ -1463,10 +1556,10 @@ function updateSettingValue(settingId) {
 
 function applyPreset(preset) {
     const presets = {
-        realistic: { upsetChance: 40, homeAdvantage: 50, eliteBoost: 50, goalVolume: 45 },
-        chaotic: { upsetChance: 80, homeAdvantage: 30, eliteBoost: 20, goalVolume: 70 },
-        favorites: { upsetChance: 15, homeAdvantage: 40, eliteBoost: 80, goalVolume: 50 },
-        underdogs: { upsetChance: 75, homeAdvantage: 60, eliteBoost: 10, goalVolume: 55 }
+        realistic: { upsetChance: 40, homeAdvantage: 50, eliteBoost: 50, goalVolume: 45, pedigree: 60, confedFactor: 55 },
+        chaotic: { upsetChance: 80, homeAdvantage: 30, eliteBoost: 20, goalVolume: 70, pedigree: 15, confedFactor: 20 },
+        favorites: { upsetChance: 15, homeAdvantage: 40, eliteBoost: 80, goalVolume: 50, pedigree: 75, confedFactor: 70 },
+        underdogs: { upsetChance: 75, homeAdvantage: 60, eliteBoost: 10, goalVolume: 55, pedigree: 10, confedFactor: 15 }
     };
 
     const settings = presets[preset];

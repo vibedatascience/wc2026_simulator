@@ -78,6 +78,22 @@
                 <input type="range" id="goalVolume" min="0" max="100" value="50" oninput="updateSettingValue('goalVolume')">
                 <p class="sim-setting-desc">Low = defensive matches, High = high-scoring</p>
             </div>
+            <div class="sim-setting">
+                <div class="sim-setting-header">
+                    <label for="pedigree">Tournament Pedigree</label>
+                    <span class="sim-setting-value" id="pedigreeValue">50%</span>
+                </div>
+                <input type="range" id="pedigree" min="0" max="100" value="50" oninput="updateSettingValue('pedigree')">
+                <p class="sim-setting-desc">WC history matters more in knockout rounds</p>
+            </div>
+            <div class="sim-setting">
+                <div class="sim-setting-header">
+                    <label for="confedFactor">Confederation Factor</label>
+                    <span class="sim-setting-value" id="confedFactorValue">50%</span>
+                </div>
+                <input type="range" id="confedFactor" min="0" max="100" value="50" oninput="updateSettingValue('confedFactor')">
+                <p class="sim-setting-desc">UEFA/CONMEBOL boost, scales WC performance history</p>
+            </div>
         </div>
         <div class="sim-settings-presets">
             <span class="sim-settings-presets-label">Presets:</span>
