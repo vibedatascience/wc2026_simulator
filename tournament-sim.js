@@ -840,7 +840,6 @@ class TournamentSimulator {
                 if (currentGroup) html += '</div>';
                 currentGroup = groupId;
                 html += `
-                    </div>
                     <div style="grid-column: 1 / -1; margin-top: 0.5rem;">
                         <div style="padding: 0.375rem 1rem; border-bottom: 2px solid var(--border-color); font-weight: 600; font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em;">
                             Group ${groupId}
