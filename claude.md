@@ -30,8 +30,8 @@ See `ARCHITECTURE.md` for a Mermaid diagram of the full system.
 
 | File | Lines | Role |
 |------|-------|------|
-| `data.js` | ~960 | Shared data: `teamStats` (FIFA rankings, WC history for 48 teams), `playoffPaths` (6 undecided qualifiers with 3-4 options each), `groups` (A-L, 4 teams each), knockout match definitions (`r32Matches`, `r16Matches`, `qfMatches`, `sfMatches`, `finalMatch`, `thirdPlaceMatch`), full group stage schedule (`GROUP_MATCHES`), third-place assignment mappings (495 combinations via `getThirdPlaceMatchMapping()`) |
-| `app.js` | ~1476 | Choose Your Own mode: state management, group/knockout rendering, team click handlers, third-place selection UI, URL hash encode/decode (~26 char shareable state), auto-fill modes (Random/Favorites/Underdogs/Champions), bracket view toggle, screenshot download via html2canvas |
+| `data.js` | ~900 | Shared data: `teamStats` (FIFA rankings, WC history for 48 teams), `groups` (A-L, 4 teams each), knockout match definitions (`r32Matches`, `r16Matches`, `qfMatches`, `sfMatches`, `finalMatch`, `thirdPlaceMatch`), full group stage schedule (`GROUP_MATCHES`), third-place assignment mappings (495 combinations via `getThirdPlaceMatchMapping()`) |
+| `app.js` | ~1380 | Choose Your Own mode: state management, group/knockout rendering, team click handlers, third-place selection UI, URL hash encode/decode (~23 char shareable state), auto-fill modes (Random/Favorites/Underdogs/Champions), bracket view toggle, screenshot download via html2canvas |
 | `tournament-sim.js` | ~1228 | Simulate mode: `TournamentSimulator` class — Poisson-based match simulation, group stage round-robin, standings calculation (Pts > GD > GF > FIFA rank), third-place ranking, full knockout bracket, penalty shootout logic, rendering for group tables/matches/knockout/champion |
 | `teams-viz.js` | ~531 | Teams Visualized mode: D3.js charts (squad strength bars, league tier stacked bars, age distribution stacked bars), world map with player birthplace dots via TopoJSON |
 | `teams-data.js` | ~14400 | Squad data: every player for all 48 teams — name, age, club, league, position, birthplace (lat/lng), market value. Plus helper functions (`calculateSquadStrength`, `getLeagueDistribution`, `getAgeDistribution`, `getAverageAge`, `leagueWeights`) |
@@ -43,8 +43,7 @@ See `ARCHITECTURE.md` for a Mermaid diagram of the full system.
 All three pages load `data.js` via `<script>` tag. It exposes these globals:
 - `teamStats` — Object keyed by 3-letter country code (e.g., `ARG`, `BRA`). Each entry has: `fifa` (ranking points), `titles`, `finals`, `semis`, `quarters`, `confed`, `host`
 - `fifaRankings` — Legacy alias, derived from `teamStats`
-- `playoffPaths` — 6 playoff paths (`UPA`-`UPD`, `IC1`, `IC2`) with 3-4 candidate teams each
-- `groups` — 12 groups (A-L), each with 4 teams (some are playoff placeholders with `qualifier: true`)
+- `groups` — 12 groups (A-L), each with 4 teams
 - `r32Matches`, `r16Matches`, `qfMatches`, `sfMatches`, `finalMatch`, `thirdPlaceMatch` — Knockout bracket structure using reference strings like `1A` (1st in Group A), `2B`, `3_74` (3rd-place team assigned to match 74), `W73` (winner of match 73), `L101` (loser of match 101)
 - `GROUP_MATCHES` — Full group stage schedule with dates, match numbers, venues
 - `getThirdPlaceMatchMapping(qualifyingGroups)` — Returns `{ matchId: groupLetter }` mapping for any combination of 8 qualifying third-place groups
@@ -53,7 +52,6 @@ All three pages load `data.js` via `<script>` tag. It exposes these globals:
 
 ```javascript
 state = {
-  playoffSelections: {},   // { UPA: teamObj, UPB: teamObj, ... }
   groupSelections: {},     // { A: { first, second, third }, B: { ... }, ... }
   thirdPlaceTeams: [],     // Computed from groupSelections
   selectedThirdPlace: [],  // 8 group letters chosen by user
@@ -62,8 +60,7 @@ state = {
 }
 ```
 
-State encodes to ~26 char URL hash for sharing:
-- 3 chars: playoff selections (6 paths × 3 bits each)
+State encodes to ~23 char URL hash for sharing:
 - 10 chars: group orderings (12 groups × 5 bits, permutation encoding)
 - 2 chars: third-place selection (12-bit bitmask)
 - 11 chars: knockout results (32 matches × 2 bits each)
@@ -109,8 +106,7 @@ The 2026 format has 48 teams in 12 groups. Top 2 from each group (24 teams) + be
 ### Key Patterns
 
 - All JS uses vanilla DOM manipulation (no virtual DOM, no templating library)
-- Team objects always have: `{ name, code, flag }` and optionally `host`, `qualifier`, `ranking`
-- Playoff teams have `qualifier: true` and their `code` matches a key in `playoffPaths`
+- Team objects always have: `{ name, code, flag }` and optionally `host`
 - Match IDs are integers: 1-72 (group stage), 73-88 (R32), 89-96 (R16), 97-100 (QF), 101-102 (SF), 103 (3rd place), 104 (final)
 - Reference strings: `1A`=1st Group A, `2B`=2nd Group B, `3_74`=3rd place in match 74, `W73`=winner of match 73, `L101`=loser of match 101
 - Functions are exposed to HTML via `window.functionName = functionName` pattern

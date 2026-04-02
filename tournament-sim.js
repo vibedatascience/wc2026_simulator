@@ -24,18 +24,6 @@ class TournamentSimulator {
 
         // Elite teams get boosted stats (top 8 FIFA ranked teams)
         this.eliteTeams = ['ARG', 'FRA', 'ESP', 'ENG', 'BRA', 'POR', 'NED', 'BEL'];
-
-        // Playoff selections (default to highest ranked)
-        this.playoffSelections = {};
-        this.initPlayoffSelections();
-    }
-
-    // Initialize playoff selections with highest ranked teams
-    initPlayoffSelections() {
-        Object.entries(playoffPaths).forEach(([pathCode, path]) => {
-            const sorted = [...path.options].sort((a, b) => b.ranking - a.ranking);
-            this.playoffSelections[pathCode] = sorted[0];
-        });
     }
 
     // Get team's effective FIFA ranking
@@ -43,15 +31,6 @@ class TournamentSimulator {
         if (!team) return 1000;
         const stats = teamStats[team.code];
         return stats?.fifa || team.ranking || 1000;
-    }
-
-    // Resolve playoff team
-    resolveTeam(team) {
-        if (!team) return null;
-        if (team.qualifier && playoffPaths[team.code]) {
-            return this.playoffSelections[team.code] || team;
-        }
-        return team;
     }
 
     // Calculate expected goals using Poisson-based prediction
@@ -95,8 +74,8 @@ class TournamentSimulator {
 
     // Simulate a single match
     simulateMatch(team1, team2, isKnockout = false) {
-        const t1 = this.resolveTeam(team1);
-        const t2 = this.resolveTeam(team2);
+        const t1 = team1;
+        const t2 = team2;
 
         if (!t1 || !t2) return null;
 
@@ -213,7 +192,7 @@ class TournamentSimulator {
         this.groupStandings = {};
 
         Object.entries(groups).forEach(([groupId, group]) => {
-            const teams = group.teams.map(t => this.resolveTeam(t));
+            const teams = [...group.teams];
             this.groupResults[groupId] = [];
 
             // Round-robin: each team plays each other once
@@ -582,7 +561,7 @@ class TournamentSimulator {
                 // Find team indices by matching resolved team codes
                 let team1Idx = -1, team2Idx = -1;
                 for (let i = 0; i < groupTeams.length; i++) {
-                    const resolved = this.resolveTeam(groupTeams[i]);
+                    const resolved = groupTeams[i];
                     if (resolved?.code === result.team1.code) team1Idx = i;
                     if (resolved?.code === result.team2.code) team2Idx = i;
                 }
@@ -650,7 +629,7 @@ class TournamentSimulator {
             matches.forEach(result => {
                 let team1Idx = -1, team2Idx = -1;
                 for (let i = 0; i < groupTeams.length; i++) {
-                    const resolved = this.resolveTeam(groupTeams[i]);
+                    const resolved = groupTeams[i];
                     if (resolved?.code === result.team1.code) team1Idx = i;
                     if (resolved?.code === result.team2.code) team2Idx = i;
                 }

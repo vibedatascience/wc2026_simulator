@@ -483,67 +483,6 @@ main {
     color: var(--text-muted);
 }
 
-.team-tag.qualifier {
-    color: var(--text-muted);
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.team-tag.qualifier:hover {
-    color: var(--text-secondary);
-    background: rgba(0,0,0,0.05);
-}
-
-/* Playoff Dropdown */
-.playoff-dropdown {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    box-shadow: var(--shadow-lg);
-    min-width: 140px;
-    z-index: 1000;
-    overflow: hidden;
-    animation: fadeIn 0.15s ease-out;
-}
-
-.playoff-dropdown-header {
-    padding: 0.375rem 0.5rem;
-    font-size: 0.55rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    border-bottom: 1px solid var(--border-color);
-    background: var(--bg-primary);
-}
-
-.playoff-dropdown-option {
-    display: flex;
-    align-items: center;
-    padding: 0.375rem 0.5rem;
-    cursor: pointer;
-    transition: var(--transition);
-    gap: 0.375rem;
-}
-
-.playoff-dropdown-option:hover {
-    background: var(--hover-bg);
-}
-
-.playoff-dropdown-option.selected {
-    background: var(--success-light);
-}
-
-.playoff-dropdown-option .team-flag {
-    font-size: 0.85rem;
-    margin: 0;
-}
-
-.playoff-dropdown-option .team-name {
-    font-size: 0.7rem;
-    color: var(--text-primary);
-}
-
 /* Third Place Section - Minimalist Table */
 .third-place-section {
     margin-bottom: 1.5rem;

@@ -2,7 +2,6 @@
 
 // State management
 const state = {
-    playoffSelections: {}, // { pathCode: selectedTeam } e.g., { UPA: { name: "Italy", ... } }
     groupSelections: {}, // { groupId: { first: team, second: team, third: team } }
     thirdPlaceTeams: [], // Array of { group, team } for all 3rd place teams
     selectedThirdPlace: [], // Array of group letters for selected 3rd place teams
@@ -65,13 +64,7 @@ function createGroupCard(groupId, group) {
 
     // Add click handlers for team selection
     card.querySelectorAll('.team-row').forEach(row => {
-        row.addEventListener('click', (e) => {
-            // If clicking on playoff picker, show dropdown instead
-            if (e.target.classList.contains('playoff-picker')) {
-                e.stopPropagation();
-                showPlayoffDropdown(e.target, e.target.dataset.path, groupId);
-                return;
-            }
+        row.addEventListener('click', () => {
             handleTeamClick(groupId, row.dataset.teamCode);
         });
     });
@@ -123,79 +116,20 @@ function handleTeamClick(groupId, teamCode) {
     updateKnockoutBracket();
 }
 
-// Show playoff team dropdown
-function showPlayoffDropdown(anchor, pathCode, groupId) {
-    // Remove any existing dropdown
-    const existing = document.querySelector('.playoff-dropdown');
-    if (existing) existing.remove();
-
-    const path = playoffPaths[pathCode];
-    if (!path) return;
-
-    const dropdown = document.createElement('div');
-    dropdown.className = 'playoff-dropdown';
-
-    dropdown.innerHTML = `
-        <div class="playoff-dropdown-header">${path.name}</div>
-        ${path.options.map(team => `
-            <div class="playoff-dropdown-option ${state.playoffSelections[pathCode]?.code === team.code ? 'selected' : ''}" data-code="${team.code}">
-                <span class="team-flag">${team.flag}</span>
-                <span class="team-name">${team.name}</span>
-            </div>
-        `).join('')}
-    `;
-
-    // Position dropdown
-    const rect = anchor.getBoundingClientRect();
-    dropdown.style.position = 'fixed';
-    dropdown.style.top = `${rect.bottom + 4}px`;
-    dropdown.style.left = `${rect.left}px`;
-
-    document.body.appendChild(dropdown);
-
-    // Handle option clicks
-    dropdown.querySelectorAll('.playoff-dropdown-option').forEach(opt => {
-        opt.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const selectedTeam = path.options.find(t => t.code === opt.dataset.code);
-            state.playoffSelections[pathCode] = selectedTeam;
-            dropdown.remove();
-            renderGroups();
-            updateThirdPlaceSection();
-            updateKnockoutBracket();
-        });
-    });
-
-    // Close on outside click
-    setTimeout(() => {
-        document.addEventListener('click', function closeDropdown(e) {
-            if (!dropdown.contains(e.target)) {
-                dropdown.remove();
-                document.removeEventListener('click', closeDropdown);
-            }
-        });
-    }, 0);
-}
-
 // Create a team row element
 function createTeamRow(groupId, team, selection) {
     let positionClass = '';
     let positionNum = '';
 
-    // Check if this is a playoff team that can be selected
-    const isPlayoffTeam = team.qualifier && playoffPaths[team.code];
-    const selectedPlayoffTeam = isPlayoffTeam ? state.playoffSelections[team.code] : null;
-    const displayTeam = selectedPlayoffTeam || team;
-
     const isComplete = selection.first && selection.second && selection.third;
 
-    if (selection.first?.code === displayTeam.code || (selectedPlayoffTeam && selection.first?.code === team.code)) {
+    if (selection.first?.code === team.code) {
         positionClass = 'first-place';
         positionNum = '1';
-    } else if (selection.second?.code === displayTeam.code || (selectedPlayoffTeam && selection.second?.code === team.code)) {
+    } else if (selection.second?.code === team.code) {
         positionClass = 'second-place';
         positionNum = '2';
-    } else if (selection.third?.code === displayTeam.code || (selectedPlayoffTeam && selection.third?.code === team.code)) {
+    } else if (selection.third?.code === team.code) {
         positionClass = 'third-place';
         positionNum = '3';
     } else if (isComplete) {
@@ -203,14 +137,13 @@ function createTeamRow(groupId, team, selection) {
     }
 
     const tags = [];
-    if (displayTeam.host) tags.push('<span class="team-tag host">H</span>');
-    if (isPlayoffTeam) tags.push(`<span class="team-tag qualifier playoff-picker" data-path="${team.code}">${selectedPlayoffTeam ? '▼' : '?'}</span>`);
+    if (team.host) tags.push('<span class="team-tag host">H</span>');
 
     return `
-        <div class="team-row ${positionClass}" data-team-code="${team.code}" data-is-playoff="${isPlayoffTeam}">
+        <div class="team-row ${positionClass}" data-team-code="${team.code}">
             ${positionNum ? `<span class="team-pos">${positionNum}</span>` : ''}
-            <span class="team-flag">${displayTeam.flag}</span>
-            <span class="team-name">${displayTeam.name}</span>
+            <span class="team-flag">${team.flag}</span>
+            <span class="team-name">${team.name}</span>
             ${tags.join('')}
         </div>
     `;
@@ -294,17 +227,12 @@ function createThirdPlaceRow(group, team, rank, isQualified, isDisabled = false)
     el.className = `third-place-team ${isQualified ? 'qualified' : ''} ${isDisabled ? 'eliminated' : ''}`;
     el.dataset.group = group;
 
-    // Resolve playoff team for display
-    const displayTeam = (team.qualifier && playoffPaths[team.code] && state.playoffSelections[team.code])
-        ? state.playoffSelections[team.code]
-        : team;
-
     el.innerHTML = `
         <span class="rank">${rank}</span>
         <span class="group-badge">${group}</span>
         <div class="team-info">
-            <span class="team-flag">${displayTeam.flag}</span>
-            <span class="team-name">${displayTeam.name}</span>
+            <span class="team-flag">${team.flag}</span>
+            <span class="team-name">${team.name}</span>
         </div>
         <span class="status-badge">${isQualified ? 'Q' : (isDisabled ? 'OUT' : '—')}</span>
     `;
@@ -497,16 +425,6 @@ function updateKnockoutBracket() {
     updateShareHint();
 }
 
-// Helper to resolve playoff team if applicable
-function resolvePlayoffTeam(team) {
-    if (!team) return null;
-    // If this is a playoff placeholder and we have a selection, use the selected team
-    if (team.qualifier && playoffPaths[team.code] && state.playoffSelections[team.code]) {
-        return state.playoffSelections[team.code];
-    }
-    return team;
-}
-
 // Get group position label for a team (e.g., "A1", "B2", "C3")
 function getTeamGroupPosition(team) {
     if (!team) return null;
@@ -515,13 +433,9 @@ function getTeamGroupPosition(team) {
     for (const [groupId, selection] of Object.entries(state.groupSelections)) {
         if (!selection) continue;
 
-        const first = resolvePlayoffTeam(selection.first);
-        const second = resolvePlayoffTeam(selection.second);
-        const third = resolvePlayoffTeam(selection.third);
-
-        if (first?.code === team.code) return `${groupId}1`;
-        if (second?.code === team.code) return `${groupId}2`;
-        if (third?.code === team.code) return `${groupId}3`;
+        if (selection.first?.code === team.code) return `${groupId}1`;
+        if (selection.second?.code === team.code) return `${groupId}2`;
+        if (selection.third?.code === team.code) return `${groupId}3`;
     }
     return null;
 }
@@ -552,8 +466,7 @@ function resolveTeamReference(ref) {
         const groupId = ref[1];
         const selection = state.groupSelections[groupId];
         if (!selection) return null;
-        const team = position === '1' ? selection.first : selection.second;
-        return resolvePlayoffTeam(team);
+        return position === '1' ? selection.first : selection.second;
     }
 
     // Third place reference (3_74, 3_77, etc. - format is 3_matchId)
@@ -581,7 +494,7 @@ function resolveTeamReference(ref) {
 
         // Find the third place team from this group
         const thirdPlaceEntry = state.thirdPlaceTeams.find(t => t.group === groupLetter);
-        return resolvePlayoffTeam(thirdPlaceEntry?.team) || null;
+        return thirdPlaceEntry?.team || null;
     }
 
     return null;
@@ -699,13 +612,6 @@ function randomizeAll() {
     state.groupSelections = {};
     state.selectedThirdPlace = [];
     state.knockoutResults = {};
-    state.playoffSelections = {};
-
-    // Randomize playoff selections
-    Object.entries(playoffPaths).forEach(([pathCode, path]) => {
-        const randomIndex = Math.floor(Math.random() * path.options.length);
-        state.playoffSelections[pathCode] = path.options[randomIndex];
-    });
 
     // Randomize group selections
     Object.entries(groups).forEach(([groupId, group]) => {
@@ -765,7 +671,6 @@ function randomizeKnockoutRound(matches) {
 }
 
 function resetAll() {
-    state.playoffSelections = {};
     state.groupSelections = {};
     state.thirdPlaceTeams = [];
     state.selectedThirdPlace = [];
@@ -828,24 +733,10 @@ function autoFillAll(mode = 'favorites') {
     state.groupSelections = {};
     state.selectedThirdPlace = [];
     state.knockoutResults = {};
-    state.playoffSelections = {};
-
-    // Select best playoff team for each path based on mode
-    Object.entries(playoffPaths).forEach(([pathCode, path]) => {
-        const sorted = [...path.options].sort((a, b) =>
-            getTeamScore(b, mode) - getTeamScore(a, mode)
-        );
-        state.playoffSelections[pathCode] = sorted[0];
-    });
 
     // Sort each group by score
     Object.entries(groups).forEach(([groupId, group]) => {
         const teamsWithScores = group.teams.map(team => {
-            // Resolve playoff team if applicable
-            if (team.qualifier && playoffPaths[team.code]) {
-                const selected = state.playoffSelections[team.code];
-                return { ...team, score: getTeamScore(selected, mode), resolved: selected };
-            }
             return { ...team, score: getTeamScore(team, mode) };
         });
 
@@ -1139,22 +1030,7 @@ const ENCODE_CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuv
 function encodeState() {
     let encoded = '';
 
-    // 1. Encode playoff selections (6 paths, each 0-3 or 4 for none)
-    // UPA, UPB, UPC, UPD, IC1, IC2
-    const playoffOrder = ['UPA', 'UPB', 'UPC', 'UPD', 'IC1', 'IC2'];
-    let playoffBits = 0;
-    playoffOrder.forEach((path, i) => {
-        const selection = state.playoffSelections[path];
-        const options = playoffPaths[path]?.options || [];
-        const idx = selection ? options.findIndex(o => o.code === selection.code) : options.length;
-        playoffBits |= (idx & 0x7) << (i * 3); // 3 bits per playoff (0-4)
-    });
-    // 18 bits total, encode as 3 chars (6 bits each)
-    encoded += ENCODE_CHARS[playoffBits & 0x3F];
-    encoded += ENCODE_CHARS[(playoffBits >> 6) & 0x3F];
-    encoded += ENCODE_CHARS[(playoffBits >> 12) & 0x3F];
-
-    // 2. Encode group selections (12 groups, each needs 4 positions = 4! = 24 possibilities)
+    // 1. Encode group selections (12 groups, each needs 4 positions = 4! = 24 possibilities)
     // We encode as 5 bits per group (0-23), 12 groups = 60 bits = 10 chars
     const groupOrder = 'ABCDEFGHIJKL'.split('');
     let groupBits = BigInt(0);
@@ -1191,7 +1067,7 @@ function encodeState() {
         encoded += ENCODE_CHARS[Number((groupBits >> BigInt(i * 6)) & BigInt(0x3F))];
     }
 
-    // 3. Encode selected third place teams (8 of 12 = 12 bits, one per group)
+    // 2. Encode selected third place teams (8 of 12 = 12 bits, one per group)
     let thirdBits = 0;
     groupOrder.forEach((groupId, i) => {
         if (state.selectedThirdPlace.includes(groupId)) {
@@ -1202,7 +1078,7 @@ function encodeState() {
     encoded += ENCODE_CHARS[thirdBits & 0x3F];
     encoded += ENCODE_CHARS[(thirdBits >> 6) & 0x3F];
 
-    // 4. Encode knockout results (32 matches: 73-104)
+    // 3. Encode knockout results (32 matches: 73-104)
     // Each match: 0 = no winner, 1 = team1 wins, 2 = team2 wins
     // 2 bits per match, 32 matches = 64 bits = 11 chars
     let knockoutBits = BigInt(0);
@@ -1226,7 +1102,7 @@ function encodeState() {
 
 // Decode state from a compact string
 function decodeState(encoded) {
-    if (!encoded || encoded.length < 26) return false;
+    if (!encoded || encoded.length < 23) return false;
 
     try {
         let pos = 0;
@@ -1234,21 +1110,7 @@ function decodeState(encoded) {
         // Helper to read char as number
         const readChar = () => ENCODE_CHARS.indexOf(encoded[pos++]);
 
-        // 1. Decode playoff selections (3 chars)
-        let playoffBits = readChar();
-        playoffBits |= readChar() << 6;
-        playoffBits |= readChar() << 12;
-
-        const playoffOrder = ['UPA', 'UPB', 'UPC', 'UPD', 'IC1', 'IC2'];
-        playoffOrder.forEach((path, i) => {
-            const idx = (playoffBits >> (i * 3)) & 0x7;
-            const options = playoffPaths[path]?.options || [];
-            if (idx < options.length) {
-                state.playoffSelections[path] = options[idx];
-            }
-        });
-
-        // 2. Decode group selections (10 chars)
+        // 1. Decode group selections (10 chars)
         let groupBits = BigInt(0);
         for (let i = 0; i < 10; i++) {
             groupBits |= BigInt(readChar()) << BigInt(i * 6);
@@ -1276,7 +1138,7 @@ function decodeState(encoded) {
             }
         });
 
-        // 3. Decode selected third place teams (2 chars)
+        // 2. Decode selected third place teams (2 chars)
         let thirdBits = readChar();
         thirdBits |= readChar() << 6;
 
@@ -1287,7 +1149,7 @@ function decodeState(encoded) {
             }
         });
 
-        // 4. Decode knockout results (11 chars)
+        // 3. Decode knockout results (11 chars)
         let knockoutBits = BigInt(0);
         for (let i = 0; i < 11; i++) {
             knockoutBits |= BigInt(readChar()) << BigInt(i * 6);
@@ -1423,7 +1285,7 @@ function updateShareHint() {
 // Load state from URL hash on page load
 function loadFromURL() {
     const hash = window.location.hash.substring(1);
-    if (hash && hash.length >= 26) {
+    if (hash && hash.length >= 23) {
         if (decodeState(hash)) {
             renderGroups();
             renderThirdPlaceTeams();

@@ -84,62 +84,6 @@ const fifaRankings = Object.fromEntries(
     Object.entries(teamStats).map(([code, stats]) => [code, stats.fifa])
 );
 
-// Playoff paths - users can select winners
-const playoffPaths = {
-    UPA: {
-        name: "UEFA Path A",
-        options: [
-            { name: "Italy", code: "ITA", flag: "🇮🇹", ranking: 1702 },
-            { name: "Wales", code: "WAL", flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿", ranking: 1530 },
-            { name: "Bosnia & Herz.", code: "BIH", flag: "🇧🇦", ranking: 1362 },
-            { name: "N. Ireland", code: "NIR", flag: "🇬🇧", ranking: 1366 }
-        ]
-    },
-    UPB: {
-        name: "UEFA Path B",
-        options: [
-            { name: "Ukraine", code: "UKR", flag: "🇺🇦", ranking: 1557 },
-            { name: "Sweden", code: "SWE", flag: "🇸🇪", ranking: 1487 },
-            { name: "Poland", code: "POL", flag: "🇵🇱", ranking: 1532 },
-            { name: "Albania", code: "ALB", flag: "🇦🇱", ranking: 1401 }
-        ]
-    },
-    UPC: {
-        name: "UEFA Path C",
-        options: [
-            { name: "Turkey", code: "TUR", flag: "🇹🇷", ranking: 1583 },
-            { name: "Romania", code: "ROU", flag: "🇷🇴", ranking: 1466 },
-            { name: "Slovakia", code: "SVK", flag: "🇸🇰", ranking: 1486 },
-            { name: "Kosovo", code: "KOS", flag: "🇽🇰", ranking: 1309 }
-        ]
-    },
-    UPD: {
-        name: "UEFA Path D",
-        options: [
-            { name: "Denmark", code: "DEN", flag: "🇩🇰", ranking: 1617 },
-            { name: "Czechia", code: "CZE", flag: "🇨🇿", ranking: 1487 },
-            { name: "Rep. of Ireland", code: "IRL", flag: "🇮🇪", ranking: 1436 },
-            { name: "N. Macedonia", code: "MKD", flag: "🇲🇰", ranking: 1379 }
-        ]
-    },
-    IC1: {
-        name: "IC Playoff 1",
-        options: [
-            { name: "DR Congo", code: "COD", flag: "🇨🇩", ranking: 1443 },
-            { name: "Jamaica", code: "JAM", flag: "🇯🇲", ranking: 1362 },
-            { name: "New Caledonia", code: "NCL", flag: "🇳🇨", ranking: 1000 }
-        ]
-    },
-    IC2: {
-        name: "IC Playoff 2",
-        options: [
-            { name: "Iraq", code: "IRQ", flag: "🇮🇶", ranking: 1439 },
-            { name: "Bolivia", code: "BOL", flag: "🇧🇴", ranking: 1330 },
-            { name: "Suriname", code: "SUR", flag: "🇸🇷", ranking: 1100 }
-        ]
-    }
-};
-
 // FIFA World Cup 2026 Groups Data
 const groups = {
     A: {
@@ -148,14 +92,14 @@ const groups = {
             { name: "Mexico", code: "MEX", flag: "🇲🇽", host: true },
             { name: "South Africa", code: "RSA", flag: "🇿🇦" },
             { name: "South Korea", code: "KOR", flag: "🇰🇷" },
-            { name: "UEFA Path D", code: "UPD", flag: "🏳️", qualifier: true }
+            { name: "Czechia", code: "CZE", flag: "🇨🇿" }
         ]
     },
     B: {
         name: "Group B",
         teams: [
             { name: "Canada", code: "CAN", flag: "🇨🇦", host: true },
-            { name: "UEFA Path A", code: "UPA", flag: "🏳️", qualifier: true },
+            { name: "Bosnia & Herz.", code: "BIH", flag: "🇧🇦" },
             { name: "Qatar", code: "QAT", flag: "🇶🇦" },
             { name: "Switzerland", code: "SUI", flag: "🇨🇭" }
         ]
@@ -175,7 +119,7 @@ const groups = {
             { name: "United States", code: "USA", flag: "🇺🇸", host: true },
             { name: "Paraguay", code: "PAR", flag: "🇵🇾" },
             { name: "Australia", code: "AUS", flag: "🇦🇺" },
-            { name: "UEFA Path C", code: "UPC", flag: "🏳️", qualifier: true }
+            { name: "Turkey", code: "TUR", flag: "🇹🇷" }
         ]
     },
     E: {
@@ -192,7 +136,7 @@ const groups = {
         teams: [
             { name: "Netherlands", code: "NED", flag: "🇳🇱" },
             { name: "Japan", code: "JPN", flag: "🇯🇵" },
-            { name: "UEFA Path B", code: "UPB", flag: "🏳️", qualifier: true },
+            { name: "Sweden", code: "SWE", flag: "🇸🇪" },
             { name: "Tunisia", code: "TUN", flag: "🇹🇳" }
         ]
     },
@@ -219,7 +163,7 @@ const groups = {
         teams: [
             { name: "France", code: "FRA", flag: "🇫🇷" },
             { name: "Senegal", code: "SEN", flag: "🇸🇳" },
-            { name: "IC Path 2", code: "IC2", flag: "🏳️", qualifier: true },
+            { name: "Iraq", code: "IRQ", flag: "🇮🇶" },
             { name: "Norway", code: "NOR", flag: "🇳🇴" }
         ]
     },
@@ -236,7 +180,7 @@ const groups = {
         name: "Group K",
         teams: [
             { name: "Portugal", code: "POR", flag: "🇵🇹" },
-            { name: "IC Path 1", code: "IC1", flag: "🏳️", qualifier: true },
+            { name: "DR Congo", code: "COD", flag: "🇨🇩" },
             { name: "Uzbekistan", code: "UZB", flag: "🇺🇿" },
             { name: "Colombia", code: "COL", flag: "🇨🇴" }
         ]
@@ -310,7 +254,7 @@ const thirdPlaceMatch = { id: 103, team1: "L101", team2: "L102", date: "July 18"
 // Based on official FIFA World Cup 2026 schedule
 const GROUP_MATCHES = {
     'A': [
-        // Mexico, South Africa, South Korea, UEFA Path D
+        // Mexico, South Africa, South Korea, Czechia
         { date: 'June 11', match: 1, team1: 0, team2: 1, venue: 'Estadio Azteca, Mexico City' },
         { date: 'June 11', match: 2, team1: 2, team2: 3, venue: 'Estadio Akron, Zapopan' },
         { date: 'June 18', match: 25, team1: 3, team2: 1, venue: 'Mercedes-Benz Stadium, Atlanta' },
@@ -319,7 +263,7 @@ const GROUP_MATCHES = {
         { date: 'June 24', match: 54, team1: 1, team2: 2, venue: 'Estadio BBVA, Guadalupe' }
     ],
     'B': [
-        // Canada, UEFA Path A, Qatar, Switzerland
+        // Canada, Bosnia & Herz., Qatar, Switzerland
         { date: 'June 12', match: 3, team1: 0, team2: 1, venue: 'BMO Field, Toronto' },
         { date: 'June 13', match: 8, team1: 2, team2: 3, venue: 'Levi\'s Stadium, Santa Clara' },
         { date: 'June 18', match: 26, team1: 3, team2: 1, venue: 'SoFi Stadium, Inglewood' },
@@ -337,7 +281,7 @@ const GROUP_MATCHES = {
         { date: 'June 24', match: 50, team1: 1, team2: 2, venue: 'Mercedes-Benz Stadium, Atlanta' }
     ],
     'D': [
-        // United States, Paraguay, Australia, UEFA Path C
+        // United States, Paraguay, Australia, Turkey
         { date: 'June 12', match: 4, team1: 0, team2: 1, venue: 'SoFi Stadium, Inglewood' },
         { date: 'June 13', match: 6, team1: 2, team2: 3, venue: 'BC Place, Vancouver' },
         { date: 'June 19', match: 31, team1: 3, team2: 1, venue: 'Levi\'s Stadium, Santa Clara' },
@@ -355,7 +299,7 @@ const GROUP_MATCHES = {
         { date: 'June 25', match: 56, team1: 3, team2: 0, venue: 'MetLife Stadium, East Rutherford' }
     ],
     'F': [
-        // Netherlands, Japan, UEFA Path B, Tunisia
+        // Netherlands, Japan, Sweden, Tunisia
         { date: 'June 14', match: 11, team1: 0, team2: 1, venue: 'AT&T Stadium, Arlington' },
         { date: 'June 14', match: 12, team1: 2, team2: 3, venue: 'Estadio BBVA, Guadalupe' },
         { date: 'June 20', match: 35, team1: 0, team2: 2, venue: 'NRG Stadium, Houston' },
@@ -382,7 +326,7 @@ const GROUP_MATCHES = {
         { date: 'June 26', match: 66, team1: 3, team2: 0, venue: 'Estadio Akron, Zapopan' }
     ],
     'I': [
-        // France, Senegal, IC Path 2, Norway
+        // France, Senegal, Iraq, Norway
         { date: 'June 16', match: 17, team1: 0, team2: 1, venue: 'MetLife Stadium, East Rutherford' },
         { date: 'June 16', match: 18, team1: 2, team2: 3, venue: 'Gillette Stadium, Foxborough' },
         { date: 'June 22', match: 41, team1: 3, team2: 1, venue: 'MetLife Stadium, East Rutherford' },
@@ -400,7 +344,7 @@ const GROUP_MATCHES = {
         { date: 'June 27', match: 70, team1: 3, team2: 0, venue: 'AT&T Stadium, Arlington' }
     ],
     'K': [
-        // Portugal, IC Path 1, Uzbekistan, Colombia
+        // Portugal, DR Congo, Uzbekistan, Colombia
         { date: 'June 17', match: 23, team1: 0, team2: 1, venue: 'NRG Stadium, Houston' },
         { date: 'June 17', match: 24, team1: 2, team2: 3, venue: 'Estadio Azteca, Mexico City' },
         { date: 'June 23', match: 47, team1: 0, team2: 2, venue: 'NRG Stadium, Houston' },
