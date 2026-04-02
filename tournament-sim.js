@@ -579,34 +579,7 @@ class TournamentSimulator {
             matchesWithInfo.sort((a, b) => (a.matchInfo?.match || 999) - (b.matchInfo?.match || 999));
 
             matchesWithInfo.forEach(({ result, matchInfo }, idx) => {
-                const isWinner1 = result.score1 > result.score2;
-                const isWinner2 = result.score2 > result.score1;
-                const isDraw = result.score1 === result.score2;
-
-                html += `
-                    <div style="background: ${idx % 2 === 0 ? '#fafafa' : '#fff'}; border-radius: 6px; padding: 0.5rem 0.75rem; margin-bottom: 0.375rem; border: 1px solid #eee;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.6rem; color: var(--text-muted); margin-bottom: 0.375rem;">
-                            <span style="font-weight: 600;">M${matchInfo?.match || idx + 1}</span>
-                            <span>${matchInfo?.venue || ''}</span>
-                            <span>${matchInfo?.date || ''}</span>
-                        </div>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; ${isWinner1 ? 'font-weight: 600;' : isDraw ? '' : 'opacity: 0.6;'}">
-                                <span style="font-size: 1.1rem;">${result.team1.flag}</span>
-                                <span style="font-size: 0.75rem; ${isWinner1 ? 'color: #166534;' : ''}">${result.team1.name}</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 0.25rem; background: #f1f5f9; padding: 0.25rem 0.625rem; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.85rem;">
-                                <span style="${isWinner1 ? 'color: #166534;' : ''}">${result.score1}</span>
-                                <span style="color: #999; font-size: 0.7rem;">-</span>
-                                <span style="${isWinner2 ? 'color: #166534;' : ''}">${result.score2}</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; justify-content: flex-end; ${isWinner2 ? 'font-weight: 600;' : isDraw ? '' : 'opacity: 0.6;'}">
-                                <span style="font-size: 0.75rem; ${isWinner2 ? 'color: #166534;' : ''}">${result.team2.name}</span>
-                                <span style="font-size: 1.1rem;">${result.team2.flag}</span>
-                            </div>
-                        </div>
-                    </div>
-                `;
+                html += this.renderMatchRow(result, matchInfo, groupId, idx);
             });
 
             html += '</div></div>';
@@ -644,18 +617,34 @@ class TournamentSimulator {
         return allMatches;
     }
 
-    // Render a single match row (shared by city/calendar/team views)
-    renderMatchRow(result, matchInfo, groupId, idx, extra = '') {
-        const isWinner1 = result.score1 > result.score2;
-        const isWinner2 = result.score2 > result.score1;
-        const isDraw = result.score1 === result.score2;
+    // Render a single match row (shared by ALL match views)
+    renderMatchRow(result, matchInfo, groupId, idx, extra = '', options = {}) {
+        const isKnockout = options.knockout || false;
+        const isFinal = options.isFinal || false;
+        const isWinner1 = isKnockout ? (options.winner?.code === result.team1.code) : (result.score1 > result.score2);
+        const isWinner2 = isKnockout ? (options.winner?.code === result.team2.code) : (result.score2 > result.score1);
+        const isDraw = !isKnockout && result.score1 === result.score2;
+        const matchNum = matchInfo?.match || matchInfo?.id || '?';
+        const venue = matchInfo?.venue || matchInfo?.city || '';
+        const date = matchInfo?.date || '';
+
+        const cardBorder = isFinal ? '2px solid var(--gold)' : '1px solid #eee';
+        const cardBg = isFinal ? 'linear-gradient(180deg, #fffbeb 0%, #fff 100%)' : (idx % 2 === 0 ? '#fafafa' : '#fff');
+
+        let extraInfo = '';
+        if (result.penalties) {
+            extraInfo = `<div style="text-align: center; font-size: 0.6rem; color: #92400e; background: #fef3c7; padding: 0.125rem 0.5rem; border-radius: 3px; margin-top: 0.375rem; font-family: 'JetBrains Mono', monospace;">PEN: ${result.penScore1}-${result.penScore2}</div>`;
+        } else if (result.extraTime) {
+            extraInfo = `<div style="text-align: center; font-size: 0.6rem; color: #1e40af; background: #dbeafe; padding: 0.125rem 0.5rem; border-radius: 3px; margin-top: 0.375rem;">AET</div>`;
+        }
 
         return `
-            <div class="schedule-match-row" style="background: ${idx % 2 === 0 ? '#fafafa' : '#fff'};">
+            <div class="schedule-match-row" style="background: ${cardBg}; border: ${cardBorder};">
                 <div class="schedule-match-meta">
-                    <span class="schedule-match-num">M${matchInfo?.match || '?'}</span>
+                    <span class="schedule-match-num">M${matchNum}</span>
                     ${extra}
-                    <span>${matchInfo?.date || ''}</span>
+                    <span>${venue}</span>
+                    <span>${date}</span>
                 </div>
                 <div style="display: flex; align-items: center; justify-content: space-between;">
                     <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; ${isWinner1 ? 'font-weight: 600;' : isDraw ? '' : 'opacity: 0.6;'}">
@@ -672,6 +661,7 @@ class TournamentSimulator {
                         <span style="font-size: 1.1rem;">${result.team2.flag}</span>
                     </div>
                 </div>
+                ${extraInfo}
             </div>
         `;
     }
@@ -1178,46 +1168,8 @@ class TournamentSimulator {
             matches.forEach((match, idx) => {
                 const result = this.matchResults[match.id];
                 if (!result) return;
-
                 const winner = this.getWinner(result);
-                const isWinner1 = winner?.code === result.team1.code;
-                const isWinner2 = winner?.code === result.team2.code;
-
-                let extraInfo = '';
-                if (result.penalties) {
-                    extraInfo = `<div style="text-align: center; font-size: 0.6rem; color: #92400e; background: #fef3c7; padding: 0.25rem 0.5rem; border-radius: 3px; margin-top: 0.375rem; font-family: 'JetBrains Mono', monospace;">PEN: ${result.penScore1} - ${result.penScore2}</div>`;
-                } else if (result.extraTime) {
-                    extraInfo = `<div style="text-align: center; font-size: 0.6rem; color: #1e40af; background: #dbeafe; padding: 0.25rem 0.5rem; border-radius: 3px; margin-top: 0.375rem;">After Extra Time</div>`;
-                }
-
-                const cardBorder = isFinal ? '2px solid var(--gold)' : '1px solid #eee';
-                const cardBg = isFinal ? 'linear-gradient(180deg, #fffbeb 0%, #fff 100%)' : (idx % 2 === 0 ? '#fafafa' : '#fff');
-
-                html += `
-                    <div style="background: ${cardBg}; border-radius: 6px; padding: 0.625rem 0.75rem; border: ${cardBorder};">
-                        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.6rem; color: var(--text-muted); margin-bottom: 0.5rem;">
-                            <span style="font-weight: 600; font-family: 'JetBrains Mono', monospace;">M${match.id}</span>
-                            <span>${match.city}</span>
-                            <span>${match.date}</span>
-                        </div>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; ${isWinner1 ? 'font-weight: 600;' : 'opacity: 0.6;'}">
-                                <span style="font-size: 1.1rem;">${result.team1.flag}</span>
-                                <span style="font-size: 0.75rem; ${isWinner1 ? 'color: #166534;' : ''}">${result.team1.name}</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 0.375rem; background: #f1f5f9; padding: 0.375rem 0.75rem; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.9rem;">
-                                <span style="${isWinner1 ? 'color: #166534;' : ''}">${result.score1}</span>
-                                <span style="color: #999; font-size: 0.75rem;">-</span>
-                                <span style="${isWinner2 ? 'color: #166534;' : ''}">${result.score2}</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; justify-content: flex-end; ${isWinner2 ? 'font-weight: 600;' : 'opacity: 0.6;'}">
-                                <span style="font-size: 0.75rem; ${isWinner2 ? 'color: #166534;' : ''}">${result.team2.name}</span>
-                                <span style="font-size: 1.1rem;">${result.team2.flag}</span>
-                            </div>
-                        </div>
-                        ${extraInfo}
-                    </div>
-                `;
+                html += this.renderMatchRow(result, match, null, idx, '', { knockout: true, isFinal, winner });
             });
 
             html += '</div></div>';
