@@ -123,6 +123,25 @@ header {
     text-transform: uppercase;
 }
 
+.subtitle-hint {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.subtitle-hint a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.15s ease;
+}
+
+.subtitle-hint a:hover {
+    color: var(--text-primary);
+}
+
 .header-actions {
     display: flex;
     gap: 0.5rem;
