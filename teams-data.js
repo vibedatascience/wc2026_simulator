@@ -1,5 +1,5 @@
 // FIFA World Cup 2026 - Teams Data
-// Auto-generated from Wikipedia on 2026-02-08
+// Auto-generated from Wikipedia on 2026-04-02
 // Run 'node scripts/fetch-squads.js' to regenerate
 
 const leagueWeights = {
@@ -16,6 +16,7 @@ const leagueWeights = {
     "Brasileirão": { tier: 2, weight: 70 },
     "Turkish Super Lig": { tier: 3, weight: 52 },
     "Ukrainian Premier League": { tier: 3, weight: 45 },
+    "Russian Premier League": { tier: 3, weight: 45 },
     "Austrian Bundesliga": { tier: 3, weight: 48 },
     "Swiss Super League": { tier: 3, weight: 47 },
     "Danish Superliga": { tier: 3, weight: 46 },
@@ -62,7 +63,6 @@ const leagueWeights = {
     "Ligue 2": { tier: 4, weight: 40 },
     "Segunda División": { tier: 3, weight: 48 },
     "Eerste Divisie": { tier: 4, weight: 38 },
-    "Russian Premier League": { tier: 3, weight: 45 },
     "Regionalliga": { tier: 5, weight: 25 },
     "Welsh Premier League": { tier: 5, weight: 28 },
     "NIFL Premiership": { tier: 5, weight: 28 },
@@ -79,24 +79,11 @@ const squadData = {
         "fifaRanking": 1,
         "players": [
             {
-                "name": "Luis Malagón",
-                "position": "GK",
-                "club": "América",
-                "league": "Liga MX",
-                "age": 28,
-                "birthplace": {
-                    "city": "Zamora de Hidalgo",
-                    "country": "Mexico",
-                    "lat": 19.9833,
-                    "lng": -102.2833
-                }
-            },
-            {
                 "name": "Raúl Rangel",
                 "position": "GK",
                 "club": "Guadalajara",
                 "league": "Liga MX",
-                "age": 25,
+                "age": 26,
                 "birthplace": {
                     "city": "Zapotlán el Grande Municipality",
                     "country": "Mexico",
@@ -118,6 +105,19 @@ const squadData = {
                 }
             },
             {
+                "name": "Guillermo Ochoa",
+                "position": "GK",
+                "club": "AEL Limassol",
+                "league": "Cypriot First Division",
+                "age": 40,
+                "birthplace": {
+                    "city": "Guadalajara",
+                    "country": "Mexico",
+                    "lat": 20.6764,
+                    "lng": -103.3422
+                }
+            },
+            {
                 "name": "Jorge Sánchez",
                 "position": "DF",
                 "club": "PAOK",
@@ -128,6 +128,32 @@ const squadData = {
                     "country": "Mexico",
                     "lat": 25.5439,
                     "lng": -103.419
+                }
+            },
+            {
+                "name": "César Montes",
+                "position": "DF",
+                "club": "Lokomotiv Moscow",
+                "league": "Russian Premier League",
+                "age": 29,
+                "birthplace": {
+                    "city": "Hermosillo",
+                    "country": "Mexico",
+                    "lat": 29.075,
+                    "lng": -110.9583
+                }
+            },
+            {
+                "name": "Johan Vásquez",
+                "position": "DF",
+                "club": "Genoa",
+                "league": "Serie A",
+                "age": 27,
+                "birthplace": {
+                    "city": "Navojoa",
+                    "country": "Mexico",
+                    "lat": 27.0817,
+                    "lng": -109.4456
                 }
             },
             {
@@ -144,94 +170,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Víctor Guzmán",
-                "position": "DF",
-                "club": "Monterrey",
-                "league": "Liga MX",
-                "age": 23,
-                "birthplace": {
-                    "city": "Tijuana",
-                    "country": "Mexico",
-                    "lat": 32.5364,
-                    "lng": -117.0372
-                }
-            },
-            {
-                "name": "Denzell García",
-                "position": "DF",
-                "club": "Juárez",
-                "league": "Liga MX",
-                "age": 22,
-                "birthplace": {
-                    "city": "Los Mochis",
-                    "country": "Mexico",
-                    "lat": 25.7936,
-                    "lng": -108.9969
-                }
-            },
-            {
-                "name": "Ramón Juárez",
-                "position": "DF",
-                "club": "América",
-                "league": "Liga MX",
-                "age": 25,
-                "birthplace": {
-                    "city": "Rioverde",
-                    "country": "Mexico",
-                    "lat": 21.9303,
-                    "lng": -99.9917
-                }
-            },
-            {
-                "name": "Eduardo Águila",
-                "position": "DF",
-                "club": "Atlético San Luis",
-                "league": "Liga MX",
-                "age": 23,
-                "birthplace": {
-                    "city": "Mexico City",
-                    "country": "Mexico",
-                    "lat": 19.7915,
-                    "lng": -99.2894
-                }
-            },
-            {
                 "name": "Everardo López",
                 "position": "DF",
                 "club": "Toluca",
                 "league": "Liga MX",
-                "age": 20,
+                "age": 21,
                 "birthplace": {
                     "city": "Mexico City",
                     "country": "Mexico",
-                    "lat": 20.0098,
-                    "lng": -99.3061
-                }
-            },
-            {
-                "name": "Jesús Gallardo",
-                "position": "DF",
-                "club": "Toluca",
-                "league": "Liga MX",
-                "age": 31,
-                "birthplace": {
-                    "city": "Cárdenas",
-                    "country": "Mexico",
-                    "lat": 17.9894,
-                    "lng": -93.3769
-                }
-            },
-            {
-                "name": "Bryan González",
-                "position": "DF",
-                "club": "Guadalajara",
-                "league": "Liga MX",
-                "age": 22,
-                "birthplace": {
-                    "city": "Juárez Municipality",
-                    "country": "Mexico",
-                    "lat": 17.7,
-                    "lng": -93.2
+                    "lat": 19.8096,
+                    "lng": -99.2022
                 }
             },
             {
@@ -248,6 +196,32 @@ const squadData = {
                 }
             },
             {
+                "name": "Jesús Gallardo",
+                "position": "DF",
+                "club": "Toluca",
+                "league": "Liga MX",
+                "age": 31,
+                "birthplace": {
+                    "city": "Cárdenas",
+                    "country": "Mexico",
+                    "lat": 17.9894,
+                    "lng": -93.3769
+                }
+            },
+            {
+                "name": "Jesús Alberto Angulo",
+                "position": "DF",
+                "club": "UANL",
+                "league": "Liga MX",
+                "age": 28,
+                "birthplace": {
+                    "city": "Culiacán",
+                    "country": "Mexico",
+                    "lat": 24.7903,
+                    "lng": -107.3878
+                }
+            },
+            {
                 "name": "Érik Lira",
                 "position": "MF",
                 "club": "Cruz Azul",
@@ -258,19 +232,6 @@ const squadData = {
                     "country": "Mexico",
                     "lat": 19.4431,
                     "lng": -99.1447
-                }
-            },
-            {
-                "name": "Luis Romo",
-                "position": "MF",
-                "club": "Guadalajara",
-                "league": "Liga MX",
-                "age": 30,
-                "birthplace": {
-                    "city": "Ahome",
-                    "country": "Mexico",
-                    "lat": 25.8333,
-                    "lng": -109.05
                 }
             },
             {
@@ -287,42 +248,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Alexis Gutiérrez",
+                "name": "Érick Sánchez",
                 "position": "MF",
                 "club": "América",
                 "league": "Liga MX",
-                "age": 24,
+                "age": 26,
                 "birthplace": {
-                    "city": "León de Los Aldama",
+                    "city": "Gustavo A. Madero",
                     "country": "Mexico",
-                    "lat": 21.1219,
-                    "lng": -101.6833
+                    "lat": 19.4841,
+                    "lng": -99.1114
                 }
             },
             {
-                "name": "Marcel Ruiz",
+                "name": "Orbelín Pineda",
                 "position": "MF",
-                "club": "Toluca",
-                "league": "Liga MX",
-                "age": 25,
+                "club": "AEK Athens",
+                "league": "Greek Super League",
+                "age": 30,
                 "birthplace": {
-                    "city": "Mérida",
+                    "city": "Coyuca de Catalán Municipality",
                     "country": "Mexico",
-                    "lat": 20.97,
-                    "lng": -89.62
-                }
-            },
-            {
-                "name": "Diego Lainez",
-                "position": "MF",
-                "club": "UANL",
-                "league": "Liga MX",
-                "age": 25,
-                "birthplace": {
-                    "city": "Villahermosa",
-                    "country": "Mexico",
-                    "lat": 17.9878,
-                    "lng": -92.9194
+                    "lat": 18.0888,
+                    "lng": -100.9149
                 }
             },
             {
@@ -339,29 +287,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Kevin Castañeda",
+                "name": "Álvaro Fidalgo",
                 "position": "MF",
-                "club": "Tijuana",
-                "league": "Liga MX",
-                "age": 26,
+                "club": "Betis",
+                "league": "La Liga",
+                "age": 28,
                 "birthplace": {
-                    "city": "Guadalajara",
-                    "country": "Mexico",
-                    "lat": 20.6764,
-                    "lng": -103.3422
+                    "city": "Oviedo",
+                    "country": "Spain",
+                    "lat": 43.3625,
+                    "lng": -5.8503
                 }
             },
             {
-                "name": "Iker Fimbres",
+                "name": "Denzell García",
                 "position": "MF",
-                "club": "Monterrey",
+                "club": "Juárez",
                 "league": "Liga MX",
-                "age": 20,
+                "age": 22,
                 "birthplace": {
-                    "city": "Hermosillo",
+                    "city": "Los Mochis",
                     "country": "Mexico",
-                    "lat": 29.075,
-                    "lng": -110.9583
+                    "lat": 25.7936,
+                    "lng": -108.9969
                 }
             },
             {
@@ -378,8 +326,73 @@ const squadData = {
                 }
             },
             {
+                "name": "Germán Berterame",
+                "position": "FW",
+                "club": "Inter Miami",
+                "league": "MLS",
+                "age": 27,
+                "birthplace": {
+                    "city": "Villa María",
+                    "country": "Argentina",
+                    "lat": -32.4103,
+                    "lng": -63.2314
+                }
+            },
+            {
+                "name": "Raúl Jiménez",
+                "position": "FW",
+                "club": "Fulham",
+                "league": "Premier League",
+                "age": 34,
+                "birthplace": {
+                    "city": "Tepeji del Río de Ocampo Municipality",
+                    "country": "Mexico",
+                    "lat": 19.9053,
+                    "lng": -99.3417
+                }
+            },
+            {
+                "name": "Alexis Vega",
+                "position": "FW",
+                "club": "Toluca",
+                "league": "Liga MX",
+                "age": 28,
+                "birthplace": {
+                    "city": "Cuauhtémoc",
+                    "country": "Mexico",
+                    "lat": 19.4431,
+                    "lng": -99.1447
+                }
+            },
+            {
+                "name": "Guillermo Martínez",
+                "position": "FW",
+                "club": "UNAM",
+                "league": "Liga MX",
+                "age": 31,
+                "birthplace": {
+                    "city": "Celaya",
+                    "country": "Mexico",
+                    "lat": 20.5289,
+                    "lng": -100.815
+                }
+            },
+            {
+                "name": "Julián Quiñones",
+                "position": "FW",
+                "club": "Al-Qadsiah",
+                "league": "Saudi Pro League",
+                "age": 29,
+                "birthplace": {
+                    "city": "Magüí Payán",
+                    "country": "Colombia",
+                    "lat": 1.7658,
+                    "lng": -78.1828
+                }
+            },
+            {
                 "name": "Roberto Alvarado",
-                "position": "MF",
+                "position": "FW",
                 "club": "Guadalajara",
                 "league": "Liga MX",
                 "age": 27,
@@ -391,19 +404,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Ángel Sepúlveda",
-                "position": "FW",
-                "club": "Guadalajara",
-                "league": "Liga MX",
-                "age": 34,
-                "birthplace": {
-                    "city": "Apatzingán de la Constitución",
-                    "country": "Mexico",
-                    "lat": 19.0886,
-                    "lng": -102.3508
-                }
-            },
-            {
                 "name": "Armando González",
                 "position": "FW",
                 "club": "Guadalajara",
@@ -412,21 +412,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Mexico City",
                     "country": "Mexico",
-                    "lat": 19.1858,
-                    "lng": -99.6441
-                }
-            },
-            {
-                "name": "Germán Berterame",
-                "position": "FW",
-                "club": "Inter Miami",
-                "league": "MLS",
-                "age": 27,
-                "birthplace": {
-                    "city": "Villa María",
-                    "country": "Argentina",
-                    "lat": -32.4103,
-                    "lng": -63.2314
+                    "lat": 19.5454,
+                    "lng": -98.4415
                 }
             }
         ]
@@ -451,16 +438,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Sipho Chaine",
+                "name": "Renaldo Leaner",
                 "position": "GK",
-                "club": "Orlando Pirates",
+                "club": "Sekhukhune United",
                 "league": "South African Premier League",
-                "age": 29,
+                "age": 28,
                 "birthplace": {
                     "city": "Johannesburg",
                     "country": "South Africa",
-                    "lat": -27.0944,
-                    "lng": 27.0421
+                    "lat": -26.0077,
+                    "lng": 27.8918
                 }
             },
             {
@@ -477,29 +464,55 @@ const squadData = {
                 }
             },
             {
-                "name": "Tylon Smith",
-                "position": "DF",
-                "club": "Queens Park Rangers",
-                "league": "EFL Championship",
-                "age": 20,
+                "name": "Sipho Chaine",
+                "position": "GK",
+                "club": "Orlando Pirates",
+                "league": "South African Premier League",
+                "age": 29,
                 "birthplace": {
                     "city": "Johannesburg",
                     "country": "South Africa",
-                    "lat": -26.325,
-                    "lng": 27.3053
+                    "lat": -26.6166,
+                    "lng": 27.7395
+                }
+            },
+            {
+                "name": "Darren Johnson",
+                "position": "GK",
+                "club": "AmaZulu",
+                "league": "South African Premier League",
+                "age": 29,
+                "birthplace": {
+                    "city": "Johannesburg",
+                    "country": "South Africa",
+                    "lat": -26.2521,
+                    "lng": 27.0609
+                }
+            },
+            {
+                "name": "Thabang Matuludi",
+                "position": "DF",
+                "club": "Polokwane City",
+                "league": "South African Premier League",
+                "age": 27,
+                "birthplace": {
+                    "city": "Johannesburg",
+                    "country": "South Africa",
+                    "lat": -25.2114,
+                    "lng": 27.2783
                 }
             },
             {
                 "name": "Khulumani Ndamane",
                 "position": "DF",
-                "club": "TS Galaxy",
+                "club": "Mamelodi Sundowns",
                 "league": "South African Premier League",
                 "age": 22,
                 "birthplace": {
                     "city": "Johannesburg",
                     "country": "South Africa",
-                    "lat": -25.2727,
-                    "lng": 27.9999
+                    "lat": -26.5228,
+                    "lng": 28.3398
                 }
             },
             {
@@ -518,7 +531,7 @@ const squadData = {
             {
                 "name": "Mbekezeli Mbokazi",
                 "position": "DF",
-                "club": "Chicago Fire",
+                "club": "Chicago Fire FC",
                 "league": "MLS",
                 "age": 20,
                 "birthplace": {
@@ -533,12 +546,12 @@ const squadData = {
                 "position": "DF",
                 "club": "Molde",
                 "league": "Norwegian Eliteserien",
-                "age": 21,
+                "age": 22,
                 "birthplace": {
                     "city": "Johannesburg",
                     "country": "South Africa",
-                    "lat": -26.8973,
-                    "lng": 27.6305
+                    "lat": -26.6468,
+                    "lng": 27.3509
                 }
             },
             {
@@ -568,42 +581,68 @@ const squadData = {
                 }
             },
             {
-                "name": "Siyabonga Ngezana",
+                "name": "Ime Okon",
                 "position": "DF",
-                "club": "FCSB",
-                "league": "Romanian SuperLiga",
-                "age": 28,
+                "club": "Hannover 96",
+                "league": "2. Bundesliga",
+                "age": 22,
                 "birthplace": {
-                    "city": "Sebokeng",
+                    "city": "South Africa",
                     "country": "South Africa",
-                    "lat": -26.5769,
-                    "lng": 27.8406
+                    "lat": -29,
+                    "lng": 24
                 }
             },
             {
-                "name": "Thabang Matuludi",
+                "name": "Deano van Rooyen",
                 "position": "DF",
-                "club": "Polokwane City",
+                "club": "Orlando Pirates",
                 "league": "South African Premier League",
-                "age": 27,
+                "age": 29,
                 "birthplace": {
                     "city": "Johannesburg",
                     "country": "South Africa",
-                    "lat": -26.6762,
-                    "lng": 27.7646
+                    "lat": -26.7068,
+                    "lng": 27.3487
                 }
             },
             {
-                "name": "Thabo Moloisane",
+                "name": "Tylon Smith",
                 "position": "DF",
-                "club": "Stellenbosch",
-                "league": "South African Premier League",
-                "age": 26,
+                "club": "Queens Park Rangers",
+                "league": "EFL Championship",
+                "age": 20,
                 "birthplace": {
-                    "city": "City of Tshwane Metropolitan Municipality",
+                    "city": "Johannesburg",
                     "country": "South Africa",
-                    "lat": -25.6667,
-                    "lng": 28.3333
+                    "lat": -25.2631,
+                    "lng": 28.2385
+                }
+            },
+            {
+                "name": "Vuyo Letlapa",
+                "position": "DF",
+                "club": "Sekhukhune United",
+                "league": "South African Premier League",
+                "age": 22,
+                "birthplace": {
+                    "city": "Johannesburg",
+                    "country": "South Africa",
+                    "lat": -25.7783,
+                    "lng": 28.8697
+                }
+            },
+            {
+                "name": "Olwethu Makhanya",
+                "position": "DF",
+                "club": "Philadelphia Union",
+                "league": "MLS",
+                "age": 21,
+                "birthplace": {
+                    "city": "Johannesburg",
+                    "country": "South Africa",
+                    "lat": -26.5191,
+                    "lng": 28.5441
                 }
             },
             {
@@ -624,12 +663,25 @@ const squadData = {
                 "position": "MF",
                 "club": "Orlando Pirates",
                 "league": "South African Premier League",
-                "age": 25,
+                "age": 26,
                 "birthplace": {
                     "city": "Johannesburg",
                     "country": "South Africa",
-                    "lat": -27.1429,
-                    "lng": 28.8673
+                    "lat": -25.7319,
+                    "lng": 27.3437
+                }
+            },
+            {
+                "name": "Themba Zwane",
+                "position": "MF",
+                "club": "Mamelodi Sundowns",
+                "league": "South African Premier League",
+                "age": 36,
+                "birthplace": {
+                    "city": "Thembisa",
+                    "country": "South Africa",
+                    "lat": -26.0055,
+                    "lng": 28.2102
                 }
             },
             {
@@ -637,7 +689,7 @@ const squadData = {
                 "position": "MF",
                 "club": "Tondela",
                 "league": "Primeira Liga",
-                "age": 26,
+                "age": 27,
                 "birthplace": {
                     "city": "Durban",
                     "country": "South Africa",
@@ -646,42 +698,55 @@ const squadData = {
                 }
             },
             {
-                "name": "Bathusi Aubaas",
+                "name": "Jayden Adams",
                 "position": "MF",
                 "club": "Mamelodi Sundowns",
                 "league": "South African Premier League",
-                "age": 27,
+                "age": 24,
                 "birthplace": {
-                    "city": "Kuruman",
+                    "city": "Cape Town",
                     "country": "South Africa",
-                    "lat": -27.4597,
-                    "lng": 23.4125
+                    "lat": -33.9253,
+                    "lng": 18.4239
                 }
             },
             {
-                "name": "Sipho Mbule",
+                "name": "Luke Le Roux",
                 "position": "MF",
-                "club": "Orlando Pirates",
-                "league": "South African Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Bethlehem",
-                    "country": "South Africa",
-                    "lat": -28.2333,
-                    "lng": 28.3
-                }
-            },
-            {
-                "name": "Mduduzi Shabalala",
-                "position": "MF",
-                "club": "Kaizer Chiefs",
-                "league": "South African Premier League",
-                "age": 22,
+                "club": "Portsmouth",
+                "league": "EFL Championship",
+                "age": 26,
                 "birthplace": {
                     "city": "Soweto",
                     "country": "South Africa",
                     "lat": -26.2678,
                     "lng": 27.8586
+                }
+            },
+            {
+                "name": "Ndamulelo Maphangule",
+                "position": "MF",
+                "club": "Polokwane City",
+                "league": "South African Premier League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Johannesburg",
+                    "country": "South Africa",
+                    "lat": -26.5335,
+                    "lng": 27.4756
+                }
+            },
+            {
+                "name": "Mthetheleli Mthiyane",
+                "position": "MF",
+                "club": "Stellenbosch",
+                "league": "South African Premier League",
+                "age": 25,
+                "birthplace": {
+                    "city": "Johannesburg",
+                    "country": "South Africa",
+                    "lat": -25.7913,
+                    "lng": 27.4074
                 }
             },
             {
@@ -737,68 +802,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Mohau Nkota",
+                "name": "Thapelo Maseko",
                 "position": "FW",
-                "club": "Al-Ettifaq",
-                "league": "Saudi Pro League",
-                "age": 21,
-                "birthplace": {
-                    "city": "Kimberley",
-                    "country": "South Africa",
-                    "lat": -28.7383,
-                    "lng": 24.7639
-                }
-            },
-            {
-                "name": "Elias Mokwana",
-                "position": "FW",
-                "club": "Al-Hazem",
-                "league": "Saudi Pro League",
-                "age": 26,
-                "birthplace": {
-                    "city": "KwaMhlanga",
-                    "country": "South Africa",
-                    "lat": -25.432,
-                    "lng": 28.708
-                }
-            },
-            {
-                "name": "Evidence Makgopa",
-                "position": "FW",
-                "club": "Orlando Pirates",
-                "league": "South African Premier League",
-                "age": 25,
+                "club": "AEL Limassol",
+                "league": "Cypriot First Division",
+                "age": 22,
                 "birthplace": {
                     "city": "Johannesburg",
                     "country": "South Africa",
-                    "lat": -26.4178,
-                    "lng": 28.0988
-                }
-            },
-            {
-                "name": "Shandre Campbell",
-                "position": "FW",
-                "club": "Club Brugge",
-                "league": "Belgian Pro League",
-                "age": 20,
-                "birthplace": {
-                    "city": "Johannesburg",
-                    "country": "South Africa",
-                    "lat": -26.2044,
-                    "lng": 28.0416
-                }
-            },
-            {
-                "name": "Iqraam Rayners",
-                "position": "FW",
-                "club": "Mamelodi Sundowns",
-                "league": "South African Premier League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Cape Town",
-                    "country": "South Africa",
-                    "lat": -33.9253,
-                    "lng": 18.4239
+                    "lat": -26.0236,
+                    "lng": 28.6255
                 }
             }
         ]
@@ -849,24 +862,24 @@ const squadData = {
                 }
             },
             {
-                "name": "Lee Myung-jae",
-                "position": "DF",
-                "club": "Daejeon Hana Citizen",
-                "league": "K League 1",
-                "age": 32,
-                "birthplace": {
-                    "city": "Seoul",
-                    "country": "South Korea",
-                    "lat": 37.56,
-                    "lng": 126.99
-                }
-            },
-            {
                 "name": "Lee Han-beom",
                 "position": "DF",
                 "club": "Midtjylland",
                 "league": "Danish Superliga",
                 "age": 23,
+                "birthplace": {
+                    "city": "South Korea",
+                    "country": "South Korea",
+                    "lat": 36,
+                    "lng": 128
+                }
+            },
+            {
+                "name": "Kim Ju-sung",
+                "position": "DF",
+                "club": "Sanfrecce Hiroshima",
+                "league": "J1 League",
+                "age": 25,
                 "birthplace": {
                     "city": "South Korea",
                     "country": "South Korea",
@@ -927,19 +940,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Park Jin-seob",
-                "position": "DF",
-                "club": "Zhejiang FC",
-                "league": "Chinese Super League",
-                "age": 30,
-                "birthplace": {
-                    "city": "South Korea",
-                    "country": "South Korea",
-                    "lat": 36,
-                    "lng": 128
-                }
-            },
-            {
                 "name": "Seol Young-woo",
                 "position": "DF",
                 "club": "Red Star Belgrade",
@@ -966,11 +966,11 @@ const squadData = {
                 }
             },
             {
-                "name": "Won Du-jae",
+                "name": "Hong Hyun-seok",
                 "position": "MF",
-                "club": "Khor Fakkan",
-                "league": "UAE Pro League",
-                "age": 28,
+                "club": "Gent",
+                "league": "Belgian Pro League",
+                "age": 26,
                 "birthplace": {
                     "city": "South Korea",
                     "country": "South Korea",
@@ -979,16 +979,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Seo Min-woo",
+                "name": "Paik Seung-ho",
                 "position": "MF",
-                "club": "Gangwon FC",
-                "league": "K League 1",
-                "age": 27,
+                "club": "Birmingham City",
+                "league": "Premier League",
+                "age": 29,
                 "birthplace": {
-                    "city": "South Korea",
+                    "city": "Suwon",
                     "country": "South Korea",
-                    "lat": 36,
-                    "lng": 128
+                    "lat": 37.2858,
+                    "lng": 127.01
                 }
             },
             {
@@ -1018,6 +1018,19 @@ const squadData = {
                 }
             },
             {
+                "name": "Park Jin-seob",
+                "position": "MF",
+                "club": "Zhejiang FC",
+                "league": "Chinese Super League",
+                "age": 30,
+                "birthplace": {
+                    "city": "South Korea",
+                    "country": "South Korea",
+                    "lat": 36,
+                    "lng": 128
+                }
+            },
+            {
                 "name": "Eom Ji-sung",
                 "position": "MF",
                 "club": "Swansea City",
@@ -1035,12 +1048,51 @@ const squadData = {
                 "position": "MF",
                 "club": "Paris Saint-Germain",
                 "league": "Ligue 1",
-                "age": 24,
+                "age": 25,
                 "birthplace": {
                     "city": "Incheon",
                     "country": "South Korea",
                     "lat": 37.4639,
                     "lng": 126.6486
+                }
+            },
+            {
+                "name": "Yang Hyun-jun",
+                "position": "MF",
+                "club": "Celtic",
+                "league": "Scottish Premiership",
+                "age": 23,
+                "birthplace": {
+                    "city": "Busan",
+                    "country": "South Korea",
+                    "lat": 35.18,
+                    "lng": 129.075
+                }
+            },
+            {
+                "name": "Kim Jin-gyu",
+                "position": "MF",
+                "club": "Jeonbuk Hyundai Motors",
+                "league": "K League 1",
+                "age": 29,
+                "birthplace": {
+                    "city": "Pohang",
+                    "country": "South Korea",
+                    "lat": 36.0322,
+                    "lng": 129.365
+                }
+            },
+            {
+                "name": "Kwon Hyeok-kyu",
+                "position": "MF",
+                "club": "Karlsruher SC",
+                "league": "2. Bundesliga",
+                "age": 25,
+                "birthplace": {
+                    "city": "South Korea",
+                    "country": "South Korea",
+                    "lat": 36,
+                    "lng": 128
                 }
             },
             {
@@ -1054,58 +1106,6 @@ const squadData = {
                     "country": "South Korea",
                     "lat": 35.8717,
                     "lng": 128.6017
-                }
-            },
-            {
-                "name": "Jens Castrop",
-                "position": "MF",
-                "club": "Borussia Mönchengladbach",
-                "league": "Bundesliga",
-                "age": 22,
-                "birthplace": {
-                    "city": "Düsseldorf",
-                    "country": "Germany",
-                    "lat": 51.2256,
-                    "lng": 6.7767
-                }
-            },
-            {
-                "name": "Kim Jin-gyu",
-                "position": "MF",
-                "club": "Jeonbuk Hyundai Motors",
-                "league": "K League 1",
-                "age": 28,
-                "birthplace": {
-                    "city": "Pohang",
-                    "country": "South Korea",
-                    "lat": 36.0322,
-                    "lng": 129.365
-                }
-            },
-            {
-                "name": "Kwon Hyeok-kyu",
-                "position": "MF",
-                "club": "Karlsruher SC",
-                "league": "Bundesliga",
-                "age": 24,
-                "birthplace": {
-                    "city": "South Korea",
-                    "country": "South Korea",
-                    "lat": 36,
-                    "lng": 128
-                }
-            },
-            {
-                "name": "Yang Min-hyeok",
-                "position": "MF",
-                "club": "Coventry City",
-                "league": "EFL Championship",
-                "age": 19,
-                "birthplace": {
-                    "city": "Gwangju",
-                    "country": "South Korea",
-                    "lat": 35.1667,
-                    "lng": 126.9167
                 }
             },
             {
@@ -1149,42 +1149,388 @@ const squadData = {
             }
         ]
     },
+    "CZE": {
+        "name": "Czechia",
+        "flag": "🇨🇿",
+        "confederation": "UEFA",
+        "fifaRanking": 4,
+        "players": [
+            {
+                "name": "Matěj Kovář",
+                "position": "GK",
+                "club": "PSV",
+                "league": "Eredivisie",
+                "age": 25,
+                "birthplace": {
+                    "city": "Uherské Hradiště",
+                    "country": "Czech Republic",
+                    "lat": 49.0698,
+                    "lng": 17.4597
+                }
+            },
+            {
+                "name": "Martin Jedlička",
+                "position": "GK",
+                "club": "Baník Ostrava",
+                "league": "Czech First League",
+                "age": 28,
+                "birthplace": {
+                    "city": "Příbram",
+                    "country": "Czech Republic",
+                    "lat": 49.69,
+                    "lng": 14.0105
+                }
+            },
+            {
+                "name": "Lukáš Horníček",
+                "position": "GK",
+                "club": "Braga",
+                "league": "Primeira Liga",
+                "age": 23,
+                "birthplace": {
+                    "city": "Vysoké Mýto",
+                    "country": "Czech Republic",
+                    "lat": 49.9532,
+                    "lng": 16.1618
+                }
+            },
+            {
+                "name": "Vladimír Coufal",
+                "position": "DF",
+                "club": "TSG Hoffenheim",
+                "league": "Bundesliga",
+                "age": 33,
+                "birthplace": {
+                    "city": "Prague",
+                    "country": "Czech Republic",
+                    "lat": 50.0875,
+                    "lng": 14.4214
+                }
+            },
+            {
+                "name": "Tomáš Holeš",
+                "position": "DF",
+                "club": "Slavia Prague",
+                "league": "Czech First League",
+                "age": 33,
+                "birthplace": {
+                    "city": "Polička",
+                    "country": "Czech Republic",
+                    "lat": 49.7147,
+                    "lng": 16.2655
+                }
+            },
+            {
+                "name": "Ladislav Krejčí",
+                "position": "DF",
+                "club": "Wolverhampton Wanderers",
+                "league": "Premier League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Rosice",
+                    "country": "Czech Republic",
+                    "lat": 49.1824,
+                    "lng": 16.3879
+                }
+            },
+            {
+                "name": "Jaroslav Zelený",
+                "position": "DF",
+                "club": "Sparta Prague",
+                "league": "Czech First League",
+                "age": 33,
+                "birthplace": {
+                    "city": "Hradec Králové",
+                    "country": "Czech Republic",
+                    "lat": 50.2092,
+                    "lng": 15.8319
+                }
+            },
+            {
+                "name": "David Jurásek",
+                "position": "DF",
+                "club": "Slavia Prague",
+                "league": "Czech First League",
+                "age": 25,
+                "birthplace": {
+                    "city": "Dolní Němčí",
+                    "country": "Czech Republic",
+                    "lat": 48.9684,
+                    "lng": 17.5859
+                }
+            },
+            {
+                "name": "Robin Hranáč",
+                "position": "DF",
+                "club": "TSG Hoffenheim",
+                "league": "Bundesliga",
+                "age": 26,
+                "birthplace": {
+                    "city": "Plzeň",
+                    "country": "Czech Republic",
+                    "lat": 49.7414,
+                    "lng": 13.3825
+                }
+            },
+            {
+                "name": "Martin Vitík",
+                "position": "DF",
+                "club": "Bologna",
+                "league": "Serie A",
+                "age": 23,
+                "birthplace": {
+                    "city": "Czech Republic",
+                    "country": "Czech Republic",
+                    "lat": 50,
+                    "lng": 15
+                }
+            },
+            {
+                "name": "Štěpán Chaloupek",
+                "position": "DF",
+                "club": "Slavia Prague",
+                "league": "Czech First League",
+                "age": 23,
+                "birthplace": {
+                    "city": "Meziboří",
+                    "country": "Czech Republic",
+                    "lat": 50.6212,
+                    "lng": 13.5988
+                }
+            },
+            {
+                "name": "Tomáš Souček",
+                "position": "MF",
+                "club": "West Ham United",
+                "league": "Premier League",
+                "age": 31,
+                "birthplace": {
+                    "city": "Havlíčkův Brod",
+                    "country": "Czech Republic",
+                    "lat": 49.6079,
+                    "lng": 15.5807
+                }
+            },
+            {
+                "name": "Vladimír Darida",
+                "position": "MF",
+                "club": "Hradec Králové",
+                "league": "Czech First League",
+                "age": 35,
+                "birthplace": {
+                    "city": "Plzeň",
+                    "country": "Czech Republic",
+                    "lat": 49.7414,
+                    "lng": 13.3825
+                }
+            },
+            {
+                "name": "Lukáš Provod",
+                "position": "MF",
+                "club": "Slavia Prague",
+                "league": "Czech First League",
+                "age": 29,
+                "birthplace": {
+                    "city": "Plzeň",
+                    "country": "Czech Republic",
+                    "lat": 49.7414,
+                    "lng": 13.3825
+                }
+            },
+            {
+                "name": "Michal Sadílek",
+                "position": "MF",
+                "club": "Slavia Prague",
+                "league": "Czech First League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Uherské Hradiště",
+                    "country": "Czech Republic",
+                    "lat": 49.0698,
+                    "lng": 17.4597
+                }
+            },
+            {
+                "name": "Pavel Šulc",
+                "position": "MF",
+                "club": "Lyon",
+                "league": "Ligue 1",
+                "age": 25,
+                "birthplace": {
+                    "city": "Karlovy Vary",
+                    "country": "Czech Republic",
+                    "lat": 50.2306,
+                    "lng": 12.8725
+                }
+            },
+            {
+                "name": "Lukáš Červ",
+                "position": "MF",
+                "club": "Viktoria Plzeň",
+                "league": "Czech First League",
+                "age": 24,
+                "birthplace": {
+                    "city": "Prague",
+                    "country": "Czech Republic",
+                    "lat": 50.0875,
+                    "lng": 14.4214
+                }
+            },
+            {
+                "name": "Adam Karabec",
+                "position": "MF",
+                "club": "Lyon",
+                "league": "Ligue 1",
+                "age": 22,
+                "birthplace": {
+                    "city": "Czech Republic",
+                    "country": "Czech Republic",
+                    "lat": 50,
+                    "lng": 15
+                }
+            },
+            {
+                "name": "Tomáš Ladra",
+                "position": "MF",
+                "club": "Viktoria Plzeň",
+                "league": "Czech First League",
+                "age": 28,
+                "birthplace": {
+                    "city": "Česká Lípa",
+                    "country": "Czech Republic",
+                    "lat": 50.6856,
+                    "lng": 14.5377
+                }
+            },
+            {
+                "name": "Pavel Bucha",
+                "position": "MF",
+                "club": "Cincinnati",
+                "league": "MLS",
+                "age": 28,
+                "birthplace": {
+                    "city": "Nelahozeves",
+                    "country": "Czech Republic",
+                    "lat": 50.2616,
+                    "lng": 14.2989
+                }
+            },
+            {
+                "name": "Denis Višinský",
+                "position": "MF",
+                "club": "Viktoria Plzeň",
+                "league": "Czech First League",
+                "age": 23,
+                "birthplace": {
+                    "city": "Mělník",
+                    "country": "Czech Republic",
+                    "lat": 50.3506,
+                    "lng": 14.4742
+                }
+            },
+            {
+                "name": "Patrik Schick",
+                "position": "FW",
+                "club": "Bayer Leverkusen",
+                "league": "Bundesliga",
+                "age": 30,
+                "birthplace": {
+                    "city": "Prague",
+                    "country": "Czech Republic",
+                    "lat": 50.0875,
+                    "lng": 14.4214
+                }
+            },
+            {
+                "name": "Tomáš Chorý",
+                "position": "FW",
+                "club": "Slavia Prague",
+                "league": "Czech First League",
+                "age": 31,
+                "birthplace": {
+                    "city": "Olomouc",
+                    "country": "Czech Republic",
+                    "lat": 49.5939,
+                    "lng": 17.2508
+                }
+            },
+            {
+                "name": "Mojmír Chytil",
+                "position": "FW",
+                "club": "Slavia Prague",
+                "league": "Czech First League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Skalka",
+                    "country": "Czech Republic",
+                    "lat": 49.4031,
+                    "lng": 17.1698
+                }
+            },
+            {
+                "name": "Jan Kliment",
+                "position": "FW",
+                "club": "Sigma Olomouc",
+                "league": "Czech First League",
+                "age": 32,
+                "birthplace": {
+                    "city": "Myjava",
+                    "country": "Slovakia",
+                    "lat": 48.7578,
+                    "lng": 17.5686
+                }
+            }
+        ]
+    },
     "CAN": {
         "name": "Canada",
         "flag": "🇨🇦",
         "confederation": "CONCACAF",
-        "fifaRanking": 4,
+        "fifaRanking": 5,
         "players": [
             {
-                "name": "James Pantemis",
+                "name": "Dayne St. Clair",
                 "position": "GK",
-                "club": "Portland Timbers",
+                "club": "Inter Miami",
                 "league": "MLS",
                 "age": 28,
                 "birthplace": {
-                    "city": "Kirkland",
+                    "city": "Pickering",
                     "country": "Canada",
-                    "lat": 45.45,
-                    "lng": -73.8667
+                    "lat": 43.9069,
+                    "lng": -79.1308
                 }
             },
             {
-                "name": "Luka Gavran",
+                "name": "Maxime Crépeau",
                 "position": "GK",
-                "club": "Toronto FC",
+                "club": "Orlando City",
                 "league": "MLS",
-                "age": 25,
+                "age": 31,
                 "birthplace": {
-                    "city": "Hamilton",
+                    "city": "Greenfield Park",
                     "country": "Canada",
-                    "lat": 43.2567,
-                    "lng": -79.8692
+                    "lat": 45.4833,
+                    "lng": -73.45
+                }
+            },
+            {
+                "name": "Owen Goodman",
+                "position": "GK",
+                "club": "Barnsley",
+                "league": "EFL League One",
+                "age": 22,
+                "birthplace": {
+                    "city": "Toronto",
+                    "country": "Canada",
+                    "lat": 43.8643,
+                    "lng": -79.7103
                 }
             },
             {
                 "name": "Jahkeele Marshall-Rutty",
                 "position": "DF",
-                "club": "CF Montréal",
+                "club": "New York Red Bulls",
                 "league": "MLS",
                 "age": 21,
                 "birthplace": {
@@ -1195,11 +1541,11 @@ const squadData = {
                 }
             },
             {
-                "name": "Zorhan Bassong",
+                "name": "Ralph Priso",
                 "position": "DF",
-                "club": "Sporting Kansas City",
-                "league": "Primeira Liga",
-                "age": 26,
+                "club": "Vancouver Whitecaps",
+                "league": "MLS",
+                "age": 23,
                 "birthplace": {
                     "city": "Toronto",
                     "country": "Canada",
@@ -1234,42 +1580,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Ralph Priso",
+                "name": "Derek Cornelius",
                 "position": "DF",
-                "club": "Vancouver Whitecaps",
-                "league": "MLS",
-                "age": 23,
+                "club": "Rangers",
+                "league": "Scottish Premiership",
+                "age": 28,
                 "birthplace": {
-                    "city": "Toronto",
+                    "city": "Ajax",
                     "country": "Canada",
-                    "lat": 43.6703,
-                    "lng": -79.3867
+                    "lat": 43.8583,
+                    "lng": -79.0364
                 }
             },
             {
-                "name": "Matteo de Brienne",
+                "name": "Luc de Fougerolles",
                 "position": "DF",
-                "club": "GAIS",
-                "league": "Swedish Allsvenskan",
-                "age": 23,
+                "club": "Dender",
+                "league": "Belgian Pro League",
+                "age": 20,
                 "birthplace": {
-                    "city": "Ottawa",
-                    "country": "Canada",
-                    "lat": 45.4247,
-                    "lng": -75.695
-                }
-            },
-            {
-                "name": "Noah Abatneh",
-                "position": "DF",
-                "club": "Atlético Ottawa",
-                "league": "MLS",
-                "age": 21,
-                "birthplace": {
-                    "city": "Toronto",
-                    "country": "Canada",
-                    "lat": 43.6624,
-                    "lng": -79.1801
+                    "city": "London",
+                    "country": "United Kingdom",
+                    "lat": 51.5072,
+                    "lng": -0.1275
                 }
             },
             {
@@ -1286,6 +1619,45 @@ const squadData = {
                 }
             },
             {
+                "name": "Niko Sigur",
+                "position": "DF",
+                "club": "Hajduk Split",
+                "league": "Croatian First League",
+                "age": 22,
+                "birthplace": {
+                    "city": "Burnaby",
+                    "country": "Canada",
+                    "lat": 49.25,
+                    "lng": -122.9492
+                }
+            },
+            {
+                "name": "Alistair Johnston",
+                "position": "DF",
+                "club": "Celtic",
+                "league": "Scottish Premiership",
+                "age": 27,
+                "birthplace": {
+                    "city": "Vancouver",
+                    "country": "Canada",
+                    "lat": 49.2608,
+                    "lng": -123.1139
+                }
+            },
+            {
+                "name": "Moïse Bombito",
+                "position": "DF",
+                "club": "Nice",
+                "league": "Ligue 1",
+                "age": 26,
+                "birthplace": {
+                    "city": "Montreal",
+                    "country": "Canada",
+                    "lat": 45.5033,
+                    "lng": -73.5868
+                }
+            },
+            {
                 "name": "Mathieu Choinière",
                 "position": "MF",
                 "club": "Los Angeles FC",
@@ -1299,11 +1671,24 @@ const squadData = {
                 }
             },
             {
-                "name": "Jayden Nelson",
+                "name": "Ismaël Koné",
                 "position": "MF",
-                "club": "Austin FC",
-                "league": "MLS",
+                "club": "Sassuolo",
+                "league": "Serie A",
                 "age": 23,
+                "birthplace": {
+                    "city": "Abidjan",
+                    "country": "Ivory Coast",
+                    "lat": 5.3364,
+                    "lng": -4.0267
+                }
+            },
+            {
+                "name": "Junior Hoilett",
+                "position": "MF",
+                "club": "Swindon Town",
+                "league": "Premier League",
+                "age": 35,
                 "birthplace": {
                     "city": "Brampton",
                     "country": "Canada",
@@ -1312,42 +1697,55 @@ const squadData = {
                 }
             },
             {
-                "name": "Jeevan Badwal",
+                "name": "Liam Millar",
                 "position": "MF",
-                "club": "Vancouver Whitecaps",
-                "league": "MLS",
-                "age": 19,
+                "club": "Hull City",
+                "league": "EFL Championship",
+                "age": 26,
                 "birthplace": {
                     "city": "Toronto",
                     "country": "Canada",
-                    "lat": 43.7687,
-                    "lng": -79.119
+                    "lat": 43.6703,
+                    "lng": -79.3867
                 }
             },
             {
-                "name": "Shola Jimoh",
+                "name": "Tajon Buchanan",
                 "position": "MF",
-                "club": "Inter Toronto",
-                "league": "MLS",
-                "age": 17,
+                "club": "Villarreal",
+                "league": "La Liga",
+                "age": 27,
                 "birthplace": {
-                    "city": "Toronto",
+                    "city": "Brampton",
                     "country": "Canada",
-                    "lat": 43.3907,
-                    "lng": -80.395
+                    "lat": 43.6833,
+                    "lng": -79.7667
                 }
             },
             {
-                "name": "Malik Henry",
+                "name": "Nathan Saliba",
                 "position": "MF",
-                "club": "Toronto FC",
-                "league": "MLS",
-                "age": 23,
+                "club": "Anderlecht",
+                "league": "Belgian Pro League",
+                "age": 22,
+                "birthplace": {
+                    "city": "Longueuil",
+                    "country": "Canada",
+                    "lat": 45.5141,
+                    "lng": -73.438
+                }
+            },
+            {
+                "name": "Ali Ahmed",
+                "position": "MF",
+                "club": "Norwich City",
+                "league": "EFL Championship",
+                "age": 25,
                 "birthplace": {
                     "city": "Toronto",
                     "country": "Canada",
-                    "lat": 43.163,
-                    "lng": -80.076
+                    "lat": 43.6703,
+                    "lng": -79.3867
                 }
             },
             {
@@ -1364,6 +1762,84 @@ const squadData = {
                 }
             },
             {
+                "name": "Marcelo Flores",
+                "position": "MF",
+                "club": "UANL",
+                "league": "Liga MX",
+                "age": 22,
+                "birthplace": {
+                    "city": "Georgetown",
+                    "country": "Canada",
+                    "lat": 43.6469,
+                    "lng": -79.91
+                }
+            },
+            {
+                "name": "Jonathan David",
+                "position": "FW",
+                "club": "Juventus",
+                "league": "Serie A",
+                "age": 26,
+                "birthplace": {
+                    "city": "Brooklyn",
+                    "country": "United States",
+                    "lat": 40.6508,
+                    "lng": -73.9497
+                }
+            },
+            {
+                "name": "Cyle Larin",
+                "position": "FW",
+                "club": "Southampton",
+                "league": "Premier League",
+                "age": 30,
+                "birthplace": {
+                    "city": "Brampton",
+                    "country": "Canada",
+                    "lat": 43.6833,
+                    "lng": -79.7667
+                }
+            },
+            {
+                "name": "Tani Oluwaseyi",
+                "position": "FW",
+                "club": "Villarreal",
+                "league": "La Liga",
+                "age": 25,
+                "birthplace": {
+                    "city": "Abuja",
+                    "country": "Nigeria",
+                    "lat": 9.0556,
+                    "lng": 7.4914
+                }
+            },
+            {
+                "name": "Aribim Pepple",
+                "position": "FW",
+                "club": "Plymouth Argyle",
+                "league": "EFL League One",
+                "age": 23,
+                "birthplace": {
+                    "city": "Kettering",
+                    "country": "United Kingdom",
+                    "lat": 52.4,
+                    "lng": -0.7333
+                }
+            },
+            {
+                "name": "Daniel Jebbison",
+                "position": "FW",
+                "club": "Preston North End",
+                "league": "EFL Championship",
+                "age": 22,
+                "birthplace": {
+                    "city": "Oakville",
+                    "country": "Canada",
+                    "lat": 43.45,
+                    "lng": -79.6833
+                }
+            },
+            {
                 "name": "Jacen Russell-Rowe",
                 "position": "FW",
                 "club": "Toulouse",
@@ -1375,44 +1851,325 @@ const squadData = {
                     "lat": 43.6703,
                     "lng": -79.3867
                 }
+            }
+        ]
+    },
+    "BIH": {
+        "name": "Bosnia & Herz.",
+        "flag": "🇧🇦",
+        "confederation": "UEFA",
+        "fifaRanking": 6,
+        "players": [
+            {
+                "name": "Nikola Vasilj",
+                "position": "GK",
+                "club": "FC St. Pauli",
+                "league": "Bundesliga",
+                "age": 30,
+                "birthplace": {
+                    "city": "Mostar",
+                    "country": "Bosnia and Herzegovina",
+                    "lat": 43.3436,
+                    "lng": 17.8075
+                }
             },
             {
-                "name": "Rayan Elloumi",
-                "position": "FW",
-                "club": "Vancouver Whitecaps",
-                "league": "MLS",
+                "name": "Osman Hadžikić",
+                "position": "GK",
+                "club": "Slaven Belupo",
+                "league": "Croatian First League",
+                "age": 30,
+                "birthplace": {
+                    "city": "Klosterneuburg",
+                    "country": "Austria",
+                    "lat": 48.3042,
+                    "lng": 16.3167
+                }
+            },
+            {
+                "name": "Martin Zlomislić",
+                "position": "GK",
+                "club": "Rijeka",
+                "league": "Croatian First League",
+                "age": 27,
+                "birthplace": {
+                    "city": "Posušje",
+                    "country": "Bosnia and Herzegovina",
+                    "lat": 43.4722,
+                    "lng": 17.3267
+                }
+            },
+            {
+                "name": "Nihad Mujakić",
+                "position": "DF",
+                "club": "Gaziantep",
+                "league": "Turkish Super Lig",
+                "age": 27,
+                "birthplace": {
+                    "city": "Sarajevo",
+                    "country": "Bosnia and Herzegovina",
+                    "lat": 43.8564,
+                    "lng": 18.4131
+                }
+            },
+            {
+                "name": "Nidal Čelik",
+                "position": "DF",
+                "club": "Lens",
+                "league": "Ligue 1",
+                "age": 19,
+                "birthplace": {
+                    "city": "Sarajevo",
+                    "country": "Bosnia and Herzegovina",
+                    "lat": 43.8564,
+                    "lng": 18.4131
+                }
+            },
+            {
+                "name": "Tarik Muharemović",
+                "position": "DF",
+                "club": "Sassuolo",
+                "league": "Serie A",
+                "age": 23,
+                "birthplace": {
+                    "city": "Ljubljana",
+                    "country": "Slovenia",
+                    "lat": 46.0514,
+                    "lng": 14.5061
+                }
+            },
+            {
+                "name": "Sead Kolašinac",
+                "position": "DF",
+                "club": "Atalanta",
+                "league": "Serie A",
+                "age": 32,
+                "birthplace": {
+                    "city": "Karlsruhe",
+                    "country": "Germany",
+                    "lat": 49.0167,
+                    "lng": 8.4
+                }
+            },
+            {
+                "name": "Amar Dedić",
+                "position": "DF",
+                "club": "Benfica",
+                "league": "Primeira Liga",
+                "age": 23,
+                "birthplace": {
+                    "city": "Zell am See",
+                    "country": "Austria",
+                    "lat": 47.3233,
+                    "lng": 12.7981
+                }
+            },
+            {
+                "name": "Nikola Katić",
+                "position": "DF",
+                "club": "Schalke 04",
+                "league": "2. Bundesliga",
+                "age": 29,
+                "birthplace": {
+                    "city": "Ljubuški",
+                    "country": "Bosnia and Herzegovina",
+                    "lat": 43.1981,
+                    "lng": 17.5467
+                }
+            },
+            {
+                "name": "Stjepan Radeljić",
+                "position": "DF",
+                "club": "Rijeka",
+                "league": "Croatian First League",
+                "age": 28,
+                "birthplace": {
+                    "city": "Travnik",
+                    "country": "Bosnia and Herzegovina",
+                    "lat": 44.2254,
+                    "lng": 17.6669
+                }
+            },
+            {
+                "name": "Benjamin Tahirović",
+                "position": "MF",
+                "club": "Brøndby",
+                "league": "Danish Superliga",
+                "age": 23,
+                "birthplace": {
+                    "city": "Spånga-Tensta city district",
+                    "country": "Sweden",
+                    "lat": 59.3942,
+                    "lng": 17.9011
+                }
+            },
+            {
+                "name": "Armin Gigović",
+                "position": "MF",
+                "club": "Young Boys",
+                "league": "Swiss Super League",
+                "age": 23,
+                "birthplace": {
+                    "city": "Lund",
+                    "country": "Sweden",
+                    "lat": 55.7083,
+                    "lng": 13.1992
+                }
+            },
+            {
+                "name": "Ivan Bašić",
+                "position": "MF",
+                "club": "Astana",
+                "league": "Unknown",
+                "age": 23,
+                "birthplace": {
+                    "city": "Imotski",
+                    "country": "Croatia",
+                    "lat": 43.45,
+                    "lng": 17.2167
+                }
+            },
+            {
+                "name": "Ivan Šunjić",
+                "position": "MF",
+                "club": "Pafos",
+                "league": "Cypriot First Division",
+                "age": 29,
+                "birthplace": {
+                    "city": "Zenica",
+                    "country": "Bosnia and Herzegovina",
+                    "lat": 44.2017,
+                    "lng": 17.9039
+                }
+            },
+            {
+                "name": "Amar Memić",
+                "position": "MF",
+                "club": "Viktoria Plzeň",
+                "league": "Czech First League",
+                "age": 25,
+                "birthplace": {
+                    "city": "Sarajevo",
+                    "country": "Bosnia and Herzegovina",
+                    "lat": 43.8564,
+                    "lng": 18.4131
+                }
+            },
+            {
+                "name": "Amir Hadžiahmetović",
+                "position": "MF",
+                "club": "Hull City",
+                "league": "EFL Championship",
+                "age": 29,
+                "birthplace": {
+                    "city": "Nexø",
+                    "country": "Denmark",
+                    "lat": 55.0625,
+                    "lng": 15.1319
+                }
+            },
+            {
+                "name": "Dženis Burnić",
+                "position": "MF",
+                "club": "Karlsruher SC",
+                "league": "2. Bundesliga",
+                "age": 27,
+                "birthplace": {
+                    "city": "Hamm",
+                    "country": "Germany",
+                    "lat": 51.6814,
+                    "lng": 7.8192
+                }
+            },
+            {
+                "name": "Kerim Alajbegović",
+                "position": "MF",
+                "club": "Red Bull Salzburg",
+                "league": "Austrian Bundesliga",
                 "age": 18,
                 "birthplace": {
-                    "city": "Toronto",
-                    "country": "Canada",
-                    "lat": 43.2799,
-                    "lng": -79.9985
+                    "city": "Cologne",
+                    "country": "Germany",
+                    "lat": 50.9422,
+                    "lng": 6.9578
                 }
             },
             {
-                "name": "Tiago Coimbra",
+                "name": "Esmir Bajraktarević",
+                "position": "MF",
+                "club": "PSV",
+                "league": "Eredivisie",
+                "age": 21,
+                "birthplace": {
+                    "city": "Appleton",
+                    "country": "United States",
+                    "lat": 44.2822,
+                    "lng": -88.4183
+                }
+            },
+            {
+                "name": "Samed Baždar",
                 "position": "FW",
-                "club": "IFK Göteborg",
-                "league": "Swedish Allsvenskan",
+                "club": "Jagiellonia Białystok",
+                "league": "Polish Ekstraklasa",
                 "age": 22,
                 "birthplace": {
-                    "city": "Toronto",
-                    "country": "Canada",
-                    "lat": 43.6775,
-                    "lng": -79.5596
+                    "city": "Novi Pazar",
+                    "country": "Serbia",
+                    "lat": 43.15,
+                    "lng": 20.5167
                 }
             },
             {
-                "name": "Marius Aiyenero",
+                "name": "Ermedin Demirović",
                 "position": "FW",
-                "club": "Los Angeles FC 2",
-                "league": "MLS",
-                "age": 17,
+                "club": "VfB Stuttgart",
+                "league": "Bundesliga",
+                "age": 28,
                 "birthplace": {
-                    "city": "Toronto",
-                    "country": "Canada",
-                    "lat": 43.716,
-                    "lng": -79.3031
+                    "city": "Hamburg",
+                    "country": "Germany",
+                    "lat": 53.55,
+                    "lng": 10
+                }
+            },
+            {
+                "name": "Edin Džeko",
+                "position": "FW",
+                "club": "Schalke 04",
+                "league": "2. Bundesliga",
+                "age": 40,
+                "birthplace": {
+                    "city": "Sarajevo",
+                    "country": "Bosnia and Herzegovina",
+                    "lat": 43.8564,
+                    "lng": 18.4131
+                }
+            },
+            {
+                "name": "Haris Tabaković",
+                "position": "FW",
+                "club": "Borussia Mönchengladbach",
+                "league": "Bundesliga",
+                "age": 31,
+                "birthplace": {
+                    "city": "Grenchen",
+                    "country": "Switzerland",
+                    "lat": 47.1931,
+                    "lng": 7.3958
+                }
+            },
+            {
+                "name": "Jovo Lukić",
+                "position": "FW",
+                "club": "Universitatea Cluj",
+                "league": "Romanian SuperLiga",
+                "age": 27,
+                "birthplace": {
+                    "city": "Banja Luka",
+                    "country": "Bosnia and Herzegovina",
+                    "lat": 44.7725,
+                    "lng": 17.1925
                 }
             }
         ]
@@ -1421,7 +2178,7 @@ const squadData = {
         "name": "Qatar",
         "flag": "🇶🇦",
         "confederation": "AFC",
-        "fifaRanking": 5,
+        "fifaRanking": 7,
         "players": [
             {
                 "name": "Shehab Ellethy",
@@ -1432,8 +2189,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Doha",
                     "country": "Qatar",
-                    "lat": 24.8926,
-                    "lng": 51.3858
+                    "lat": 25.3865,
+                    "lng": 52.2402
                 }
             },
             {
@@ -1454,12 +2211,25 @@ const squadData = {
                 "position": "GK",
                 "club": "Al-Sadd",
                 "league": "Qatar Stars League",
-                "age": 27,
+                "age": 28,
                 "birthplace": {
                     "city": "Doha",
                     "country": "Qatar",
-                    "lat": 25.2862,
+                    "lat": 25.2861,
                     "lng": 51.5294
+                }
+            },
+            {
+                "name": "Salah Zakaria",
+                "position": "GK",
+                "club": "Al-Duhail",
+                "league": "Qatar Stars League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Qatar",
+                    "country": "Qatar",
+                    "lat": 25.2695,
+                    "lng": 51.2128
                 }
             },
             {
@@ -1471,8 +2241,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Doha",
                     "country": "Qatar",
-                    "lat": 25.9089,
-                    "lng": 52.2528
+                    "lat": 25.2695,
+                    "lng": 51.4289
                 }
             },
             {
@@ -1506,24 +2276,24 @@ const squadData = {
                 "position": "DF",
                 "club": "Al-Gharafa",
                 "league": "Qatar Stars League",
-                "age": 20,
+                "age": 21,
                 "birthplace": {
                     "city": "Doha",
                     "country": "Qatar",
-                    "lat": 25.8026,
-                    "lng": 51.5661
+                    "lat": 24.6449,
+                    "lng": 51.296
                 }
             },
             {
                 "name": "Homam Ahmed",
                 "position": "DF",
-                "club": "Al-Duhail",
-                "league": "Qatar Stars League",
+                "club": "Cultural Leonesa",
+                "league": "La Liga",
                 "age": 26,
                 "birthplace": {
                     "city": "Doha",
                     "country": "Qatar",
-                    "lat": 25.2862,
+                    "lat": 25.2861,
                     "lng": 51.5294
                 }
             },
@@ -1532,12 +2302,12 @@ const squadData = {
                 "position": "DF",
                 "club": "Al-Duhail",
                 "league": "Qatar Stars League",
-                "age": 26,
+                "age": 27,
                 "birthplace": {
                     "city": "Doha",
                     "country": "Qatar",
-                    "lat": 26.1133,
-                    "lng": 52.3615
+                    "lat": 24.9877,
+                    "lng": 52.3077
                 }
             },
             {
@@ -1549,8 +2319,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Doha",
                     "country": "Qatar",
-                    "lat": 24.4156,
-                    "lng": 51.4809
+                    "lat": 25.5395,
+                    "lng": 52.2246
                 }
             },
             {
@@ -1564,6 +2334,84 @@ const squadData = {
                     "country": "Qatar",
                     "lat": 25.2695,
                     "lng": 51.2128
+                }
+            },
+            {
+                "name": "Boualem Khoukhi",
+                "position": "DF",
+                "club": "Al-Sadd",
+                "league": "Qatar Stars League",
+                "age": 35,
+                "birthplace": {
+                    "city": "Bou Ismaïl",
+                    "country": "Algeria",
+                    "lat": 36.65,
+                    "lng": 2.7
+                }
+            },
+            {
+                "name": "Pedro Miguel",
+                "position": "DF",
+                "club": "Al-Sadd",
+                "league": "Qatar Stars League",
+                "age": 35,
+                "birthplace": {
+                    "city": "Algueirão - Mem Martins",
+                    "country": "Portugal",
+                    "lat": 38.7941,
+                    "lng": -9.3451
+                }
+            },
+            {
+                "name": "Bassam Al-Rawi",
+                "position": "DF",
+                "club": "Al-Duhail",
+                "league": "Qatar Stars League",
+                "age": 28,
+                "birthplace": {
+                    "city": "Baghdad",
+                    "country": "Iraq",
+                    "lat": 33.3153,
+                    "lng": 44.3661
+                }
+            },
+            {
+                "name": "Niall Mason",
+                "position": "DF",
+                "club": "Qatar SC",
+                "league": "Qatar Stars League",
+                "age": 29,
+                "birthplace": {
+                    "city": "Bromley",
+                    "country": "United Kingdom",
+                    "lat": 51.4064,
+                    "lng": 0.0183
+                }
+            },
+            {
+                "name": "Eisa Palangi",
+                "position": "DF",
+                "club": "Qatar SC",
+                "league": "Qatar Stars League",
+                "age": 27,
+                "birthplace": {
+                    "city": "Qatar",
+                    "country": "Qatar",
+                    "lat": 25.2695,
+                    "lng": 51.2128
+                }
+            },
+            {
+                "name": "Marwan Sherif",
+                "position": "DF",
+                "club": "Al-Arabi",
+                "league": "Qatar Stars League",
+                "age": 19,
+                "birthplace": {
+                    "city": "Doha",
+                    "country": "Qatar",
+                    "lat": 26.2853,
+                    "lng": 50.7085
                 }
             },
             {
@@ -1588,7 +2436,7 @@ const squadData = {
                 "birthplace": {
                     "city": "Doha",
                     "country": "Qatar",
-                    "lat": 25.2862,
+                    "lat": 25.2861,
                     "lng": 51.5294
                 }
             },
@@ -1597,11 +2445,11 @@ const squadData = {
                 "position": "MF",
                 "club": "Al-Rayyan",
                 "league": "Qatar Stars League",
-                "age": 23,
+                "age": 24,
                 "birthplace": {
                     "city": "Doha",
                     "country": "Qatar",
-                    "lat": 25.2862,
+                    "lat": 25.2861,
                     "lng": 51.5294
                 }
             },
@@ -1627,8 +2475,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Doha",
                     "country": "Qatar",
-                    "lat": 24.7021,
-                    "lng": 51.4797
+                    "lat": 24.6459,
+                    "lng": 50.6266
                 }
             },
             {
@@ -1640,8 +2488,21 @@ const squadData = {
                 "birthplace": {
                     "city": "Doha",
                     "country": "Qatar",
-                    "lat": 25.2862,
+                    "lat": 25.2861,
                     "lng": 51.5294
+                }
+            },
+            {
+                "name": "Karim Boudiaf",
+                "position": "MF",
+                "club": "Al-Duhail",
+                "league": "Qatar Stars League",
+                "age": 35,
+                "birthplace": {
+                    "city": "Rueil-Malmaison",
+                    "country": "France",
+                    "lat": 48.8778,
+                    "lng": 2.1883
                 }
             },
             {
@@ -1658,6 +2519,45 @@ const squadData = {
                 }
             },
             {
+                "name": "Mostafa Meshaal",
+                "position": "MF",
+                "club": "Eupen",
+                "league": "Belgian Pro League",
+                "age": 25,
+                "birthplace": {
+                    "city": "Doha",
+                    "country": "Qatar",
+                    "lat": 25.2861,
+                    "lng": 51.5294
+                }
+            },
+            {
+                "name": "Ibrahim Al-Hassan",
+                "position": "MF",
+                "club": "Al-Rayyan",
+                "league": "Qatar Stars League",
+                "age": 20,
+                "birthplace": {
+                    "city": "Doha",
+                    "country": "Qatar",
+                    "lat": 26.2242,
+                    "lng": 50.9243
+                }
+            },
+            {
+                "name": "Anas Abweny",
+                "position": "MF",
+                "club": "Al-Sadd",
+                "league": "Qatar Stars League",
+                "age": 21,
+                "birthplace": {
+                    "city": "Doha",
+                    "country": "Qatar",
+                    "lat": 25.4851,
+                    "lng": 50.6374
+                }
+            },
+            {
                 "name": "Ahmed Alaaeldin",
                 "position": "FW",
                 "club": "Al-Rayyan",
@@ -1669,58 +2569,6 @@ const squadData = {
                     "lat": 30.5833,
                     "lng": 32.2667
                 }
-            },
-            {
-                "name": "Mohammed Muntari",
-                "position": "FW",
-                "club": "Al-Gharafa",
-                "league": "Qatar Stars League",
-                "age": 32,
-                "birthplace": {
-                    "city": "Kumasi",
-                    "country": "Ghana",
-                    "lat": 6.7,
-                    "lng": -1.625
-                }
-            },
-            {
-                "name": "Akram Afif",
-                "position": "FW",
-                "club": "Al-Sadd",
-                "league": "Qatar Stars League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Doha",
-                    "country": "Qatar",
-                    "lat": 25.2862,
-                    "lng": 51.5294
-                }
-            },
-            {
-                "name": "Edmilson Junior",
-                "position": "FW",
-                "club": "Al-Duhail",
-                "league": "Qatar Stars League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Liège",
-                    "country": "Belgium",
-                    "lat": 50.6397,
-                    "lng": 5.5706
-                }
-            },
-            {
-                "name": "Mohamed Khaled Gouda",
-                "position": "FW",
-                "club": "Al-Arabi",
-                "league": "Qatar Stars League",
-                "age": 21,
-                "birthplace": {
-                    "city": "Doha",
-                    "country": "Qatar",
-                    "lat": 24.8891,
-                    "lng": 50.6061
-                }
             }
         ]
     },
@@ -1728,7 +2576,7 @@ const squadData = {
         "name": "Switzerland",
         "flag": "🇨🇭",
         "confederation": "UEFA",
-        "fifaRanking": 6,
+        "fifaRanking": 8,
         "players": [
             {
                 "name": "Gregor Kobel",
@@ -1772,14 +2620,14 @@ const squadData = {
             {
                 "name": "Miro Muheim",
                 "position": "DF",
-                "club": "Hamburger SV",
+                "club": "Hamburg",
                 "league": "Bundesliga",
-                "age": 27,
+                "age": 28,
                 "birthplace": {
-                    "city": "Flüelen",
+                    "city": "Zurich",
                     "country": "Switzerland",
-                    "lat": 46.9123,
-                    "lng": 8.6432
+                    "lat": 47.3744,
+                    "lng": 8.5411
                 }
             },
             {
@@ -1787,7 +2635,7 @@ const squadData = {
                 "position": "DF",
                 "club": "Mainz 05",
                 "league": "Bundesliga",
-                "age": 32,
+                "age": 33,
                 "birthplace": {
                     "city": "Aarau",
                     "country": "Switzerland",
@@ -1822,19 +2670,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Bećir Omeragić",
-                "position": "DF",
-                "club": "Montpellier",
-                "league": "Ligue 1",
-                "age": 24,
-                "birthplace": {
-                    "city": "Geneva",
-                    "country": "Switzerland",
-                    "lat": 46.2,
-                    "lng": 6.15
-                }
-            },
-            {
                 "name": "Ricardo Rodriguez",
                 "position": "DF",
                 "club": "Betis",
@@ -1845,6 +2680,32 @@ const squadData = {
                     "country": "Switzerland",
                     "lat": 47.3744,
                     "lng": 8.5411
+                }
+            },
+            {
+                "name": "Eray Cömert",
+                "position": "DF",
+                "club": "Valencia",
+                "league": "La Liga",
+                "age": 28,
+                "birthplace": {
+                    "city": "Rheinfelden",
+                    "country": "Switzerland",
+                    "lat": 47.5539,
+                    "lng": 7.7958
+                }
+            },
+            {
+                "name": "Luca Jaquez",
+                "position": "DF",
+                "club": "Stuttgart",
+                "league": "Bundesliga",
+                "age": 22,
+                "birthplace": {
+                    "city": "Lucerne",
+                    "country": "Switzerland",
+                    "lat": 47.0523,
+                    "lng": 8.3059
                 }
             },
             {
@@ -1861,61 +2722,35 @@ const squadData = {
                 }
             },
             {
-                "name": "Adrian Bajrami",
-                "position": "DF",
-                "club": "Luzern",
-                "league": "Swiss Super League",
-                "age": 23,
+                "name": "Denis Zakaria",
+                "position": "MF",
+                "club": "Monaco",
+                "league": "Ligue 1",
+                "age": 29,
                 "birthplace": {
-                    "city": "Langenthal",
+                    "city": "Geneva",
                     "country": "Switzerland",
-                    "lat": 47.2153,
-                    "lng": 7.7889
+                    "lat": 46.2,
+                    "lng": 6.15
                 }
             },
             {
-                "name": "Isaac Schmidt",
-                "position": "DF",
-                "club": "Werder Bremen",
-                "league": "Bundesliga",
-                "age": 26,
-                "birthplace": {
-                    "city": "Lausanne",
-                    "country": "Switzerland",
-                    "lat": 46.5333,
-                    "lng": 6.6333
-                }
-            },
-            {
-                "name": "Luca Jaquez",
-                "position": "DF",
-                "club": "VfB Stuttgart",
-                "league": "Bundesliga",
-                "age": 22,
-                "birthplace": {
-                    "city": "Lucerne",
-                    "country": "Switzerland",
-                    "lat": 47.0523,
-                    "lng": 8.3059
-                }
-            },
-            {
-                "name": "Simon Sohm",
+                "name": "Remo Freuler",
                 "position": "MF",
                 "club": "Bologna",
                 "league": "Serie A",
-                "age": 24,
+                "age": 33,
                 "birthplace": {
-                    "city": "Zurich",
+                    "city": "Ennenda",
                     "country": "Switzerland",
-                    "lat": 47.3744,
-                    "lng": 8.5411
+                    "lat": 47.0336,
+                    "lng": 9.0775
                 }
             },
             {
                 "name": "Johan Manzambi",
                 "position": "MF",
-                "club": "SC Freiburg",
+                "club": "Freiburg",
                 "league": "Bundesliga",
                 "age": 20,
                 "birthplace": {
@@ -1939,6 +2774,19 @@ const squadData = {
                 }
             },
             {
+                "name": "Ardon Jashari",
+                "position": "MF",
+                "club": "Milan",
+                "league": "Serie A",
+                "age": 23,
+                "birthplace": {
+                    "city": "Cham",
+                    "country": "Switzerland",
+                    "lat": 47.1803,
+                    "lng": 8.4594
+                }
+            },
+            {
                 "name": "Djibril Sow",
                 "position": "MF",
                 "club": "Sevilla",
@@ -1952,16 +2800,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Christian Fassnacht",
+                "name": "Vincent Sierro",
+                "position": "MF",
+                "club": "Al-Shabab",
+                "league": "Saudi Pro League",
+                "age": 30,
+                "birthplace": {
+                    "city": "Sion",
+                    "country": "Switzerland",
+                    "lat": 46.2304,
+                    "lng": 7.3661
+                }
+            },
+            {
+                "name": "Alvyn Sanches",
                 "position": "MF",
                 "club": "Young Boys",
                 "league": "Swiss Super League",
-                "age": 32,
+                "age": 23,
                 "birthplace": {
-                    "city": "Zurich",
-                    "country": "Switzerland",
-                    "lat": 47.3744,
-                    "lng": 8.5411
+                    "city": "Créteil",
+                    "country": "France",
+                    "lat": 48.7778,
+                    "lng": 2.4531
                 }
             },
             {
@@ -1980,9 +2841,9 @@ const squadData = {
             {
                 "name": "Fabian Rieder",
                 "position": "MF",
-                "club": "FC Augsburg",
+                "club": "Augsburg",
                 "league": "Bundesliga",
-                "age": 23,
+                "age": 24,
                 "birthplace": {
                     "city": "Koppigen",
                     "country": "Switzerland",
@@ -1991,11 +2852,11 @@ const squadData = {
                 }
             },
             {
-                "name": "Vincent Sierro",
+                "name": "Joël Monteiro",
                 "position": "MF",
-                "club": "Al-Shabab",
-                "league": "Saudi Pro League",
-                "age": 30,
+                "club": "Young Boys",
+                "league": "Swiss Super League",
+                "age": 26,
                 "birthplace": {
                     "city": "Sion",
                     "country": "Switzerland",
@@ -2008,7 +2869,7 @@ const squadData = {
                 "position": "FW",
                 "club": "Rennes",
                 "league": "Ligue 1",
-                "age": 28,
+                "age": 29,
                 "birthplace": {
                     "city": "Yaoundé",
                     "country": "Cameroon",
@@ -2030,19 +2891,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Andi Zeqiri",
-                "position": "FW",
-                "club": "Widzew Łódź",
-                "league": "Polish Ekstraklasa",
-                "age": 26,
-                "birthplace": {
-                    "city": "Lausanne",
-                    "country": "Switzerland",
-                    "lat": 46.5333,
-                    "lng": 6.6333
-                }
-            },
-            {
                 "name": "Rubén Vargas",
                 "position": "FW",
                 "club": "Sevilla",
@@ -2056,16 +2904,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Cedric Itten",
+                "name": "Noah Okafor",
                 "position": "FW",
-                "club": "Fortuna Düsseldorf",
-                "league": "2. Bundesliga",
-                "age": 29,
+                "club": "Leeds United",
+                "league": "Premier League",
+                "age": 25,
                 "birthplace": {
-                    "city": "Basel",
+                    "city": "Switzerland",
                     "country": "Switzerland",
-                    "lat": 47.5606,
-                    "lng": 7.5906
+                    "lat": 46.7986,
+                    "lng": 8.232
                 }
             }
         ]
@@ -2074,19 +2922,19 @@ const squadData = {
         "name": "Brazil",
         "flag": "🇧🇷",
         "confederation": "CONMEBOL",
-        "fifaRanking": 7,
+        "fifaRanking": 9,
         "players": [
             {
-                "name": "John Victor",
+                "name": "Hugo Souza",
                 "position": "GK",
-                "club": "Nottingham Forest",
-                "league": "Premier League",
-                "age": 29,
+                "club": "Corinthians",
+                "league": "Brasileirão",
+                "age": 27,
                 "birthplace": {
-                    "city": "Diadema",
+                    "city": "Duque de Caxias",
                     "country": "Brazil",
-                    "lat": -23.6858,
-                    "lng": -46.6228
+                    "lat": -22.7858,
+                    "lng": -43.3119
                 }
             },
             {
@@ -2116,16 +2964,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Éder Militão",
+                "name": "Vitor Reis",
                 "position": "DF",
-                "club": "Real Madrid",
+                "club": "Girona",
                 "league": "La Liga",
-                "age": 28,
+                "age": 20,
                 "birthplace": {
-                    "city": "Sertãozinho",
+                    "city": "São José dos Campos",
                     "country": "Brazil",
-                    "lat": -21.1378,
-                    "lng": -47.99
+                    "lat": -23.1789,
+                    "lng": -45.8869
                 }
             },
             {
@@ -2142,20 +2990,20 @@ const squadData = {
                 }
             },
             {
-                "name": "Alex Sandro",
+                "name": "Douglas Santos",
                 "position": "DF",
-                "club": "Flamengo",
-                "league": "Brasileirão",
-                "age": 35,
+                "club": "Zenit Saint Petersburg",
+                "league": "Russian Premier League",
+                "age": 32,
                 "birthplace": {
-                    "city": "Catanduva",
+                    "city": "João Pessoa",
                     "country": "Brazil",
-                    "lat": -21.1378,
-                    "lng": -48.9728
+                    "lat": -7.12,
+                    "lng": -34.88
                 }
             },
             {
-                "name": "Danilo",
+                "name": "Danilo Luiz",
                 "position": "DF",
                 "club": "Flamengo",
                 "league": "Brasileirão",
@@ -2168,68 +3016,55 @@ const squadData = {
                 }
             },
             {
-                "name": "Wesley França",
+                "name": "Gleison Bremer",
                 "position": "DF",
-                "club": "Roma",
+                "club": "Juventus",
                 "league": "Serie A",
-                "age": 22,
+                "age": 29,
                 "birthplace": {
-                    "city": "Açailândia",
+                    "city": "Itapitanga",
                     "country": "Brazil",
-                    "lat": -4.9469,
-                    "lng": -47.505
+                    "lat": -14.4228,
+                    "lng": -39.565
                 }
             },
             {
-                "name": "Fabrício Bruno",
+                "name": "Léo Pereira",
+                "position": "DF",
+                "club": "Flamengo",
+                "league": "Brasileirão",
+                "age": 30,
+                "birthplace": {
+                    "city": "Curitiba",
+                    "country": "Brazil",
+                    "lat": -25.4297,
+                    "lng": -49.2719
+                }
+            },
+            {
+                "name": "Kaiki Bruno",
                 "position": "DF",
                 "club": "Cruzeiro",
                 "league": "Brasileirão",
-                "age": 29,
+                "age": 23,
                 "birthplace": {
-                    "city": "Ibirité",
+                    "city": "Betim",
                     "country": "Brazil",
-                    "lat": -20.0219,
-                    "lng": -44.0589
+                    "lat": -19.9678,
+                    "lng": -44.1978
                 }
             },
             {
-                "name": "Caio Henrique",
+                "name": "Roger Ibañez",
                 "position": "DF",
-                "club": "Monaco",
-                "league": "Ligue 1",
-                "age": 28,
+                "club": "Al-Ahli",
+                "league": "Saudi Pro League",
+                "age": 27,
                 "birthplace": {
-                    "city": "Santos",
+                    "city": "Canela",
                     "country": "Brazil",
-                    "lat": -23.9336,
-                    "lng": -46.3286
-                }
-            },
-            {
-                "name": "Luciano Juba",
-                "position": "DF",
-                "club": "Bahia",
-                "league": "Brasileirão",
-                "age": 26,
-                "birthplace": {
-                    "city": "Serra Talhada",
-                    "country": "Brazil",
-                    "lat": -7.9858,
-                    "lng": -38.2958
-                }
-            },
-            {
-                "name": "Paulo Henrique",
-                "position": "DF",
-                "club": "Vasco da Gama",
-                "league": "Brasileirão",
-                "age": 29,
-                "birthplace": {
-                    "city": "Sete Barras",
-                    "country": "Brazil",
-                    "lat": -24.3878,
-                    "lng": -47.9258
+                    "lat": -29.3658,
+                    "lng": -50.8158
                 }
             },
             {
@@ -2237,7 +3072,7 @@ const squadData = {
                 "position": "MF",
                 "club": "Manchester United",
                 "league": "Premier League",
-                "age": 33,
+                "age": 34,
                 "birthplace": {
                     "city": "São José dos Campos",
                     "country": "Brazil",
@@ -2246,24 +3081,11 @@ const squadData = {
                 }
             },
             {
-                "name": "Bruno Guimarães",
+                "name": "Andrey Santos",
                 "position": "MF",
-                "club": "Newcastle United",
+                "club": "Chelsea",
                 "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Rio de Janeiro",
-                    "country": "Brazil",
-                    "lat": -22.9111,
-                    "lng": -43.2056
-                }
-            },
-            {
-                "name": "Lucas Paquetá",
-                "position": "MF",
-                "club": "Flamengo",
-                "league": "Brasileirão",
-                "age": 28,
+                "age": 21,
                 "birthplace": {
                     "city": "Rio de Janeiro",
                     "country": "Brazil",
@@ -2285,81 +3107,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Andrey Santos",
+                "name": "Danilo Santos",
                 "position": "MF",
-                "club": "Chelsea",
-                "league": "Premier League",
-                "age": 21,
+                "club": "Botafogo",
+                "league": "Brasileirão",
+                "age": 24,
                 "birthplace": {
-                    "city": "Rio de Janeiro",
+                    "city": "Salvador",
                     "country": "Brazil",
-                    "lat": -22.9111,
-                    "lng": -43.2056
+                    "lat": -12.9831,
+                    "lng": -38.4928
                 }
             },
             {
-                "name": "Vinícius Júnior",
-                "position": "FW",
-                "club": "Real Madrid",
-                "league": "La Liga",
-                "age": 25,
+                "name": "Gabriel Sara",
+                "position": "MF",
+                "club": "Galatasaray",
+                "league": "Turkish Super Lig",
+                "age": 26,
                 "birthplace": {
-                    "city": "São Gonçalo",
+                    "city": "Joinville",
                     "country": "Brazil",
-                    "lat": -22.8269,
-                    "lng": -43.0539
-                }
-            },
-            {
-                "name": "Richarlison",
-                "position": "FW",
-                "club": "Tottenham Hotspur",
-                "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Nova Venécia",
-                    "country": "Brazil",
-                    "lat": -18.7108,
-                    "lng": -40.4008
-                }
-            },
-            {
-                "name": "Rodrygo",
-                "position": "FW",
-                "club": "Real Madrid",
-                "league": "La Liga",
-                "age": 25,
-                "birthplace": {
-                    "city": "Osasco",
-                    "country": "Brazil",
-                    "lat": -23.5328,
-                    "lng": -46.7919
-                }
-            },
-            {
-                "name": "Luiz Henrique",
-                "position": "FW",
-                "club": "Zenit Saint Petersburg",
-                "league": "Russian Premier League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Petrópolis",
-                    "country": "Brazil",
-                    "lat": -22.505,
-                    "lng": -43.1789
-                }
-            },
-            {
-                "name": "Estêvão Willian",
-                "position": "FW",
-                "club": "Chelsea",
-                "league": "Premier League",
-                "age": 18,
-                "birthplace": {
-                    "city": "Franca",
-                    "country": "Brazil",
-                    "lat": -20.5389,
-                    "lng": -47.4008
+                    "lat": -26.3039,
+                    "lng": -48.8458
                 }
             },
             {
@@ -2389,16 +3159,81 @@ const squadData = {
                 }
             },
             {
-                "name": "Vitor Roque",
+                "name": "Vinícius Júnior",
                 "position": "FW",
-                "club": "Palmeiras",
-                "league": "Brasileirão",
-                "age": 20,
+                "club": "Real Madrid",
+                "league": "La Liga",
+                "age": 25,
                 "birthplace": {
-                    "city": "Timóteo",
+                    "city": "São Gonçalo",
                     "country": "Brazil",
-                    "lat": -19.5828,
-                    "lng": -42.6439
+                    "lat": -22.8269,
+                    "lng": -43.0539
+                }
+            },
+            {
+                "name": "Endrick",
+                "position": "FW",
+                "club": "Lyon",
+                "league": "Ligue 1",
+                "age": 19,
+                "birthplace": {
+                    "city": "Taguatinga",
+                    "country": "Brazil",
+                    "lat": -15.8333,
+                    "lng": -48.0564
+                }
+            },
+            {
+                "name": "Luiz Henrique",
+                "position": "FW",
+                "club": "Zenit Saint Petersburg",
+                "league": "Russian Premier League",
+                "age": 25,
+                "birthplace": {
+                    "city": "Petrópolis",
+                    "country": "Brazil",
+                    "lat": -22.505,
+                    "lng": -43.1789
+                }
+            },
+            {
+                "name": "Igor Thiago",
+                "position": "FW",
+                "club": "Brentford",
+                "league": "Premier League",
+                "age": 24,
+                "birthplace": {
+                    "city": "Gama",
+                    "country": "Brazil",
+                    "lat": -16.0194,
+                    "lng": -48.0669
+                }
+            },
+            {
+                "name": "Gabriel Martinelli",
+                "position": "FW",
+                "club": "Arsenal",
+                "league": "Premier League",
+                "age": 24,
+                "birthplace": {
+                    "city": "Guarulhos",
+                    "country": "Brazil",
+                    "lat": -23.4667,
+                    "lng": -46.5333
+                }
+            },
+            {
+                "name": "Rayan",
+                "position": "FW",
+                "club": "Bournemouth",
+                "league": "Premier League",
+                "age": 19,
+                "birthplace": {
+                    "city": "Rio de Janeiro",
+                    "country": "Brazil",
+                    "lat": -22.9111,
+                    "lng": -43.2056
                 }
             }
         ]
@@ -2407,7 +3242,7 @@ const squadData = {
         "name": "Morocco",
         "flag": "🇲🇦",
         "confederation": "CAF",
-        "fifaRanking": 8,
+        "fifaRanking": 10,
         "players": [
             {
                 "name": "Yassine Bounou",
@@ -2423,19 +3258,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Munir Mohamedi",
-                "position": "GK",
-                "club": "RS Berkane",
-                "league": "Botola Pro",
-                "age": 36,
-                "birthplace": {
-                    "city": "Melilla",
-                    "country": "Spain",
-                    "lat": 35.2825,
-                    "lng": -2.9475
-                }
-            },
-            {
                 "name": "El Mehdi Al Harrar",
                 "position": "GK",
                 "club": "Raja Casablanca",
@@ -2446,6 +3268,19 @@ const squadData = {
                     "country": "Morocco",
                     "lat": 33.5992,
                     "lng": -7.62
+                }
+            },
+            {
+                "name": "Mehdi Benabid",
+                "position": "GK",
+                "club": "Wydad Casablanca",
+                "league": "Botola Pro",
+                "age": 28,
+                "birthplace": {
+                    "city": "Rabat",
+                    "country": "Morocco",
+                    "lat": 34.0211,
+                    "lng": -6.8414
                 }
             },
             {
@@ -2475,37 +3310,24 @@ const squadData = {
                 }
             },
             {
-                "name": "Nayef Aguerd",
+                "name": "Ismaël Baouf",
                 "position": "DF",
-                "club": "Marseille",
-                "league": "Ligue 1",
+                "club": "Cambuur",
+                "league": "Eredivisie",
+                "age": 19,
+                "birthplace": {
+                    "city": "Tubize",
+                    "country": "Belgium",
+                    "lat": 50.6928,
+                    "lng": 4.205
+                }
+            },
+            {
+                "name": "Issa Diop",
+                "position": "DF",
+                "club": "Fulham",
+                "league": "Premier League",
                 "age": 29,
-                "birthplace": {
-                    "city": "Kenitra",
-                    "country": "Morocco",
-                    "lat": 34.25,
-                    "lng": -6.5833
-                }
-            },
-            {
-                "name": "Romain Saïss",
-                "position": "DF",
-                "club": "Al-Sadd",
-                "league": "Qatar Stars League",
-                "age": 35,
-                "birthplace": {
-                    "city": "Bourg-de-Péage",
-                    "country": "France",
-                    "lat": 45.0378,
-                    "lng": 5.05
-                }
-            },
-            {
-                "name": "Mohamed Chibi",
-                "position": "DF",
-                "club": "Pyramids",
-                "league": "Egyptian Premier League",
-                "age": 33,
                 "birthplace": {
                     "city": "Casablanca",
                     "country": "Morocco",
@@ -2514,29 +3336,55 @@ const squadData = {
                 }
             },
             {
-                "name": "Jawad El Yamiq",
+                "name": "Zakaria El Ouahdi",
                 "position": "DF",
-                "club": "Zaragoza",
-                "league": "Segunda División",
-                "age": 33,
+                "club": "Genk",
+                "league": "Belgian Pro League",
+                "age": 24,
                 "birthplace": {
-                    "city": "Khouribga",
-                    "country": "Morocco",
-                    "lat": 32.88,
-                    "lng": -6.9
+                    "city": "Hoboken",
+                    "country": "Belgium",
+                    "lat": 51.1736,
+                    "lng": 4.3483
                 }
             },
             {
-                "name": "Adam Masina",
+                "name": "Souffian El Karouani",
                 "position": "DF",
-                "club": "Torino",
-                "league": "Serie A",
-                "age": 32,
+                "club": "Utrecht",
+                "league": "Eredivisie",
+                "age": 25,
                 "birthplace": {
-                    "city": "Khouribga",
-                    "country": "Morocco",
-                    "lat": 32.88,
-                    "lng": -6.9
+                    "city": "'s-Hertogenbosch",
+                    "country": "Netherlands",
+                    "lat": 51.7,
+                    "lng": 5.3167
+                }
+            },
+            {
+                "name": "Chadi Riad",
+                "position": "DF",
+                "club": "Crystal Palace",
+                "league": "Premier League",
+                "age": 22,
+                "birthplace": {
+                    "city": "Palma",
+                    "country": "Spain",
+                    "lat": 39.5667,
+                    "lng": 2.6497
+                }
+            },
+            {
+                "name": "Redouane Halhal",
+                "position": "DF",
+                "club": "Mechelen",
+                "league": "Belgian Pro League",
+                "age": 23,
+                "birthplace": {
+                    "city": "Montpellier",
+                    "country": "France",
+                    "lat": 43.6109,
+                    "lng": 3.8772
                 }
             },
             {
@@ -2566,29 +3414,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Youssef Belammari",
-                "position": "DF",
-                "club": "Al Ahly",
-                "league": "Egyptian Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Casablanca",
-                    "country": "Morocco",
-                    "lat": 33.5992,
-                    "lng": -7.62
-                }
-            },
-            {
-                "name": "Sofyan Amrabat",
+                "name": "Mohamed Rabie Hrimat",
                 "position": "MF",
-                "club": "Betis",
-                "league": "La Liga",
-                "age": 29,
+                "club": "AS FAR",
+                "league": "Botola Pro",
+                "age": 31,
                 "birthplace": {
-                    "city": "Huizen",
-                    "country": "Netherlands",
-                    "lat": 52.2994,
-                    "lng": 5.2531
+                    "city": "Rabat",
+                    "country": "Morocco",
+                    "lat": 34.0211,
+                    "lng": -6.8414
                 }
             },
             {
@@ -2657,16 +3492,42 @@ const squadData = {
                 }
             },
             {
-                "name": "Hamza Igamane",
-                "position": "FW",
-                "club": "Lille",
+                "name": "Samir El Mourabet",
+                "position": "MF",
+                "club": "Strasbourg",
                 "league": "Ligue 1",
-                "age": 23,
+                "age": 19,
                 "birthplace": {
-                    "city": "Temara",
+                    "city": "Strasbourg",
+                    "country": "France",
+                    "lat": 48.5733,
+                    "lng": 7.7522
+                }
+            },
+            {
+                "name": "Rayane Bounida",
+                "position": "MF",
+                "club": "Ajax",
+                "league": "Eredivisie",
+                "age": 20,
+                "birthplace": {
+                    "city": "Casablanca",
                     "country": "Morocco",
-                    "lat": 33.9234,
-                    "lng": -6.9076
+                    "lat": 33.5125,
+                    "lng": -8.0564
+                }
+            },
+            {
+                "name": "Chemsdine Talbi",
+                "position": "FW",
+                "club": "Sunderland",
+                "league": "Premier League",
+                "age": 20,
+                "birthplace": {
+                    "city": "Sambreville",
+                    "country": "Belgium",
+                    "lat": 50.45,
+                    "lng": 4.6
                 }
             },
             {
@@ -2696,29 +3557,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Eliesse Ben Seghir",
+                "name": "Gessime Yassine",
                 "position": "FW",
-                "club": "Bayer Leverkusen",
-                "league": "Bundesliga",
+                "club": "Strasbourg",
+                "league": "Ligue 1",
                 "age": 20,
                 "birthplace": {
-                    "city": "Saint-Tropez",
+                    "city": "Salon-de-Provence",
                     "country": "France",
-                    "lat": 43.2697,
-                    "lng": 6.6386
-                }
-            },
-            {
-                "name": "Ilias Akhomach",
-                "position": "FW",
-                "club": "Villarreal",
-                "league": "La Liga",
-                "age": 21,
-                "birthplace": {
-                    "city": "Igualada",
-                    "country": "Spain",
-                    "lat": 41.5814,
-                    "lng": 1.6208
+                    "lat": 43.6406,
+                    "lng": 5.0972
                 }
             },
             {
@@ -2735,16 +3583,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Youssef En-Nesyri",
+                "name": "Yassir Zabiri",
                 "position": "FW",
-                "club": "Al-Ittihad",
-                "league": "Saudi Pro League",
-                "age": 28,
+                "club": "Rennes",
+                "league": "Ligue 1",
+                "age": 21,
                 "birthplace": {
-                    "city": "Fez",
+                    "city": "Marrakesh",
                     "country": "Morocco",
-                    "lat": 34.0433,
-                    "lng": -5.0033
+                    "lat": 31.6295,
+                    "lng": -7.9811
                 }
             },
             {
@@ -2761,16 +3609,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Chemsdine Talbi",
+                "name": "Amine Adli",
                 "position": "FW",
-                "club": "Sunderland",
+                "club": "Bournemouth",
                 "league": "Premier League",
-                "age": 20,
+                "age": 25,
                 "birthplace": {
-                    "city": "Sambreville",
-                    "country": "Belgium",
-                    "lat": 50.45,
-                    "lng": 4.6
+                    "city": "Béziers",
+                    "country": "France",
+                    "lat": 43.3433,
+                    "lng": 3.2161
                 }
             }
         ]
@@ -2779,27 +3627,14 @@ const squadData = {
         "name": "Haiti",
         "flag": "🇭🇹",
         "confederation": "CONCACAF",
-        "fifaRanking": 9,
+        "fifaRanking": 11,
         "players": [
-            {
-                "name": "Johny Placide",
-                "position": "GK",
-                "club": "Bastia",
-                "league": "Ligue 2",
-                "age": 38,
-                "birthplace": {
-                    "city": "Montfermeil",
-                    "country": "France",
-                    "lat": 48.8983,
-                    "lng": 2.5647
-                }
-            },
             {
                 "name": "Alexandre Pierre",
                 "position": "GK",
                 "club": "Sochaux",
                 "league": "Ligue 1",
-                "age": 24,
+                "age": 25,
                 "birthplace": {
                     "city": "Aubervilliers",
                     "country": "France",
@@ -2821,29 +3656,42 @@ const squadData = {
                 }
             },
             {
-                "name": "Carlens Arcus",
-                "position": "DF",
-                "club": "Angers",
-                "league": "Ligue 1",
-                "age": 29,
+                "name": "Johny Placide",
+                "position": "GK",
+                "club": "Bastia",
+                "league": "Ligue 2",
+                "age": 38,
                 "birthplace": {
-                    "city": "Port-au-Prince",
-                    "country": "Haiti",
-                    "lat": 18.5469,
-                    "lng": -72.3403
+                    "city": "Montfermeil",
+                    "country": "France",
+                    "lat": 48.8983,
+                    "lng": 2.5647
                 }
             },
             {
-                "name": "Keeto Thermoncy",
+                "name": "Wilguens Paugain",
                 "position": "DF",
-                "club": "Young Boys",
-                "league": "Swiss Super League",
-                "age": 19,
+                "club": "Zulte Waregem",
+                "league": "Belgian Pro League",
+                "age": 24,
                 "birthplace": {
-                    "city": "Port-au-Prince",
+                    "city": "Thomazeau",
                     "country": "Haiti",
-                    "lat": 19.0302,
-                    "lng": -71.8208
+                    "lat": 18.65,
+                    "lng": -72.1
+                }
+            },
+            {
+                "name": "Delentz Pierre",
+                "position": "DF",
+                "club": "Tulsa",
+                "league": "MLS",
+                "age": 25,
+                "birthplace": {
+                    "city": "Fort Lauderdale",
+                    "country": "United States",
+                    "lat": 26.1358,
+                    "lng": -80.1419
                 }
             },
             {
@@ -2864,7 +3712,7 @@ const squadData = {
                 "position": "DF",
                 "club": "Lugano",
                 "league": "Swiss Super League",
-                "age": 26,
+                "age": 27,
                 "birthplace": {
                     "city": "Petite-Rivière-de-l'Artibonite",
                     "country": "Haiti",
@@ -2873,24 +3721,11 @@ const squadData = {
                 }
             },
             {
-                "name": "Garven Metusala",
-                "position": "DF",
-                "club": "Colorado Springs Switchbacks",
-                "league": "MLS",
-                "age": 26,
-                "birthplace": {
-                    "city": "Terrebonne",
-                    "country": "Canada",
-                    "lat": 45.7,
-                    "lng": -73.6333
-                }
-            },
-            {
                 "name": "Martin Expérience",
                 "position": "DF",
                 "club": "Nancy",
                 "league": "Ligue 1",
-                "age": 26,
+                "age": 27,
                 "birthplace": {
                     "city": "Châteaubriant",
                     "country": "France",
@@ -2912,16 +3747,42 @@ const squadData = {
                 }
             },
             {
-                "name": "Stéphane Lambese",
+                "name": "Jean-Kévin Duverne",
                 "position": "DF",
-                "club": "Fleury",
-                "league": "Ligue 1",
-                "age": 30,
+                "club": "Gent",
+                "league": "Belgian Pro League",
+                "age": 28,
                 "birthplace": {
-                    "city": "Nogent-sur-Marne",
+                    "city": "Paris",
                     "country": "France",
-                    "lat": 48.8367,
-                    "lng": 2.4825
+                    "lat": 48.8567,
+                    "lng": 2.3522
+                }
+            },
+            {
+                "name": "Carlens Arcus",
+                "position": "DF",
+                "club": "Angers",
+                "league": "Ligue 1",
+                "age": 29,
+                "birthplace": {
+                    "city": "Port-au-Prince",
+                    "country": "Haiti",
+                    "lat": 18.5469,
+                    "lng": -72.3403
+                }
+            },
+            {
+                "name": "Carl Sainté",
+                "position": "MF",
+                "club": "El Paso Locomotive",
+                "league": "MLS",
+                "age": 23,
+                "birthplace": {
+                    "city": "Grand-Goâve",
+                    "country": "Haiti",
+                    "lat": 18.4333,
+                    "lng": -72.7667
                 }
             },
             {
@@ -2942,38 +3803,12 @@ const squadData = {
                 "position": "MF",
                 "club": "Vizela",
                 "league": "Primeira Liga",
-                "age": 27,
+                "age": 28,
                 "birthplace": {
                     "city": "Tabarre",
                     "country": "Haiti",
                     "lat": 18.5833,
                     "lng": -72.2667
-                }
-            },
-            {
-                "name": "Carl Fred Sainté",
-                "position": "MF",
-                "club": "Phoenix Rising",
-                "league": "MLS",
-                "age": 23,
-                "birthplace": {
-                    "city": "Port-au-Prince",
-                    "country": "Haiti",
-                    "lat": 18.9727,
-                    "lng": -73.2293
-                }
-            },
-            {
-                "name": "Christopher Attys",
-                "position": "MF",
-                "club": "Triestina",
-                "league": "Serie A",
-                "age": 24,
-                "birthplace": {
-                    "city": "Saint-Maurice",
-                    "country": "France",
-                    "lat": 48.8183,
-                    "lng": 2.4347
                 }
             },
             {
@@ -2990,9 +3825,22 @@ const squadData = {
                 }
             },
             {
+                "name": "Woodensky Pierre",
+                "position": "MF",
+                "club": "Violette",
+                "league": "Unknown",
+                "age": 21,
+                "birthplace": {
+                    "city": "Port-au-Prince",
+                    "country": "Haiti",
+                    "lat": 19.0637,
+                    "lng": -72.4838
+                }
+            },
+            {
                 "name": "Derrick Etienne Jr.",
                 "position": "FW",
-                "club": "Toronto FC",
+                "club": "Toronto",
                 "league": "MLS",
                 "age": 29,
                 "birthplace": {
@@ -3018,9 +3866,9 @@ const squadData = {
             {
                 "name": "Don Deedson Louicius",
                 "position": "FW",
-                "club": "FC Dallas",
+                "club": "Dallas",
                 "league": "MLS",
-                "age": 24,
+                "age": 25,
                 "birthplace": {
                     "city": "Tabarre",
                     "country": "Haiti",
@@ -3044,7 +3892,7 @@ const squadData = {
             {
                 "name": "Woobens Pacius",
                 "position": "FW",
-                "club": "Tampa Bay Rowdies",
+                "club": "Nashville",
                 "league": "MLS",
                 "age": 24,
                 "birthplace": {
@@ -3052,6 +3900,45 @@ const squadData = {
                     "country": "Canada",
                     "lat": 45.7,
                     "lng": -73.6333
+                }
+            },
+            {
+                "name": "Wilson Isidor",
+                "position": "FW",
+                "club": "Sunderland",
+                "league": "Premier League",
+                "age": 25,
+                "birthplace": {
+                    "city": "Rennes",
+                    "country": "France",
+                    "lat": 48.1142,
+                    "lng": -1.6808
+                }
+            },
+            {
+                "name": "Yassin Fortuné",
+                "position": "FW",
+                "club": "Vizela",
+                "league": "Primeira Liga",
+                "age": 27,
+                "birthplace": {
+                    "city": "Aubervilliers",
+                    "country": "France",
+                    "lat": 48.9111,
+                    "lng": 2.3825
+                }
+            },
+            {
+                "name": "Frantzdy Pierrot",
+                "position": "FW",
+                "club": "Çaykur Rizespor",
+                "league": "Turkish Super Lig",
+                "age": 31,
+                "birthplace": {
+                    "city": "Port-au-Prince",
+                    "country": "Haiti",
+                    "lat": 18.5469,
+                    "lng": -72.3403
                 }
             },
             {
@@ -3066,19 +3953,6 @@ const squadData = {
                     "lat": 16.2675,
                     "lng": -61.5869
                 }
-            },
-            {
-                "name": "Frantzdy Pierrot",
-                "position": "FW",
-                "club": "Çaykur Rizespor",
-                "league": "Turkish Super Lig",
-                "age": 30,
-                "birthplace": {
-                    "city": "Port-au-Prince",
-                    "country": "Haiti",
-                    "lat": 18.5469,
-                    "lng": -72.3403
-                }
             }
         ]
     },
@@ -3086,19 +3960,19 @@ const squadData = {
         "name": "Scotland",
         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
         "confederation": "UEFA",
-        "fifaRanking": 10,
+        "fifaRanking": 12,
         "players": [
             {
-                "name": "Craig Gordon",
+                "name": "Angus Gunn",
                 "position": "GK",
-                "club": "Heart of Midlothian",
-                "league": "Scottish Premiership",
-                "age": 43,
+                "club": "Nottingham Forest",
+                "league": "Premier League",
+                "age": 30,
                 "birthplace": {
-                    "city": "Edinburgh",
+                    "city": "Norwich",
                     "country": "United Kingdom",
-                    "lat": 55.9533,
-                    "lng": -3.1892
+                    "lat": 52.6286,
+                    "lng": 1.2928
                 }
             },
             {
@@ -3128,16 +4002,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Aaron Hickey",
+                "name": "Nathan Patterson",
                 "position": "DF",
-                "club": "Brentford",
+                "club": "Everton",
                 "league": "Premier League",
-                "age": 23,
+                "age": 24,
                 "birthplace": {
-                    "city": "Scotland",
+                    "city": "Glasgow",
                     "country": "United Kingdom",
-                    "lat": 57,
-                    "lng": -5
+                    "lat": 55.8611,
+                    "lng": -4.25
                 }
             },
             {
@@ -3145,7 +4019,7 @@ const squadData = {
                 "position": "DF",
                 "club": "Liverpool",
                 "league": "Premier League",
-                "age": 31,
+                "age": 32,
                 "birthplace": {
                     "city": "Glasgow",
                     "country": "United Kingdom",
@@ -3206,16 +4080,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Scott McKenna",
+                "name": "Ross McCrorie",
                 "position": "DF",
-                "club": "Dinamo Zagreb",
-                "league": "Croatian First League",
-                "age": 29,
+                "club": "Bristol City",
+                "league": "EFL Championship",
+                "age": 28,
                 "birthplace": {
-                    "city": "Kirriemuir",
+                    "city": "Glasgow",
                     "country": "United Kingdom",
-                    "lat": 56.6736,
-                    "lng": -3.005
+                    "lat": 55.8611,
+                    "lng": -4.25
+                }
+            },
+            {
+                "name": "Dominic Hyam",
+                "position": "DF",
+                "club": "Wrexham",
+                "league": "Welsh Premier League",
+                "age": 30,
+                "birthplace": {
+                    "city": "Leuchars",
+                    "country": "United Kingdom",
+                    "lat": 56.3814,
+                    "lng": -2.8835
                 }
             },
             {
@@ -3232,16 +4119,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Josh Doig",
+                "name": "Scott McKenna",
                 "position": "DF",
-                "club": "Sassuolo",
-                "league": "Serie A",
-                "age": 23,
+                "club": "Dinamo Zagreb",
+                "league": "Croatian First League",
+                "age": 29,
                 "birthplace": {
-                    "city": "Edinburgh",
+                    "city": "Kirriemuir",
                     "country": "United Kingdom",
-                    "lat": 55.9533,
-                    "lng": -3.1892
+                    "lat": 56.6736,
+                    "lng": -3.005
                 }
             },
             {
@@ -3271,16 +4158,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Andy Irving",
+                "name": "Billy Gilmour",
                 "position": "MF",
-                "club": "Sparta Prague",
-                "league": "Czech First League",
-                "age": 25,
+                "club": "Napoli",
+                "league": "Serie A",
+                "age": 24,
                 "birthplace": {
-                    "city": "Edinburgh",
+                    "city": "Irvine",
                     "country": "United Kingdom",
-                    "lat": 55.9533,
-                    "lng": -3.1892
+                    "lat": 55.6194,
+                    "lng": -4.6611
                 }
             },
             {
@@ -3288,7 +4175,7 @@ const squadData = {
                 "position": "MF",
                 "club": "Bournemouth",
                 "league": "Premier League",
-                "age": 30,
+                "age": 31,
                 "birthplace": {
                     "city": "Inverness",
                     "country": "United Kingdom",
@@ -3297,29 +4184,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Connor Barron",
+                "name": "Lennon Miller",
                 "position": "MF",
-                "club": "Rangers",
-                "league": "Scottish Premiership",
-                "age": 23,
+                "club": "Udinese",
+                "league": "Serie A",
+                "age": 19,
                 "birthplace": {
-                    "city": "Kintore",
+                    "city": "Wishaw",
                     "country": "United Kingdom",
-                    "lat": 57.236,
-                    "lng": -2.3462
-                }
-            },
-            {
-                "name": "Ben Gannon-Doak",
-                "position": "MF",
-                "club": "Bournemouth",
-                "league": "Premier League",
-                "age": 20,
-                "birthplace": {
-                    "city": "Dalry",
-                    "country": "United Kingdom",
-                    "lat": 55.711,
-                    "lng": -4.723
+                    "lat": 55.7742,
+                    "lng": -3.9183
                 }
             },
             {
@@ -3349,10 +4223,23 @@ const squadData = {
                 }
             },
             {
+                "name": "Andy Irving",
+                "position": "MF",
+                "club": "Sparta Prague",
+                "league": "Czech First League",
+                "age": 25,
+                "birthplace": {
+                    "city": "Edinburgh",
+                    "country": "United Kingdom",
+                    "lat": 55.9533,
+                    "lng": -3.1892
+                }
+            },
+            {
                 "name": "Lyndon Dykes",
                 "position": "FW",
                 "club": "Charlton Athletic",
-                "league": "Premier League",
+                "league": "EFL League One",
                 "age": 30,
                 "birthplace": {
                     "city": "Gold Coast",
@@ -3379,7 +4266,7 @@ const squadData = {
                 "position": "FW",
                 "club": "Ipswich Town",
                 "league": "Premier League",
-                "age": 26,
+                "age": 27,
                 "birthplace": {
                     "city": "Sheffield",
                     "country": "United Kingdom",
@@ -3388,16 +4275,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Lawrence Shankland",
+                "name": "Tommy Conway",
                 "position": "FW",
-                "club": "Heart of Midlothian",
-                "league": "Scottish Premiership",
-                "age": 30,
+                "club": "Middlesbrough",
+                "league": "EFL Championship",
+                "age": 23,
                 "birthplace": {
-                    "city": "Glasgow",
+                    "city": "Taunton",
                     "country": "United Kingdom",
-                    "lat": 55.8611,
-                    "lng": -4.25
+                    "lat": 51.0192,
+                    "lng": -3.1
+                }
+            },
+            {
+                "name": "Findlay Curtis",
+                "position": "FW",
+                "club": "Kilmarnock",
+                "league": "Scottish Premiership",
+                "age": 19,
+                "birthplace": {
+                    "city": "Edinburgh",
+                    "country": "Scotland",
+                    "lat": 56.7074,
+                    "lng": -2.4429
                 }
             }
         ]
@@ -3406,8 +4306,21 @@ const squadData = {
         "name": "United States",
         "flag": "🇺🇸",
         "confederation": "CONCACAF",
-        "fifaRanking": 11,
+        "fifaRanking": 13,
         "players": [
+            {
+                "name": "Matt Turner",
+                "position": "GK",
+                "club": "New England Revolution",
+                "league": "MLS",
+                "age": 31,
+                "birthplace": {
+                    "city": "New York",
+                    "country": "USA",
+                    "lat": 40.5879,
+                    "lng": -74.7749
+                }
+            },
             {
                 "name": "Matt Freese",
                 "position": "GK",
@@ -3422,29 +4335,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Jonathan Klinsmann",
+                "name": "Chris Brady",
                 "position": "GK",
-                "club": "Cesena",
-                "league": "Serie B",
-                "age": 28,
-                "birthplace": {
-                    "city": "Newport Beach",
-                    "country": "United States",
-                    "lat": 33.6167,
-                    "lng": -117.8975
-                }
-            },
-            {
-                "name": "Roman Celentano",
-                "position": "GK",
-                "club": "FC Cincinnati",
+                "club": "Chicago Fire",
                 "league": "MLS",
-                "age": 25,
+                "age": 22,
                 "birthplace": {
-                    "city": "Naperville",
-                    "country": "United States",
-                    "lat": 41.7483,
-                    "lng": -88.1659
+                    "city": "New York",
+                    "country": "USA",
+                    "lat": 41.2484,
+                    "lng": -73.7393
                 }
             },
             {
@@ -3452,77 +4352,12 @@ const squadData = {
                 "position": "GK",
                 "club": "Columbus Crew",
                 "league": "MLS",
-                "age": 24,
+                "age": 25,
                 "birthplace": {
                     "city": "St. Charles",
                     "country": "United States",
                     "lat": 38.7886,
                     "lng": -90.5117
-                }
-            },
-            {
-                "name": "Sergiño Dest",
-                "position": "DF",
-                "club": "PSV Eindhoven",
-                "league": "Eredivisie",
-                "age": 25,
-                "birthplace": {
-                    "city": "Almere",
-                    "country": "Netherlands",
-                    "lat": 52.3758,
-                    "lng": 5.2256
-                }
-            },
-            {
-                "name": "John Tolkin",
-                "position": "DF",
-                "club": "Holstein Kiel",
-                "league": "Bundesliga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Chatham",
-                    "country": "United States",
-                    "lat": 40.7407,
-                    "lng": -74.3845
-                }
-            },
-            {
-                "name": "Joe Scally",
-                "position": "DF",
-                "club": "Borussia Mönchengladbach",
-                "league": "Bundesliga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Lake Grove",
-                    "country": "United States",
-                    "lat": 40.8583,
-                    "lng": -73.1167
-                }
-            },
-            {
-                "name": "Miles Robinson",
-                "position": "DF",
-                "club": "FC Cincinnati",
-                "league": "MLS",
-                "age": 28,
-                "birthplace": {
-                    "city": "New York",
-                    "country": "USA",
-                    "lat": 41.2943,
-                    "lng": -73.1355
-                }
-            },
-            {
-                "name": "Tim Ream",
-                "position": "DF",
-                "club": "Charlotte FC",
-                "league": "MLS",
-                "age": 38,
-                "birthplace": {
-                    "city": "St. Louis",
-                    "country": "United States",
-                    "lat": 38.6264,
-                    "lng": -90.1994
                 }
             },
             {
@@ -3536,6 +4371,58 @@ const squadData = {
                     "country": "United States",
                     "lat": 39.9189,
                     "lng": -75.3892
+                }
+            },
+            {
+                "name": "Chris Richards",
+                "position": "DF",
+                "club": "Crystal Palace",
+                "league": "Premier League",
+                "age": 26,
+                "birthplace": {
+                    "city": "New York",
+                    "country": "USA",
+                    "lat": 40.0183,
+                    "lng": -73.7442
+                }
+            },
+            {
+                "name": "Antonee Robinson",
+                "position": "DF",
+                "club": "Fulham",
+                "league": "Premier League",
+                "age": 28,
+                "birthplace": {
+                    "city": "Milton Keynes",
+                    "country": "United Kingdom",
+                    "lat": 52.0333,
+                    "lng": -0.7667
+                }
+            },
+            {
+                "name": "Miles Robinson",
+                "position": "DF",
+                "club": "FC Cincinnati",
+                "league": "MLS",
+                "age": 29,
+                "birthplace": {
+                    "city": "New York",
+                    "country": "USA",
+                    "lat": 40.202,
+                    "lng": -74.8619
+                }
+            },
+            {
+                "name": "Tim Ream",
+                "position": "DF",
+                "club": "Charlotte FC",
+                "league": "MLS",
+                "age": 38,
+                "birthplace": {
+                    "city": "St. Louis",
+                    "country": "United States",
+                    "lat": 38.6264,
+                    "lng": -90.1994
                 }
             },
             {
@@ -3565,16 +4452,29 @@ const squadData = {
                 }
             },
             {
+                "name": "Joe Scally",
+                "position": "DF",
+                "club": "Borussia Mönchengladbach",
+                "league": "Bundesliga",
+                "age": 23,
+                "birthplace": {
+                    "city": "Lake Grove",
+                    "country": "United States",
+                    "lat": 40.8583,
+                    "lng": -73.1167
+                }
+            },
+            {
                 "name": "Mark McKenzie",
                 "position": "DF",
                 "club": "Toulouse",
                 "league": "Ligue 1",
-                "age": 26,
+                "age": 27,
                 "birthplace": {
                     "city": "New York",
                     "country": "USA",
-                    "lat": 39.7293,
-                    "lng": -73.4253
+                    "lat": 41.4494,
+                    "lng": -74.0976
                 }
             },
             {
@@ -3591,19 +4491,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Giovanni Reyna",
-                "position": "MF",
-                "club": "Borussia Mönchengladbach",
-                "league": "Bundesliga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Sunderland",
-                    "country": "United Kingdom",
-                    "lat": 54.9,
-                    "lng": -1.3803
-                }
-            },
-            {
                 "name": "Tanner Tessmann",
                 "position": "MF",
                 "club": "Lyon",
@@ -3617,16 +4504,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Timothy Tillman",
+                "name": "Giovanni Reyna",
                 "position": "MF",
-                "club": "Los Angeles FC",
-                "league": "MLS",
+                "club": "Borussia Mönchengladbach",
+                "league": "Bundesliga",
+                "age": 23,
+                "birthplace": {
+                    "city": "Sunderland",
+                    "country": "United Kingdom",
+                    "lat": 54.9,
+                    "lng": -1.3803
+                }
+            },
+            {
+                "name": "Weston McKennie",
+                "position": "MF",
+                "club": "Juventus",
+                "league": "Serie A",
                 "age": 27,
                 "birthplace": {
-                    "city": "Nuremberg",
-                    "country": "Germany",
-                    "lat": 49.4539,
-                    "lng": 11.0775
+                    "city": "Little Elm",
+                    "country": "United States",
+                    "lat": 33.1639,
+                    "lng": -96.9303
                 }
             },
             {
@@ -3640,6 +4540,19 @@ const squadData = {
                     "country": "United Kingdom",
                     "lat": 51.5072,
                     "lng": -0.1275
+                }
+            },
+            {
+                "name": "Malik Tillman",
+                "position": "MF",
+                "club": "Bayer Leverkusen",
+                "league": "Bundesliga",
+                "age": 23,
+                "birthplace": {
+                    "city": "Nuremberg",
+                    "country": "Germany",
+                    "lat": 49.4539,
+                    "lng": 11.0775
                 }
             },
             {
@@ -3669,16 +4582,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Diego Luna",
+                "name": "Christian Pulisic",
                 "position": "FW",
-                "club": "Real Salt Lake",
-                "league": "MLS",
-                "age": 22,
+                "club": "AC Milan",
+                "league": "Serie A",
+                "age": 27,
                 "birthplace": {
-                    "city": "Toluca de Lerdo",
-                    "country": "Mexico",
-                    "lat": 19.2922,
-                    "lng": -99.6539
+                    "city": "Hershey",
+                    "country": "United States",
+                    "lat": 40.2783,
+                    "lng": -76.6511
                 }
             },
             {
@@ -3695,19 +4608,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Haji Wright",
-                "position": "FW",
-                "club": "Coventry City",
-                "league": "EFL Championship",
-                "age": 27,
-                "birthplace": {
-                    "city": "Los Angeles",
-                    "country": "United States",
-                    "lat": 34.0522,
-                    "lng": -118.2437
-                }
-            },
-            {
                 "name": "Folarin Balogun",
                 "position": "FW",
                 "club": "Monaco",
@@ -3719,6 +4619,32 @@ const squadData = {
                     "lat": 40.7128,
                     "lng": -74.0061
                 }
+            },
+            {
+                "name": "Timothy Weah",
+                "position": "FW",
+                "club": "Marseille",
+                "league": "Ligue 1",
+                "age": 26,
+                "birthplace": {
+                    "city": "Brooklyn",
+                    "country": "United States",
+                    "lat": 40.6508,
+                    "lng": -73.9497
+                }
+            },
+            {
+                "name": "Patrick Agyemang",
+                "position": "FW",
+                "club": "Derby County",
+                "league": "EFL Championship",
+                "age": 25,
+                "birthplace": {
+                    "city": "New York",
+                    "country": "USA",
+                    "lat": 40.4518,
+                    "lng": -73.987
+                }
             }
         ]
     },
@@ -3726,14 +4652,14 @@ const squadData = {
         "name": "Paraguay",
         "flag": "🇵🇾",
         "confederation": "CONMEBOL",
-        "fifaRanking": 12,
+        "fifaRanking": 14,
         "players": [
             {
                 "name": "Roberto Fernández",
                 "position": "GK",
                 "club": "Cerro Porteño",
                 "league": "Paraguayan Primera",
-                "age": 37,
+                "age": 38,
                 "birthplace": {
                     "city": "Asunción",
                     "country": "Paraguay",
@@ -3755,16 +4681,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Aldo Pérez",
+                "name": "Gastón Olveira",
                 "position": "GK",
-                "club": "Guaraní",
+                "club": "Olimpia",
                 "league": "Paraguayan Primera",
-                "age": 25,
+                "age": 32,
                 "birthplace": {
-                    "city": "Asunción",
-                    "country": "Paraguay",
-                    "lat": -24.7236,
-                    "lng": -57.4222
+                    "city": "Montevideo",
+                    "country": "Uruguay",
+                    "lat": -34.9059,
+                    "lng": -56.1913
                 }
             },
             {
@@ -3781,6 +4707,19 @@ const squadData = {
                 }
             },
             {
+                "name": "Omar Alderete",
+                "position": "DF",
+                "club": "Sunderland",
+                "league": "Premier League",
+                "age": 29,
+                "birthplace": {
+                    "city": "Asunción",
+                    "country": "Paraguay",
+                    "lat": -25.28,
+                    "lng": -57.6344
+                }
+            },
+            {
                 "name": "Juan José Cáceres",
                 "position": "DF",
                 "club": "Dynamo Moscow",
@@ -3794,16 +4733,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Alexis Duarte",
+                "name": "Fabián Balbuena",
                 "position": "DF",
-                "club": "Santos",
+                "club": "Grêmio",
                 "league": "Brasileirão",
-                "age": 25,
+                "age": 34,
                 "birthplace": {
-                    "city": "Asunción",
+                    "city": "Ciudad del Este",
                     "country": "Paraguay",
-                    "lat": -25.28,
-                    "lng": -57.6344
+                    "lat": -25.5167,
+                    "lng": -54.6167
                 }
             },
             {
@@ -3811,7 +4750,7 @@ const squadData = {
                 "position": "DF",
                 "club": "Atlético Mineiro",
                 "league": "Brasileirão",
-                "age": 32,
+                "age": 33,
                 "birthplace": {
                     "city": "Asunción",
                     "country": "Paraguay",
@@ -3822,27 +4761,14 @@ const squadData = {
             {
                 "name": "Alan Benítez",
                 "position": "DF",
-                "club": "Internacional",
-                "league": "Brasileirão",
+                "club": "Libertad",
+                "league": "Paraguayan Primera",
                 "age": 32,
                 "birthplace": {
                     "city": "Asunción",
                     "country": "Paraguay",
                     "lat": -25.28,
                     "lng": -57.6344
-                }
-            },
-            {
-                "name": "Blas Riveros",
-                "position": "DF",
-                "club": "Cerro Porteño",
-                "league": "Paraguayan Primera",
-                "age": 28,
-                "birthplace": {
-                    "city": "Itauguá",
-                    "country": "Paraguay",
-                    "lat": -25.3833,
-                    "lng": -57.3333
                 }
             },
             {
@@ -3859,16 +4785,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Agustín Sández",
+                "name": "José Canale",
                 "position": "DF",
-                "club": "Rosario Central",
+                "club": "Lanús",
                 "league": "Argentine Primera",
-                "age": 25,
+                "age": 29,
                 "birthplace": {
-                    "city": "Lanús",
-                    "country": "Argentina",
-                    "lat": -34.7,
-                    "lng": -58.4
+                    "city": "Villa monica alritmo",
+                    "country": "Paraguay",
+                    "lat": -25.3833,
+                    "lng": -57.3333
+                }
+            },
+            {
+                "name": "Alexandro Maidana",
+                "position": "DF",
+                "club": "Talleres",
+                "league": "Argentine Primera",
+                "age": 20,
+                "birthplace": {
+                    "city": "Caacupé",
+                    "country": "Paraguay",
+                    "lat": -25.3861,
+                    "lng": -57.1408
                 }
             },
             {
@@ -3889,7 +4828,7 @@ const squadData = {
                 "position": "MF",
                 "club": "Brighton & Hove Albion",
                 "league": "Premier League",
-                "age": 22,
+                "age": 23,
                 "birthplace": {
                     "city": "San Juan Bautista",
                     "country": "Paraguay",
@@ -3902,7 +4841,7 @@ const squadData = {
                 "position": "MF",
                 "club": "Atlanta United",
                 "league": "MLS",
-                "age": 31,
+                "age": 32,
                 "birthplace": {
                     "city": "Asunción",
                     "country": "Paraguay",
@@ -3911,16 +4850,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Diego González",
+                "name": "Maurício Magalhães",
                 "position": "MF",
-                "club": "Atlas",
-                "league": "Liga MX",
+                "club": "Palmeiras",
+                "league": "Brasileirão",
+                "age": 24,
+                "birthplace": {
+                    "city": "São Paulo",
+                    "country": "Brazil",
+                    "lat": -23.5504,
+                    "lng": -46.6339
+                }
+            },
+            {
+                "name": "Lucas Romero",
+                "position": "MF",
+                "club": "Universidad de Chile",
+                "league": "Unknown",
                 "age": 23,
                 "birthplace": {
                     "city": "Asunción",
                     "country": "Paraguay",
-                    "lat": -25.1325,
-                    "lng": -57.8874
+                    "lat": -24.8553,
+                    "lng": -56.7215
                 }
             },
             {
@@ -3937,26 +4889,13 @@ const squadData = {
                 }
             },
             {
-                "name": "Alejandro Romero Gamarra",
-                "position": "MF",
-                "club": "Al Ain",
-                "league": "UAE Pro League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Ciudadela",
-                    "country": "Argentina",
-                    "lat": -34.6333,
-                    "lng": -58.5333
-                }
-            },
-            {
                 "name": "Braian Ojeda",
                 "position": "MF",
                 "club": "Orlando City",
                 "league": "MLS",
                 "age": 25,
                 "birthplace": {
-                    "city": "Itauguá",
+                    "city": "Villa monica alritmo",
                     "country": "Paraguay",
                     "lat": -25.3833,
                     "lng": -57.3333
@@ -3965,9 +4904,9 @@ const squadData = {
             {
                 "name": "Matías Galarza",
                 "position": "MF",
-                "club": "River Plate",
-                "league": "Argentine Primera",
-                "age": 23,
+                "club": "Atlanta United",
+                "league": "MLS",
+                "age": 24,
                 "birthplace": {
                     "city": "Asunción",
                     "country": "Paraguay",
@@ -3976,50 +4915,11 @@ const squadData = {
                 }
             },
             {
-                "name": "Diego León",
-                "position": "MF",
-                "club": "Manchester United",
-                "league": "Premier League",
-                "age": 18,
-                "birthplace": {
-                    "city": "Asunción",
-                    "country": "Paraguay",
-                    "lat": -26.1489,
-                    "lng": -56.8276
-                }
-            },
-            {
-                "name": "Lucas Romero",
-                "position": "MF",
-                "club": "Universidad de Chile",
-                "league": "Unknown",
-                "age": 23,
-                "birthplace": {
-                    "city": "Asunción",
-                    "country": "Paraguay",
-                    "lat": -25.2415,
-                    "lng": -58.5507
-                }
-            },
-            {
-                "name": "Hugo Cuenca",
-                "position": "MF",
-                "club": "Burgos CF",
-                "league": "La Liga",
-                "age": 21,
-                "birthplace": {
-                    "city": "Coronel Oviedo",
-                    "country": "Paraguay",
-                    "lat": -25.4481,
-                    "lng": -56.4411
-                }
-            },
-            {
                 "name": "Antonio Sanabria",
                 "position": "FW",
                 "club": "Cremonese",
                 "league": "Serie A",
-                "age": 29,
+                "age": 30,
                 "birthplace": {
                     "city": "San Lorenzo",
                     "country": "Paraguay",
@@ -4054,16 +4954,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Ronaldo Martínez",
+                "name": "Gabriel Ávalos",
                 "position": "FW",
-                "club": "Talleres",
+                "club": "Independiente",
                 "league": "Argentine Primera",
-                "age": 29,
+                "age": 34,
                 "birthplace": {
-                    "city": "Eusebio Ayala",
+                    "city": "Edelira",
                     "country": "Paraguay",
-                    "lat": -25.3818,
-                    "lng": -56.9608
+                    "lat": -26.75,
+                    "lng": -55.27
+                }
+            },
+            {
+                "name": "Gustavo Caballero",
+                "position": "FW",
+                "club": "Portsmouth",
+                "league": "EFL Championship",
+                "age": 24,
+                "birthplace": {
+                    "city": "San Lorenzo",
+                    "country": "Paraguay",
+                    "lat": -25.3431,
+                    "lng": -57.5094
                 }
             }
         ]
@@ -4072,7 +4985,7 @@ const squadData = {
         "name": "Australia",
         "flag": "🇦🇺",
         "confederation": "AFC",
-        "fifaRanking": 13,
+        "fifaRanking": 15,
         "players": [
             {
                 "name": "Mathew Ryan",
@@ -4127,16 +5040,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Lewis Miller",
+                "name": "Jacob Italiano",
                 "position": "DF",
-                "club": "Blackburn Rovers",
-                "league": "EFL Championship",
-                "age": 25,
+                "club": "Grazer AK",
+                "league": "Austrian Bundesliga",
+                "age": 24,
                 "birthplace": {
-                    "city": "Sydney",
+                    "city": "Australia",
                     "country": "Australia",
-                    "lat": -33.6332,
-                    "lng": 151.4779
+                    "lat": -25,
+                    "lng": 133
                 }
             },
             {
@@ -4153,16 +5066,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Callum Elder",
+                "name": "Jordan Bos",
                 "position": "DF",
-                "club": "Derby County",
-                "league": "EFL Championship",
-                "age": 31,
+                "club": "Feyenoord",
+                "league": "Eredivisie",
+                "age": 23,
                 "birthplace": {
-                    "city": "Sydney",
+                    "city": "Point Cook",
                     "country": "Australia",
-                    "lat": -33.8678,
-                    "lng": 151.21
+                    "lat": -37.909,
+                    "lng": 144.752
                 }
             },
             {
@@ -4176,6 +5089,19 @@ const squadData = {
                     "country": "Australia",
                     "lat": -35.2931,
                     "lng": 149.1269
+                }
+            },
+            {
+                "name": "Aziz Behich",
+                "position": "DF",
+                "club": "Melbourne City",
+                "league": "A-League",
+                "age": 35,
+                "birthplace": {
+                    "city": "Moonee Ponds",
+                    "country": "Australia",
+                    "lat": -37.765,
+                    "lng": 144.92
                 }
             },
             {
@@ -4205,29 +5131,29 @@ const squadData = {
                 }
             },
             {
-                "name": "James Overy",
+                "name": "Alessandro Circati",
                 "position": "DF",
-                "club": "Manchester United",
-                "league": "Premier League",
+                "club": "Parma",
+                "league": "Serie A",
+                "age": 22,
+                "birthplace": {
+                    "city": "Fidenza",
+                    "country": "Italy",
+                    "lat": 44.8664,
+                    "lng": 10.0611
+                }
+            },
+            {
+                "name": "Lucas Herrington",
+                "position": "DF",
+                "club": "Colorado Rapids",
+                "league": "MLS",
                 "age": 18,
                 "birthplace": {
                     "city": "Sydney",
                     "country": "Australia",
-                    "lat": -33.9805,
-                    "lng": 151.5244
-                }
-            },
-            {
-                "name": "Jack Iredale",
-                "position": "DF",
-                "club": "Hibernian",
-                "league": "Scottish Premiership",
-                "age": 29,
-                "birthplace": {
-                    "city": "Greenock",
-                    "country": "United Kingdom",
-                    "lat": 55.95,
-                    "lng": -4.7667
+                    "lat": -34.3001,
+                    "lng": 151.0377
                 }
             },
             {
@@ -4241,6 +5167,19 @@ const squadData = {
                     "country": "Australia",
                     "lat": -32.9167,
                     "lng": 151.75
+                }
+            },
+            {
+                "name": "Ajdin Hrustić",
+                "position": "MF",
+                "club": "Heracles Almelo",
+                "league": "Eredivisie",
+                "age": 29,
+                "birthplace": {
+                    "city": "Dandenong",
+                    "country": "Australia",
+                    "lat": -37.981,
+                    "lng": 145.215
                 }
             },
             {
@@ -4270,29 +5209,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Max Balard",
+                "name": "Patrick Yazbek",
                 "position": "MF",
-                "club": "NAC Breda",
-                "league": "Eredivisie",
-                "age": 25,
+                "club": "Nashville SC",
+                "league": "MLS",
+                "age": 23,
                 "birthplace": {
-                    "city": "Sydney",
+                    "city": "Liverpool",
                     "country": "Australia",
-                    "lat": -33.8678,
-                    "lng": 151.21
-                }
-            },
-            {
-                "name": "Cameron Devlin",
-                "position": "MF",
-                "club": "Heart of Midlothian",
-                "league": "Scottish Premiership",
-                "age": 27,
-                "birthplace": {
-                    "city": "Australia",
-                    "country": "Australia",
-                    "lat": -25,
-                    "lng": 133
+                    "lat": -33.9231,
+                    "lng": 150.915
                 }
             },
             {
@@ -4304,21 +5230,21 @@ const squadData = {
                 "birthplace": {
                     "city": "Sydney",
                     "country": "Australia",
-                    "lat": -34.7553,
-                    "lng": 151.4541
+                    "lat": -34.4079,
+                    "lng": 151.8439
                 }
             },
             {
-                "name": "Jackson Irvine",
+                "name": "Alex Robertson",
                 "position": "MF",
-                "club": "FC St. Pauli",
-                "league": "Bundesliga",
-                "age": 32,
+                "club": "Cardiff City",
+                "league": "EFL League One",
+                "age": 22,
                 "birthplace": {
-                    "city": "Melbourne",
+                    "city": "Sydney",
                     "country": "Australia",
-                    "lat": -37.8142,
-                    "lng": 144.9631
+                    "lat": -33.8802,
+                    "lng": 151.3308
                 }
             },
             {
@@ -4339,7 +5265,7 @@ const squadData = {
                 "position": "FW",
                 "club": "Watford",
                 "league": "EFL Championship",
-                "age": 19,
+                "age": 20,
                 "birthplace": {
                     "city": "Kigoma",
                     "country": "Tanzania",
@@ -4348,55 +5274,440 @@ const squadData = {
                 }
             },
             {
-                "name": "Mohamed Toure",
+                "name": "Nishan Velupillay",
                 "position": "FW",
-                "club": "Norwich City",
-                "league": "EFL Championship",
-                "age": 21,
+                "club": "Melbourne Victory",
+                "league": "A-League",
+                "age": 24,
                 "birthplace": {
-                    "city": "Sydney",
+                    "city": "Australia",
                     "country": "Australia",
-                    "lat": -33.7654,
-                    "lng": 150.4272
+                    "lat": -25,
+                    "lng": 133
                 }
             },
             {
-                "name": "Al Hassan Toure",
+                "name": "Awer Mabil",
                 "position": "FW",
-                "club": "Sydney FC",
-                "league": "A-League",
+                "club": "Castellón",
+                "league": "Segunda División",
+                "age": 30,
+                "birthplace": {
+                    "city": "Kakuma",
+                    "country": "Kenya",
+                    "lat": 3.7086,
+                    "lng": 34.865
+                }
+            },
+            {
+                "name": "Deni Jurić",
+                "position": "FW",
+                "club": "Wisła Płock",
+                "league": "Polish Ekstraklasa",
+                "age": 28,
+                "birthplace": {
+                    "city": "Kogarah",
+                    "country": "Australia",
+                    "lat": -33.965,
+                    "lng": 151.1344
+                }
+            },
+            {
+                "name": "Ante Šuto",
+                "position": "FW",
+                "club": "Hibernian",
+                "league": "Scottish Premiership",
                 "age": 25,
                 "birthplace": {
-                    "city": "Guinea",
-                    "country": "Guinea",
-                    "lat": 10,
-                    "lng": -11
-                }
-            },
-            {
-                "name": "Craig Goodwin",
-                "position": "FW",
-                "club": "Adelaide United",
-                "league": "A-League",
-                "age": 34,
-                "birthplace": {
-                    "city": "Adelaide",
-                    "country": "Australia",
-                    "lat": -34.9275,
-                    "lng": 138.6
-                }
-            },
-            {
-                "name": "Nicholas D'Agostino",
-                "position": "FW",
-                "club": "Brisbane Roar",
-                "league": "A-League",
-                "age": 27,
-                "birthplace": {
                     "city": "Sydney",
                     "country": "Australia",
-                    "lat": -32.9203,
-                    "lng": 151.5912
+                    "lat": -33.9232,
+                    "lng": 151.0673
+                }
+            }
+        ]
+    },
+    "TUR": {
+        "name": "Turkey",
+        "flag": "🇹🇷",
+        "confederation": "UEFA",
+        "fifaRanking": 16,
+        "players": [
+            {
+                "name": "Mert Günok",
+                "position": "GK",
+                "club": "Fenerbahçe",
+                "league": "Turkish Super Lig",
+                "age": 37,
+                "birthplace": {
+                    "city": "Karabük",
+                    "country": "Turkey",
+                    "lat": 41.2,
+                    "lng": 32.6333
+                }
+            },
+            {
+                "name": "Altay Bayındır",
+                "position": "GK",
+                "club": "Manchester United",
+                "league": "Premier League",
+                "age": 27,
+                "birthplace": {
+                    "city": "Osmangazi",
+                    "country": "Turkey",
+                    "lat": 40.2192,
+                    "lng": 29.0414
+                }
+            },
+            {
+                "name": "Uğurcan Çakır",
+                "position": "GK",
+                "club": "Galatasaray",
+                "league": "Turkish Super Lig",
+                "age": 29,
+                "birthplace": {
+                    "city": "Antalya",
+                    "country": "Turkey",
+                    "lat": 37.8333,
+                    "lng": 34.75
+                }
+            },
+            {
+                "name": "Muhammed Şengezer",
+                "position": "GK",
+                "club": "İstanbul Başakşehir",
+                "league": "Turkish Super Lig",
+                "age": 29,
+                "birthplace": {
+                    "city": "Osmangazi",
+                    "country": "Turkey",
+                    "lat": 40.2192,
+                    "lng": 29.0414
+                }
+            },
+            {
+                "name": "Zeki Çelik",
+                "position": "DF",
+                "club": "Roma",
+                "league": "Serie A",
+                "age": 29,
+                "birthplace": {
+                    "city": "Yıldırım district",
+                    "country": "Turkey",
+                    "lat": 40.1901,
+                    "lng": 29.0977
+                }
+            },
+            {
+                "name": "Eren Elmalı",
+                "position": "DF",
+                "club": "Galatasaray",
+                "league": "Turkish Super Lig",
+                "age": 25,
+                "birthplace": {
+                    "city": "Kartal",
+                    "country": "Turkey",
+                    "lat": 40.9064,
+                    "lng": 29.2111
+                }
+            },
+            {
+                "name": "Samet Akaydin",
+                "position": "DF",
+                "club": "Çaykur Rizespor",
+                "league": "Turkish Super Lig",
+                "age": 31,
+                "birthplace": {
+                    "city": "Trabzon",
+                    "country": "Turkey",
+                    "lat": 41.005,
+                    "lng": 39.7225
+                }
+            },
+            {
+                "name": "Abdülkerim Bardakcı",
+                "position": "DF",
+                "club": "Galatasaray",
+                "league": "Turkish Super Lig",
+                "age": 31,
+                "birthplace": {
+                    "city": "Meram district",
+                    "country": "Turkey",
+                    "lat": 37.8364,
+                    "lng": 32.4383
+                }
+            },
+            {
+                "name": "Ozan Kabak",
+                "position": "DF",
+                "club": "Hoffenheim",
+                "league": "Bundesliga",
+                "age": 26,
+                "birthplace": {
+                    "city": "Çankaya district",
+                    "country": "Turkey",
+                    "lat": 39.9083,
+                    "lng": 32.8461
+                }
+            },
+            {
+                "name": "Mert Müldür",
+                "position": "DF",
+                "club": "Fenerbahçe",
+                "league": "Turkish Super Lig",
+                "age": 26,
+                "birthplace": {
+                    "city": "Vienna",
+                    "country": "Austria",
+                    "lat": 48.2083,
+                    "lng": 16.3725
+                }
+            },
+            {
+                "name": "Ferdi Kadıoğlu",
+                "position": "DF",
+                "club": "Brighton & Hove Albion",
+                "league": "Premier League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Arnhem",
+                    "country": "Netherlands",
+                    "lat": 51.9833,
+                    "lng": 5.9167
+                }
+            },
+            {
+                "name": "Merih Demiral",
+                "position": "DF",
+                "club": "Al-Ahli",
+                "league": "Saudi Pro League",
+                "age": 28,
+                "birthplace": {
+                    "city": "Karamürsel district",
+                    "country": "Turkey",
+                    "lat": 40.6914,
+                    "lng": 29.6156
+                }
+            },
+            {
+                "name": "Mustafa Eskihellaç",
+                "position": "DF",
+                "club": "Trabzonspor",
+                "league": "Turkish Super Lig",
+                "age": 28,
+                "birthplace": {
+                    "city": "Trabzon",
+                    "country": "Turkey",
+                    "lat": 41.005,
+                    "lng": 39.7225
+                }
+            },
+            {
+                "name": "Ahmetcan Kaplan",
+                "position": "DF",
+                "club": "NEC",
+                "league": "Eredivisie",
+                "age": 23,
+                "birthplace": {
+                    "city": "Trabzon",
+                    "country": "Turkey",
+                    "lat": 41.005,
+                    "lng": 39.7225
+                }
+            },
+            {
+                "name": "Salih Özcan",
+                "position": "MF",
+                "club": "Borussia Dortmund",
+                "league": "Bundesliga",
+                "age": 28,
+                "birthplace": {
+                    "city": "Cologne",
+                    "country": "Germany",
+                    "lat": 50.9422,
+                    "lng": 6.9578
+                }
+            },
+            {
+                "name": "Orkun Kökçü",
+                "position": "MF",
+                "club": "Beşiktaş",
+                "league": "Turkish Super Lig",
+                "age": 25,
+                "birthplace": {
+                    "city": "Haarlem",
+                    "country": "Netherlands",
+                    "lat": 52.3803,
+                    "lng": 4.6406
+                }
+            },
+            {
+                "name": "Hakan Çalhanoğlu",
+                "position": "MF",
+                "club": "Inter Milan",
+                "league": "Serie A",
+                "age": 32,
+                "birthplace": {
+                    "city": "Mannheim",
+                    "country": "Germany",
+                    "lat": 49.4878,
+                    "lng": 8.4661
+                }
+            },
+            {
+                "name": "İsmail Yüksek",
+                "position": "MF",
+                "club": "Fenerbahçe",
+                "league": "Turkish Super Lig",
+                "age": 27,
+                "birthplace": {
+                    "city": "İznik",
+                    "country": "Turkey",
+                    "lat": 40.4289,
+                    "lng": 29.7194
+                }
+            },
+            {
+                "name": "Atakan Karazor",
+                "position": "MF",
+                "club": "VfB Stuttgart",
+                "league": "Bundesliga",
+                "age": 29,
+                "birthplace": {
+                    "city": "Essen",
+                    "country": "Germany",
+                    "lat": 51.4508,
+                    "lng": 7.0131
+                }
+            },
+            {
+                "name": "Kaan Ayhan",
+                "position": "MF",
+                "club": "Galatasaray",
+                "league": "Turkish Super Lig",
+                "age": 31,
+                "birthplace": {
+                    "city": "Gelsenkirchen",
+                    "country": "Germany",
+                    "lat": 51.5103,
+                    "lng": 7.0942
+                }
+            },
+            {
+                "name": "Kerem Aktürkoğlu",
+                "position": "FW",
+                "club": "Fenerbahçe",
+                "league": "Turkish Super Lig",
+                "age": 27,
+                "birthplace": {
+                    "city": "İzmit",
+                    "country": "Turkey",
+                    "lat": 40.7719,
+                    "lng": 29.9498
+                }
+            },
+            {
+                "name": "Arda Güler",
+                "position": "FW",
+                "club": "Real Madrid",
+                "league": "La Liga",
+                "age": 21,
+                "birthplace": {
+                    "city": "Altındağ",
+                    "country": "Turkey",
+                    "lat": 39.9458,
+                    "lng": 32.8561
+                }
+            },
+            {
+                "name": "Barış Alper Yılmaz",
+                "position": "FW",
+                "club": "Galatasaray",
+                "league": "Turkish Super Lig",
+                "age": 25,
+                "birthplace": {
+                    "city": "İkizdere",
+                    "country": "Turkey",
+                    "lat": 40.7772,
+                    "lng": 40.5608
+                }
+            },
+            {
+                "name": "Kenan Yıldız",
+                "position": "FW",
+                "club": "Juventus",
+                "league": "Serie A",
+                "age": 20,
+                "birthplace": {
+                    "city": "Regensburg",
+                    "country": "Germany",
+                    "lat": 49.0167,
+                    "lng": 12.0833
+                }
+            },
+            {
+                "name": "Deniz Gül",
+                "position": "FW",
+                "club": "Porto",
+                "league": "Primeira Liga",
+                "age": 21,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.3294,
+                    "lng": 18.0686
+                }
+            },
+            {
+                "name": "İrfan Can Kahveci",
+                "position": "FW",
+                "club": "Kasımpaşa",
+                "league": "Turkish Super Lig",
+                "age": 30,
+                "birthplace": {
+                    "city": "Bayat",
+                    "country": "Turkey",
+                    "lat": 40.185,
+                    "lng": 32.437
+                }
+            },
+            {
+                "name": "Yunus Akgün",
+                "position": "FW",
+                "club": "Galatasaray",
+                "league": "Turkish Super Lig",
+                "age": 25,
+                "birthplace": {
+                    "city": "Küçükçekmece",
+                    "country": "Turkey",
+                    "lat": 41.0219,
+                    "lng": 28.7772
+                }
+            },
+            {
+                "name": "Oğuz Aydın",
+                "position": "FW",
+                "club": "Fenerbahçe",
+                "league": "Turkish Super Lig",
+                "age": 25,
+                "birthplace": {
+                    "city": "The Hague",
+                    "country": "Netherlands",
+                    "lat": 52.08,
+                    "lng": 4.31
+                }
+            },
+            {
+                "name": "Semih Kılıçsoy",
+                "position": "FW",
+                "club": "Cagliari",
+                "league": "Serie A",
+                "age": 20,
+                "birthplace": {
+                    "city": "Gaziosmanpaşa",
+                    "country": "Turkey",
+                    "lat": 41.0733,
+                    "lng": 28.9047
                 }
             }
         ]
@@ -4405,7 +5716,7 @@ const squadData = {
         "name": "Germany",
         "flag": "🇩🇪",
         "confederation": "UEFA",
-        "fifaRanking": 14,
+        "fifaRanking": 17,
         "players": [
             {
                 "name": "Oliver Baumann",
@@ -4438,7 +5749,7 @@ const squadData = {
                 "position": "GK",
                 "club": "FC Augsburg",
                 "league": "Bundesliga",
-                "age": 27,
+                "age": 28,
                 "birthplace": {
                     "city": "Wiesbaden",
                     "country": "Germany",
@@ -4447,29 +5758,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Noah Atubolu",
-                "position": "GK",
-                "club": "SC Freiburg",
-                "league": "Bundesliga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Freiburg im Breisgau",
-                    "country": "Germany",
-                    "lat": 47.995,
-                    "lng": 7.85
-                }
-            },
-            {
-                "name": "Malick Thiaw",
+                "name": "Antonio Rüdiger",
                 "position": "DF",
-                "club": "Newcastle United",
-                "league": "Premier League",
-                "age": 24,
+                "club": "Real Madrid",
+                "league": "La Liga",
+                "age": 33,
                 "birthplace": {
-                    "city": "Düsseldorf",
+                    "city": "Berlin",
                     "country": "Germany",
-                    "lat": 51.2256,
-                    "lng": 6.7767
+                    "lat": 52.5167,
+                    "lng": 13.3833
                 }
             },
             {
@@ -4490,7 +5788,7 @@ const squadData = {
                 "position": "DF",
                 "club": "Bayern Munich",
                 "league": "Bundesliga",
-                "age": 29,
+                "age": 30,
                 "birthplace": {
                     "city": "Hamburg",
                     "country": "Germany",
@@ -4538,29 +5836,42 @@ const squadData = {
                 }
             },
             {
-                "name": "Ridle Baku",
+                "name": "Josha Vagnoman",
                 "position": "DF",
-                "club": "RB Leipzig",
+                "club": "VfB Stuttgart",
                 "league": "Bundesliga",
-                "age": 27,
+                "age": 25,
                 "birthplace": {
-                    "city": "Mainz",
+                    "city": "Hamburg",
                     "country": "Germany",
-                    "lat": 49.9994,
-                    "lng": 8.2736
+                    "lat": 53.55,
+                    "lng": 10
                 }
             },
             {
-                "name": "Aleksandar Pavlović",
-                "position": "MF",
-                "club": "Bayern Munich",
-                "league": "Bundesliga",
-                "age": 21,
+                "name": "Malick Thiaw",
+                "position": "DF",
+                "club": "Newcastle United",
+                "league": "Premier League",
+                "age": 24,
                 "birthplace": {
-                    "city": "Munich",
+                    "city": "Düsseldorf",
                     "country": "Germany",
-                    "lat": 48.1375,
-                    "lng": 11.575
+                    "lat": 51.2256,
+                    "lng": 6.7767
+                }
+            },
+            {
+                "name": "Pascal Groß",
+                "position": "MF",
+                "club": "Brighton & Hove Albion",
+                "league": "Premier League",
+                "age": 34,
+                "birthplace": {
+                    "city": "Mannheim",
+                    "country": "Germany",
+                    "lat": 49.4878,
+                    "lng": 8.4661
                 }
             },
             {
@@ -4577,16 +5888,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Jamie Leweling",
+                "name": "Kai Havertz",
                 "position": "MF",
-                "club": "VfB Stuttgart",
-                "league": "Bundesliga",
-                "age": 24,
+                "club": "Arsenal",
+                "league": "Premier League",
+                "age": 26,
                 "birthplace": {
-                    "city": "Germany",
+                    "city": "Aachen",
                     "country": "Germany",
-                    "lat": 51,
-                    "lng": 10
+                    "lat": 50.7762,
+                    "lng": 6.0838
                 }
             },
             {
@@ -4603,45 +5914,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Assan Ouédraogo",
-                "position": "MF",
-                "club": "RB Leipzig",
-                "league": "Bundesliga",
-                "age": 19,
-                "birthplace": {
-                    "city": "Mülheim an der Ruhr",
-                    "country": "Germany",
-                    "lat": 51.4275,
-                    "lng": 6.8825
-                }
-            },
-            {
-                "name": "Felix Nmecha",
-                "position": "MF",
-                "club": "Borussia Dortmund",
-                "league": "Bundesliga",
-                "age": 25,
-                "birthplace": {
-                    "city": "Hamburg",
-                    "country": "Germany",
-                    "lat": 53.55,
-                    "lng": 10
-                }
-            },
-            {
-                "name": "Karim Adeyemi",
-                "position": "MF",
-                "club": "Borussia Dortmund",
-                "league": "Bundesliga",
-                "age": 24,
-                "birthplace": {
-                    "city": "Munich",
-                    "country": "Germany",
-                    "lat": 48.1375,
-                    "lng": 11.575
-                }
-            },
-            {
                 "name": "Kevin Schade",
                 "position": "MF",
                 "club": "Brentford",
@@ -4652,6 +5924,32 @@ const squadData = {
                     "country": "Germany",
                     "lat": 52.4,
                     "lng": 13.0667
+                }
+            },
+            {
+                "name": "Chris Führich",
+                "position": "MF",
+                "club": "VfB Stuttgart",
+                "league": "Bundesliga",
+                "age": 28,
+                "birthplace": {
+                    "city": "Castrop-Rauxel",
+                    "country": "Germany",
+                    "lat": 51.55,
+                    "lng": 7.3167
+                }
+            },
+            {
+                "name": "Angelo Stiller",
+                "position": "MF",
+                "club": "VfB Stuttgart",
+                "league": "Bundesliga",
+                "age": 24,
+                "birthplace": {
+                    "city": "Munich",
+                    "country": "Germany",
+                    "lat": 48.1375,
+                    "lng": 11.575
                 }
             },
             {
@@ -4694,16 +5992,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Jonathan Burkardt",
-                "position": "FW",
-                "club": "Eintracht Frankfurt",
-                "league": "Bundesliga",
-                "age": 25,
+                "name": "Anton Stach",
+                "position": "MF",
+                "club": "Leeds United",
+                "league": "Premier League",
+                "age": 27,
                 "birthplace": {
-                    "city": "Darmstadt",
+                    "city": "Buchholz in der Nordheide",
                     "country": "Germany",
-                    "lat": 49.8667,
-                    "lng": 8.65
+                    "lat": 53.3285,
+                    "lng": 9.8621
+                }
+            },
+            {
+                "name": "Lennart Karl",
+                "position": "MF",
+                "club": "Bayern Munich",
+                "league": "Bundesliga",
+                "age": 18,
+                "birthplace": {
+                    "city": "Frammersbach",
+                    "country": "Germany",
+                    "lat": 50.0667,
+                    "lng": 9.4667
                 }
             },
             {
@@ -4711,12 +6022,25 @@ const squadData = {
                 "position": "FW",
                 "club": "Newcastle United",
                 "league": "Premier League",
-                "age": 23,
+                "age": 24,
                 "birthplace": {
                     "city": "Bremen",
                     "country": "Germany",
                     "lat": 53.0758,
                     "lng": 8.8072
+                }
+            },
+            {
+                "name": "Deniz Undav",
+                "position": "FW",
+                "club": "VfB Stuttgart",
+                "league": "Bundesliga",
+                "age": 29,
+                "birthplace": {
+                    "city": "Varel",
+                    "country": "Germany",
+                    "lat": 53.3969,
+                    "lng": 8.1361
                 }
             }
         ]
@@ -4725,7 +6049,7 @@ const squadData = {
         "name": "Curaçao",
         "flag": "🇨🇼",
         "confederation": "CONCACAF",
-        "fifaRanking": 15,
+        "fifaRanking": 18,
         "players": [
             {
                 "name": "Eloy Room",
@@ -4827,8 +6151,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Willemstad",
                     "country": "Curaçao",
-                    "lat": 12.5691,
-                    "lng": -69.2122
+                    "lat": 11.2116,
+                    "lng": -69.1019
                 }
             },
             {
@@ -4836,7 +6160,7 @@ const squadData = {
                 "position": "DF",
                 "club": "PSV",
                 "league": "Eredivisie",
-                "age": 26,
+                "age": 27,
                 "birthplace": {
                     "city": "Boxtel",
                     "country": "Netherlands",
@@ -4849,12 +6173,25 @@ const squadData = {
                 "position": "DF",
                 "club": "Kayserispor",
                 "league": "Turkish Super Lig",
-                "age": 31,
+                "age": 32,
                 "birthplace": {
                     "city": "Kerkrade",
                     "country": "Netherlands",
                     "lat": 50.8667,
                     "lng": 6.0667
+                }
+            },
+            {
+                "name": "Riechedly Bazoer",
+                "position": "DF",
+                "club": "Konyaspor",
+                "league": "Turkish Super Lig",
+                "age": 29,
+                "birthplace": {
+                    "city": "Utrecht",
+                    "country": "Netherlands",
+                    "lat": 52.0908,
+                    "lng": 5.1222
                 }
             },
             {
@@ -4899,7 +6236,7 @@ const squadData = {
             {
                 "name": "Leandro Bacuna",
                 "position": "MF",
-                "club": "Iğdır F.K.",
+                "club": "Iğdır",
                 "league": "Turkish Super Lig",
                 "age": 34,
                 "birthplace": {
@@ -4931,8 +6268,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Willemstad",
                     "country": "Curaçao",
-                    "lat": 12.4626,
-                    "lng": -68.1459
+                    "lat": 12.8261,
+                    "lng": -69.3441
                 }
             },
             {
@@ -4979,7 +6316,7 @@ const squadData = {
                 "position": "FW",
                 "club": "Kifisia",
                 "league": "Greek Super League",
-                "age": 23,
+                "age": 24,
                 "birthplace": {
                     "city": "Rosmalen",
                     "country": "Netherlands",
@@ -5027,22 +6364,22 @@ const squadData = {
                 }
             },
             {
-                "name": "Jordi Paulina",
+                "name": "Brandley Kuwas",
                 "position": "FW",
-                "club": "Fortuna Dusseldorf",
-                "league": "2. Bundesliga",
-                "age": 21,
+                "club": "Volendam",
+                "league": "Eredivisie",
+                "age": 33,
                 "birthplace": {
-                    "city": "Willemstad",
-                    "country": "Curaçao",
-                    "lat": 13.1629,
-                    "lng": -68.441
+                    "city": "Hoorn",
+                    "country": "Netherlands",
+                    "lat": 52.6533,
+                    "lng": 5.0733
                 }
             },
             {
                 "name": "Gervane Kastaneer",
                 "position": "FW",
-                "club": "Terengganu FC",
+                "club": "Terengganu",
                 "league": "Unknown",
                 "age": 29,
                 "birthplace": {
@@ -5058,7 +6395,7 @@ const squadData = {
         "name": "Ivory Coast",
         "flag": "🇨🇮",
         "confederation": "CAF",
-        "fifaRanking": 16,
+        "fifaRanking": 19,
         "players": [
             {
                 "name": "Yahia Fofana",
@@ -5071,19 +6408,6 @@ const squadData = {
                     "country": "France",
                     "lat": 48.8567,
                     "lng": 2.3522
-                }
-            },
-            {
-                "name": "Mohamed Koné",
-                "position": "GK",
-                "club": "Charleroi",
-                "league": "Belgian Pro League",
-                "age": 23,
-                "birthplace": {
-                    "city": "Adjamé",
-                    "country": "Ivory Coast",
-                    "lat": 5.3648,
-                    "lng": -4.0237
                 }
             },
             {
@@ -5100,16 +6424,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Ousmane Diomande",
-                "position": "DF",
-                "club": "Sporting CP",
-                "league": "Primeira Liga",
-                "age": 22,
+                "name": "Mohamed Koné",
+                "position": "GK",
+                "club": "Charleroi",
+                "league": "Belgian Pro League",
+                "age": 24,
                 "birthplace": {
-                    "city": "Abidjan",
+                    "city": "Adjamé",
                     "country": "Ivory Coast",
-                    "lat": 5.3364,
-                    "lng": -4.0267
+                    "lat": 5.3648,
+                    "lng": -4.0237
                 }
             },
             {
@@ -5126,19 +6450,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Armel Zohouri",
-                "position": "DF",
-                "club": "Iberia 1999",
-                "league": "Unknown",
-                "age": 24,
-                "birthplace": {
-                    "city": "Divo",
-                    "country": "Ivory Coast",
-                    "lat": 5.8372,
-                    "lng": -5.3572
-                }
-            },
-            {
                 "name": "Odilon Kossounou",
                 "position": "DF",
                 "club": "Atalanta",
@@ -5152,55 +6463,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Willy Boly",
+                "name": "Wilfried Singo",
                 "position": "DF",
-                "club": "Nottingham Forest",
-                "league": "Premier League",
-                "age": 35,
-                "birthplace": {
-                    "city": "Melun",
-                    "country": "France",
-                    "lat": 48.5397,
-                    "lng": 2.6592
-                }
-            },
-            {
-                "name": "Christopher Opéri",
-                "position": "DF",
-                "club": "İstanbul Başakşehir",
+                "club": "Galatasaray",
                 "league": "Turkish Super Lig",
-                "age": 28,
+                "age": 25,
                 "birthplace": {
-                    "city": "Abidjan",
+                    "city": "Ouragahio",
                     "country": "Ivory Coast",
-                    "lat": 5.3364,
-                    "lng": -4.0267
-                }
-            },
-            {
-                "name": "Guéla Doué",
-                "position": "DF",
-                "club": "Strasbourg",
-                "league": "Ligue 1",
-                "age": 23,
-                "birthplace": {
-                    "city": "Angers",
-                    "country": "France",
-                    "lat": 47.4728,
-                    "lng": -0.5556
-                }
-            },
-            {
-                "name": "Emmanuel Agbadou",
-                "position": "DF",
-                "club": "Beşiktaş",
-                "league": "Turkish Super Lig",
-                "age": 28,
-                "birthplace": {
-                    "city": "Ivory Coast",
-                    "country": "Ivory Coast",
-                    "lat": 8,
-                    "lng": -6
+                    "lat": 6.4167,
+                    "lng": -5.9167
                 }
             },
             {
@@ -5217,42 +6489,55 @@ const squadData = {
                 }
             },
             {
-                "name": "Jean-Philippe Gbamin",
+                "name": "Emmanuel Agbadou",
                 "position": "DF",
-                "club": "Metz",
+                "club": "Beşiktaş",
+                "league": "Turkish Super Lig",
+                "age": 28,
+                "birthplace": {
+                    "city": "Ivory Coast",
+                    "country": "Ivory Coast",
+                    "lat": 8,
+                    "lng": -6
+                }
+            },
+            {
+                "name": "Guéla Doué",
+                "position": "DF",
+                "club": "Strasbourg",
                 "league": "Ligue 1",
-                "age": 30,
+                "age": 23,
                 "birthplace": {
-                    "city": "San-Pédro",
-                    "country": "Ivory Coast",
-                    "lat": 4.7333,
-                    "lng": -6.6333
-                }
-            },
-            {
-                "name": "Jean Michaël Seri",
-                "position": "MF",
-                "club": "Maribor",
-                "league": "Unknown",
-                "age": 34,
-                "birthplace": {
-                    "city": "Grand-Béréby",
-                    "country": "Ivory Coast",
-                    "lat": 4.65,
-                    "lng": -6.9333
-                }
-            },
-            {
-                "name": "Seko Fofana",
-                "position": "MF",
-                "club": "Porto",
-                "league": "Primeira Liga",
-                "age": 30,
-                "birthplace": {
-                    "city": "Paris",
+                    "city": "Angers",
                     "country": "France",
-                    "lat": 48.8567,
-                    "lng": 2.3522
+                    "lat": 47.4728,
+                    "lng": -0.5556
+                }
+            },
+            {
+                "name": "Ousmane Diomande",
+                "position": "DF",
+                "club": "Sporting CP",
+                "league": "Primeira Liga",
+                "age": 22,
+                "birthplace": {
+                    "city": "Abidjan",
+                    "country": "Ivory Coast",
+                    "lat": 5.3364,
+                    "lng": -4.0267
+                }
+            },
+            {
+                "name": "Clément Akpa",
+                "position": "DF",
+                "club": "Auxerre",
+                "league": "Ligue 1",
+                "age": 24,
+                "birthplace": {
+                    "city": "Meudon",
+                    "country": "France",
+                    "lat": 48.8075,
+                    "lng": 2.2403
                 }
             },
             {
@@ -5269,6 +6554,19 @@ const squadData = {
                 }
             },
             {
+                "name": "Jean Michaël Seri",
+                "position": "MF",
+                "club": "Maribor",
+                "league": "Unknown",
+                "age": 34,
+                "birthplace": {
+                    "city": "Grand-Béréby",
+                    "country": "Ivory Coast",
+                    "lat": 4.65,
+                    "lng": -6.9333
+                }
+            },
+            {
                 "name": "Ibrahim Sangaré",
                 "position": "MF",
                 "club": "Nottingham Forest",
@@ -5279,6 +6577,19 @@ const squadData = {
                     "country": "Ivory Coast",
                     "lat": 5.3,
                     "lng": -3.95
+                }
+            },
+            {
+                "name": "Seko Fofana",
+                "position": "MF",
+                "club": "Porto",
+                "league": "Primeira Liga",
+                "age": 30,
+                "birthplace": {
+                    "city": "Paris",
+                    "country": "France",
+                    "lat": 48.8567,
+                    "lng": 2.3522
                 }
             },
             {
@@ -5295,55 +6606,55 @@ const squadData = {
                 }
             },
             {
-                "name": "Vakoun Issouf Bayo",
-                "position": "FW",
-                "club": "Udinese",
-                "league": "Serie A",
-                "age": 29,
-                "birthplace": {
-                    "city": "Daloa",
-                    "country": "Ivory Coast",
-                    "lat": 6.8667,
-                    "lng": -6.45
-                }
-            },
-            {
-                "name": "Wilfried Zaha",
-                "position": "FW",
-                "club": "Charlotte FC",
-                "league": "MLS",
-                "age": 33,
-                "birthplace": {
-                    "city": "Abidjan",
-                    "country": "Ivory Coast",
-                    "lat": 5.3364,
-                    "lng": -4.0267
-                }
-            },
-            {
-                "name": "Jean-Philippe Krasso",
-                "position": "FW",
-                "club": "Paris FC",
-                "league": "Ligue 1",
-                "age": 28,
-                "birthplace": {
-                    "city": "Stuttgart",
-                    "country": "Germany",
-                    "lat": 48.7775,
-                    "lng": 9.18
-                }
-            },
-            {
-                "name": "Oumar Diakité",
-                "position": "FW",
-                "club": "Cercle Brugge",
+                "name": "Parfait Guiagon",
+                "position": "MF",
+                "club": "Charleroi",
                 "league": "Belgian Pro League",
-                "age": 22,
+                "age": 25,
                 "birthplace": {
-                    "city": "Bingerville",
+                    "city": "Ivory Coast",
                     "country": "Ivory Coast",
-                    "lat": 5.35,
-                    "lng": -3.9
+                    "lat": 8,
+                    "lng": -6
+                }
+            },
+            {
+                "name": "Nicolas Pépé",
+                "position": "FW",
+                "club": "Villarreal",
+                "league": "La Liga",
+                "age": 30,
+                "birthplace": {
+                    "city": "Mantes-la-Jolie",
+                    "country": "France",
+                    "lat": 48.9906,
+                    "lng": 1.7167
+                }
+            },
+            {
+                "name": "Simon Adingra",
+                "position": "FW",
+                "club": "Monaco",
+                "league": "Ligue 1",
+                "age": 24,
+                "birthplace": {
+                    "city": "Yamoussoukro",
+                    "country": "Ivory Coast",
+                    "lat": 6.8161,
+                    "lng": -5.2742
+                }
+            },
+            {
+                "name": "Evann Guessand",
+                "position": "FW",
+                "club": "Crystal Palace",
+                "league": "Premier League",
+                "age": 24,
+                "birthplace": {
+                    "city": "Ajaccio",
+                    "country": "France",
+                    "lat": 41.9256,
+                    "lng": 8.7364
                 }
             },
             {
@@ -5360,16 +6671,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Evann Guessand",
+                "name": "Bénie Traoré",
                 "position": "FW",
-                "club": "Aston Villa",
-                "league": "Premier League",
-                "age": 24,
+                "club": "Basel",
+                "league": "Swiss Super League",
+                "age": 23,
                 "birthplace": {
-                    "city": "Ajaccio",
-                    "country": "France",
-                    "lat": 41.9256,
-                    "lng": 8.7364
+                    "city": "Ouragahio",
+                    "country": "Ivory Coast",
+                    "lat": 6.4167,
+                    "lng": -5.9167
                 }
             },
             {
@@ -5377,25 +6688,38 @@ const squadData = {
                 "position": "FW",
                 "club": "TSG Hoffenheim",
                 "league": "Bundesliga",
-                "age": 19,
+                "age": 20,
                 "birthplace": {
                     "city": "Abidjan",
                     "country": "Ivory Coast",
-                    "lat": 6.0752,
-                    "lng": -3.6523
+                    "lat": 5.7744,
+                    "lng": -4.5582
                 }
             },
             {
-                "name": "Yan Diomande",
+                "name": "Martial Godo",
                 "position": "FW",
-                "club": "RB Leipzig",
-                "league": "Bundesliga",
-                "age": 19,
+                "club": "Strasbourg",
+                "league": "Ligue 1",
+                "age": 23,
                 "birthplace": {
-                    "city": "Abidjan",
-                    "country": "Ivory Coast",
-                    "lat": 5.3364,
-                    "lng": -4.0267
+                    "city": "London",
+                    "country": "United Kingdom",
+                    "lat": 51.5072,
+                    "lng": -0.1275
+                }
+            },
+            {
+                "name": "Elye Wahi",
+                "position": "FW",
+                "club": "Nice",
+                "league": "Ligue 1",
+                "age": 23,
+                "birthplace": {
+                    "city": "Courcouronnes",
+                    "country": "France",
+                    "lat": 48.6181,
+                    "lng": 2.4069
                 }
             }
         ]
@@ -5404,19 +6728,45 @@ const squadData = {
         "name": "Ecuador",
         "flag": "🇪🇨",
         "confederation": "CONMEBOL",
-        "fifaRanking": 17,
+        "fifaRanking": 20,
         "players": [
             {
                 "name": "Hernán Galíndez",
                 "position": "GK",
                 "club": "Huracán",
                 "league": "Argentine Primera",
-                "age": 38,
+                "age": 39,
                 "birthplace": {
                     "city": "Rosario",
                     "country": "Argentina",
                     "lat": -32.9575,
                     "lng": -60.6394
+                }
+            },
+            {
+                "name": "David Cabezas",
+                "position": "GK",
+                "club": "Libertad",
+                "league": "Ecuadorian Serie A",
+                "age": 30,
+                "birthplace": {
+                    "city": "Quito",
+                    "country": "Ecuador",
+                    "lat": -0.4266,
+                    "lng": -77.6407
+                }
+            },
+            {
+                "name": "Gonzalo Valle",
+                "position": "GK",
+                "club": "LDU Quito",
+                "league": "Ecuadorian Serie A",
+                "age": 30,
+                "birthplace": {
+                    "city": "Riobamba",
+                    "country": "Ecuador",
+                    "lat": -1.6731,
+                    "lng": -78.6483
                 }
             },
             {
@@ -5433,22 +6783,9 @@ const squadData = {
                 }
             },
             {
-                "name": "Cristhian Loor",
-                "position": "GK",
-                "club": "Botafogo",
-                "league": "Brasileirão",
-                "age": 19,
-                "birthplace": {
-                    "city": "Quito",
-                    "country": "Ecuador",
-                    "lat": -0.2342,
-                    "lng": -77.6407
-                }
-            },
-            {
                 "name": "Félix Torres",
                 "position": "DF",
-                "club": "Corinthians",
+                "club": "Internacional",
                 "league": "Brasileirão",
                 "age": 29,
                 "birthplace": {
@@ -5459,16 +6796,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Piero Hincapié",
+                "name": "José Hurtado",
                 "position": "DF",
-                "club": "Arsenal",
-                "league": "Premier League",
+                "club": "Red Bull Bragantino",
+                "league": "Primeira Liga",
                 "age": 24,
                 "birthplace": {
-                    "city": "Esmeraldas",
+                    "city": "Santo Domingo",
                     "country": "Ecuador",
-                    "lat": 0.95,
-                    "lng": -79.6667
+                    "lat": -0.2542,
+                    "lng": -79.1719
                 }
             },
             {
@@ -5485,19 +6822,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Cristian Ramírez",
-                "position": "DF",
-                "club": "Lokomotiv Moscow",
-                "league": "Russian Premier League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Santo Domingo",
-                    "country": "Ecuador",
-                    "lat": -0.2542,
-                    "lng": -79.1719
-                }
-            },
-            {
                 "name": "Willian Pacho",
                 "position": "DF",
                 "club": "Paris Saint-Germain",
@@ -5511,11 +6835,24 @@ const squadData = {
                 }
             },
             {
+                "name": "Pervis Estupiñán",
+                "position": "DF",
+                "club": "Milan",
+                "league": "Serie A",
+                "age": 28,
+                "birthplace": {
+                    "city": "Esmeraldas",
+                    "country": "Ecuador",
+                    "lat": 0.95,
+                    "lng": -79.6667
+                }
+            },
+            {
                 "name": "Ángelo Preciado",
                 "position": "DF",
                 "club": "Atlético Mineiro",
                 "league": "Brasileirão",
-                "age": 27,
+                "age": 28,
                 "birthplace": {
                     "city": "Shushufindi Canton",
                     "country": "Ecuador",
@@ -5524,29 +6861,29 @@ const squadData = {
                 }
             },
             {
+                "name": "Jackson Porozo",
+                "position": "DF",
+                "club": "Tijuana",
+                "league": "Liga MX",
+                "age": 25,
+                "birthplace": {
+                    "city": "San Lorenzo",
+                    "country": "Ecuador",
+                    "lat": 1.2864,
+                    "lng": -78.8353
+                }
+            },
+            {
                 "name": "Leonardo Realpe",
                 "position": "DF",
                 "club": "Famalicão",
                 "league": "Primeira Liga",
-                "age": 24,
+                "age": 25,
                 "birthplace": {
                     "city": "Rosa Zárate",
                     "country": "Ecuador",
                     "lat": 0.3272,
                     "lng": -79.4689
-                }
-            },
-            {
-                "name": "Jhoanner Chávez",
-                "position": "DF",
-                "club": "Lens",
-                "league": "Ligue 1",
-                "age": 23,
-                "birthplace": {
-                    "city": "Coca",
-                    "country": "Ecuador",
-                    "lat": -0.4625,
-                    "lng": -76.9842
                 }
             },
             {
@@ -5589,19 +6926,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Denil Castillo",
-                "position": "MF",
-                "club": "Midtjylland",
-                "league": "Danish Superliga",
-                "age": 21,
-                "birthplace": {
-                    "city": "Eloy Alfaro Canton",
-                    "country": "Ecuador",
-                    "lat": 1.2499,
-                    "lng": -78.9842
-                }
-            },
-            {
                 "name": "Alan Minda",
                 "position": "MF",
                 "club": "Atlético Mineiro",
@@ -5619,7 +6943,7 @@ const squadData = {
                 "position": "MF",
                 "club": "UNAM",
                 "league": "Liga MX",
-                "age": 23,
+                "age": 24,
                 "birthplace": {
                     "city": "Babahoyo",
                     "country": "Ecuador",
@@ -5680,55 +7004,68 @@ const squadData = {
                 }
             },
             {
-                "name": "Patrik Mercado",
+                "name": "Bryan Ramírez",
                 "position": "MF",
-                "club": "Independiente del Valle",
-                "league": "Ecuadorian Serie A",
-                "age": 22,
-                "birthplace": {
-                    "city": "Tena",
-                    "country": "Ecuador",
-                    "lat": -0.989,
-                    "lng": -77.8159
-                }
-            },
-            {
-                "name": "Jeremy Arévalo",
-                "position": "FW",
-                "club": "VfB Stuttgart",
-                "league": "Bundesliga",
-                "age": 20,
-                "birthplace": {
-                    "city": "Santander",
-                    "country": "Spain",
-                    "lat": 43.4667,
-                    "lng": -3.8
-                }
-            },
-            {
-                "name": "Kevin Rodríguez",
-                "position": "FW",
-                "club": "Union Saint-Gilloise",
-                "league": "Belgian Pro League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Ibarra",
-                    "country": "Ecuador",
-                    "lat": 0.3628,
-                    "lng": -78.13
-                }
-            },
-            {
-                "name": "Leonardo Campana",
-                "position": "FW",
-                "club": "New England Revolution",
+                "club": "Cincinnati",
                 "league": "MLS",
                 "age": 25,
+                "birthplace": {
+                    "city": "Esmeraldas",
+                    "country": "Ecuador",
+                    "lat": 0.95,
+                    "lng": -79.6667
+                }
+            },
+            {
+                "name": "Anthony Valencia",
+                "position": "FW",
+                "club": "Antwerp",
+                "league": "Belgian Pro League",
+                "age": 22,
                 "birthplace": {
                     "city": "Guayaquil",
                     "country": "Ecuador",
                     "lat": -2.19,
                     "lng": -79.8875
+                }
+            },
+            {
+                "name": "Elías Legendre",
+                "position": "FW",
+                "club": "Rennes",
+                "league": "Ligue 1",
+                "age": 17,
+                "birthplace": {
+                    "city": "Quito",
+                    "country": "Ecuador",
+                    "lat": -0.9151,
+                    "lng": -78.2334
+                }
+            },
+            {
+                "name": "Enner Valencia",
+                "position": "FW",
+                "club": "Pachuca",
+                "league": "Liga MX",
+                "age": 36,
+                "birthplace": {
+                    "city": "San Lorenzo",
+                    "country": "Ecuador",
+                    "lat": 1.2864,
+                    "lng": -78.8353
+                }
+            },
+            {
+                "name": "Jordy Caicedo",
+                "position": "FW",
+                "club": "Huracán",
+                "league": "Argentine Primera",
+                "age": 28,
+                "birthplace": {
+                    "city": "Machala",
+                    "country": "Ecuador",
+                    "lat": -3.2667,
+                    "lng": -79.9667
                 }
             },
             {
@@ -5745,16 +7082,42 @@ const squadData = {
                 }
             },
             {
-                "name": "Nilson Angulo",
+                "name": "Janner Corozo",
                 "position": "FW",
-                "club": "Sunderland",
-                "league": "Premier League",
-                "age": 22,
+                "club": "LDU Quito",
+                "league": "Ecuadorian Serie A",
+                "age": 30,
                 "birthplace": {
-                    "city": "Quito",
+                    "city": "Guayaquil",
                     "country": "Ecuador",
-                    "lat": -0.22,
-                    "lng": -78.5125
+                    "lat": -2.19,
+                    "lng": -79.8875
+                }
+            },
+            {
+                "name": "Jeremy Arévalo",
+                "position": "FW",
+                "club": "VfB Stuttgart",
+                "league": "Bundesliga",
+                "age": 21,
+                "birthplace": {
+                    "city": "Santander",
+                    "country": "Spain",
+                    "lat": 43.4667,
+                    "lng": -3.8
+                }
+            },
+            {
+                "name": "Kevin Rodríguez",
+                "position": "FW",
+                "club": "Union Saint-Gilloise",
+                "league": "Belgian Pro League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Ibarra",
+                    "country": "Ecuador",
+                    "lat": 0.3628,
+                    "lng": -78.13
                 }
             }
         ]
@@ -5763,7 +7126,7 @@ const squadData = {
         "name": "Netherlands",
         "flag": "🇳🇱",
         "confederation": "UEFA",
-        "fifaRanking": 18,
+        "fifaRanking": 21,
         "players": [
             {
                 "name": "Bart Verbruggen",
@@ -5779,16 +7142,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Robin Roefs",
+                "name": "Justin Bijlow",
                 "position": "GK",
-                "club": "Sunderland",
-                "league": "Premier League",
-                "age": 23,
+                "club": "Genoa",
+                "league": "Serie A",
+                "age": 28,
                 "birthplace": {
-                    "city": "Heeswijk-Dinther",
+                    "city": "Rotterdam",
                     "country": "Netherlands",
-                    "lat": 51.6503,
-                    "lng": 5.475
+                    "lat": 51.92,
+                    "lng": 4.48
                 }
             },
             {
@@ -5818,16 +7181,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Jurriën Timber",
+                "name": "Jan Paul van Hecke",
                 "position": "DF",
-                "club": "Arsenal",
+                "club": "Brighton & Hove Albion",
                 "league": "Premier League",
-                "age": 24,
+                "age": 25,
                 "birthplace": {
-                    "city": "Utrecht",
+                    "city": "Arnemuiden",
                     "country": "Netherlands",
-                    "lat": 52.0908,
-                    "lng": 5.1222
+                    "lat": 51.5,
+                    "lng": 3.6667
                 }
             },
             {
@@ -5848,7 +7211,7 @@ const squadData = {
                 "position": "DF",
                 "club": "Manchester City",
                 "league": "Premier League",
-                "age": 30,
+                "age": 31,
                 "birthplace": {
                     "city": "The Hague",
                     "country": "Netherlands",
@@ -5857,16 +7220,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Matthijs de Ligt",
+                "name": "Stefan de Vrij",
                 "position": "DF",
-                "club": "Manchester United",
-                "league": "Premier League",
-                "age": 26,
+                "club": "Internazionale",
+                "league": "Serie A",
+                "age": 34,
                 "birthplace": {
-                    "city": "Leiderdorp",
+                    "city": "Ouderkerk aan den IJssel",
                     "country": "Netherlands",
-                    "lat": 52.1617,
-                    "lng": 4.5283
+                    "lat": 51.9322,
+                    "lng": 4.6361
+                }
+            },
+            {
+                "name": "Jeremie Frimpong",
+                "position": "DF",
+                "club": "Liverpool",
+                "league": "Premier League",
+                "age": 25,
+                "birthplace": {
+                    "city": "Amsterdam",
+                    "country": "Netherlands",
+                    "lat": 52.3667,
+                    "lng": 4.8833
                 }
             },
             {
@@ -5880,6 +7256,32 @@ const squadData = {
                     "country": "Netherlands",
                     "lat": 52.4972,
                     "lng": 4.8089
+                }
+            },
+            {
+                "name": "Denzel Dumfries",
+                "position": "DF",
+                "club": "Internazionale",
+                "league": "Serie A",
+                "age": 29,
+                "birthplace": {
+                    "city": "Rotterdam",
+                    "country": "Netherlands",
+                    "lat": 51.92,
+                    "lng": 4.48
+                }
+            },
+            {
+                "name": "Jorrel Hato",
+                "position": "DF",
+                "club": "Chelsea",
+                "league": "Premier League",
+                "age": 20,
+                "birthplace": {
+                    "city": "Rotterdam",
+                    "country": "Netherlands",
+                    "lat": 51.92,
+                    "lng": 4.48
                 }
             },
             {
@@ -5909,16 +7311,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Quinten Timber",
+                "name": "Luciano Valente",
                 "position": "MF",
-                "club": "Marseille",
-                "league": "Ligue 1",
-                "age": 24,
+                "club": "Feyenoord",
+                "league": "Eredivisie",
+                "age": 22,
                 "birthplace": {
-                    "city": "Utrecht",
+                    "city": "Groningen",
                     "country": "Netherlands",
-                    "lat": 52.0908,
-                    "lng": 5.1217
+                    "lat": 53.2189,
+                    "lng": 6.5675
                 }
             },
             {
@@ -5948,55 +7350,55 @@ const squadData = {
                 }
             },
             {
-                "name": "Frenkie de Jong",
+                "name": "Teun Koopmeiners",
                 "position": "MF",
-                "club": "Barcelona",
-                "league": "La Liga",
+                "club": "Juventus",
+                "league": "Serie A",
                 "age": 28,
                 "birthplace": {
-                    "city": "Arkel",
+                    "city": "Castricum",
                     "country": "Netherlands",
-                    "lat": 51.8642,
-                    "lng": 4.9944
+                    "lat": 52.5517,
+                    "lng": 4.6583
                 }
             },
             {
-                "name": "Luciano Valente",
+                "name": "Kees Smit",
                 "position": "MF",
-                "club": "Feyenoord",
+                "club": "AZ",
                 "league": "Eredivisie",
-                "age": 22,
+                "age": 20,
                 "birthplace": {
-                    "city": "Groningen",
+                    "city": "Heiloo",
                     "country": "Netherlands",
-                    "lat": 53.2189,
-                    "lng": 6.5675
+                    "lat": 52.6011,
+                    "lng": 4.7019
                 }
             },
             {
-                "name": "Emmanuel Emegha",
-                "position": "FW",
-                "club": "Strasbourg",
+                "name": "Quinten Timber",
+                "position": "MF",
+                "club": "Marseille",
                 "league": "Ligue 1",
-                "age": 23,
+                "age": 24,
                 "birthplace": {
-                    "city": "The Hague",
+                    "city": "Utrecht",
                     "country": "Netherlands",
-                    "lat": 52.08,
-                    "lng": 4.31
+                    "lat": 52.0908,
+                    "lng": 5.1217
                 }
             },
             {
-                "name": "Memphis Depay",
+                "name": "Wout Weghorst",
                 "position": "FW",
-                "club": "Corinthians",
-                "league": "Brasileirão",
-                "age": 31,
+                "club": "Ajax",
+                "league": "Eredivisie",
+                "age": 33,
                 "birthplace": {
-                    "city": "Moordrecht",
+                    "city": "Amsterdam",
                     "country": "Netherlands",
-                    "lat": 51.9861,
-                    "lng": 4.6681
+                    "lat": 52.3667,
+                    "lng": 4.8833
                 }
             },
             {
@@ -6037,6 +7439,32 @@ const squadData = {
                     "lat": 52.9,
                     "lng": 4.97
                 }
+            },
+            {
+                "name": "Brian Brobbey",
+                "position": "FW",
+                "club": "Sunderland",
+                "league": "Premier League",
+                "age": 24,
+                "birthplace": {
+                    "city": "Amsterdam",
+                    "country": "Netherlands",
+                    "lat": 52.3667,
+                    "lng": 4.8833
+                }
+            },
+            {
+                "name": "Memphis Depay",
+                "position": "FW",
+                "club": "Corinthians",
+                "league": "Brasileirão",
+                "age": 32,
+                "birthplace": {
+                    "city": "Moordrecht",
+                    "country": "Netherlands",
+                    "lat": 51.9861,
+                    "lng": 4.6681
+                }
             }
         ]
     },
@@ -6044,45 +7472,45 @@ const squadData = {
         "name": "Japan",
         "flag": "🇯🇵",
         "confederation": "AFC",
-        "fifaRanking": 19,
+        "fifaRanking": 22,
         "players": [
+            {
+                "name": "Zion Suzuki",
+                "position": "GK",
+                "club": "Parma",
+                "league": "Serie A",
+                "age": 23,
+                "birthplace": {
+                    "city": "Newark",
+                    "country": "United States",
+                    "lat": 40.7356,
+                    "lng": -74.1722
+                }
+            },
+            {
+                "name": "Keisuke Ōsako",
+                "position": "GK",
+                "club": "Sanfrecce Hiroshima",
+                "league": "J1 League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Izumi",
+                    "country": "Japan",
+                    "lat": 32.0904,
+                    "lng": 130.3527
+                }
+            },
             {
                 "name": "Tomoki Hayakawa",
                 "position": "GK",
                 "club": "Kashima Antlers",
                 "league": "J1 League",
-                "age": 26,
+                "age": 27,
                 "birthplace": {
                     "city": "Kanagawa Prefecture",
                     "country": "Japan",
                     "lat": 35.4477,
                     "lng": 139.6425
-                }
-            },
-            {
-                "name": "Leo Kokubo",
-                "position": "GK",
-                "club": "Sint-Truiden",
-                "league": "Belgian Pro League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Chiba Prefecture",
-                    "country": "Japan",
-                    "lat": 35.6046,
-                    "lng": 140.1232
-                }
-            },
-            {
-                "name": "Taishi Brandon Nozawa",
-                "position": "GK",
-                "club": "Antwerp",
-                "league": "Belgian Pro League",
-                "age": 23,
-                "birthplace": {
-                    "city": "Ginowan",
-                    "country": "Japan",
-                    "lat": 26.2815,
-                    "lng": 127.7785
                 }
             },
             {
@@ -6112,16 +7540,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Ko Itakura",
+                "name": "Ayumu Seko",
                 "position": "DF",
-                "club": "Ajax",
-                "league": "Eredivisie",
-                "age": 29,
+                "club": "Le Havre",
+                "league": "Ligue 1",
+                "age": 25,
                 "birthplace": {
-                    "city": "Yokohama",
+                    "city": "Osaka",
                     "country": "Japan",
-                    "lat": 35.4333,
-                    "lng": 139.65
+                    "lat": 34.6938,
+                    "lng": 135.5021
                 }
             },
             {
@@ -6138,29 +7566,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Tomoya Ando",
+                "name": "Daiki Hashioka",
                 "position": "DF",
-                "club": "FC St. Pauli",
-                "league": "Bundesliga",
-                "age": 27,
+                "club": "Gent",
+                "league": "Belgian Pro League",
+                "age": 26,
                 "birthplace": {
-                    "city": "Toyota",
+                    "city": "Saitama",
                     "country": "Japan",
-                    "lat": 35.0824,
-                    "lng": 137.1563
+                    "lat": 35.8614,
+                    "lng": 139.6456
                 }
             },
             {
-                "name": "Ayumu Seko",
+                "name": "Hiroki Itō",
                 "position": "DF",
-                "club": "Le Havre",
-                "league": "Ligue 1",
-                "age": 25,
+                "club": "Bayern Munich",
+                "league": "Bundesliga",
+                "age": 26,
                 "birthplace": {
-                    "city": "Osaka",
+                    "city": "Tokyo",
                     "country": "Japan",
-                    "lat": 34.6938,
-                    "lng": 135.5021
+                    "lat": 35.1934,
+                    "lng": 140.6576
                 }
             },
             {
@@ -6177,24 +7605,11 @@ const squadData = {
                 }
             },
             {
-                "name": "Wataru Endo",
-                "position": "MF",
-                "club": "Liverpool",
-                "league": "Premier League",
-                "age": 32,
-                "birthplace": {
-                    "city": "Yokohama",
-                    "country": "Japan",
-                    "lat": 35.4333,
-                    "lng": 139.65
-                }
-            },
-            {
                 "name": "Joel Chima Fujita",
                 "position": "MF",
                 "club": "FC St. Pauli",
                 "league": "Bundesliga",
-                "age": 23,
+                "age": 24,
                 "birthplace": {
                     "city": "Tokyo",
                     "country": "Japan",
@@ -6203,16 +7618,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Takumi Minamino",
+                "name": "Kaoru Mitoma",
                 "position": "MF",
-                "club": "Monaco",
-                "league": "Ligue 1",
-                "age": 31,
+                "club": "Brighton & Hove Albion",
+                "league": "Premier League",
+                "age": 28,
                 "birthplace": {
-                    "city": "Izumisano",
+                    "city": "Kawasaki",
                     "country": "Japan",
-                    "lat": 34.4069,
-                    "lng": 135.3275
+                    "lat": 35.5309,
+                    "lng": 139.703
                 }
             },
             {
@@ -6242,16 +7657,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Ryūnosuke Satō",
+                "name": "Junya Itō",
                 "position": "MF",
-                "club": "FC Tokyo",
-                "league": "J1 League",
-                "age": 19,
+                "club": "Genk",
+                "league": "Belgian Pro League",
+                "age": 33,
                 "birthplace": {
-                    "city": "Nishitōkyō-shi",
+                    "city": "Yokosuka",
                     "country": "Japan",
-                    "lat": 35.7256,
-                    "lng": 139.5383
+                    "lat": 35.2813,
+                    "lng": 139.6721
                 }
             },
             {
@@ -6281,16 +7696,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Takefusa Kubo",
+                "name": "Kodai Sano",
                 "position": "MF",
-                "club": "Real Sociedad",
-                "league": "La Liga",
-                "age": 24,
+                "club": "NEC Nijmegen",
+                "league": "Eredivisie",
+                "age": 22,
                 "birthplace": {
-                    "city": "Kawasaki",
+                    "city": "Tsuyama",
                     "country": "Japan",
-                    "lat": 35.5309,
-                    "lng": 139.703
+                    "lat": 35.0691,
+                    "lng": 134.0045
                 }
             },
             {
@@ -6307,16 +7722,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Sōta Kitano",
+                "name": "Ryūnosuke Satō",
                 "position": "MF",
-                "club": "Red Bull Salzburg",
-                "league": "Austrian Bundesliga",
-                "age": 21,
+                "club": "FC Tokyo",
+                "league": "J1 League",
+                "age": 19,
                 "birthplace": {
-                    "city": "Wakayama Prefecture",
+                    "city": "Nishitōkyō-shi",
                     "country": "Japan",
-                    "lat": 34.226,
-                    "lng": 135.1675
+                    "lat": 35.7256,
+                    "lng": 139.5383
+                }
+            },
+            {
+                "name": "Yuito Suzuki",
+                "position": "FW",
+                "club": "SC Freiburg",
+                "league": "Bundesliga",
+                "age": 24,
+                "birthplace": {
+                    "city": "Hayama",
+                    "country": "Japan",
+                    "lat": 35.2721,
+                    "lng": 139.5863
                 }
             },
             {
@@ -6367,8 +7795,21 @@ const squadData = {
                 "birthplace": {
                     "city": "Yokohama",
                     "country": "Japan",
-                    "lat": 35.4333,
-                    "lng": 139.65
+                    "lat": 35.4503,
+                    "lng": 139.6342
+                }
+            },
+            {
+                "name": "Kento Shiogai",
+                "position": "FW",
+                "club": "VfL Wolfsburg",
+                "league": "Bundesliga",
+                "age": 21,
+                "birthplace": {
+                    "city": "Tokyo",
+                    "country": "Japan",
+                    "lat": 35.6894,
+                    "lng": 139.6917
                 }
             },
             {
@@ -6380,8 +7821,341 @@ const squadData = {
                 "birthplace": {
                     "city": "Tokyo",
                     "country": "Japan",
-                    "lat": 35.8503,
-                    "lng": 139.168
+                    "lat": 35.8557,
+                    "lng": 139.0268
+                }
+            }
+        ]
+    },
+    "SWE": {
+        "name": "Sweden",
+        "flag": "🇸🇪",
+        "confederation": "UEFA",
+        "fifaRanking": 23,
+        "players": [
+            {
+                "name": "Noel Törnqvist",
+                "position": "GK",
+                "club": "Como",
+                "league": "Serie A",
+                "age": 24,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 60.2263,
+                    "lng": 18.1984
+                }
+            },
+            {
+                "name": "Melker Ellborg",
+                "position": "GK",
+                "club": "Sunderland",
+                "league": "Premier League",
+                "age": 22,
+                "birthplace": {
+                    "city": "Kalmar",
+                    "country": "Sweden",
+                    "lat": 56.6643,
+                    "lng": 16.3656
+                }
+            },
+            {
+                "name": "Kristoffer Nordfeldt",
+                "position": "GK",
+                "club": "AIK",
+                "league": "Swedish Allsvenskan",
+                "age": 36,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.3294,
+                    "lng": 18.0686
+                }
+            },
+            {
+                "name": "Gustaf Lagerbielke",
+                "position": "DF",
+                "club": "Braga",
+                "league": "Primeira Liga",
+                "age": 25,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.3294,
+                    "lng": 18.0686
+                }
+            },
+            {
+                "name": "Victor Lindelöf",
+                "position": "DF",
+                "club": "Aston Villa",
+                "league": "Premier League",
+                "age": 31,
+                "birthplace": {
+                    "city": "Västerås",
+                    "country": "Sweden",
+                    "lat": 59.6173,
+                    "lng": 16.5422
+                }
+            },
+            {
+                "name": "Victor Eriksson",
+                "position": "DF",
+                "club": "Hammarby IF",
+                "league": "Swedish Allsvenskan",
+                "age": 25,
+                "birthplace": {
+                    "city": "Värnamo",
+                    "country": "Sweden",
+                    "lat": 57.1818,
+                    "lng": 14.0585
+                }
+            },
+            {
+                "name": "Gabriel Gudmundsson",
+                "position": "DF",
+                "club": "Leeds United",
+                "league": "Premier League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Malmö",
+                    "country": "Sweden",
+                    "lat": 55.5833,
+                    "lng": 13
+                }
+            },
+            {
+                "name": "Daniel Svensson",
+                "position": "DF",
+                "club": "Borussia Dortmund",
+                "league": "Bundesliga",
+                "age": 24,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.3294,
+                    "lng": 18.0686
+                }
+            },
+            {
+                "name": "Elliot Stroud",
+                "position": "DF",
+                "club": "Mjällby AIF",
+                "league": "Swedish Allsvenskan",
+                "age": 23,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.8061,
+                    "lng": 18.1391
+                }
+            },
+            {
+                "name": "Carl Starfelt",
+                "position": "DF",
+                "club": "Celta Vigo",
+                "league": "La Liga",
+                "age": 30,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.3294,
+                    "lng": 18.0686
+                }
+            },
+            {
+                "name": "Herman Johansson",
+                "position": "DF",
+                "club": "FC Dallas",
+                "league": "MLS",
+                "age": 28,
+                "birthplace": {
+                    "city": "Örnsköldsvik",
+                    "country": "Sweden",
+                    "lat": 63.2655,
+                    "lng": 18.6762
+                }
+            },
+            {
+                "name": "Williot Swedberg",
+                "position": "MF",
+                "club": "Celta Vigo",
+                "league": "La Liga",
+                "age": 22,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.3294,
+                    "lng": 18.0686
+                }
+            },
+            {
+                "name": "Lucas Bergvall",
+                "position": "MF",
+                "club": "Tottenham Hotspur",
+                "league": "Premier League",
+                "age": 20,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.3294,
+                    "lng": 18.0686
+                }
+            },
+            {
+                "name": "Gustav Lundgren",
+                "position": "MF",
+                "club": "GAIS",
+                "league": "Swedish Allsvenskan",
+                "age": 30,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.0307,
+                    "lng": 19.0782
+                }
+            },
+            {
+                "name": "Jesper Karlström",
+                "position": "MF",
+                "club": "Udinese",
+                "league": "Serie A",
+                "age": 30,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.3294,
+                    "lng": 18.0686
+                }
+            },
+            {
+                "name": "Yasin Ayari",
+                "position": "MF",
+                "club": "Brighton & Hove Albion",
+                "league": "Premier League",
+                "age": 22,
+                "birthplace": {
+                    "city": "Sweden",
+                    "country": "Unknown",
+                    "lat": 61,
+                    "lng": 15
+                }
+            },
+            {
+                "name": "Mattias Svanberg",
+                "position": "MF",
+                "club": "VfL Wolfsburg",
+                "league": "Bundesliga",
+                "age": 27,
+                "birthplace": {
+                    "city": "Malmö",
+                    "country": "Sweden",
+                    "lat": 55.5833,
+                    "lng": 13
+                }
+            },
+            {
+                "name": "Hugo Larsson",
+                "position": "MF",
+                "club": "Eintracht Frankfurt",
+                "league": "Bundesliga",
+                "age": 21,
+                "birthplace": {
+                    "city": "Svarte",
+                    "country": "Sweden",
+                    "lat": 55.4308,
+                    "lng": 13.7137
+                }
+            },
+            {
+                "name": "Besfort Zeneli",
+                "position": "MF",
+                "club": "Union Saint-Gilloise",
+                "league": "Belgian Pro League",
+                "age": 23,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 58.5965,
+                    "lng": 18.1864
+                }
+            },
+            {
+                "name": "Gustaf Nilsson",
+                "position": "FW",
+                "club": "Club Brugge",
+                "league": "Belgian Pro League",
+                "age": 28,
+                "birthplace": {
+                    "city": "Sweden",
+                    "country": "Unknown",
+                    "lat": 61,
+                    "lng": 15
+                }
+            },
+            {
+                "name": "Benjamin Nygren",
+                "position": "FW",
+                "club": "Celtic",
+                "league": "Scottish Premiership",
+                "age": 24,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 58.9138,
+                    "lng": 17.1832
+                }
+            },
+            {
+                "name": "Anthony Elanga",
+                "position": "FW",
+                "club": "Newcastle United",
+                "league": "Premier League",
+                "age": 23,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.3092,
+                    "lng": 17.695
+                }
+            },
+            {
+                "name": "Viktor Gyökeres",
+                "position": "FW",
+                "club": "Arsenal",
+                "league": "Premier League",
+                "age": 27,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.2473,
+                    "lng": 17.1189
+                }
+            },
+            {
+                "name": "Taha Ali",
+                "position": "FW",
+                "club": "Malmö FF",
+                "league": "Swedish Allsvenskan",
+                "age": 27,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.399,
+                    "lng": 17.5831
+                }
+            },
+            {
+                "name": "Roony Bardghji",
+                "position": "FW",
+                "club": "Barcelona",
+                "league": "La Liga",
+                "age": 20,
+                "birthplace": {
+                    "city": "Stockholm",
+                    "country": "Sweden",
+                    "lat": 59.2772,
+                    "lng": 18.3356
                 }
             }
         ]
@@ -6390,7 +8164,7 @@ const squadData = {
         "name": "Tunisia",
         "flag": "🇹🇳",
         "confederation": "CAF",
-        "fifaRanking": 20,
+        "fifaRanking": 24,
         "players": [
             {
                 "name": "Noureddine Farhati",
@@ -6401,8 +8175,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 37.3284,
-                    "lng": 9.7324
+                    "lat": 37.0668,
+                    "lng": 9.4847
                 }
             },
             {
@@ -6412,23 +8186,23 @@ const squadData = {
                 "league": "Tunisian Ligue 1",
                 "age": 29,
                 "birthplace": {
-                    "city": "Sfax",
+                    "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 34.74,
-                    "lng": 10.76
+                    "lat": 37.0451,
+                    "lng": 10.0445
                 }
             },
             {
-                "name": "Bechir Ben Saïd",
+                "name": "Mouhib Chamakh",
                 "position": "GK",
-                "club": "Espérance de Tunis",
+                "club": "Club Africain",
                 "league": "Tunisian Ligue 1",
-                "age": 31,
+                "age": 24,
                 "birthplace": {
-                    "city": "Gabès",
+                    "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 33.8814,
-                    "lng": 10.0983
+                    "lat": 37.0149,
+                    "lng": 11.1899
                 }
             },
             {
@@ -6440,8 +8214,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 36.7521,
-                    "lng": 10.9585
+                    "lat": 36.2105,
+                    "lng": 9.5031
                 }
             },
             {
@@ -6451,114 +8225,36 @@ const squadData = {
                 "league": "Ligue 1",
                 "age": 32,
                 "birthplace": {
-                    "city": "Sfax",
+                    "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 34.74,
-                    "lng": 10.76
+                    "lat": 36.9877,
+                    "lng": 11.0038
                 }
             },
             {
-                "name": "Montassar Talbi",
-                "position": "DF",
-                "club": "Lorient",
-                "league": "Ligue 1",
-                "age": 27,
-                "birthplace": {
-                    "city": "Paris",
-                    "country": "France",
-                    "lat": 48.8567,
-                    "lng": 2.3522
-                }
-            },
-            {
-                "name": "Yassine Meriah",
+                "name": "Mohamed Amine Ben Hamida",
                 "position": "DF",
                 "club": "Espérance de Tunis",
                 "league": "Tunisian Ligue 1",
-                "age": 32,
+                "age": 30,
                 "birthplace": {
                     "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 36.8008,
-                    "lng": 10.18
+                    "lat": 37.0217,
+                    "lng": 9.6058
                 }
             },
             {
-                "name": "Dylan Bronn",
+                "name": "Omar Rekik",
                 "position": "DF",
-                "club": "Servette",
-                "league": "Swiss Super League",
-                "age": 30,
+                "club": "Maribor",
+                "league": "Unknown",
+                "age": 24,
                 "birthplace": {
-                    "city": "Cannes",
-                    "country": "France",
-                    "lat": 43.5525,
-                    "lng": 7.0214
-                }
-            },
-            {
-                "name": "Ali Maâloul",
-                "position": "DF",
-                "club": "CS Sfaxien",
-                "league": "Tunisian Ligue 1",
-                "age": 36,
-                "birthplace": {
-                    "city": "Sfax",
+                    "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 34.74,
-                    "lng": 10.76
-                }
-            },
-            {
-                "name": "Mohamed Ben Ali",
-                "position": "DF",
-                "club": "Espérance de Tunis",
-                "league": "Tunisian Ligue 1",
-                "age": 30,
-                "birthplace": {
-                    "city": "Aryanah",
-                    "country": "Tunisia",
-                    "lat": 36.8625,
-                    "lng": 10.1956
-                }
-            },
-            {
-                "name": "Nader Ghandri",
-                "position": "DF",
-                "club": "Akhmat Grozny",
-                "league": "Russian Premier League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Aubervilliers",
-                    "country": "France",
-                    "lat": 48.9111,
-                    "lng": 2.3825
-                }
-            },
-            {
-                "name": "Yan Valery",
-                "position": "DF",
-                "club": "Sheffield Wednesday",
-                "league": "EFL Championship",
-                "age": 26,
-                "birthplace": {
-                    "city": "Champigny-sur-Marne",
-                    "country": "France",
-                    "lat": 48.8172,
-                    "lng": 2.5156
-                }
-            },
-            {
-                "name": "Mortadha Ben Ouanes",
-                "position": "DF",
-                "club": "Kasımpaşa",
-                "league": "Turkish Super Lig",
-                "age": 31,
-                "birthplace": {
-                    "city": "Sousse",
-                    "country": "Tunisia",
-                    "lat": 35.8333,
-                    "lng": 10.6333
+                    "lat": 35.8217,
+                    "lng": 9.5118
                 }
             },
             {
@@ -6568,62 +8264,75 @@ const squadData = {
                 "league": "Turkish Super Lig",
                 "age": 21,
                 "birthplace": {
-                    "city": "Medina",
-                    "country": "Saudi Arabia",
-                    "lat": 24.47,
-                    "lng": 39.61
+                    "city": "Tunis",
+                    "country": "Tunisia",
+                    "lat": 36.4955,
+                    "lng": 9.3439
                 }
             },
             {
-                "name": "Mohamed Ali Ben Romdhane",
-                "position": "MF",
-                "club": "Al Ahly",
-                "league": "Egyptian Premier League",
-                "age": 26,
+                "name": "Ghaith Zaalouni",
+                "position": "DF",
+                "club": "Club Africain",
+                "league": "Tunisian Ligue 1",
+                "age": 23,
                 "birthplace": {
                     "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 36.8008,
-                    "lng": 10.18
+                    "lat": 37.496,
+                    "lng": 10.1536
                 }
             },
             {
-                "name": "Hannibal Mejbri",
-                "position": "MF",
-                "club": "Burnley",
-                "league": "Premier League",
-                "age": 23,
+                "name": "Alaa Ghram",
+                "position": "DF",
+                "club": "Shakhta Donetsk",
+                "league": "Ukrainian Premier League",
+                "age": 24,
                 "birthplace": {
-                    "city": "Ivry-sur-Seine",
-                    "country": "France",
-                    "lat": 48.8139,
-                    "lng": 2.3878
+                    "city": "Tunis",
+                    "country": "Tunisia",
+                    "lat": 35.831,
+                    "lng": 10.9667
                 }
             },
             {
-                "name": "Ismaël Gharbi",
-                "position": "MF",
-                "club": "FC Augsburg",
-                "league": "Bundesliga",
+                "name": "Moutaz Neffati",
+                "position": "DF",
+                "club": "IFK Norrköping",
+                "league": "Swedish Allsvenskan",
                 "age": 21,
                 "birthplace": {
-                    "city": "Paris",
-                    "country": "France",
-                    "lat": 48.8567,
-                    "lng": 2.3522
+                    "city": "Tunis",
+                    "country": "Tunisia",
+                    "lat": 35.8495,
+                    "lng": 11.1724
                 }
             },
             {
-                "name": "Ferjani Sassi",
-                "position": "MF",
-                "club": "Al-Gharafa",
-                "league": "Qatar Stars League",
-                "age": 33,
+                "name": "Raed Chikhaoui",
+                "position": "DF",
+                "club": "US Monastir",
+                "league": "Tunisian Ligue 1",
+                "age": 21,
                 "birthplace": {
-                    "city": "Aryanah",
+                    "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 36.8625,
-                    "lng": 10.1956
+                    "lat": 37.3195,
+                    "lng": 10.1607
+                }
+            },
+            {
+                "name": "Rani Khedira",
+                "position": "MF",
+                "club": "Union Berlin",
+                "league": "Bundesliga",
+                "age": 32,
+                "birthplace": {
+                    "city": "Stuttgart",
+                    "country": "Germany",
+                    "lat": 48.7775,
+                    "lng": 9.18
                 }
             },
             {
@@ -6633,10 +8342,10 @@ const squadData = {
                 "league": "Swiss Super League",
                 "age": 25,
                 "birthplace": {
-                    "city": "Sousse",
+                    "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 35.8333,
-                    "lng": 10.6333
+                    "lat": 37.3186,
+                    "lng": 10.7493
                 }
             },
             {
@@ -6646,49 +8355,49 @@ const squadData = {
                 "league": "Bundesliga",
                 "age": 30,
                 "birthplace": {
-                    "city": "Lunel",
-                    "country": "France",
-                    "lat": 43.6769,
-                    "lng": 4.1353
+                    "city": "Tunis",
+                    "country": "Tunisia",
+                    "lat": 36.76,
+                    "lng": 9.6137
                 }
             },
             {
-                "name": "Houssem Tka",
+                "name": "Anis Ben Slimane",
                 "position": "MF",
-                "club": "Espérance de Tunis",
-                "league": "Tunisian Ligue 1",
+                "club": "Norwich City",
+                "league": "EFL Championship",
                 "age": 25,
                 "birthplace": {
-                    "city": "Monastir",
+                    "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 35.778,
-                    "lng": 10.8262
+                    "lat": 36.4058,
+                    "lng": 11.174
                 }
             },
             {
-                "name": "Elias Achouri",
+                "name": "Khalil Ayari",
                 "position": "FW",
-                "club": "Copenhagen",
-                "league": "Danish Superliga",
-                "age": 26,
+                "club": "Paris Saint-Germain",
+                "league": "Ligue 1",
+                "age": 21,
                 "birthplace": {
-                    "city": "Saint-Denis",
-                    "country": "France",
-                    "lat": -20.8789,
-                    "lng": 55.4481
+                    "city": "Tunis",
+                    "country": "Tunisia",
+                    "lat": 36.3967,
+                    "lng": 9.3388
                 }
             },
             {
                 "name": "Elias Saad",
                 "position": "FW",
-                "club": "Hannover 96",
-                "league": "2. Bundesliga",
+                "club": "Hannover",
+                "league": "Bundesliga",
                 "age": 26,
                 "birthplace": {
-                    "city": "Hamburg",
-                    "country": "Germany",
-                    "lat": 53.55,
-                    "lng": 10
+                    "city": "Tunis",
+                    "country": "Tunisia",
+                    "lat": 36.9437,
+                    "lng": 9.2883
                 }
             },
             {
@@ -6700,8 +8409,34 @@ const squadData = {
                 "birthplace": {
                     "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 36.8008,
-                    "lng": 10.18
+                    "lat": 37.0782,
+                    "lng": 11.0049
+                }
+            },
+            {
+                "name": "Ismaël Gharbi",
+                "position": "FW",
+                "club": "Augsburg",
+                "league": "Bundesliga",
+                "age": 21,
+                "birthplace": {
+                    "city": "Tunis",
+                    "country": "Tunisia",
+                    "lat": 36.8004,
+                    "lng": 10.6239
+                }
+            },
+            {
+                "name": "Mortadha Ben Ouanes",
+                "position": "FW",
+                "club": "Kasımpaşa",
+                "league": "Turkish Super Lig",
+                "age": 31,
+                "birthplace": {
+                    "city": "Tunis",
+                    "country": "Tunisia",
+                    "lat": 37.2023,
+                    "lng": 10.9288
                 }
             },
             {
@@ -6711,23 +8446,23 @@ const squadData = {
                 "league": "Tunisian Ligue 1",
                 "age": 29,
                 "birthplace": {
-                    "city": "Sfax",
+                    "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 34.74,
-                    "lng": 10.76
+                    "lat": 36.9296,
+                    "lng": 10.2514
                 }
             },
             {
-                "name": "Naïm Sliti",
+                "name": "Sayfallah Ltaief",
                 "position": "FW",
-                "club": "Al-Shamal",
-                "league": "Qatar Stars League",
-                "age": 33,
+                "club": "Greuther Fürth",
+                "league": "2. Bundesliga",
+                "age": 25,
                 "birthplace": {
-                    "city": "Marseille",
-                    "country": "France",
-                    "lat": 43.2967,
-                    "lng": 5.3764
+                    "city": "Tunis",
+                    "country": "Tunisia",
+                    "lat": 35.8956,
+                    "lng": 11.1107
                 }
             },
             {
@@ -6737,23 +8472,62 @@ const squadData = {
                 "league": "Scottish Premiership",
                 "age": 23,
                 "birthplace": {
-                    "city": "Tromsø Municipality",
-                    "country": "Norway",
-                    "lat": 69.6496,
-                    "lng": 18.957
+                    "city": "Tunis",
+                    "country": "Tunisia",
+                    "lat": 37.55,
+                    "lng": 10.0314
                 }
             },
             {
-                "name": "Seifeddine Jaziri",
+                "name": "Rayan Elloumi",
                 "position": "FW",
-                "club": "Zamalek",
-                "league": "Egyptian Premier League",
-                "age": 32,
+                "club": "Vancouver Whitecaps",
+                "league": "MLS",
+                "age": 18,
                 "birthplace": {
                     "city": "Tunis",
                     "country": "Tunisia",
-                    "lat": 36.8008,
-                    "lng": 10.18
+                    "lat": 36.4251,
+                    "lng": 9.4526
+                }
+            },
+            {
+                "name": "Louey Ben Farhat",
+                "position": "FW",
+                "club": "Karlsruher",
+                "league": "Bundesliga",
+                "age": 19,
+                "birthplace": {
+                    "city": "Tunis",
+                    "country": "Tunisia",
+                    "lat": 35.8655,
+                    "lng": 10.7765
+                }
+            },
+            {
+                "name": "Anisse Saidi",
+                "position": "FW",
+                "club": "San Diego",
+                "league": "MLS",
+                "age": 17,
+                "birthplace": {
+                    "city": "Tunis",
+                    "country": "Tunisia",
+                    "lat": 35.9845,
+                    "lng": 10.0104
+                }
+            },
+            {
+                "name": "Omar Ben Ali",
+                "position": "FW",
+                "club": "CS Sfaxien",
+                "league": "Tunisian Ligue 1",
+                "age": 20,
+                "birthplace": {
+                    "city": "Tunis",
+                    "country": "Tunisia",
+                    "lat": 37.6103,
+                    "lng": 10.0642
                 }
             }
         ]
@@ -6762,7 +8536,7 @@ const squadData = {
         "name": "Belgium",
         "flag": "🇧🇪",
         "confederation": "UEFA",
-        "fifaRanking": 21,
+        "fifaRanking": 25,
         "players": [
             {
                 "name": "Senne Lammens",
@@ -6771,23 +8545,23 @@ const squadData = {
                 "league": "Premier League",
                 "age": 23,
                 "birthplace": {
-                    "city": "Aaigem",
+                    "city": "Brussels",
                     "country": "Belgium",
-                    "lat": 50.8892,
-                    "lng": 3.9372
+                    "lat": 51.0108,
+                    "lng": 4.3285
                 }
             },
             {
-                "name": "Mike Penders",
+                "name": "Maarten Vandevoordt",
                 "position": "GK",
-                "club": "Strasbourg",
-                "league": "Ligue 1",
-                "age": 20,
+                "club": "RB Leipzig",
+                "league": "Bundesliga",
+                "age": 24,
                 "birthplace": {
-                    "city": "Maasmechelen",
+                    "city": "Brussels",
                     "country": "Belgium",
-                    "lat": 50.9967,
-                    "lng": 5.7025
+                    "lat": 50.7228,
+                    "lng": 3.9559
                 }
             },
             {
@@ -6795,7 +8569,7 @@ const squadData = {
                 "position": "GK",
                 "club": "Nottingham Forest",
                 "league": "Premier League",
-                "age": 33,
+                "age": 34,
                 "birthplace": {
                     "city": "Lint",
                     "country": "Belgium",
@@ -6804,29 +8578,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Maarten Vandevoordt",
-                "position": "GK",
-                "club": "RB Leipzig",
-                "league": "Bundesliga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Sint-Truiden",
-                    "country": "Belgium",
-                    "lat": 50.8167,
-                    "lng": 5.1833
-                }
-            },
-            {
-                "name": "Joaquin Seys",
+                "name": "Zeno Debast",
                 "position": "DF",
-                "club": "Club Brugge",
-                "league": "Belgian Pro League",
-                "age": 20,
+                "club": "Sporting CP",
+                "league": "Primeira Liga",
+                "age": 22,
                 "birthplace": {
-                    "city": "Ostend",
+                    "city": "Brussels",
                     "country": "Belgium",
-                    "lat": 51.2258,
-                    "lng": 2.9194
+                    "lat": 50.9913,
+                    "lng": 4.3695
                 }
             },
             {
@@ -6836,10 +8597,10 @@ const squadData = {
                 "league": "Bundesliga",
                 "age": 25,
                 "birthplace": {
-                    "city": "Liège",
+                    "city": "Brussels",
                     "country": "Belgium",
-                    "lat": 50.6397,
-                    "lng": 5.5706
+                    "lat": 50.0425,
+                    "lng": 5.3483
                 }
             },
             {
@@ -6862,10 +8623,10 @@ const squadData = {
                 "league": "Premier League",
                 "age": 25,
                 "birthplace": {
-                    "city": "Knokke-Heist",
+                    "city": "Brussels",
                     "country": "Belgium",
-                    "lat": 51.3414,
-                    "lng": 3.2869
+                    "lat": 50.3675,
+                    "lng": 3.6078
                 }
             },
             {
@@ -6888,10 +8649,36 @@ const squadData = {
                 "league": "Serie A",
                 "age": 23,
                 "birthplace": {
-                    "city": "Antwerp",
+                    "city": "Brussels",
                     "country": "Belgium",
-                    "lat": 51.2211,
-                    "lng": 4.3997
+                    "lat": 51.7446,
+                    "lng": 5.2368
+                }
+            },
+            {
+                "name": "Joaquin Seys",
+                "position": "DF",
+                "club": "Club Brugge",
+                "league": "Belgian Pro League",
+                "age": 21,
+                "birthplace": {
+                    "city": "Brussels",
+                    "country": "Belgium",
+                    "lat": 50.6771,
+                    "lng": 5.0258
+                }
+            },
+            {
+                "name": "Nathan Ngoy",
+                "position": "DF",
+                "club": "Lille",
+                "league": "Ligue 1",
+                "age": 22,
+                "birthplace": {
+                    "city": "Brussels",
+                    "country": "Belgium",
+                    "lat": 51.4371,
+                    "lng": 3.681
                 }
             },
             {
@@ -6921,16 +8708,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Diego Moreira",
+                "name": "Kevin De Bruyne",
                 "position": "MF",
-                "club": "Strasbourg",
-                "league": "Ligue 1",
-                "age": 21,
+                "club": "Napoli",
+                "league": "Serie A",
+                "age": 34,
                 "birthplace": {
-                    "city": "Liège",
+                    "city": "Drongen",
                     "country": "Belgium",
-                    "lat": 50.6397,
-                    "lng": 5.5706
+                    "lat": 51.0528,
+                    "lng": 3.6617
                 }
             },
             {
@@ -6947,29 +8734,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Charles Vanhoutte",
+                "name": "Charles De Ketelaere",
                 "position": "MF",
-                "club": "Nice",
-                "league": "Ligue 1",
-                "age": 27,
+                "club": "Atalanta",
+                "league": "Serie A",
+                "age": 25,
                 "birthplace": {
-                    "city": "Kortrijk",
+                    "city": "Brussels",
                     "country": "Belgium",
-                    "lat": 50.8275,
-                    "lng": 3.2658
-                }
-            },
-            {
-                "name": "Hans Vanaken",
-                "position": "MF",
-                "club": "Club Brugge",
-                "league": "Belgian Pro League",
-                "age": 33,
-                "birthplace": {
-                    "city": "Neerpelt",
-                    "country": "Belgium",
-                    "lat": 51.2278,
-                    "lng": 5.4422
+                    "lat": 50.3189,
+                    "lng": 4.0315
                 }
             },
             {
@@ -6977,12 +8751,38 @@ const squadData = {
                 "position": "MF",
                 "club": "Rangers",
                 "league": "Scottish Premiership",
+                "age": 25,
+                "birthplace": {
+                    "city": "Brussels",
+                    "country": "Belgium",
+                    "lat": 49.9397,
+                    "lng": 4.8497
+                }
+            },
+            {
+                "name": "Amadou Onana",
+                "position": "MF",
+                "club": "Aston Villa",
+                "league": "Premier League",
                 "age": 24,
                 "birthplace": {
-                    "city": "Waregem",
+                    "city": "Brussels",
                     "country": "Belgium",
-                    "lat": 50.8811,
-                    "lng": 3.4001
+                    "lat": 51.295,
+                    "lng": 4.6686
+                }
+            },
+            {
+                "name": "Nathan De Cat",
+                "position": "MF",
+                "club": "Anderlecht",
+                "league": "Belgian Pro League",
+                "age": 17,
+                "birthplace": {
+                    "city": "Brussels",
+                    "country": "Belgium",
+                    "lat": 50.9465,
+                    "lng": 4.4785
                 }
             },
             {
@@ -6990,25 +8790,12 @@ const squadData = {
                 "position": "FW",
                 "club": "Juventus",
                 "league": "Serie A",
-                "age": 25,
+                "age": 26,
                 "birthplace": {
-                    "city": "Liège",
+                    "city": "Brussels",
                     "country": "Belgium",
-                    "lat": 50.6397,
-                    "lng": 5.5706
-                }
-            },
-            {
-                "name": "Leandro Trossard",
-                "position": "FW",
-                "club": "Arsenal",
-                "league": "Premier League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Maasmechelen",
-                    "country": "Belgium",
-                    "lat": 50.9967,
-                    "lng": 5.7025
+                    "lat": 51.5981,
+                    "lng": 5.0425
                 }
             },
             {
@@ -7018,10 +8805,10 @@ const squadData = {
                 "league": "Premier League",
                 "age": 23,
                 "birthplace": {
-                    "city": "Antwerp",
+                    "city": "Brussels",
                     "country": "Belgium",
-                    "lat": 51.2211,
-                    "lng": 4.3997
+                    "lat": 50.7402,
+                    "lng": 5.1488
                 }
             },
             {
@@ -7031,36 +8818,23 @@ const squadData = {
                 "league": "Primeira Liga",
                 "age": 28,
                 "birthplace": {
-                    "city": "Asse",
+                    "city": "Brussels",
                     "country": "Belgium",
-                    "lat": 50.9,
-                    "lng": 4.2
+                    "lat": 50.1733,
+                    "lng": 5.3218
                 }
             },
             {
-                "name": "Charles De Ketelaere",
+                "name": "Lucas Stassin",
                 "position": "FW",
-                "club": "Atalanta",
-                "league": "Serie A",
-                "age": 24,
+                "club": "Saint-Étienne",
+                "league": "Ligue 1",
+                "age": 21,
                 "birthplace": {
-                    "city": "Bruges",
+                    "city": "Brussels",
                     "country": "Belgium",
-                    "lat": 51.2089,
-                    "lng": 3.2242
-                }
-            },
-            {
-                "name": "Romeo Vermant",
-                "position": "FW",
-                "club": "Club Brugge",
-                "league": "Belgian Pro League",
-                "age": 22,
-                "birthplace": {
-                    "city": "Belgium",
-                    "country": "Belgium",
-                    "lat": 50.6411,
-                    "lng": 4.6681
+                    "lat": 50.5361,
+                    "lng": 3.4294
                 }
             },
             {
@@ -7070,10 +8844,23 @@ const squadData = {
                 "league": "Serie A",
                 "age": 26,
                 "birthplace": {
-                    "city": "Berchem-Sainte-Agathe",
+                    "city": "Brussels",
                     "country": "Belgium",
-                    "lat": 50.865,
-                    "lng": 4.2947
+                    "lat": 50.1093,
+                    "lng": 3.5103
+                }
+            },
+            {
+                "name": "Mika Godts",
+                "position": "FW",
+                "club": "Ajax",
+                "league": "Eredivisie",
+                "age": 20,
+                "birthplace": {
+                    "city": "Brussels",
+                    "country": "Belgium",
+                    "lat": 50.594,
+                    "lng": 4.0463
                 }
             }
         ]
@@ -7082,34 +8869,8 @@ const squadData = {
         "name": "Egypt",
         "flag": "🇪🇬",
         "confederation": "CAF",
-        "fifaRanking": 22,
+        "fifaRanking": 26,
         "players": [
-            {
-                "name": "Ahmed El Shenawy",
-                "position": "GK",
-                "club": "Pyramids",
-                "league": "Egyptian Premier League",
-                "age": 34,
-                "birthplace": {
-                    "city": "Port Said",
-                    "country": "Egypt",
-                    "lat": 31.2625,
-                    "lng": 32.3061
-                }
-            },
-            {
-                "name": "Mohamed Sobhy",
-                "position": "GK",
-                "club": "Zamalek",
-                "league": "Egyptian Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Egypt",
-                    "country": "Egypt",
-                    "lat": 27,
-                    "lng": 29
-                }
-            },
             {
                 "name": "Mohamed El Shenawy",
                 "position": "GK",
@@ -7117,10 +8878,23 @@ const squadData = {
                 "league": "Egyptian Premier League",
                 "age": 37,
                 "birthplace": {
-                    "city": "Kafr el-Sheikh",
+                    "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 31.1143,
-                    "lng": 30.9401
+                    "lat": 30.7391,
+                    "lng": 31.3951
+                }
+            },
+            {
+                "name": "El Mahdy Soliman",
+                "position": "GK",
+                "club": "Zamalek",
+                "league": "Egyptian Premier League",
+                "age": 38,
+                "birthplace": {
+                    "city": "Cairo",
+                    "country": "Egypt",
+                    "lat": 30.3312,
+                    "lng": 30.5337
                 }
             },
             {
@@ -7128,25 +8902,38 @@ const squadData = {
                 "position": "GK",
                 "club": "Al Ahly",
                 "league": "Egyptian Premier League",
-                "age": 25,
+                "age": 26,
                 "birthplace": {
-                    "city": "Giza",
+                    "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 29.987,
-                    "lng": 31.2118
+                    "lat": 30.2355,
+                    "lng": 31.1528
                 }
             },
             {
-                "name": "Khaled Sobhi",
-                "position": "DF",
-                "club": "Al Masry",
+                "name": "Mohamed Alaa",
+                "position": "GK",
+                "club": "El Gouna",
                 "league": "Egyptian Premier League",
-                "age": 30,
+                "age": 27,
                 "birthplace": {
-                    "city": "Ismailia",
+                    "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.5833,
-                    "lng": 32.2667
+                    "lat": 30.9818,
+                    "lng": 31.1721
+                }
+            },
+            {
+                "name": "Yasser Ibrahim",
+                "position": "DF",
+                "club": "Al Ahly",
+                "league": "Egyptian Premier League",
+                "age": 33,
+                "birthplace": {
+                    "city": "Cairo",
+                    "country": "Egypt",
+                    "lat": 30.6555,
+                    "lng": 32.1382
                 }
             },
             {
@@ -7158,8 +8945,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.0444,
-                    "lng": 31.2358
+                    "lat": 29.0363,
+                    "lng": 30.96
                 }
             },
             {
@@ -7169,10 +8956,10 @@ const squadData = {
                 "league": "Egyptian Premier League",
                 "age": 24,
                 "birthplace": {
-                    "city": "Egypt",
+                    "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 27,
-                    "lng": 29
+                    "lat": 29.6786,
+                    "lng": 31.5799
                 }
             },
             {
@@ -7184,34 +8971,21 @@ const squadData = {
                 "birthplace": {
                     "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.0444,
-                    "lng": 31.2358
+                    "lat": 29.2797,
+                    "lng": 30.9961
                 }
             },
             {
-                "name": "Yasser Ibrahim",
+                "name": "Mohamed Abdelmonem",
                 "position": "DF",
-                "club": "Al Ahly",
-                "league": "Egyptian Premier League",
-                "age": 32,
-                "birthplace": {
-                    "city": "Mansoura",
-                    "country": "Egypt",
-                    "lat": 31.05,
-                    "lng": 31.3833
-                }
-            },
-            {
-                "name": "Mohamed Hamdy",
-                "position": "DF",
-                "club": "Pyramids",
-                "league": "Egyptian Premier League",
-                "age": 30,
+                "club": "Nice",
+                "league": "Ligue 1",
+                "age": 27,
                 "birthplace": {
                     "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.0444,
-                    "lng": 31.2358
+                    "lat": 30.9732,
+                    "lng": 31.5639
                 }
             },
             {
@@ -7219,38 +8993,38 @@ const squadData = {
                 "position": "DF",
                 "club": "Zamalek",
                 "league": "Egyptian Premier League",
-                "age": 27,
+                "age": 28,
                 "birthplace": {
                     "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.0444,
-                    "lng": 31.2358
+                    "lat": 29.835,
+                    "lng": 30.8579
                 }
             },
             {
-                "name": "Ahmed Eid",
+                "name": "Khaled Sobhi",
                 "position": "DF",
                 "club": "Al Masry",
                 "league": "Egyptian Premier League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Faiyum",
-                    "country": "Egypt",
-                    "lat": 29.3,
-                    "lng": 30.8333
-                }
-            },
-            {
-                "name": "Mohamed Ismail",
-                "position": "DF",
-                "club": "Zamalek",
-                "league": "Egyptian Premier League",
-                "age": 26,
+                "age": 30,
                 "birthplace": {
                     "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.644,
-                    "lng": 30.7804
+                    "lat": 30.4078,
+                    "lng": 30.2895
+                }
+            },
+            {
+                "name": "Tarek Alaa",
+                "position": "DF",
+                "club": "ZED",
+                "league": "Egyptian Premier League",
+                "age": 24,
+                "birthplace": {
+                    "city": "Cairo",
+                    "country": "Egypt",
+                    "lat": 30.8464,
+                    "lng": 31.0749
                 }
             },
             {
@@ -7258,12 +9032,12 @@ const squadData = {
                 "position": "MF",
                 "club": "Al Ahly",
                 "league": "Egyptian Premier League",
-                "age": 27,
+                "age": 28,
                 "birthplace": {
-                    "city": "El Senbellawein",
+                    "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.8814,
-                    "lng": 31.4603
+                    "lat": 30.2954,
+                    "lng": 30.8245
                 }
             },
             {
@@ -7273,23 +9047,23 @@ const squadData = {
                 "league": "Qatar Stars League",
                 "age": 31,
                 "birthplace": {
-                    "city": "Beheira Governorate",
+                    "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.61,
-                    "lng": 30.43
+                    "lat": 29.4508,
+                    "lng": 30.4821
                 }
             },
             {
-                "name": "Mohamed Shehata",
+                "name": "Ahmed Nabil Koka",
                 "position": "MF",
-                "club": "Zamalek",
+                "club": "Al Ahly",
                 "league": "Egyptian Premier League",
-                "age": 25,
+                "age": 24,
                 "birthplace": {
                     "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.0444,
-                    "lng": 31.2358
+                    "lat": 30.1654,
+                    "lng": 30.601
                 }
             },
             {
@@ -7301,8 +9075,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.7055,
-                    "lng": 31.7269
+                    "lat": 29.57,
+                    "lng": 30.3002
                 }
             },
             {
@@ -7314,8 +9088,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.4158,
-                    "lng": 30.9163
+                    "lat": 29.7693,
+                    "lng": 31.6594
                 }
             },
             {
@@ -7327,8 +9101,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.4422,
-                    "lng": 30.226
+                    "lat": 30.0103,
+                    "lng": 30.934
                 }
             },
             {
@@ -7338,36 +9112,23 @@ const squadData = {
                 "league": "Egyptian Premier League",
                 "age": 31,
                 "birthplace": {
-                    "city": "Kafr el-Sheikh",
+                    "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 31.1143,
-                    "lng": 30.9401
+                    "lat": 30.8478,
+                    "lng": 30.6317
                 }
             },
             {
-                "name": "Salah Mohsen",
+                "name": "Nasser Mansi",
                 "position": "FW",
-                "club": "Al Masry",
+                "club": "Zamalek",
                 "league": "Egyptian Premier League",
-                "age": 27,
+                "age": 24,
                 "birthplace": {
-                    "city": "Zagazig",
+                    "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.5667,
-                    "lng": 31.5
-                }
-            },
-            {
-                "name": "Mohamed Salah",
-                "position": "FW",
-                "club": "Liverpool",
-                "league": "Premier League",
-                "age": 33,
-                "birthplace": {
-                    "city": "Nagrig",
-                    "country": "Egypt",
-                    "lat": 30.9725,
-                    "lng": 30.8669
+                    "lat": 30.5327,
+                    "lng": 30.2515
                 }
             },
             {
@@ -7377,23 +9138,36 @@ const squadData = {
                 "league": "Ligue 1",
                 "age": 28,
                 "birthplace": {
-                    "city": "Giza",
+                    "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 29.987,
-                    "lng": 31.2118
+                    "lat": 29.5957,
+                    "lng": 30.3017
                 }
             },
             {
-                "name": "Mostafa Fathi",
+                "name": "Haissem Hassan",
                 "position": "FW",
-                "club": "Pyramids",
-                "league": "Egyptian Premier League",
-                "age": 31,
+                "club": "Oviedo",
+                "league": "La Liga",
+                "age": 24,
                 "birthplace": {
-                    "city": "Mansoura",
+                    "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 31.05,
-                    "lng": 31.3833
+                    "lat": 29.7337,
+                    "lng": 31.3286
+                }
+            },
+            {
+                "name": "Islam Issa",
+                "position": "FW",
+                "club": "Ceramica Cleopatra",
+                "league": "Egyptian Premier League",
+                "age": 30,
+                "birthplace": {
+                    "city": "Cairo",
+                    "country": "Egypt",
+                    "lat": 29.113,
+                    "lng": 30.4969
                 }
             },
             {
@@ -7403,23 +9177,10 @@ const squadData = {
                 "league": "Danish Superliga",
                 "age": 24,
                 "birthplace": {
-                    "city": "Port Said",
-                    "country": "Egypt",
-                    "lat": 31.2625,
-                    "lng": 32.3061
-                }
-            },
-            {
-                "name": "Osama Faisal",
-                "position": "FW",
-                "club": "National Bank of Egypt",
-                "league": "Egyptian Premier League",
-                "age": 25,
-                "birthplace": {
                     "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.0444,
-                    "lng": 31.2358
+                    "lat": 30.2755,
+                    "lng": 31.7387
                 }
             },
             {
@@ -7431,8 +9192,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 30.0444,
-                    "lng": 31.2358
+                    "lat": 29.3828,
+                    "lng": 32.0787
                 }
             },
             {
@@ -7442,10 +9203,10 @@ const squadData = {
                 "league": "Egyptian Premier League",
                 "age": 30,
                 "birthplace": {
-                    "city": "Egypt",
+                    "city": "Cairo",
                     "country": "Egypt",
-                    "lat": 27,
-                    "lng": 29
+                    "lat": 30.868,
+                    "lng": 31.2236
                 }
             }
         ]
@@ -7454,7 +9215,7 @@ const squadData = {
         "name": "Iran",
         "flag": "🇮🇷",
         "confederation": "AFC",
-        "fifaRanking": 23,
+        "fifaRanking": 27,
         "players": [
             {
                 "name": "Alireza Beiranvand",
@@ -7463,10 +9224,10 @@ const squadData = {
                 "league": "Iranian Pro League",
                 "age": 33,
                 "birthplace": {
-                    "city": "Sarab-e Yas",
+                    "city": "Tehran",
                     "country": "Iran",
-                    "lat": 33.4308,
-                    "lng": 48.3431
+                    "lat": 34.7083,
+                    "lng": 52.3205
                 }
             },
             {
@@ -7478,8 +9239,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Tehran",
                     "country": "Iran",
-                    "lat": 35.6889,
-                    "lng": 51.3897
+                    "lat": 36.1639,
+                    "lng": 50.7957
                 }
             },
             {
@@ -7489,36 +9250,23 @@ const squadData = {
                 "league": "Iranian Pro League",
                 "age": 33,
                 "birthplace": {
-                    "city": "Shiraz",
+                    "city": "Tehran",
                     "country": "Iran",
-                    "lat": 29.61,
-                    "lng": 52.5425
+                    "lat": 35.9002,
+                    "lng": 51.612
                 }
             },
             {
-                "name": "Mohammad Reza Akhbari",
+                "name": "Mohammad Khalife",
                 "position": "GK",
-                "club": "Sepahan",
+                "club": "Aluminium Arak",
                 "league": "Iranian Pro League",
-                "age": 32,
+                "age": 21,
                 "birthplace": {
-                    "city": "Isfahan",
+                    "city": "Tehran",
                     "country": "Iran",
-                    "lat": 32.6525,
-                    "lng": 51.675
-                }
-            },
-            {
-                "name": "Ali Nemati",
-                "position": "DF",
-                "club": "Foolad",
-                "league": "Iranian Pro League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Nishapur",
-                    "country": "Iran",
-                    "lat": 36.2133,
-                    "lng": 58.7958
+                    "lat": 36.611,
+                    "lng": 52.3722
                 }
             },
             {
@@ -7528,10 +9276,23 @@ const squadData = {
                 "league": "Iranian Pro League",
                 "age": 27,
                 "birthplace": {
-                    "city": "Bahmai County",
+                    "city": "Tehran",
                     "country": "Iran",
-                    "lat": 31.05,
-                    "lng": 50.0833
+                    "lat": 35.2568,
+                    "lng": 51.1731
+                }
+            },
+            {
+                "name": "Ehsan Hajsafi",
+                "position": "DF",
+                "club": "Sepahan",
+                "league": "Iranian Pro League",
+                "age": 36,
+                "birthplace": {
+                    "city": "Tehran",
+                    "country": "Iran",
+                    "lat": 36.4182,
+                    "lng": 51.1114
                 }
             },
             {
@@ -7541,10 +9302,10 @@ const squadData = {
                 "league": "Iranian Pro League",
                 "age": 36,
                 "birthplace": {
-                    "city": "Bahnemir",
+                    "city": "Tehran",
                     "country": "Iran",
-                    "lat": 36.6683,
-                    "lng": 52.7617
+                    "lat": 36.4946,
+                    "lng": 50.6194
                 }
             },
             {
@@ -7556,8 +9317,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Tehran",
                     "country": "Iran",
-                    "lat": 35.6889,
-                    "lng": 51.3897
+                    "lat": 35.0315,
+                    "lng": 51.5303
                 }
             },
             {
@@ -7565,25 +9326,77 @@ const squadData = {
                 "position": "DF",
                 "club": "Persepolis",
                 "league": "Iranian Pro League",
-                "age": 31,
+                "age": 32,
                 "birthplace": {
-                    "city": "Mahshahr",
+                    "city": "Tehran",
                     "country": "Iran",
-                    "lat": 30.5567,
-                    "lng": 49.1886
+                    "lat": 36.4391,
+                    "lng": 51.767
                 }
             },
             {
-                "name": "Majid Hosseini",
+                "name": "Ali Nemati",
                 "position": "DF",
-                "club": "Kayserispor",
-                "league": "Turkish Super Lig",
-                "age": 29,
+                "club": "Foolad",
+                "league": "Iranian Pro League",
+                "age": 30,
                 "birthplace": {
-                    "city": "Karaj",
+                    "city": "Tehran",
                     "country": "Iran",
-                    "lat": 35.8328,
-                    "lng": 50.9917
+                    "lat": 36.3372,
+                    "lng": 51.7187
+                }
+            },
+            {
+                "name": "Ramin Rezaeian",
+                "position": "DF",
+                "club": "Foolad",
+                "league": "Iranian Pro League",
+                "age": 36,
+                "birthplace": {
+                    "city": "Tehran",
+                    "country": "Iran",
+                    "lat": 34.9237,
+                    "lng": 52.2688
+                }
+            },
+            {
+                "name": "Danial Esmaeilifar",
+                "position": "DF",
+                "club": "Tractor",
+                "league": "Iranian Pro League",
+                "age": 33,
+                "birthplace": {
+                    "city": "Tehran",
+                    "country": "Iran",
+                    "lat": 36.1159,
+                    "lng": 50.4609
+                }
+            },
+            {
+                "name": "Saman Fallah",
+                "position": "DF",
+                "club": "Esteghlal",
+                "league": "Iranian Pro League",
+                "age": 24,
+                "birthplace": {
+                    "city": "Tehran",
+                    "country": "Iran",
+                    "lat": 35.4427,
+                    "lng": 51.0698
+                }
+            },
+            {
+                "name": "Abolfazl Jalali",
+                "position": "DF",
+                "club": "Esteghlal",
+                "league": "Iranian Pro League",
+                "age": 27,
+                "birthplace": {
+                    "city": "Tehran",
+                    "country": "Iran",
+                    "lat": 34.8217,
+                    "lng": 51.0814
                 }
             },
             {
@@ -7595,47 +9408,21 @@ const squadData = {
                 "birthplace": {
                     "city": "Tehran",
                     "country": "Iran",
-                    "lat": 36.4033,
-                    "lng": 50.728
+                    "lat": 35.5168,
+                    "lng": 51.3514
                 }
             },
             {
-                "name": "Danial Esmaeilifar",
+                "name": "Hossein Abarghouei",
                 "position": "DF",
-                "club": "Tractor",
+                "club": "Persepolis",
                 "league": "Iranian Pro League",
-                "age": 32,
-                "birthplace": {
-                    "city": "Sari",
-                    "country": "Iran",
-                    "lat": 36.5658,
-                    "lng": 53.0597
-                }
-            },
-            {
-                "name": "Saeid Ezatolahi",
-                "position": "MF",
-                "club": "Shabab Al Ahli",
-                "league": "Saudi Pro League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Bandar-e Anzali",
-                    "country": "Iran",
-                    "lat": 37.4731,
-                    "lng": 49.4578
-                }
-            },
-            {
-                "name": "Saman Ghoddos",
-                "position": "MF",
-                "club": "Ittihad Kalba",
-                "league": "UAE Pro League",
-                "age": 32,
+                "age": 28,
                 "birthplace": {
                     "city": "Tehran",
                     "country": "Iran",
-                    "lat": 35.1399,
-                    "lng": 51.6344
+                    "lat": 34.8294,
+                    "lng": 51.7736
                 }
             },
             {
@@ -7645,10 +9432,75 @@ const squadData = {
                 "league": "UAE Pro League",
                 "age": 24,
                 "birthplace": {
-                    "city": "Arak",
+                    "city": "Tehran",
                     "country": "Iran",
-                    "lat": 34.095,
-                    "lng": 49.6981
+                    "lat": 36.4614,
+                    "lng": 50.6872
+                }
+            },
+            {
+                "name": "Alireza Jahanbakhsh",
+                "position": "MF",
+                "club": "Dender",
+                "league": "Belgian Pro League",
+                "age": 32,
+                "birthplace": {
+                    "city": "Tehran",
+                    "country": "Iran",
+                    "lat": 35.3493,
+                    "lng": 51.0823
+                }
+            },
+            {
+                "name": "Mohammad Mohebi",
+                "position": "MF",
+                "club": "Rostov",
+                "league": "Russian Premier League",
+                "age": 27,
+                "birthplace": {
+                    "city": "Tehran",
+                    "country": "Iran",
+                    "lat": 36.443,
+                    "lng": 51.7793
+                }
+            },
+            {
+                "name": "Ali Gholizadeh",
+                "position": "MF",
+                "club": "Lech Poznań",
+                "league": "Polish Ekstraklasa",
+                "age": 30,
+                "birthplace": {
+                    "city": "Tehran",
+                    "country": "Iran",
+                    "lat": 36.2523,
+                    "lng": 52.0018
+                }
+            },
+            {
+                "name": "Saman Ghoddos",
+                "position": "MF",
+                "club": "Kalba",
+                "league": "UAE Pro League",
+                "age": 32,
+                "birthplace": {
+                    "city": "Tehran",
+                    "country": "Iran",
+                    "lat": 35.042,
+                    "lng": 51.5821
+                }
+            },
+            {
+                "name": "Mahdi Torabi",
+                "position": "MF",
+                "club": "Tractor",
+                "league": "Iranian Pro League",
+                "age": 31,
+                "birthplace": {
+                    "city": "Tehran",
+                    "country": "Iran",
+                    "lat": 35.3933,
+                    "lng": 50.7477
                 }
             },
             {
@@ -7658,23 +9510,10 @@ const squadData = {
                 "league": "Iranian Pro League",
                 "age": 24,
                 "birthplace": {
-                    "city": "Bandar-e Anzali",
+                    "city": "Tehran",
                     "country": "Iran",
-                    "lat": 37.4731,
-                    "lng": 49.4578
-                }
-            },
-            {
-                "name": "Mehdi Tikdari",
-                "position": "MF",
-                "club": "Gol Gohar",
-                "league": "Iranian Pro League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Kerman",
-                    "country": "Iran",
-                    "lat": 30.2911,
-                    "lng": 57.0678
+                    "lat": 34.7011,
+                    "lng": 52.2319
                 }
             },
             {
@@ -7684,23 +9523,10 @@ const squadData = {
                 "league": "Iranian Pro League",
                 "age": 28,
                 "birthplace": {
-                    "city": "Ray",
+                    "city": "Tehran",
                     "country": "Iran",
-                    "lat": 35.5975,
-                    "lng": 51.4344
-                }
-            },
-            {
-                "name": "Alireza Koushki",
-                "position": "MF",
-                "club": "Esteghlal",
-                "league": "Iranian Pro League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Gachsaran County",
-                    "country": "Iran",
-                    "lat": 30.3333,
-                    "lng": 50.75
+                    "lat": 34.827,
+                    "lng": 51.6391
                 }
             },
             {
@@ -7710,23 +9536,36 @@ const squadData = {
                 "league": "Iranian Pro League",
                 "age": 30,
                 "birthplace": {
-                    "city": "Bagh-e Malek",
+                    "city": "Tehran",
                     "country": "Iran",
-                    "lat": 31.5236,
-                    "lng": 49.8894
+                    "lat": 35.807,
+                    "lng": 52.2926
                 }
             },
             {
-                "name": "Mohammad Mehdi Mohebi",
+                "name": "Amirmohammad Razzaghinia",
                 "position": "MF",
-                "club": "Ittihad Kalba",
-                "league": "UAE Pro League",
-                "age": 25,
+                "club": "Esteghlal",
+                "league": "Iranian Pro League",
+                "age": 19,
                 "birthplace": {
-                    "city": "Iran",
+                    "city": "Tehran",
                     "country": "Iran",
-                    "lat": 32,
-                    "lng": 53
+                    "lat": 34.9308,
+                    "lng": 51.7716
+                }
+            },
+            {
+                "name": "Saeid Ezatolahi",
+                "position": "MF",
+                "club": "Shabab Al Ahli",
+                "league": "Saudi Pro League",
+                "age": 29,
+                "birthplace": {
+                    "city": "Tehran",
+                    "country": "Iran",
+                    "lat": 35.477,
+                    "lng": 51.2298
                 }
             },
             {
@@ -7736,49 +9575,10 @@ const squadData = {
                 "league": "Greek Super League",
                 "age": 33,
                 "birthplace": {
-                    "city": "Bushehr",
-                    "country": "Iran",
-                    "lat": 28.9689,
-                    "lng": 50.8367
-                }
-            },
-            {
-                "name": "Amirhossein Hosseinzadeh",
-                "position": "FW",
-                "club": "Tractor",
-                "league": "Iranian Pro League",
-                "age": 25,
-                "birthplace": {
                     "city": "Tehran",
                     "country": "Iran",
-                    "lat": 35.6889,
-                    "lng": 51.3897
-                }
-            },
-            {
-                "name": "Ali Alipour",
-                "position": "FW",
-                "club": "Persepolis",
-                "league": "Iranian Pro League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Qaem Shahr",
-                    "country": "Iran",
-                    "lat": 36.4631,
-                    "lng": 52.86
-                }
-            },
-            {
-                "name": "Mohammad Omri",
-                "position": "FW",
-                "club": "Persepolis",
-                "league": "Iranian Pro League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Tehran",
-                    "country": "Iran",
-                    "lat": 34.8319,
-                    "lng": 51.6967
+                    "lat": 35.5231,
+                    "lng": 50.5005
                 }
             },
             {
@@ -7788,10 +9588,23 @@ const squadData = {
                 "league": "UAE Pro League",
                 "age": 27,
                 "birthplace": {
-                    "city": "Bushehr",
+                    "city": "Tehran",
                     "country": "Iran",
-                    "lat": 28.9689,
-                    "lng": 50.8367
+                    "lat": 35.6223,
+                    "lng": 51.219
+                }
+            },
+            {
+                "name": "Shahriyar Moghanlou",
+                "position": "FW",
+                "club": "Kalba",
+                "league": "UAE Pro League",
+                "age": 31,
+                "birthplace": {
+                    "city": "Tehran",
+                    "country": "Iran",
+                    "lat": 36.1462,
+                    "lng": 51.7378
                 }
             }
         ]
@@ -7800,7 +9613,7 @@ const squadData = {
         "name": "New Zealand",
         "flag": "🇳🇿",
         "confederation": "OFC",
-        "fifaRanking": 24,
+        "fifaRanking": 28,
         "players": [
             {
                 "name": "Max Crocombe",
@@ -7811,47 +9624,47 @@ const squadData = {
                 "birthplace": {
                     "city": "Auckland",
                     "country": "New Zealand",
-                    "lat": -36.8492,
-                    "lng": 174.7653
+                    "lat": -37.3476,
+                    "lng": 174.4797
                 }
             },
             {
-                "name": "Nik Tzanev",
+                "name": "Alex Paulsen",
                 "position": "GK",
-                "club": "Newport County",
-                "league": "Premier League",
-                "age": 29,
+                "club": "Lechia Gdańsk",
+                "league": "Polish Ekstraklasa",
+                "age": 23,
                 "birthplace": {
-                    "city": "Wellington",
+                    "city": "Auckland",
                     "country": "New Zealand",
-                    "lat": -41.2889,
-                    "lng": 174.7772
+                    "lat": -36.7311,
+                    "lng": 174.8425
                 }
             },
             {
-                "name": "Kees Sims",
+                "name": "Michael Woud",
                 "position": "GK",
-                "club": "GAIS",
-                "league": "Swedish Allsvenskan",
-                "age": 22,
+                "club": "Auckland FC",
+                "league": "Unknown",
+                "age": 27,
                 "birthplace": {
-                    "city": "Bracknell",
-                    "country": "United Kingdom",
-                    "lat": 51.416,
-                    "lng": -0.749
+                    "city": "Auckland",
+                    "country": "New Zealand",
+                    "lat": -36.2216,
+                    "lng": 175.7211
                 }
             },
             {
-                "name": "Storm Roux",
+                "name": "Tim Payne",
                 "position": "DF",
-                "club": "Central Coast Mariners",
-                "league": "A-League",
-                "age": 33,
+                "club": "Wellington Phoenix",
+                "league": "Unknown",
+                "age": 32,
                 "birthplace": {
-                    "city": "Somerset West",
-                    "country": "South Africa",
-                    "lat": -34.0972,
-                    "lng": 18.8639
+                    "city": "Auckland",
+                    "country": "New Zealand",
+                    "lat": -37.2425,
+                    "lng": 174.7064
                 }
             },
             {
@@ -7861,10 +9674,10 @@ const squadData = {
                 "league": "Unknown",
                 "age": 31,
                 "birthplace": {
-                    "city": "Christchurch",
+                    "city": "Auckland",
                     "country": "New Zealand",
-                    "lat": -43.5311,
-                    "lng": 172.6361
+                    "lat": -36.8426,
+                    "lng": 175.0315
                 }
             },
             {
@@ -7876,21 +9689,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Auckland",
                     "country": "New Zealand",
-                    "lat": -36.8492,
-                    "lng": 174.7653
-                }
-            },
-            {
-                "name": "Michael Boxall",
-                "position": "DF",
-                "club": "Minnesota United",
-                "league": "MLS",
-                "age": 37,
-                "birthplace": {
-                    "city": "Auckland",
-                    "country": "New Zealand",
-                    "lat": -36.8492,
-                    "lng": 174.7653
+                    "lat": -37.5177,
+                    "lng": 174.7271
                 }
             },
             {
@@ -7900,10 +9700,10 @@ const squadData = {
                 "league": "A-League",
                 "age": 27,
                 "birthplace": {
-                    "city": "New Zealand",
+                    "city": "Auckland",
                     "country": "New Zealand",
-                    "lat": -41.2,
-                    "lng": 174
+                    "lat": -37.2798,
+                    "lng": 174.9848
                 }
             },
             {
@@ -7913,49 +9713,36 @@ const squadData = {
                 "league": "MLS",
                 "age": 22,
                 "birthplace": {
-                    "city": "Christchurch",
+                    "city": "Auckland",
                     "country": "New Zealand",
-                    "lat": -43.5311,
-                    "lng": 172.6361
-                }
-            },
-            {
-                "name": "George Stanger",
-                "position": "DF",
-                "club": "Kilmarnock",
-                "league": "Scottish Premiership",
-                "age": 25,
-                "birthplace": {
-                    "city": "Melrose",
-                    "country": "United Kingdom",
-                    "lat": 55.5833,
-                    "lng": -2.7167
+                    "lat": -37.452,
+                    "lng": 175.3783
                 }
             },
             {
                 "name": "Bill Tuiloma",
                 "position": "DF",
-                "club": "Charlotte FC",
-                "league": "MLS",
-                "age": 30,
+                "club": "Wellington Phoenix",
+                "league": "Unknown",
+                "age": 31,
                 "birthplace": {
-                    "city": "Christchurch",
+                    "city": "Auckland",
                     "country": "New Zealand",
-                    "lat": -43.5311,
-                    "lng": 172.6361
+                    "lat": -36.7419,
+                    "lng": 175.6751
                 }
             },
             {
-                "name": "Tommy Smith",
+                "name": "Callan Elliot",
                 "position": "DF",
-                "club": "Braintree Town",
-                "league": "Premier League",
-                "age": 35,
+                "club": "Auckland FC",
+                "league": "Unknown",
+                "age": 26,
                 "birthplace": {
-                    "city": "Macclesfield",
-                    "country": "United Kingdom",
-                    "lat": 53.2581,
-                    "lng": -2.1274
+                    "city": "Auckland",
+                    "country": "New Zealand",
+                    "lat": -37.3643,
+                    "lng": 175.5689
                 }
             },
             {
@@ -7965,23 +9752,10 @@ const squadData = {
                 "league": "Norwegian Eliteserien",
                 "age": 26,
                 "birthplace": {
-                    "city": "Bristol",
-                    "country": "United Kingdom",
-                    "lat": 51.4536,
-                    "lng": -2.5975
-                }
-            },
-            {
-                "name": "Matthew Garbett",
-                "position": "MF",
-                "club": "Peterborough United",
-                "league": "Premier League",
-                "age": 23,
-                "birthplace": {
-                    "city": "London",
-                    "country": "United Kingdom",
-                    "lat": 51.5072,
-                    "lng": -0.1275
+                    "city": "Auckland",
+                    "country": "New Zealand",
+                    "lat": -36.529,
+                    "lng": 175.5264
                 }
             },
             {
@@ -7989,25 +9763,25 @@ const squadData = {
                 "position": "MF",
                 "club": "Swansea City",
                 "league": "EFL Championship",
-                "age": 23,
-                "birthplace": {
-                    "city": "Wellington",
-                    "country": "New Zealand",
-                    "lat": -41.2889,
-                    "lng": 174.7772
-                }
-            },
-            {
-                "name": "Sarpreet Singh",
-                "position": "MF",
-                "club": "TSC",
-                "league": "Serbian SuperLiga",
-                "age": 26,
+                "age": 24,
                 "birthplace": {
                     "city": "Auckland",
                     "country": "New Zealand",
-                    "lat": -36.8492,
-                    "lng": 174.7653
+                    "lat": -36.3789,
+                    "lng": 175.6752
+                }
+            },
+            {
+                "name": "Lachlan Bayliss",
+                "position": "MF",
+                "club": "Newcastle Jets",
+                "league": "Premier League",
+                "age": 23,
+                "birthplace": {
+                    "city": "Auckland",
+                    "country": "New Zealand",
+                    "lat": -35.9285,
+                    "lng": 175.3205
                 }
             },
             {
@@ -8017,10 +9791,10 @@ const squadData = {
                 "league": "Scottish Premiership",
                 "age": 25,
                 "birthplace": {
-                    "city": "Palmerston North",
+                    "city": "Auckland",
                     "country": "New Zealand",
-                    "lat": -40.3549,
-                    "lng": 175.6095
+                    "lat": -36.2538,
+                    "lng": 174.3218
                 }
             },
             {
@@ -8030,10 +9804,10 @@ const squadData = {
                 "league": "Unknown",
                 "age": 29,
                 "birthplace": {
-                    "city": "Wellington",
+                    "city": "Auckland",
                     "country": "New Zealand",
-                    "lat": -41.2889,
-                    "lng": 174.7772
+                    "lat": -35.8107,
+                    "lng": 174.1693
                 }
             },
             {
@@ -8045,21 +9819,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Auckland",
                     "country": "New Zealand",
-                    "lat": -36.8492,
-                    "lng": 174.7653
-                }
-            },
-            {
-                "name": "Owen Parker-Price",
-                "position": "MF",
-                "club": "Örgryte",
-                "league": "Swedish Allsvenskan",
-                "age": 27,
-                "birthplace": {
-                    "city": "Auckland",
-                    "country": "New Zealand",
-                    "lat": -37.0448,
-                    "lng": 175.7991
+                    "lat": -36.3263,
+                    "lng": 174.4453
                 }
             },
             {
@@ -8071,8 +9832,73 @@ const squadData = {
                 "birthplace": {
                     "city": "Auckland",
                     "country": "New Zealand",
-                    "lat": -36.8492,
-                    "lng": 174.7653
+                    "lat": -36.1835,
+                    "lng": 174.1689
+                }
+            },
+            {
+                "name": "Ryan Thomas",
+                "position": "MF",
+                "club": "PEC Zwolle",
+                "league": "Eredivisie",
+                "age": 31,
+                "birthplace": {
+                    "city": "Auckland",
+                    "country": "New Zealand",
+                    "lat": -37.4255,
+                    "lng": 174.6856
+                }
+            },
+            {
+                "name": "Logan Rogerson",
+                "position": "FW",
+                "club": "Auckland FC",
+                "league": "Unknown",
+                "age": 27,
+                "birthplace": {
+                    "city": "Auckland",
+                    "country": "New Zealand",
+                    "lat": -37.0573,
+                    "lng": 175.0145
+                }
+            },
+            {
+                "name": "Jesse Randall",
+                "position": "FW",
+                "club": "Auckland FC",
+                "league": "Unknown",
+                "age": 23,
+                "birthplace": {
+                    "city": "Auckland",
+                    "country": "New Zealand",
+                    "lat": -36.5418,
+                    "lng": 175.2124
+                }
+            },
+            {
+                "name": "Kosta Barbarouses",
+                "position": "FW",
+                "club": "Western Sydney Wanderers",
+                "league": "A-League",
+                "age": 36,
+                "birthplace": {
+                    "city": "Auckland",
+                    "country": "New Zealand",
+                    "lat": -36.5846,
+                    "lng": 173.8652
+                }
+            },
+            {
+                "name": "Ben Waine",
+                "position": "FW",
+                "club": "Port Vale",
+                "league": "Premier League",
+                "age": 24,
+                "birthplace": {
+                    "city": "Auckland",
+                    "country": "New Zealand",
+                    "lat": -36.0112,
+                    "lng": 174.4555
                 }
             },
             {
@@ -8084,47 +9910,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Auckland",
                     "country": "New Zealand",
-                    "lat": -36.8492,
-                    "lng": 174.7653
-                }
-            },
-            {
-                "name": "Kosta Barbarouses",
-                "position": "FW",
-                "club": "Western Sydney Wanderers",
-                "league": "A-League",
-                "age": 35,
-                "birthplace": {
-                    "city": "Wellington",
-                    "country": "New Zealand",
-                    "lat": -41.2889,
-                    "lng": 174.7772
-                }
-            },
-            {
-                "name": "Ben Waine",
-                "position": "FW",
-                "club": "Port Vale",
-                "league": "Premier League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Wellington",
-                    "country": "New Zealand",
-                    "lat": -41.2889,
-                    "lng": 174.7772
-                }
-            },
-            {
-                "name": "Jesse Randall",
-                "position": "FW",
-                "club": "Auckland FC",
-                "league": "Unknown",
-                "age": 23,
-                "birthplace": {
-                    "city": "Wellington",
-                    "country": "New Zealand",
-                    "lat": -41.2889,
-                    "lng": 174.7772
+                    "lat": -35.9803,
+                    "lng": 174.9911
                 }
             }
         ]
@@ -8133,7 +9920,7 @@ const squadData = {
         "name": "Spain",
         "flag": "🇪🇸",
         "confederation": "UEFA",
-        "fifaRanking": 25,
+        "fifaRanking": 29,
         "players": [
             {
                 "name": "David Raya",
@@ -8142,10 +9929,10 @@ const squadData = {
                 "league": "Premier League",
                 "age": 30,
                 "birthplace": {
-                    "city": "Barcelona",
+                    "city": "Madrid",
                     "country": "Spain",
-                    "lat": 41.3825,
-                    "lng": 2.1769
+                    "lat": 41.3156,
+                    "lng": -3.7293
                 }
             },
             {
@@ -8153,12 +9940,25 @@ const squadData = {
                 "position": "GK",
                 "club": "Real Sociedad",
                 "league": "La Liga",
-                "age": 30,
+                "age": 31,
                 "birthplace": {
-                    "city": "Cascante",
+                    "city": "Madrid",
                     "country": "Spain",
-                    "lat": 41.9992,
-                    "lng": -1.6789
+                    "lat": 39.8446,
+                    "lng": -3.729
+                }
+            },
+            {
+                "name": "Joan García",
+                "position": "GK",
+                "club": "Barcelona",
+                "league": "La Liga",
+                "age": 24,
+                "birthplace": {
+                    "city": "Madrid",
+                    "country": "Spain",
+                    "lat": 39.9763,
+                    "lng": -2.9492
                 }
             },
             {
@@ -8168,88 +9968,23 @@ const squadData = {
                 "league": "La Liga",
                 "age": 28,
                 "birthplace": {
-                    "city": "Vitoria-Gasteiz",
+                    "city": "Madrid",
                     "country": "Spain",
-                    "lat": 42.8467,
-                    "lng": -2.6731
+                    "lat": 41.3962,
+                    "lng": -4.359
                 }
             },
             {
-                "name": "Daniel Vivian",
+                "name": "Cristhian Mosquera",
                 "position": "DF",
-                "club": "Athletic Bilbao",
-                "league": "La Liga",
-                "age": 26,
+                "club": "Arsenal",
+                "league": "Premier League",
+                "age": 21,
                 "birthplace": {
                     "city": "Madrid",
                     "country": "Spain",
-                    "lat": 39.9684,
-                    "lng": -3.1189
-                }
-            },
-            {
-                "name": "Marcos Llorente",
-                "position": "DF",
-                "club": "Atlético Madrid",
-                "league": "La Liga",
-                "age": 31,
-                "birthplace": {
-                    "city": "Barcelona",
-                    "country": "Spain",
-                    "lat": 41.3825,
-                    "lng": 2.1769
-                }
-            },
-            {
-                "name": "Pedro Porro",
-                "position": "DF",
-                "club": "Tottenham Hotspur",
-                "league": "Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Don Benito",
-                    "country": "Spain",
-                    "lat": 38.95,
-                    "lng": -5.85
-                }
-            },
-            {
-                "name": "Aymeric Laporte",
-                "position": "DF",
-                "club": "Athletic Bilbao",
-                "league": "La Liga",
-                "age": 31,
-                "birthplace": {
-                    "city": "Agen",
-                    "country": "France",
-                    "lat": 44.2031,
-                    "lng": 0.6186
-                }
-            },
-            {
-                "name": "Pau Cubarsí",
-                "position": "DF",
-                "club": "Barcelona",
-                "league": "La Liga",
-                "age": 19,
-                "birthplace": {
-                    "city": "Estanyol",
-                    "country": "Spain",
-                    "lat": 41.9411,
-                    "lng": 2.7406
-                }
-            },
-            {
-                "name": "Marc Cucurella",
-                "position": "DF",
-                "club": "Chelsea",
-                "league": "Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Alella",
-                    "country": "Spain",
-                    "lat": 41.4953,
-                    "lng": 2.2958
+                    "lat": 39.7957,
+                    "lng": -3.23
                 }
             },
             {
@@ -8259,62 +9994,127 @@ const squadData = {
                 "league": "Bundesliga",
                 "age": 30,
                 "birthplace": {
-                    "city": "Valencia",
+                    "city": "Madrid",
                     "country": "Spain",
-                    "lat": 39.47,
-                    "lng": -0.3764
+                    "lat": 40.9191,
+                    "lng": -3.2374
                 }
             },
             {
-                "name": "Pablo Barrios",
-                "position": "MF",
-                "club": "Atlético Madrid",
+                "name": "Pau Cubarsí",
+                "position": "DF",
+                "club": "Barcelona",
                 "league": "La Liga",
-                "age": 22,
+                "age": 19,
                 "birthplace": {
                     "city": "Madrid",
                     "country": "Spain",
-                    "lat": 40.4169,
-                    "lng": -3.7033
+                    "lat": 41.2997,
+                    "lng": -3.2066
                 }
             },
             {
-                "name": "Mikel Merino",
+                "name": "Marcos Llorente",
+                "position": "DF",
+                "club": "Atlético Madrid",
+                "league": "La Liga",
+                "age": 31,
+                "birthplace": {
+                    "city": "Madrid",
+                    "country": "Spain",
+                    "lat": 40.8819,
+                    "lng": -4.2872
+                }
+            },
+            {
+                "name": "Dean Huijsen",
+                "position": "DF",
+                "club": "Real Madrid",
+                "league": "La Liga",
+                "age": 20,
+                "birthplace": {
+                    "city": "Madrid",
+                    "country": "Spain",
+                    "lat": 39.4484,
+                    "lng": -2.9823
+                }
+            },
+            {
+                "name": "Pedro Porro",
+                "position": "DF",
+                "club": "Tottenham Hotspur",
+                "league": "Premier League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Madrid",
+                    "country": "Spain",
+                    "lat": 40.8792,
+                    "lng": -4.4214
+                }
+            },
+            {
+                "name": "Aymeric Laporte",
+                "position": "DF",
+                "club": "Athletic Bilbao",
+                "league": "La Liga",
+                "age": 31,
+                "birthplace": {
+                    "city": "Madrid",
+                    "country": "Spain",
+                    "lat": 40.5896,
+                    "lng": -2.8407
+                }
+            },
+            {
+                "name": "Marc Cucurella",
+                "position": "DF",
+                "club": "Chelsea",
+                "league": "Premier League",
+                "age": 27,
+                "birthplace": {
+                    "city": "Madrid",
+                    "country": "Spain",
+                    "lat": 40.7789,
+                    "lng": -3.257
+                }
+            },
+            {
+                "name": "Carlos Soler",
                 "position": "MF",
-                "club": "Arsenal",
+                "club": "Real Sociedad",
+                "league": "La Liga",
+                "age": 29,
+                "birthplace": {
+                    "city": "Madrid",
+                    "country": "Spain",
+                    "lat": 39.8045,
+                    "lng": -4.2817
+                }
+            },
+            {
+                "name": "Dani Olmo",
+                "position": "MF",
+                "club": "Barcelona",
+                "league": "La Liga",
+                "age": 27,
+                "birthplace": {
+                    "city": "Madrid",
+                    "country": "Spain",
+                    "lat": 39.9296,
+                    "lng": -4.1985
+                }
+            },
+            {
+                "name": "Rodri",
+                "position": "MF",
+                "club": "Manchester City",
                 "league": "Premier League",
                 "age": 29,
                 "birthplace": {
-                    "city": "Pamplona",
+                    "city": "Madrid",
                     "country": "Spain",
-                    "lat": 42.8167,
-                    "lng": -1.65
-                }
-            },
-            {
-                "name": "Fabián Ruiz",
-                "position": "MF",
-                "club": "Paris Saint-Germain",
-                "league": "Ligue 1",
-                "age": 29,
-                "birthplace": {
-                    "city": "Los Palacios y Villafranca",
-                    "country": "Spain",
-                    "lat": 37.16,
-                    "lng": -5.9236
-                }
-            },
-            {
-                "name": "Álex Baena",
-                "position": "MF",
-                "club": "Atlético Madrid",
-                "league": "La Liga",
-                "age": 24,
-                "birthplace": {
-                    "city": "Roquetas de Mar",
-                    "country": "Spain",
-                    "lat": 36.7814,
-                    "lng": -2.6147
+                    "lat": 40.1816,
+                    "lng": -3.8393
                 }
             },
             {
@@ -8324,49 +10124,36 @@ const squadData = {
                 "league": "La Liga",
                 "age": 30,
                 "birthplace": {
-                    "city": "Castellón de la Plana",
+                    "city": "Madrid",
                     "country": "Spain",
-                    "lat": 39.986,
-                    "lng": -0.0374
+                    "lat": 39.5978,
+                    "lng": -3.281
                 }
             },
             {
-                "name": "Martín Zubimendi",
+                "name": "Pedri",
                 "position": "MF",
-                "club": "Arsenal",
-                "league": "Premier League",
-                "age": 27,
+                "club": "Barcelona",
+                "league": "La Liga",
+                "age": 23,
                 "birthplace": {
-                    "city": "San Sebastián",
+                    "city": "Tegueste",
                     "country": "Spain",
-                    "lat": 43.32,
-                    "lng": -1.98
+                    "lat": 28.5233,
+                    "lng": -16.3408
                 }
             },
             {
-                "name": "Aleix García",
+                "name": "Fermín López",
                 "position": "MF",
-                "club": "Bayer Leverkusen",
-                "league": "Bundesliga",
-                "age": 28,
+                "club": "Barcelona",
+                "league": "La Liga",
+                "age": 22,
                 "birthplace": {
-                    "city": "Ulldecona",
+                    "city": "El Campillo",
                     "country": "Spain",
-                    "lat": 40.5981,
-                    "lng": 0.4482
-                }
-            },
-            {
-                "name": "Samu Aghehowa",
-                "position": "FW",
-                "club": "Porto",
-                "league": "Primeira Liga",
-                "age": 21,
-                "birthplace": {
-                    "city": "Melilla",
-                    "country": "Spain",
-                    "lat": 35.2825,
-                    "lng": -2.9475
+                    "lat": 37.6932,
+                    "lng": -6.63
                 }
             },
             {
@@ -8374,12 +10161,12 @@ const squadData = {
                 "position": "FW",
                 "club": "Barcelona",
                 "league": "La Liga",
-                "age": 25,
+                "age": 26,
                 "birthplace": {
-                    "city": "Foios",
+                    "city": "Madrid",
                     "country": "Spain",
-                    "lat": 39.5386,
-                    "lng": -0.3567
+                    "lat": 39.5385,
+                    "lng": -3.0138
                 }
             },
             {
@@ -8389,23 +10176,10 @@ const squadData = {
                 "league": "La Liga",
                 "age": 33,
                 "birthplace": {
-                    "city": "Santiago de Compostela",
+                    "city": "Madrid",
                     "country": "Spain",
-                    "lat": 42.8833,
-                    "lng": -8.5333
-                }
-            },
-            {
-                "name": "Dani Olmo",
-                "position": "FW",
-                "club": "Barcelona",
-                "league": "La Liga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Terrassa",
-                    "country": "Spain",
-                    "lat": 41.5611,
-                    "lng": 2.0081
+                    "lat": 41.3936,
+                    "lng": -3.772
                 }
             },
             {
@@ -8422,16 +10196,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Fermín López",
+                "name": "Álex Baena",
+                "position": "FW",
+                "club": "Atlético Madrid",
+                "league": "La Liga",
+                "age": 24,
+                "birthplace": {
+                    "city": "Roquetas de Mar",
+                    "country": "Spain",
+                    "lat": 36.7814,
+                    "lng": -2.6147
+                }
+            },
+            {
+                "name": "Lamine Yamal",
                 "position": "FW",
                 "club": "Barcelona",
                 "league": "La Liga",
-                "age": 22,
+                "age": 18,
                 "birthplace": {
-                    "city": "El Campillo",
+                    "city": "Esplugues de Llobregat",
                     "country": "Spain",
-                    "lat": 37.6932,
-                    "lng": -6.63
+                    "lat": 41.3767,
+                    "lng": 2.0858
                 }
             },
             {
@@ -8441,23 +10228,36 @@ const squadData = {
                 "league": "La Liga",
                 "age": 28,
                 "birthplace": {
-                    "city": "Eibar",
+                    "city": "Madrid",
                     "country": "Spain",
-                    "lat": 43.1843,
-                    "lng": -2.4733
+                    "lat": 39.8491,
+                    "lng": -4.5718
                 }
             },
             {
-                "name": "Jorge de Frutos",
+                "name": "Víctor Muñoz",
                 "position": "FW",
-                "club": "Rayo Vallecano",
+                "club": "Osasuna",
                 "league": "La Liga",
-                "age": 28,
+                "age": 22,
                 "birthplace": {
-                    "city": "Navares de Enmedio",
+                    "city": "Barcelona",
                     "country": "Spain",
-                    "lat": 41.3811,
-                    "lng": -3.7231
+                    "lat": 41.3825,
+                    "lng": 2.1769
+                }
+            },
+            {
+                "name": "Ander Barrenetxea",
+                "position": "FW",
+                "club": "Real Sociedad",
+                "league": "La Liga",
+                "age": 24,
+                "birthplace": {
+                    "city": "San Sebastián",
+                    "country": "Spain",
+                    "lat": 43.32,
+                    "lng": -1.98
                 }
             }
         ]
@@ -8466,7 +10266,7 @@ const squadData = {
         "name": "Cape Verde",
         "flag": "🇨🇻",
         "confederation": "CAF",
-        "fifaRanking": 26,
+        "fifaRanking": 30,
         "players": [
             {
                 "name": "Vozinha",
@@ -8475,10 +10275,10 @@ const squadData = {
                 "league": "Primeira Liga",
                 "age": 39,
                 "birthplace": {
-                    "city": "Mindelo",
+                    "city": "Praia",
                     "country": "Cape Verde",
-                    "lat": 16.8914,
-                    "lng": -24.988
+                    "lat": 14.4915,
+                    "lng": -23.6677
                 }
             },
             {
@@ -8486,7 +10286,7 @@ const squadData = {
                 "position": "GK",
                 "club": "Montana",
                 "league": "Bulgarian First League",
-                "age": 28,
+                "age": 29,
                 "birthplace": {
                     "city": "Praia",
                     "country": "Cape Verde",
@@ -8495,29 +10295,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Bruno Varela",
+                "name": "CJ dos Santos",
                 "position": "GK",
-                "club": "Al-Hazem",
-                "league": "Saudi Pro League",
-                "age": 31,
+                "club": "San Diego",
+                "league": "MLS",
+                "age": 25,
                 "birthplace": {
-                    "city": "Lisbon",
-                    "country": "Portugal",
-                    "lat": 38.708,
-                    "lng": -9.139
+                    "city": "Philadelphia",
+                    "country": "United States",
+                    "lat": 39.9528,
+                    "lng": -75.1636
                 }
             },
             {
-                "name": "Stopira",
+                "name": "Roberto Lopes",
                 "position": "DF",
-                "club": "Torreense",
-                "league": "Primeira Liga",
-                "age": 37,
+                "club": "Shamrock Rovers",
+                "league": "Unknown",
+                "age": 33,
                 "birthplace": {
-                    "city": "Praia",
-                    "country": "Cape Verde",
-                    "lat": 14.9177,
-                    "lng": -23.5092
+                    "city": "Crumlin",
+                    "country": "Ireland",
+                    "lat": 53.324,
+                    "lng": -6.329
                 }
             },
             {
@@ -8527,36 +10327,23 @@ const squadData = {
                 "league": "UAE Pro League",
                 "age": 31,
                 "birthplace": {
-                    "city": "Tarrafal",
+                    "city": "Praia",
                     "country": "Cape Verde",
-                    "lat": 15.2667,
-                    "lng": -23.75
+                    "lat": 14.1489,
+                    "lng": -24.2896
                 }
             },
             {
-                "name": "Ricardo Santos",
+                "name": "Steven Moreira",
                 "position": "DF",
-                "club": "Swansea City",
-                "league": "EFL Championship",
-                "age": 30,
+                "club": "Columbus Crew",
+                "league": "MLS",
+                "age": 31,
                 "birthplace": {
-                    "city": "Almada",
-                    "country": "Portugal",
-                    "lat": 38.6803,
-                    "lng": -9.1583
-                }
-            },
-            {
-                "name": "Kelvin Pires",
-                "position": "DF",
-                "club": "SJK",
-                "league": "Finnish Veikkausliiga",
-                "age": 25,
-                "birthplace": {
-                    "city": "Cape Verde",
+                    "city": "Praia",
                     "country": "Cape Verde",
-                    "lat": 15.3,
-                    "lng": -23.7
+                    "lat": 15.3529,
+                    "lng": -22.7211
                 }
             },
             {
@@ -8575,53 +10362,53 @@ const squadData = {
             {
                 "name": "Sidny Lopes Cabral",
                 "position": "DF",
-                "club": "Estrela da Amadora",
+                "club": "Benfica",
                 "league": "Primeira Liga",
                 "age": 22,
                 "birthplace": {
                     "city": "Praia",
                     "country": "Cape Verde",
-                    "lat": 14.7256,
-                    "lng": -24.5079
+                    "lat": 14.6232,
+                    "lng": -24.0198
                 }
             },
             {
-                "name": "Jójó",
+                "name": "Kelvin Pires",
                 "position": "DF",
-                "club": "Vizela",
-                "league": "Primeira Liga",
-                "age": 24,
+                "club": "SJK",
+                "league": "Finnish Veikkausliiga",
+                "age": 25,
                 "birthplace": {
-                    "city": "Lisbon",
-                    "country": "Portugal",
-                    "lat": 38.708,
-                    "lng": -9.139
+                    "city": "Cape Verde",
+                    "country": "Cape Verde",
+                    "lat": 15.3,
+                    "lng": -23.7
                 }
             },
             {
-                "name": "David Moreira",
+                "name": "Jordan Mendes",
                 "position": "DF",
-                "club": "Sporting CP",
-                "league": "Primeira Liga",
-                "age": 21,
-                "birthplace": {
-                    "city": "Lisbon",
-                    "country": "Portugal",
-                    "lat": 38.708,
-                    "lng": -9.139
-                }
-            },
-            {
-                "name": "Kevin Pina",
-                "position": "MF",
-                "club": "Krasnodar",
-                "league": "Russian Premier League",
-                "age": 29,
+                "club": "Rodez",
+                "league": "Ligue 2",
+                "age": 22,
                 "birthplace": {
                     "city": "Praia",
                     "country": "Cape Verde",
-                    "lat": 14.9177,
-                    "lng": -23.5092
+                    "lat": 15.0822,
+                    "lng": -23.4426
+                }
+            },
+            {
+                "name": "Jorginho Soares",
+                "position": "DF",
+                "club": "Montana",
+                "league": "Bulgarian First League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Praia",
+                    "country": "Cape Verde",
+                    "lat": 14.751,
+                    "lng": -23.6777
                 }
             },
             {
@@ -8638,42 +10425,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Jamiro Monteiro",
-                "position": "MF",
-                "club": "PEC Zwolle",
-                "league": "Eredivisie",
-                "age": 32,
-                "birthplace": {
-                    "city": "Rotterdam",
-                    "country": "Netherlands",
-                    "lat": 51.92,
-                    "lng": 4.48
-                }
-            },
-            {
                 "name": "Deroy Duarte",
                 "position": "MF",
                 "club": "Ludogorets Razgrad",
                 "league": "Bulgarian First League",
                 "age": 26,
                 "birthplace": {
-                    "city": "Rotterdam",
-                    "country": "Netherlands",
-                    "lat": 51.92,
-                    "lng": 4.48
+                    "city": "Praia",
+                    "country": "Cape Verde",
+                    "lat": 14.8481,
+                    "lng": -23.1645
                 }
             },
             {
-                "name": "Laros Duarte",
+                "name": "Kevin Pina Lenini",
                 "position": "MF",
-                "club": "Puskás Akadémia",
-                "league": "Hungarian NB I",
-                "age": 28,
+                "club": "Krasnodar",
+                "league": "Russian Premier League",
+                "age": 29,
                 "birthplace": {
-                    "city": "Rotterdam",
-                    "country": "Netherlands",
-                    "lat": 51.92,
-                    "lng": 4.48
+                    "city": "Praia",
+                    "country": "Cape Verde",
+                    "lat": 14.9177,
+                    "lng": -23.5092
                 }
             },
             {
@@ -8690,16 +10464,94 @@ const squadData = {
                 }
             },
             {
-                "name": "Aílson Tavares",
+                "name": "Laros Duarte",
                 "position": "MF",
-                "club": "Beitar Jerusalem",
-                "league": "Israeli Premier League",
+                "club": "Puskás Akadémia",
+                "league": "Hungarian NB I",
+                "age": 29,
+                "birthplace": {
+                    "city": "Praia",
+                    "country": "Cape Verde",
+                    "lat": 15.4122,
+                    "lng": -23.7296
+                }
+            },
+            {
+                "name": "Yannick Semedo",
+                "position": "MF",
+                "club": "Farense",
+                "league": "Primeira Liga",
+                "age": 30,
+                "birthplace": {
+                    "city": "Praia",
+                    "country": "Cape Verde",
+                    "lat": 15.6059,
+                    "lng": -23.8168
+                }
+            },
+            {
+                "name": "Ayoni Santos",
+                "position": "MF",
+                "club": "Sparta Rotterdam",
+                "league": "Eredivisie",
+                "age": 20,
+                "birthplace": {
+                    "city": "Praia",
+                    "country": "Cape Verde",
+                    "lat": 14.6416,
+                    "lng": -23.9936
+                }
+            },
+            {
+                "name": "Ryan Mendes",
+                "position": "FW",
+                "club": "Iğdır",
+                "league": "Turkish Super Lig",
+                "age": 36,
+                "birthplace": {
+                    "city": "Praia",
+                    "country": "Cape Verde",
+                    "lat": 14.1389,
+                    "lng": -24.3862
+                }
+            },
+            {
+                "name": "Garry Rodrigues",
+                "position": "FW",
+                "club": "Apollon Limassol",
+                "league": "Cypriot First Division",
+                "age": 35,
+                "birthplace": {
+                    "city": "Praia",
+                    "country": "Cape Verde",
+                    "lat": 15.9248,
+                    "lng": -22.9842
+                }
+            },
+            {
+                "name": "Willy Semedo",
+                "position": "FW",
+                "club": "Omonia",
+                "league": "Cypriot First Division",
+                "age": 31,
+                "birthplace": {
+                    "city": "Praia",
+                    "country": "Cape Verde",
+                    "lat": 14.9044,
+                    "lng": -23.1211
+                }
+            },
+            {
+                "name": "Jovane Cabral",
+                "position": "FW",
+                "club": "Estrela Amadora",
+                "league": "Primeira Liga",
                 "age": 27,
                 "birthplace": {
                     "city": "Praia",
                     "country": "Cape Verde",
-                    "lat": 14.9177,
-                    "lng": -23.5092
+                    "lat": 15.4377,
+                    "lng": -22.969
                 }
             },
             {
@@ -8716,94 +10568,42 @@ const squadData = {
                 }
             },
             {
-                "name": "Garry Rodrigues",
-                "position": "FW",
-                "club": "Apollon Limassol",
-                "league": "Cypriot First Division",
-                "age": 35,
-                "birthplace": {
-                    "city": "Rotterdam",
-                    "country": "Netherlands",
-                    "lat": 51.92,
-                    "lng": 4.48
-                }
-            },
-            {
-                "name": "Alessio da Cruz",
-                "position": "FW",
-                "club": "Athletic",
-                "league": "Brasileirão",
-                "age": 29,
-                "birthplace": {
-                    "city": "Almere",
-                    "country": "Netherlands",
-                    "lat": 52.3758,
-                    "lng": 5.2256
-                }
-            },
-            {
-                "name": "Willy Semedo",
-                "position": "FW",
-                "club": "Omonia",
-                "league": "Cypriot First Division",
-                "age": 31,
-                "birthplace": {
-                    "city": "Montfermeil",
-                    "country": "France",
-                    "lat": 48.8983,
-                    "lng": 2.5647
-                }
-            },
-            {
-                "name": "Hélio Varela",
-                "position": "FW",
-                "club": "Maccabi Tel Aviv",
-                "league": "Israeli Premier League",
-                "age": 23,
-                "birthplace": {
-                    "city": "Almada",
-                    "country": "Portugal",
-                    "lat": 38.6803,
-                    "lng": -9.1583
-                }
-            },
-            {
-                "name": "Ryan Mendes",
-                "position": "FW",
-                "club": "Iğdır",
-                "league": "Turkish Super Lig",
-                "age": 36,
-                "birthplace": {
-                    "city": "Mindelo",
-                    "country": "Cape Verde",
-                    "lat": 16.8914,
-                    "lng": -24.988
-                }
-            },
-            {
                 "name": "Nuno da Costa",
                 "position": "FW",
                 "club": "İstanbul Başakşehir",
                 "league": "Turkish Super Lig",
-                "age": 34,
+                "age": 35,
                 "birthplace": {
                     "city": "Praia",
                     "country": "Cape Verde",
-                    "lat": 14.9177,
-                    "lng": -23.5092
+                    "lat": 15.9836,
+                    "lng": -23.0218
                 }
             },
             {
-                "name": "Heriberto Tavares",
+                "name": "Ieltsin Camões",
                 "position": "FW",
-                "club": "Maccabi Netanya",
-                "league": "Israeli Premier League",
-                "age": 28,
+                "club": "Al Ahly",
+                "league": "Egyptian Premier League",
+                "age": 27,
                 "birthplace": {
-                    "city": "Amadora",
-                    "country": "Portugal",
-                    "lat": 38.75,
-                    "lng": -9.2333
+                    "city": "Luanda",
+                    "country": "Angola",
+                    "lat": -8.8383,
+                    "lng": 13.2344
+                }
+            },
+            {
+                "name": "Fabio Domingos",
+                "position": "FW",
+                "club": "Paris Saint-Germain Youth",
+                "league": "Ligue 1",
+                "age": 18,
+                "birthplace": {
+                    "city": "Praia",
+                    "country": "Cape Verde",
+                    "lat": 15.5984,
+                    "lng": -23.4837
                 }
             }
         ]
@@ -8812,7 +10612,7 @@ const squadData = {
         "name": "Saudi Arabia",
         "flag": "🇸🇦",
         "confederation": "AFC",
-        "fifaRanking": 27,
+        "fifaRanking": 31,
         "players": [
             {
                 "name": "Nawaf Al-Aqidi",
@@ -8897,7 +10697,7 @@ const squadData = {
                 "position": "DF",
                 "club": "Al-Hilal",
                 "league": "Saudi Pro League",
-                "age": 26,
+                "age": 27,
                 "birthplace": {
                     "city": "Riyadh",
                     "country": "Saudi Arabia",
@@ -8914,8 +10714,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Riyadh",
                     "country": "Saudi Arabia",
-                    "lat": 24.7969,
-                    "lng": 46.485
+                    "lat": 25.2406,
+                    "lng": 45.7464
                 }
             },
             {
@@ -8934,7 +10734,7 @@ const squadData = {
             {
                 "name": "Waleed Al-Ahmed",
                 "position": "DF",
-                "club": "Al-Taawoun",
+                "club": "Al-Qadsiah",
                 "league": "Saudi Pro League",
                 "age": 26,
                 "birthplace": {
@@ -8953,8 +10753,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Riyadh",
                     "country": "Saudi Arabia",
-                    "lat": 24.3585,
-                    "lng": 47.0652
+                    "lat": 24.4383,
+                    "lng": 47.2871
                 }
             },
             {
@@ -8964,10 +10764,10 @@ const squadData = {
                 "league": "Saudi Pro League",
                 "age": 27,
                 "birthplace": {
-                    "city": "Saudi Arabia",
+                    "city": "Riyadh",
                     "country": "Saudi Arabia",
-                    "lat": 23.7167,
-                    "lng": 44.1167
+                    "lat": 24.8142,
+                    "lng": 47.6945
                 }
             },
             {
@@ -9025,14 +10825,14 @@ const squadData = {
             {
                 "name": "Murad Hawsawi",
                 "position": "MF",
-                "club": "Al-Khaleej",
+                "club": "Al-Hilal",
                 "league": "Saudi Pro League",
                 "age": 24,
                 "birthplace": {
                     "city": "Riyadh",
                     "country": "Saudi Arabia",
-                    "lat": 24.1987,
-                    "lng": 46.6582
+                    "lat": 25.3506,
+                    "lng": 46.6058
                 }
             },
             {
@@ -9103,7 +10903,7 @@ const squadData = {
             {
                 "name": "Abdullah Al-Hamdan",
                 "position": "FW",
-                "club": "Al-Hilal",
+                "club": "Al-Nassr",
                 "league": "Saudi Pro League",
                 "age": 26,
                 "birthplace": {
@@ -9119,32 +10919,19 @@ const squadData = {
         "name": "Uruguay",
         "flag": "🇺🇾",
         "confederation": "CONMEBOL",
-        "fifaRanking": 28,
+        "fifaRanking": 32,
         "players": [
             {
-                "name": "Cristopher Fiermarin",
+                "name": "Sergio Rochet",
                 "position": "GK",
-                "club": "Defensa y Justicia",
-                "league": "Argentine Primera",
-                "age": 28,
+                "club": "Internacional",
+                "league": "Brasileirão",
+                "age": 33,
                 "birthplace": {
-                    "city": "Rosario",
+                    "city": "Nueva Palmira",
                     "country": "Uruguay",
-                    "lat": -34.3139,
-                    "lng": -57.3525
-                }
-            },
-            {
-                "name": "Kevin Martínez",
-                "position": "GK",
-                "club": "Danubio",
-                "league": "Uruguayan Primera",
-                "age": 21,
-                "birthplace": {
-                    "city": "Montevideo",
-                    "country": "Uruguay",
-                    "lat": -34.1762,
-                    "lng": -56.1704
+                    "lat": -33.87,
+                    "lng": -58.408
                 }
             },
             {
@@ -9161,6 +10948,19 @@ const squadData = {
                 }
             },
             {
+                "name": "Fernando Muslera",
+                "position": "GK",
+                "club": "Estudiantes",
+                "league": "Argentine Primera",
+                "age": 39,
+                "birthplace": {
+                    "city": "Buenos Aires",
+                    "country": "Argentina",
+                    "lat": -34.5997,
+                    "lng": -58.3819
+                }
+            },
+            {
                 "name": "José María Giménez",
                 "position": "DF",
                 "club": "Atlético Madrid",
@@ -9174,11 +10974,11 @@ const squadData = {
                 }
             },
             {
-                "name": "Santiago Bueno",
+                "name": "Sebastián Cáceres",
                 "position": "DF",
-                "club": "Wolverhampton Wanderers",
-                "league": "Premier League",
-                "age": 27,
+                "club": "América",
+                "league": "Liga MX",
+                "age": 26,
                 "birthplace": {
                     "city": "Montevideo",
                     "country": "Uruguay",
@@ -9191,7 +10991,7 @@ const squadData = {
                 "position": "DF",
                 "club": "Barcelona",
                 "league": "La Liga",
-                "age": 26,
+                "age": 27,
                 "birthplace": {
                     "city": "Rivera",
                     "country": "Uruguay",
@@ -9204,7 +11004,7 @@ const squadData = {
                 "position": "DF",
                 "club": "Flamengo",
                 "league": "Brasileirão",
-                "age": 32,
+                "age": 33,
                 "birthplace": {
                     "city": "Montevideo",
                     "country": "Uruguay",
@@ -9239,24 +11039,11 @@ const squadData = {
                 }
             },
             {
-                "name": "Joaquín Piquerez",
+                "name": "Santiago Bueno",
                 "position": "DF",
-                "club": "Palmeiras",
-                "league": "Brasileirão",
+                "club": "Wolverhampton Wanderers",
+                "league": "Premier League",
                 "age": 27,
-                "birthplace": {
-                    "city": "Montevideo",
-                    "country": "Uruguay",
-                    "lat": -34.9059,
-                    "lng": -56.1913
-                }
-            },
-            {
-                "name": "Sebastián Cáceres",
-                "position": "DF",
-                "club": "América",
-                "league": "Liga MX",
-                "age": 26,
                 "birthplace": {
                     "city": "Montevideo",
                     "country": "Uruguay",
@@ -9269,12 +11056,25 @@ const squadData = {
                 "position": "DF",
                 "club": "Vasco da Gama",
                 "league": "Brasileirão",
-                "age": 28,
+                "age": 29,
                 "birthplace": {
                     "city": "Canelones",
                     "country": "Uruguay",
                     "lat": -34.5243,
                     "lng": -56.2818
+                }
+            },
+            {
+                "name": "Joaquín Piquerez",
+                "position": "DF",
+                "club": "Palmeiras",
+                "league": "Brasileirão",
+                "age": 27,
+                "birthplace": {
+                    "city": "Montevideo",
+                    "country": "Uruguay",
+                    "lat": -34.9059,
+                    "lng": -56.1913
                 }
             },
             {
@@ -9291,24 +11091,37 @@ const squadData = {
                 }
             },
             {
-                "name": "Rodrigo Bentancur",
+                "name": "Juan Manuel Sanabria",
                 "position": "MF",
-                "club": "Tottenham Hotspur",
-                "league": "Premier League",
-                "age": 28,
+                "club": "Real Salt Lake",
+                "league": "MLS",
+                "age": 26,
                 "birthplace": {
-                    "city": "Colonia del Sacramento",
-                    "country": "Uruguay",
-                    "lat": -34.4699,
-                    "lng": -57.8434
+                    "city": "Florida",
+                    "country": "United States",
+                    "lat": 28.1333,
+                    "lng": -81.6317
                 }
             },
             {
-                "name": "Nahitan Nández",
+                "name": "Nicolás de la Cruz",
                 "position": "MF",
-                "club": "Al-Qadsiah",
-                "league": "Saudi Pro League",
-                "age": 30,
+                "club": "Flamengo",
+                "league": "Brasileirão",
+                "age": 28,
+                "birthplace": {
+                    "city": "Montevideo",
+                    "country": "Uruguay",
+                    "lat": -34.9059,
+                    "lng": -56.1913
+                }
+            },
+            {
+                "name": "Emiliano Martínez",
+                "position": "MF",
+                "club": "Palmeiras",
+                "league": "Brasileirão",
+                "age": 26,
                 "birthplace": {
                     "city": "Punta del Este",
                     "country": "Uruguay",
@@ -9330,29 +11143,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Rodrigo Zalazar",
+                "name": "Federico Valverde",
                 "position": "MF",
-                "club": "Braga",
-                "league": "Primeira Liga",
-                "age": 26,
+                "club": "Real Madrid",
+                "league": "La Liga",
+                "age": 27,
                 "birthplace": {
-                    "city": "Albacete",
-                    "country": "Spain",
-                    "lat": 38.9956,
-                    "lng": -1.8558
-                }
-            },
-            {
-                "name": "Emiliano Martínez",
-                "position": "MF",
-                "club": "Palmeiras",
-                "league": "Brasileirão",
-                "age": 26,
-                "birthplace": {
-                    "city": "Punta del Este",
+                    "city": "Montevideo",
                     "country": "Uruguay",
-                    "lat": -34.9557,
-                    "lng": -54.9381
+                    "lat": -34.9059,
+                    "lng": -56.1913
                 }
             },
             {
@@ -9360,7 +11160,7 @@ const squadData = {
                 "position": "MF",
                 "club": "Sporting CP",
                 "league": "Primeira Liga",
-                "age": 25,
+                "age": 26,
                 "birthplace": {
                     "city": "Montevideo",
                     "country": "Uruguay",
@@ -9369,49 +11169,49 @@ const squadData = {
                 }
             },
             {
-                "name": "Juan Manuel Sanabria",
+                "name": "Nicolás Fonseca",
                 "position": "MF",
-                "club": "Atlético San Luis",
-                "league": "Liga MX",
-                "age": 25,
-                "birthplace": {
-                    "city": "Florida",
-                    "country": "United States",
-                    "lat": 28.1333,
-                    "lng": -81.6317
-                }
-            },
-            {
-                "name": "Santiago Homenchenko",
-                "position": "MF",
-                "club": "Querétaro",
-                "league": "Liga MX",
-                "age": 22,
-                "birthplace": {
-                    "city": "Mercedes",
-                    "country": "Uruguay",
-                    "lat": -33.2484,
-                    "lng": -58.0299
-                }
-            },
-            {
-                "name": "Rodrigo Aguirre",
-                "position": "FW",
-                "club": "América",
-                "league": "Liga MX",
-                "age": 31,
-                "birthplace": {
-                    "city": "Montevideo",
-                    "country": "Uruguay",
-                    "lat": -34.9059,
-                    "lng": -56.1913
-                }
-            },
-            {
-                "name": "Federico Viñas",
-                "position": "FW",
                 "club": "Oviedo",
                 "league": "La Liga",
+                "age": 27,
+                "birthplace": {
+                    "city": "Naples",
+                    "country": "Italy",
+                    "lat": 40.8358,
+                    "lng": 14.2486
+                }
+            },
+            {
+                "name": "Darwin Núñez",
+                "position": "FW",
+                "club": "Al-Hilal",
+                "league": "Saudi Pro League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Artigas",
+                    "country": "Uruguay",
+                    "lat": -30.3984,
+                    "lng": -56.4638
+                }
+            },
+            {
+                "name": "Facundo Pellistri",
+                "position": "FW",
+                "club": "Panathinaikos",
+                "league": "Greek Super League",
+                "age": 24,
+                "birthplace": {
+                    "city": "Montevideo",
+                    "country": "Uruguay",
+                    "lat": -34.9059,
+                    "lng": -56.1913
+                }
+            },
+            {
+                "name": "Agustín Canobbio",
+                "position": "FW",
+                "club": "Fluminense",
+                "league": "Brasileirão",
                 "age": 27,
                 "birthplace": {
                     "city": "Montevideo",
@@ -9434,11 +11234,11 @@ const squadData = {
                 }
             },
             {
-                "name": "Luciano Rodríguez",
+                "name": "Federico Viñas",
                 "position": "FW",
-                "club": "Neom",
-                "league": "Saudi Pro League",
-                "age": 22,
+                "club": "Oviedo",
+                "league": "La Liga",
+                "age": 27,
                 "birthplace": {
                     "city": "Montevideo",
                     "country": "Uruguay",
@@ -9460,29 +11260,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Facundo Pellistri",
+                "name": "Agustín Álvarez",
                 "position": "FW",
-                "club": "Panathinaikos",
-                "league": "Greek Super League",
+                "club": "Monza",
+                "league": "Serie A",
                 "age": 24,
+                "birthplace": {
+                    "city": "San Bautista",
+                    "country": "Uruguay",
+                    "lat": -34.44,
+                    "lng": -55.9597
+                }
+            },
+            {
+                "name": "Rodrigo Aguirre",
+                "position": "FW",
+                "club": "UANL",
+                "league": "Liga MX",
+                "age": 31,
                 "birthplace": {
                     "city": "Montevideo",
                     "country": "Uruguay",
                     "lat": -34.9059,
                     "lng": -56.1913
-                }
-            },
-            {
-                "name": "Ignacio Laquintana",
-                "position": "FW",
-                "club": "Huesca",
-                "league": "Segunda División",
-                "age": 27,
-                "birthplace": {
-                    "city": "Paysandú",
-                    "country": "Uruguay",
-                    "lat": -32.3218,
-                    "lng": -58.0892
                 }
             }
         ]
@@ -9491,7 +11291,7 @@ const squadData = {
         "name": "France",
         "flag": "🇫🇷",
         "confederation": "UEFA",
-        "fifaRanking": 29,
+        "fifaRanking": 33,
         "players": [
             {
                 "name": "Brice Samba",
@@ -9509,7 +11309,7 @@ const squadData = {
             {
                 "name": "Mike Maignan",
                 "position": "GK",
-                "club": "Milan",
+                "club": "AC Milan",
                 "league": "Serie A",
                 "age": 30,
                 "birthplace": {
@@ -9572,16 +11372,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Jules Koundé",
+                "name": "Pierre Kalulu",
                 "position": "DF",
-                "club": "Barcelona",
-                "league": "La Liga",
-                "age": 27,
+                "club": "Juventus",
+                "league": "Serie A",
+                "age": 25,
                 "birthplace": {
-                    "city": "14th arrondissement of Paris",
+                    "city": "Lyon",
                     "country": "France",
-                    "lat": 48.833,
-                    "lng": 2.3269
+                    "lat": 45.7675,
+                    "lng": 4.835
                 }
             },
             {
@@ -9598,29 +11398,16 @@ const squadData = {
                 }
             },
             {
-                "name": "William Saliba",
+                "name": "Maxence Lacroix",
                 "position": "DF",
-                "club": "Arsenal",
+                "club": "Crystal Palace",
                 "league": "Premier League",
-                "age": 24,
+                "age": 25,
                 "birthplace": {
-                    "city": "Bondy",
+                    "city": "Villeneuve-Saint-Georges",
                     "country": "France",
-                    "lat": 48.9028,
-                    "lng": 2.4836
-                }
-            },
-            {
-                "name": "Lucas Hernandez",
-                "position": "DF",
-                "club": "Paris Saint-Germain",
-                "league": "Ligue 1",
-                "age": 29,
-                "birthplace": {
-                    "city": "Marseille",
-                    "country": "France",
-                    "lat": 43.2967,
-                    "lng": 5.3764
+                    "lat": 48.7325,
+                    "lng": 2.4497
                 }
             },
             {
@@ -9637,21 +11424,125 @@ const squadData = {
                 }
             },
             {
-                "name": "Khéphren Thuram",
-                "position": "MF",
-                "club": "Juventus",
-                "league": "Serie A",
-                "age": 24,
+                "name": "Lucas Hernandez",
+                "position": "DF",
+                "club": "Paris Saint-Germain",
+                "league": "Ligue 1",
+                "age": 30,
                 "birthplace": {
-                    "city": "Reggio Emilia",
+                    "city": "Marseille",
+                    "country": "France",
+                    "lat": 43.2967,
+                    "lng": 5.3764
+                }
+            },
+            {
+                "name": "Eduardo Camavinga",
+                "position": "MF",
+                "club": "Real Madrid",
+                "league": "La Liga",
+                "age": 23,
+                "birthplace": {
+                    "city": "Cabinda",
+                    "country": "Angola",
+                    "lat": -5.5667,
+                    "lng": 12.2
+                }
+            },
+            {
+                "name": "Aurélien Tchouaméni",
+                "position": "MF",
+                "club": "Real Madrid",
+                "league": "La Liga",
+                "age": 26,
+                "birthplace": {
+                    "city": "Rouen",
+                    "country": "France",
+                    "lat": 49.4431,
+                    "lng": 1.1025
+                }
+            },
+            {
+                "name": "N'Golo Kanté",
+                "position": "MF",
+                "club": "Fenerbahçe",
+                "league": "Turkish Super Lig",
+                "age": 35,
+                "birthplace": {
+                    "city": "Paris",
+                    "country": "France",
+                    "lat": 48.8567,
+                    "lng": 2.3522
+                }
+            },
+            {
+                "name": "Adrien Rabiot",
+                "position": "MF",
+                "club": "AC Milan",
+                "league": "Serie A",
+                "age": 30,
+                "birthplace": {
+                    "city": "Saint-Maurice",
+                    "country": "France",
+                    "lat": 48.8183,
+                    "lng": 2.4347
+                }
+            },
+            {
+                "name": "Warren Zaïre-Emery",
+                "position": "MF",
+                "club": "Paris Saint-Germain",
+                "league": "Ligue 1",
+                "age": 20,
+                "birthplace": {
+                    "city": "Montreuil",
+                    "country": "France",
+                    "lat": 48.8603,
+                    "lng": 2.4431
+                }
+            },
+            {
+                "name": "Ousmane Dembélé",
+                "position": "FW",
+                "club": "Paris Saint-Germain",
+                "league": "Ligue 1",
+                "age": 28,
+                "birthplace": {
+                    "city": "Vernon",
+                    "country": "France",
+                    "lat": 49.0917,
+                    "lng": 1.485
+                }
+            },
+            {
+                "name": "Marcus Thuram",
+                "position": "FW",
+                "club": "Inter Milan",
+                "league": "Serie A",
+                "age": 28,
+                "birthplace": {
+                    "city": "Parma",
                     "country": "Italy",
-                    "lat": 44.7,
-                    "lng": 10.6333
+                    "lat": 44.8015,
+                    "lng": 10.328
+                }
+            },
+            {
+                "name": "Kylian Mbappé",
+                "position": "FW",
+                "club": "Real Madrid",
+                "league": "La Liga",
+                "age": 27,
+                "birthplace": {
+                    "city": "Paris",
+                    "country": "France",
+                    "lat": 48.8567,
+                    "lng": 2.3522
                 }
             },
             {
                 "name": "Michael Olise",
-                "position": "MF",
+                "position": "FW",
                 "club": "Bayern Munich",
                 "league": "Bundesliga",
                 "age": 24,
@@ -9663,55 +11554,29 @@ const squadData = {
                 }
             },
             {
-                "name": "N'Golo Kanté",
-                "position": "MF",
-                "club": "Fenerbahçe",
-                "league": "Turkish Super Lig",
-                "age": 34,
+                "name": "Randal Kolo Muani",
+                "position": "FW",
+                "club": "Tottenham Hotspur",
+                "league": "Premier League",
+                "age": 27,
                 "birthplace": {
-                    "city": "Paris",
+                    "city": "Bondy",
                     "country": "France",
-                    "lat": 48.8567,
-                    "lng": 2.3522
+                    "lat": 48.9028,
+                    "lng": 2.4836
                 }
             },
             {
-                "name": "Warren Zaïre-Emery",
-                "position": "MF",
+                "name": "Désiré Doué",
+                "position": "FW",
                 "club": "Paris Saint-Germain",
                 "league": "Ligue 1",
-                "age": 19,
+                "age": 20,
                 "birthplace": {
-                    "city": "Montreuil",
+                    "city": "Angers",
                     "country": "France",
-                    "lat": 48.8603,
-                    "lng": 2.4431
-                }
-            },
-            {
-                "name": "Christopher Nkunku",
-                "position": "FW",
-                "club": "Milan",
-                "league": "Serie A",
-                "age": 28,
-                "birthplace": {
-                    "city": "Lagny-sur-Marne",
-                    "country": "France",
-                    "lat": 48.8781,
-                    "lng": 2.7067
-                }
-            },
-            {
-                "name": "Florian Thauvin",
-                "position": "FW",
-                "club": "Lens",
-                "league": "Ligue 1",
-                "age": 33,
-                "birthplace": {
-                    "city": "Orléans",
-                    "country": "France",
-                    "lat": 47.9022,
-                    "lng": 1.9042
+                    "lat": 47.4728,
+                    "lng": -0.5556
                 }
             },
             {
@@ -9728,19 +11593,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Maghnes Akliouche",
-                "position": "FW",
-                "club": "Monaco",
-                "league": "Ligue 1",
-                "age": 23,
-                "birthplace": {
-                    "city": "Tremblay-en-France",
-                    "country": "France",
-                    "lat": 48.9561,
-                    "lng": 2.5764
-                }
-            },
-            {
                 "name": "Rayan Cherki",
                 "position": "FW",
                 "club": "Manchester City",
@@ -9754,29 +11606,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Jean-Philippe Mateta",
+                "name": "Maghnes Akliouche",
                 "position": "FW",
-                "club": "Crystal Palace",
-                "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Sevran",
-                    "country": "France",
-                    "lat": 48.9414,
-                    "lng": 2.5228
-                }
-            },
-            {
-                "name": "Bradley Barcola",
-                "position": "FW",
-                "club": "Paris Saint-Germain",
+                "club": "Monaco",
                 "league": "Ligue 1",
-                "age": 23,
+                "age": 24,
                 "birthplace": {
-                    "city": "Villeurbanne",
+                    "city": "Tremblay-en-France",
                     "country": "France",
-                    "lat": 45.7661,
-                    "lng": 4.8794
+                    "lat": 48.9561,
+                    "lng": 2.5764
                 }
             }
         ]
@@ -9785,7 +11624,7 @@ const squadData = {
         "name": "Senegal",
         "flag": "🇸🇳",
         "confederation": "CAF",
-        "fifaRanking": 30,
+        "fifaRanking": 34,
         "players": [
             {
                 "name": "Yehvann Diouf",
@@ -9798,19 +11637,6 @@ const squadData = {
                     "country": "France",
                     "lat": 48.8603,
                     "lng": 2.4431
-                }
-            },
-            {
-                "name": "Édouard Mendy",
-                "position": "GK",
-                "club": "Al-Ahli",
-                "league": "Saudi Pro League",
-                "age": 33,
-                "birthplace": {
-                    "city": "Montivilliers",
-                    "country": "France",
-                    "lat": 49.5461,
-                    "lng": 0.1881
                 }
             },
             {
@@ -9827,6 +11653,19 @@ const squadData = {
                 }
             },
             {
+                "name": "Édouard Mendy",
+                "position": "GK",
+                "club": "Al-Ahli",
+                "league": "Saudi Pro League",
+                "age": 34,
+                "birthplace": {
+                    "city": "Montivilliers",
+                    "country": "France",
+                    "lat": 49.5461,
+                    "lng": 0.1881
+                }
+            },
+            {
                 "name": "Mamadou Sarr",
                 "position": "DF",
                 "club": "Chelsea",
@@ -9837,19 +11676,6 @@ const squadData = {
                     "country": "France",
                     "lat": 43.4053,
                     "lng": 5.0475
-                }
-            },
-            {
-                "name": "Kalidou Koulibaly",
-                "position": "DF",
-                "club": "Al-Hilal",
-                "league": "Saudi Pro League",
-                "age": 34,
-                "birthplace": {
-                    "city": "Saint-Dié-des-Vosges",
-                    "country": "France",
-                    "lat": 48.2842,
-                    "lng": 6.9492
                 }
             },
             {
@@ -9883,7 +11709,7 @@ const squadData = {
                 "position": "DF",
                 "club": "Monaco",
                 "league": "Ligue 1",
-                "age": 26,
+                "age": 27,
                 "birthplace": {
                     "city": "Dakar",
                     "country": "Senegal",
@@ -9896,7 +11722,7 @@ const squadData = {
                 "position": "DF",
                 "club": "Lyon",
                 "league": "Ligue 1",
-                "age": 29,
+                "age": 30,
                 "birthplace": {
                     "city": "Roubaix",
                     "country": "France",
@@ -9931,6 +11757,32 @@ const squadData = {
                 }
             },
             {
+                "name": "Nobel Mendy",
+                "position": "DF",
+                "club": "Rayo Vallecano",
+                "league": "La Liga",
+                "age": 21,
+                "birthplace": {
+                    "city": "Guédiawaye",
+                    "country": "Senegal",
+                    "lat": 14.7724,
+                    "lng": -17.3884
+                }
+            },
+            {
+                "name": "Kalidou Koulibaly",
+                "position": "DF",
+                "club": "Al-Hilal",
+                "league": "Saudi Pro League",
+                "age": 34,
+                "birthplace": {
+                    "city": "Saint-Dié-des-Vosges",
+                    "country": "France",
+                    "lat": 48.2842,
+                    "lng": 6.9492
+                }
+            },
+            {
                 "name": "Idrissa Gueye",
                 "position": "MF",
                 "club": "Everton",
@@ -9948,25 +11800,12 @@ const squadData = {
                 "position": "MF",
                 "club": "Rayo Vallecano",
                 "league": "La Liga",
-                "age": 31,
+                "age": 32,
                 "birthplace": {
                     "city": "Dakar",
                     "country": "Senegal",
                     "lat": 14.6726,
                     "lng": -17.432
-                }
-            },
-            {
-                "name": "Habib Diarra",
-                "position": "MF",
-                "club": "Sunderland",
-                "league": "Premier League",
-                "age": 22,
-                "birthplace": {
-                    "city": "Guédiawaye",
-                    "country": "Senegal",
-                    "lat": 14.7724,
-                    "lng": -17.3884
                 }
             },
             {
@@ -9996,16 +11835,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Ousseynou Niang",
+                "name": "Habib Diarra",
                 "position": "MF",
-                "club": "Union Saint-Gilloise",
-                "league": "Belgian Pro League",
-                "age": 24,
+                "club": "Sunderland",
+                "league": "Premier League",
+                "age": 22,
                 "birthplace": {
-                    "city": "Ziguinchor",
+                    "city": "Guédiawaye",
                     "country": "Senegal",
-                    "lat": 12.5861,
-                    "lng": -16.2707
+                    "lat": 14.7724,
+                    "lng": -17.3884
                 }
             },
             {
@@ -10022,16 +11861,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Mamadou Camara",
-                "position": "MF",
-                "club": "Nahdat Berkane",
-                "league": "Botola Pro",
-                "age": 23,
+                "name": "Assane Diao",
+                "position": "FW",
+                "club": "Como",
+                "league": "Serie A",
+                "age": 20,
                 "birthplace": {
-                    "city": "Tivaouane",
+                    "city": "Ndangane",
                     "country": "Senegal",
-                    "lat": 14.9543,
-                    "lng": -16.8132
+                    "lat": 14.0747,
+                    "lng": -16.6925
                 }
             },
             {
@@ -10045,19 +11884,6 @@ const squadData = {
                     "country": "France",
                     "lat": 46.2556,
                     "lng": 5.655
-                }
-            },
-            {
-                "name": "Sadio Mané",
-                "position": "FW",
-                "club": "Al-Nassr",
-                "league": "Saudi Pro League",
-                "age": 33,
-                "birthplace": {
-                    "city": "Bambali",
-                    "country": "Senegal",
-                    "lat": 12.6042,
-                    "lng": -15.6614
                 }
             },
             {
@@ -10087,24 +11913,11 @@ const squadData = {
                 }
             },
             {
-                "name": "Iliman Ndiaye",
-                "position": "FW",
-                "club": "Everton",
-                "league": "Premier League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Rouen",
-                    "country": "France",
-                    "lat": 49.4431,
-                    "lng": 1.1025
-                }
-            },
-            {
                 "name": "Ismaïla Sarr",
                 "position": "FW",
                 "club": "Crystal Palace",
                 "league": "Premier League",
-                "age": 27,
+                "age": 28,
                 "birthplace": {
                     "city": "Saint-Louis",
                     "country": "Senegal",
@@ -10126,19 +11939,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Cheikh Sabaly",
-                "position": "FW",
-                "club": "Vancouver Whitecaps",
-                "league": "MLS",
-                "age": 26,
-                "birthplace": {
-                    "city": "Kolda",
-                    "country": "Senegal",
-                    "lat": 12.8958,
-                    "lng": -14.9408
-                }
-            },
-            {
                 "name": "Ibrahim Mbaye",
                 "position": "FW",
                 "club": "Paris Saint-Germain",
@@ -10150,6 +11950,391 @@ const squadData = {
                     "lat": 48.7767,
                     "lng": 2.0017
                 }
+            },
+            {
+                "name": "Bamba Dieng",
+                "position": "FW",
+                "club": "Lorient",
+                "league": "Ligue 1",
+                "age": 26,
+                "birthplace": {
+                    "city": "Pikine",
+                    "country": "Senegal",
+                    "lat": 14.744,
+                    "lng": -17.4021
+                }
+            },
+            {
+                "name": "Iliman Ndiaye",
+                "position": "FW",
+                "club": "Everton",
+                "league": "Premier League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Rouen",
+                    "country": "France",
+                    "lat": 49.4431,
+                    "lng": 1.1025
+                }
+            },
+            {
+                "name": "Mamadou Diakhon",
+                "position": "FW",
+                "club": "Club Brugge",
+                "league": "Belgian Pro League",
+                "age": 20,
+                "birthplace": {
+                    "city": "Strasbourg",
+                    "country": "France",
+                    "lat": 48.5733,
+                    "lng": 7.7522
+                }
+            }
+        ]
+    },
+    "IRQ": {
+        "name": "Iraq",
+        "flag": "🇮🇶",
+        "confederation": "AFC",
+        "fifaRanking": 35,
+        "players": [
+            {
+                "name": "Fahad Talib",
+                "position": "GK",
+                "club": "Al-Talaba",
+                "league": "Iraqi Premier League",
+                "age": 31,
+                "birthplace": {
+                    "city": "Baghdad",
+                    "country": "Iraq",
+                    "lat": 33.3153,
+                    "lng": 44.3661
+                }
+            },
+            {
+                "name": "Ahmed Basil Fadhil",
+                "position": "GK",
+                "club": "Al-Shorta",
+                "league": "Iraqi Premier League",
+                "age": 29,
+                "birthplace": {
+                    "city": "Baghdad",
+                    "country": "Iraq",
+                    "lat": 33.1316,
+                    "lng": 43.7276
+                }
+            },
+            {
+                "name": "Kumel Al-Rekabe",
+                "position": "GK",
+                "club": "Erbil",
+                "league": "Iraqi Premier League",
+                "age": 21,
+                "birthplace": {
+                    "city": "Baghdad",
+                    "country": "Iraq",
+                    "lat": 32.6727,
+                    "lng": 44.4905
+                }
+            },
+            {
+                "name": "Rebin Sulaka",
+                "position": "DF",
+                "club": "Port",
+                "league": "Unknown",
+                "age": 33,
+                "birthplace": {
+                    "city": "Ankawa",
+                    "country": "Iraq",
+                    "lat": 36.2292,
+                    "lng": 43.9936
+                }
+            },
+            {
+                "name": "Manaf Younis",
+                "position": "DF",
+                "club": "Al-Shorta",
+                "league": "Iraqi Premier League",
+                "age": 29,
+                "birthplace": {
+                    "city": "Tikrit",
+                    "country": "Iraq",
+                    "lat": 34.6,
+                    "lng": 43.6833
+                }
+            },
+            {
+                "name": "Merchas Doski",
+                "position": "DF",
+                "club": "Viktoria Plzeň",
+                "league": "Czech First League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Hanover",
+                    "country": "Germany",
+                    "lat": 52.3744,
+                    "lng": 9.7386
+                }
+            },
+            {
+                "name": "Frans Putros",
+                "position": "DF",
+                "club": "Persib",
+                "league": "Unknown",
+                "age": 32,
+                "birthplace": {
+                    "city": "Aarhus",
+                    "country": "Denmark",
+                    "lat": 56.1564,
+                    "lng": 10.2097
+                }
+            },
+            {
+                "name": "Hussein Ali",
+                "position": "DF",
+                "club": "Pogoń Szczecin",
+                "league": "Polish Ekstraklasa",
+                "age": 24,
+                "birthplace": {
+                    "city": "Malmö",
+                    "country": "Sweden",
+                    "lat": 55.5833,
+                    "lng": 13
+                }
+            },
+            {
+                "name": "Zaid Tahseen",
+                "position": "DF",
+                "club": "Pakhtakor",
+                "league": "Unknown",
+                "age": 25,
+                "birthplace": {
+                    "city": "Najaf",
+                    "country": "Iraq",
+                    "lat": 32.029,
+                    "lng": 44.3396
+                }
+            },
+            {
+                "name": "Akam Hashim",
+                "position": "DF",
+                "club": "Al-Zawraa",
+                "league": "Iraqi Premier League",
+                "age": 27,
+                "birthplace": {
+                    "city": "Erbil",
+                    "country": "Iraq",
+                    "lat": 36.1911,
+                    "lng": 44.0094
+                }
+            },
+            {
+                "name": "Ahmed Maknzi",
+                "position": "DF",
+                "club": "Al-Karma",
+                "league": "Iraqi Premier League",
+                "age": 24,
+                "birthplace": {
+                    "city": "Baghdad",
+                    "country": "Iraq",
+                    "lat": 33.3153,
+                    "lng": 44.3661
+                }
+            },
+            {
+                "name": "Ibrahim Bayesh",
+                "position": "MF",
+                "club": "Al-Dhafra",
+                "league": "UAE Pro League",
+                "age": 25,
+                "birthplace": {
+                    "city": "Iraq",
+                    "country": "Iraq",
+                    "lat": 33,
+                    "lng": 43
+                }
+            },
+            {
+                "name": "Amir Al-Ammari",
+                "position": "MF",
+                "club": "Cracovia",
+                "league": "Polish Ekstraklasa",
+                "age": 28,
+                "birthplace": {
+                    "city": "Jönköping",
+                    "country": "Sweden",
+                    "lat": 57.7833,
+                    "lng": 14.1667
+                }
+            },
+            {
+                "name": "Ali Jasim",
+                "position": "MF",
+                "club": "Al-Najma",
+                "league": "Saudi Pro League",
+                "age": 22,
+                "birthplace": {
+                    "city": "Baghdad",
+                    "country": "Iraq",
+                    "lat": 33.3153,
+                    "lng": 44.3661
+                }
+            },
+            {
+                "name": "Youssef Amyn",
+                "position": "MF",
+                "club": "AEK Larnaca",
+                "league": "Cypriot First Division",
+                "age": 22,
+                "birthplace": {
+                    "city": "Essen",
+                    "country": "Germany",
+                    "lat": 51.4508,
+                    "lng": 7.0131
+                }
+            },
+            {
+                "name": "Zidane Iqbal",
+                "position": "MF",
+                "club": "Utrecht",
+                "league": "Eredivisie",
+                "age": 22,
+                "birthplace": {
+                    "city": "Manchester",
+                    "country": "United Kingdom",
+                    "lat": 53.4667,
+                    "lng": -2.2333
+                }
+            },
+            {
+                "name": "Hasan Abdulkareem",
+                "position": "MF",
+                "club": "Al-Zawraa",
+                "league": "Iraqi Premier League",
+                "age": 27,
+                "birthplace": {
+                    "city": "Baghdad",
+                    "country": "Iraq",
+                    "lat": 33.3153,
+                    "lng": 44.3661
+                }
+            },
+            {
+                "name": "Marko Farji",
+                "position": "MF",
+                "club": "Venezia",
+                "league": "Serie A",
+                "age": 22,
+                "birthplace": {
+                    "city": "Grimstad",
+                    "country": "Norway",
+                    "lat": 58.3519,
+                    "lng": 8.5444
+                }
+            },
+            {
+                "name": "Kevin Yakob",
+                "position": "MF",
+                "club": "AGF",
+                "league": "Danish Superliga",
+                "age": 25,
+                "birthplace": {
+                    "city": "Gothenburg",
+                    "country": "Sweden",
+                    "lat": 57.7075,
+                    "lng": 11.9675
+                }
+            },
+            {
+                "name": "Aimar Sher",
+                "position": "MF",
+                "club": "Sarpsborg",
+                "league": "Norwegian Eliteserien",
+                "age": 23,
+                "birthplace": {
+                    "city": "Iraq",
+                    "country": "Iraq",
+                    "lat": 33,
+                    "lng": 43
+                }
+            },
+            {
+                "name": "Peter Gwargis",
+                "position": "MF",
+                "club": "Duhok",
+                "league": "Iraqi Premier League",
+                "age": 25,
+                "birthplace": {
+                    "city": "Sydney",
+                    "country": "Australia",
+                    "lat": -33.8678,
+                    "lng": 151.21
+                }
+            },
+            {
+                "name": "Zaid Ismail",
+                "position": "MF",
+                "club": "Al-Talaba",
+                "league": "Iraqi Premier League",
+                "age": 24,
+                "birthplace": {
+                    "city": "Baghdad",
+                    "country": "Iraq",
+                    "lat": 32.9429,
+                    "lng": 45.3259
+                }
+            },
+            {
+                "name": "Aymen Hussein",
+                "position": "FW",
+                "club": "Al-Karma",
+                "league": "Iraqi Premier League",
+                "age": 30,
+                "birthplace": {
+                    "city": "Hawija",
+                    "country": "Iraq",
+                    "lat": 35.3232,
+                    "lng": 43.774
+                }
+            },
+            {
+                "name": "Mohanad Ali",
+                "position": "FW",
+                "club": "Dibba",
+                "league": "UAE Pro League",
+                "age": 25,
+                "birthplace": {
+                    "city": "Baghdad",
+                    "country": "Iraq",
+                    "lat": 33.3153,
+                    "lng": 44.3661
+                }
+            },
+            {
+                "name": "Ali Al-Hamadi",
+                "position": "FW",
+                "club": "Luton Town",
+                "league": "EFL League One",
+                "age": 24,
+                "birthplace": {
+                    "city": "Maysan Governorate",
+                    "country": "Iraq",
+                    "lat": 31.9,
+                    "lng": 47.0333
+                }
+            },
+            {
+                "name": "Ali Yousif",
+                "position": "FW",
+                "club": "Al-Talaba",
+                "league": "Iraqi Premier League",
+                "age": 30,
+                "birthplace": {
+                    "city": "Iraq",
+                    "country": "Iraq",
+                    "lat": 33,
+                    "lng": 43
+                }
             }
         ]
     },
@@ -10157,7 +12342,7 @@ const squadData = {
         "name": "Norway",
         "flag": "🇳🇴",
         "confederation": "UEFA",
-        "fifaRanking": 31,
+        "fifaRanking": 36,
         "players": [
             {
                 "name": "Ørjan Nyland",
@@ -10173,29 +12358,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Mathias Dyngeland",
+                "name": "Viljar Myhra",
                 "position": "GK",
-                "club": "Brann",
-                "league": "Norwegian Eliteserien",
-                "age": 30,
+                "club": "OB",
+                "league": "Danish Superliga",
+                "age": 29,
                 "birthplace": {
-                    "city": "Fana",
+                    "city": "Skien",
                     "country": "Norway",
-                    "lat": 60.3111,
-                    "lng": 5.3914
+                    "lat": 59.2081,
+                    "lng": 9.5528
                 }
             },
             {
-                "name": "Sander Tangvik",
+                "name": "Egil Selvik",
                 "position": "GK",
-                "club": "Hamburg",
-                "league": "Bundesliga",
-                "age": 23,
+                "club": "Watford",
+                "league": "EFL Championship",
+                "age": 28,
                 "birthplace": {
-                    "city": "Trondheim",
+                    "city": "Sandnes Municipality",
                     "country": "Norway",
-                    "lat": 63.44,
-                    "lng": 10.4
+                    "lat": 58.845,
+                    "lng": 5.8294
                 }
             },
             {
@@ -10290,22 +12475,35 @@ const squadData = {
                 }
             },
             {
-                "name": "Sondre Langås",
+                "name": "Odin Bjørtuft",
                 "position": "DF",
-                "club": "Derby County",
-                "league": "EFL Championship",
-                "age": 25,
+                "club": "Bodø/Glimt",
+                "league": "Norwegian Eliteserien",
+                "age": 27,
                 "birthplace": {
-                    "city": "Namsos",
+                    "city": "Skien",
                     "country": "Norway",
-                    "lat": 64.467,
-                    "lng": 11.494
+                    "lat": 59.2081,
+                    "lng": 9.5528
+                }
+            },
+            {
+                "name": "Henrik Falchener",
+                "position": "DF",
+                "club": "Viking",
+                "league": "Norwegian Eliteserien",
+                "age": 22,
+                "birthplace": {
+                    "city": "Oslo",
+                    "country": "Norway",
+                    "lat": 60.4383,
+                    "lng": 10.3719
                 }
             },
             {
                 "name": "Morten Thorsby",
                 "position": "MF",
-                "club": "Genoa",
+                "club": "Cremonese",
                 "league": "Serie A",
                 "age": 29,
                 "birthplace": {
@@ -10333,7 +12531,7 @@ const squadData = {
                 "position": "MF",
                 "club": "Fulham",
                 "league": "Premier League",
-                "age": 27,
+                "age": 28,
                 "birthplace": {
                     "city": "Bærum Municipality",
                     "country": "Norway",
@@ -10342,11 +12540,24 @@ const squadData = {
                 }
             },
             {
+                "name": "Jens Petter Hauge",
+                "position": "MF",
+                "club": "Bodø/Glimt",
+                "league": "Norwegian Eliteserien",
+                "age": 26,
+                "birthplace": {
+                    "city": "Bodø",
+                    "country": "Norway",
+                    "lat": 67.2827,
+                    "lng": 14.3751
+                }
+            },
+            {
                 "name": "Kristian Thorstvedt",
                 "position": "MF",
                 "club": "Sassuolo",
                 "league": "Serie A",
-                "age": 26,
+                "age": 27,
                 "birthplace": {
                     "city": "Stavanger",
                     "country": "Norway",
@@ -10355,16 +12566,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Kristian Arnstad",
+                "name": "Felix Horn Myhre",
                 "position": "MF",
-                "club": "AGF",
-                "league": "Danish Superliga",
-                "age": 22,
+                "club": "Brann",
+                "league": "Norwegian Eliteserien",
+                "age": 27,
                 "birthplace": {
-                    "city": "Oslo",
+                    "city": "Norway",
                     "country": "Norway",
-                    "lat": 59.9133,
-                    "lng": 10.7389
+                    "lat": 59.9333,
+                    "lng": 10.6833
                 }
             },
             {
@@ -10381,6 +12592,19 @@ const squadData = {
                 }
             },
             {
+                "name": "Andreas Schjelderup",
+                "position": "MF",
+                "club": "Benfica",
+                "league": "Primeira Liga",
+                "age": 21,
+                "birthplace": {
+                    "city": "Bodø Municipality",
+                    "country": "Norway",
+                    "lat": 67.2831,
+                    "lng": 14.3831
+                }
+            },
+            {
                 "name": "Oscar Bobb",
                 "position": "MF",
                 "club": "Fulham",
@@ -10391,32 +12615,6 @@ const squadData = {
                     "country": "Norway",
                     "lat": 59.9133,
                     "lng": 10.7389
-                }
-            },
-            {
-                "name": "Thelo Aasgaard",
-                "position": "MF",
-                "club": "Rangers",
-                "league": "Scottish Premiership",
-                "age": 23,
-                "birthplace": {
-                    "city": "Liverpool",
-                    "country": "United Kingdom",
-                    "lat": 53.4072,
-                    "lng": -2.9917
-                }
-            },
-            {
-                "name": "Aron Dønnum",
-                "position": "MF",
-                "club": "Toulouse",
-                "league": "Ligue 1",
-                "age": 27,
-                "birthplace": {
-                    "city": "Eidsvoll Municipality",
-                    "country": "Norway",
-                    "lat": 60.3475,
-                    "lng": 11.2508
                 }
             },
             {
@@ -10446,19 +12644,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Andreas Schjelderup",
-                "position": "FW",
-                "club": "Benfica",
-                "league": "Primeira Liga",
-                "age": 21,
-                "birthplace": {
-                    "city": "Bodø Municipality",
-                    "country": "Norway",
-                    "lat": 67.2831,
-                    "lng": 14.3831
-                }
-            },
-            {
                 "name": "Jørgen Strand Larsen",
                 "position": "FW",
                 "club": "Crystal Palace",
@@ -10477,19 +12662,19 @@ const squadData = {
         "name": "Argentina",
         "flag": "🇦🇷",
         "confederation": "CONMEBOL",
-        "fifaRanking": 32,
+        "fifaRanking": 37,
         "players": [
             {
-                "name": "Walter Benítez",
+                "name": "Juan Musso",
                 "position": "GK",
-                "club": "Crystal Palace",
-                "league": "Premier League",
-                "age": 33,
+                "club": "Atlético Madrid",
+                "league": "La Liga",
+                "age": 31,
                 "birthplace": {
-                    "city": "General José de San Martín",
+                    "city": "San Nicolás de los Arroyos",
                     "country": "Argentina",
-                    "lat": -26.5375,
-                    "lng": -59.3417
+                    "lat": -33.3333,
+                    "lng": -60.2167
                 }
             },
             {
@@ -10506,16 +12691,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Juan Foyth",
-                "position": "DF",
-                "club": "Villarreal",
-                "league": "La Liga",
-                "age": 28,
+                "name": "Emiliano Martínez",
+                "position": "GK",
+                "club": "Aston Villa",
+                "league": "Premier League",
+                "age": 33,
                 "birthplace": {
-                    "city": "La Plata",
+                    "city": "Mar del Plata",
                     "country": "Argentina",
-                    "lat": -34.9333,
-                    "lng": -57.95
+                    "lat": -38,
+                    "lng": -57.55
+                }
+            },
+            {
+                "name": "Lucas Martínez Quarta",
+                "position": "DF",
+                "club": "River Plate",
+                "league": "Argentine Primera",
+                "age": 29,
+                "birthplace": {
+                    "city": "Mar del Plata",
+                    "country": "Argentina",
+                    "lat": -38,
+                    "lng": -57.55
                 }
             },
             {
@@ -10532,42 +12730,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Kevin Mac Allister",
+                "name": "Agustín Giay",
                 "position": "DF",
-                "club": "Union Saint-Gilloise",
-                "league": "Belgian Pro League",
-                "age": 28,
+                "club": "Palmeiras",
+                "league": "Brasileirão",
+                "age": 22,
                 "birthplace": {
-                    "city": "Buenos Aires",
+                    "city": "San Carlos Centro",
                     "country": "Argentina",
-                    "lat": -34.5997,
-                    "lng": -58.3819
+                    "lat": -31.7333,
+                    "lng": -61.1
                 }
             },
             {
-                "name": "Valentín Barco",
+                "name": "Marcos Acuña",
                 "position": "DF",
-                "club": "Strasbourg",
-                "league": "Ligue 1",
-                "age": 21,
+                "club": "River Plate",
+                "league": "Argentine Primera",
+                "age": 34,
                 "birthplace": {
-                    "city": "Buenos Aires",
+                    "city": "Zapala",
                     "country": "Argentina",
-                    "lat": -34.5997,
-                    "lng": -58.3819
-                }
-            },
-            {
-                "name": "Marcos Senesi",
-                "position": "DF",
-                "club": "Bournemouth",
-                "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Concordia",
-                    "country": "Argentina",
-                    "lat": -31.3922,
-                    "lng": -58.0169
+                    "lat": -38.9028,
+                    "lng": -70.065
                 }
             },
             {
@@ -10588,7 +12773,46 @@ const squadData = {
                 "position": "DF",
                 "club": "Benfica",
                 "league": "Primeira Liga",
-                "age": 37,
+                "age": 38,
+                "birthplace": {
+                    "city": "Buenos Aires",
+                    "country": "Argentina",
+                    "lat": -34.5997,
+                    "lng": -58.3819
+                }
+            },
+            {
+                "name": "Nahuel Molina",
+                "position": "DF",
+                "club": "Atlético Madrid",
+                "league": "La Liga",
+                "age": 27,
+                "birthplace": {
+                    "city": "Embalse",
+                    "country": "Argentina",
+                    "lat": -32.2045,
+                    "lng": -64.4005
+                }
+            },
+            {
+                "name": "Leandro Paredes",
+                "position": "MF",
+                "club": "Boca Juniors",
+                "league": "Argentine Primera",
+                "age": 31,
+                "birthplace": {
+                    "city": "San Justo",
+                    "country": "Argentina",
+                    "lat": -34.6833,
+                    "lng": -58.55
+                }
+            },
+            {
+                "name": "Valentín Barco",
+                "position": "MF",
+                "club": "Strasbourg",
+                "league": "Ligue 1",
+                "age": 21,
                 "birthplace": {
                     "city": "Buenos Aires",
                     "country": "Argentina",
@@ -10610,32 +12834,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Giovani Lo Celso",
-                "position": "MF",
-                "club": "Betis",
-                "league": "La Liga",
-                "age": 29,
-                "birthplace": {
-                    "city": "Rosario",
-                    "country": "Argentina",
-                    "lat": -32.9575,
-                    "lng": -60.6394
-                }
-            },
-            {
-                "name": "Máximo Perrone",
-                "position": "MF",
-                "club": "Como",
-                "league": "Serie A",
-                "age": 23,
-                "birthplace": {
-                    "city": "Buenos Aires",
-                    "country": "Argentina",
-                    "lat": -34.5997,
-                    "lng": -58.3819
-                }
-            },
-            {
                 "name": "Thiago Almada",
                 "position": "MF",
                 "club": "Atlético Madrid",
@@ -10649,16 +12847,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Emiliano Buendía",
+                "name": "Exequiel Palacios",
                 "position": "MF",
-                "club": "Aston Villa",
-                "league": "Premier League",
-                "age": 29,
+                "club": "Bayer Leverkusen",
+                "league": "Bundesliga",
+                "age": 27,
                 "birthplace": {
-                    "city": "Mar del Plata",
+                    "city": "Famaillá",
                     "country": "Argentina",
-                    "lat": -38,
-                    "lng": -57.55
+                    "lat": -27.05,
+                    "lng": -65.4
+                }
+            },
+            {
+                "name": "Máximo Perrone",
+                "position": "MF",
+                "club": "Como",
+                "league": "Serie A",
+                "age": 23,
+                "birthplace": {
+                    "city": "Buenos Aires",
+                    "country": "Argentina",
+                    "lat": -34.5997,
+                    "lng": -58.3819
                 }
             },
             {
@@ -10688,6 +12899,32 @@ const squadData = {
                 }
             },
             {
+                "name": "Enzo Fernández",
+                "position": "MF",
+                "club": "Chelsea",
+                "league": "Premier League",
+                "age": 25,
+                "birthplace": {
+                    "city": "General San Martín",
+                    "country": "Argentina",
+                    "lat": -34.5772,
+                    "lng": -58.5376
+                }
+            },
+            {
+                "name": "Julián Alvarez",
+                "position": "FW",
+                "club": "Atlético Madrid",
+                "league": "La Liga",
+                "age": 26,
+                "birthplace": {
+                    "city": "Calchín",
+                    "country": "Argentina",
+                    "lat": -31.6667,
+                    "lng": -63.2
+                }
+            },
+            {
                 "name": "Lionel Messi",
                 "position": "FW",
                 "club": "Inter Miami",
@@ -10714,6 +12951,19 @@ const squadData = {
                 }
             },
             {
+                "name": "Giuliano Simeone",
+                "position": "FW",
+                "club": "Atlético Madrid",
+                "league": "La Liga",
+                "age": 23,
+                "birthplace": {
+                    "city": "Rome",
+                    "country": "Italy",
+                    "lat": 41.8931,
+                    "lng": 12.4828
+                }
+            },
+            {
                 "name": "José Manuel López",
                 "position": "FW",
                 "club": "Palmeiras",
@@ -10727,29 +12977,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Lautaro Martínez",
+                "name": "Franco Mastantuono",
                 "position": "FW",
-                "club": "Internazionale",
-                "league": "Serie A",
-                "age": 28,
+                "club": "Real Madrid",
+                "league": "La Liga",
+                "age": 18,
                 "birthplace": {
-                    "city": "Bahía Blanca",
+                    "city": "Azul",
                     "country": "Argentina",
-                    "lat": -38.7167,
-                    "lng": -62.2667
-                }
-            },
-            {
-                "name": "Joaquín Panichelli",
-                "position": "FW",
-                "club": "Strasbourg",
-                "league": "Ligue 1",
-                "age": 23,
-                "birthplace": {
-                    "city": "Córdoba",
-                    "country": "Argentina",
-                    "lat": -31.4167,
-                    "lng": -64.1833
+                    "lat": -36.7833,
+                    "lng": -59.85
                 }
             },
             {
@@ -10771,7 +13008,7 @@ const squadData = {
         "name": "Algeria",
         "flag": "🇩🇿",
         "confederation": "CAF",
-        "fifaRanking": 33,
+        "fifaRanking": 38,
         "players": [
             {
                 "name": "Anthony Mandrea",
@@ -10784,19 +13021,6 @@ const squadData = {
                     "country": "France",
                     "lat": 43.6581,
                     "lng": 6.9253
-                }
-            },
-            {
-                "name": "Oussama Benbot",
-                "position": "GK",
-                "club": "USM Alger",
-                "league": "Algerian Ligue 1",
-                "age": 31,
-                "birthplace": {
-                    "city": "Aïn M'lila",
-                    "country": "Algeria",
-                    "lat": 36.0367,
-                    "lng": 6.5719
                 }
             },
             {
@@ -10813,6 +13037,32 @@ const squadData = {
                 }
             },
             {
+                "name": "Melvin Mastil",
+                "position": "GK",
+                "club": "Stade Nyonnais",
+                "league": "Swiss Super League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Algiers",
+                    "country": "Algeria",
+                    "lat": 37.6062,
+                    "lng": 3.0972
+                }
+            },
+            {
+                "name": "Kilian Belazzoug",
+                "position": "GK",
+                "club": "Rennes B",
+                "league": "Ligue 1",
+                "age": 19,
+                "birthplace": {
+                    "city": "Algiers",
+                    "country": "Algeria",
+                    "lat": 37.6082,
+                    "lng": 4.0491
+                }
+            },
+            {
                 "name": "Aïssa Mandi",
                 "position": "DF",
                 "club": "Lille",
@@ -10823,84 +13073,6 @@ const squadData = {
                     "country": "France",
                     "lat": 48.9567,
                     "lng": 4.3644
-                }
-            },
-            {
-                "name": "Mehdi Dorval",
-                "position": "DF",
-                "club": "Bari",
-                "league": "Serie B",
-                "age": 24,
-                "birthplace": {
-                    "city": "Paris",
-                    "country": "France",
-                    "lat": 48.8567,
-                    "lng": 2.3522
-                }
-            },
-            {
-                "name": "Mohamed Amine Tougai",
-                "position": "DF",
-                "club": "Espérance de Tunis",
-                "league": "Tunisian Ligue 1",
-                "age": 26,
-                "birthplace": {
-                    "city": "Bourouba",
-                    "country": "Algeria",
-                    "lat": 36.7147,
-                    "lng": 3.1064
-                }
-            },
-            {
-                "name": "Zineddine Belaïd",
-                "position": "DF",
-                "club": "JS Kabylie",
-                "league": "Algerian Ligue 1",
-                "age": 26,
-                "birthplace": {
-                    "city": "Thénia",
-                    "country": "Algeria",
-                    "lat": 36.7278,
-                    "lng": 3.5539
-                }
-            },
-            {
-                "name": "Jaouen Hadjam",
-                "position": "DF",
-                "club": "Young Boys",
-                "league": "Swiss Super League",
-                "age": 22,
-                "birthplace": {
-                    "city": "Paris",
-                    "country": "France",
-                    "lat": 48.8567,
-                    "lng": 2.3522
-                }
-            },
-            {
-                "name": "Rayan Aït-Nouri",
-                "position": "DF",
-                "club": "Manchester City",
-                "league": "Premier League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Montreuil",
-                    "country": "France",
-                    "lat": 48.8603,
-                    "lng": 2.4431
-                }
-            },
-            {
-                "name": "Youcef Atal",
-                "position": "DF",
-                "club": "Al-Sadd",
-                "league": "Qatar Stars League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Boghni",
-                    "country": "Algeria",
-                    "lat": 36.5437,
-                    "lng": 3.9523
                 }
             },
             {
@@ -10917,6 +13089,19 @@ const squadData = {
                 }
             },
             {
+                "name": "Rayan Aït-Nouri",
+                "position": "DF",
+                "club": "Manchester City",
+                "league": "Premier League",
+                "age": 24,
+                "birthplace": {
+                    "city": "Montreuil",
+                    "country": "France",
+                    "lat": 48.8603,
+                    "lng": 2.4431
+                }
+            },
+            {
                 "name": "Rafik Belghali",
                 "position": "DF",
                 "club": "Hellas Verona",
@@ -10930,16 +13115,55 @@ const squadData = {
                 }
             },
             {
-                "name": "Samir Chergui",
+                "name": "Zineddine Belaïd",
                 "position": "DF",
-                "club": "Paris",
-                "league": "Ligue 1",
+                "club": "JS Kabylie",
+                "league": "Algerian Ligue 1",
                 "age": 27,
                 "birthplace": {
-                    "city": "Arpajon",
+                    "city": "Thénia",
+                    "country": "Algeria",
+                    "lat": 36.7278,
+                    "lng": 3.5539
+                }
+            },
+            {
+                "name": "Achref Abada",
+                "position": "DF",
+                "club": "USM Alger",
+                "league": "Algerian Ligue 1",
+                "age": 26,
+                "birthplace": {
+                    "city": "Algiers",
+                    "country": "Algeria",
+                    "lat": 37.2119,
+                    "lng": 3.6
+                }
+            },
+            {
+                "name": "Mehdi Dorval",
+                "position": "DF",
+                "club": "Bari",
+                "league": "Serie B",
+                "age": 25,
+                "birthplace": {
+                    "city": "Paris",
                     "country": "France",
-                    "lat": 48.5903,
-                    "lng": 2.2478
+                    "lat": 48.8567,
+                    "lng": 2.3522
+                }
+            },
+            {
+                "name": "Sohaib Naïr",
+                "position": "DF",
+                "club": "Guingamp",
+                "league": "Ligue 2",
+                "age": 23,
+                "birthplace": {
+                    "city": "Algiers",
+                    "country": "Algeria",
+                    "lat": 37.3824,
+                    "lng": 3.3153
                 }
             },
             {
@@ -10953,32 +13177,6 @@ const squadData = {
                     "country": "Netherlands",
                     "lat": 52.3667,
                     "lng": 4.8833
-                }
-            },
-            {
-                "name": "Himad Abdelli",
-                "position": "MF",
-                "club": "Marseille",
-                "league": "Ligue 1",
-                "age": 26,
-                "birthplace": {
-                    "city": "Montivilliers",
-                    "country": "France",
-                    "lat": 49.5461,
-                    "lng": 0.1881
-                }
-            },
-            {
-                "name": "Ismaël Bennacer",
-                "position": "MF",
-                "club": "Dinamo Zagreb",
-                "league": "Croatian First League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Arles",
-                    "country": "France",
-                    "lat": 43.6769,
-                    "lng": 4.6286
                 }
             },
             {
@@ -11008,16 +13206,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Adem Zorgane",
+                "name": "Houssem Aouar",
                 "position": "MF",
-                "club": "Union Saint-Gilloise",
-                "league": "Belgian Pro League",
-                "age": 26,
+                "club": "Al-Ittihad",
+                "league": "Saudi Pro League",
+                "age": 27,
                 "birthplace": {
-                    "city": "Sétif",
-                    "country": "Algeria",
-                    "lat": 36.19,
-                    "lng": 5.41
+                    "city": "Lyon",
+                    "country": "France",
+                    "lat": 45.7675,
+                    "lng": 4.835
                 }
             },
             {
@@ -11034,16 +13232,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Ilan Kebbal",
+                "name": "Yacine Titraoui",
                 "position": "MF",
-                "club": "Paris",
-                "league": "Ligue 1",
-                "age": 27,
+                "club": "Charleroi",
+                "league": "Belgian Pro League",
+                "age": 22,
                 "birthplace": {
-                    "city": "Marseille",
+                    "city": "Algeria",
+                    "country": "Algeria",
+                    "lat": 28,
+                    "lng": 1
+                }
+            },
+            {
+                "name": "Adil Aouchiche",
+                "position": "MF",
+                "club": "Schalke 04",
+                "league": "2. Bundesliga",
+                "age": 23,
+                "birthplace": {
+                    "city": "Le Blanc-Mesnil",
                     "country": "France",
-                    "lat": 43.2967,
-                    "lng": 5.3764
+                    "lat": 48.9386,
+                    "lng": 2.4611
                 }
             },
             {
@@ -11051,51 +13262,12 @@ const squadData = {
                 "position": "FW",
                 "club": "Al-Ahli",
                 "league": "Saudi Pro League",
-                "age": 34,
+                "age": 35,
                 "birthplace": {
                     "city": "Clichy",
                     "country": "France",
                     "lat": 48.9036,
                     "lng": 2.3056
-                }
-            },
-            {
-                "name": "Baghdad Bounedjah",
-                "position": "FW",
-                "club": "Al-Shamal",
-                "league": "Qatar Stars League",
-                "age": 34,
-                "birthplace": {
-                    "city": "Oran",
-                    "country": "Algeria",
-                    "lat": 35.6969,
-                    "lng": -0.6331
-                }
-            },
-            {
-                "name": "Anis Hadj Moussa",
-                "position": "FW",
-                "club": "Feyenoord",
-                "league": "Eredivisie",
-                "age": 23,
-                "birthplace": {
-                    "city": "Paris",
-                    "country": "France",
-                    "lat": 48.8567,
-                    "lng": 2.3522
-                }
-            },
-            {
-                "name": "Monsef Bakrar",
-                "position": "FW",
-                "club": "Dinamo Zagreb",
-                "league": "Croatian First League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Sétif",
-                    "country": "Algeria",
-                    "lat": 36.19,
-                    "lng": 5.41
                 }
             },
             {
@@ -11112,6 +13284,32 @@ const squadData = {
                 }
             },
             {
+                "name": "Amine Gouiri",
+                "position": "FW",
+                "club": "Marseille",
+                "league": "Ligue 1",
+                "age": 26,
+                "birthplace": {
+                    "city": "Bourgoin-Jallieu",
+                    "country": "France",
+                    "lat": 45.5908,
+                    "lng": 5.2792
+                }
+            },
+            {
+                "name": "Anis Hadj Moussa",
+                "position": "FW",
+                "club": "Feyenoord",
+                "league": "Eredivisie",
+                "age": 24,
+                "birthplace": {
+                    "city": "Paris",
+                    "country": "France",
+                    "lat": 48.8567,
+                    "lng": 2.3522
+                }
+            },
+            {
                 "name": "Adil Boulbina",
                 "position": "FW",
                 "club": "Al-Duhail",
@@ -11125,16 +13323,42 @@ const squadData = {
                 }
             },
             {
-                "name": "Redouane Berkane",
+                "name": "Amin Chiakha",
                 "position": "FW",
-                "club": "Al-Wakrah",
-                "league": "Qatar Stars League",
-                "age": 22,
+                "club": "Rosenborg",
+                "league": "Norwegian Eliteserien",
+                "age": 20,
+                "birthplace": {
+                    "city": "Copenhagen",
+                    "country": "Denmark",
+                    "lat": 55.6761,
+                    "lng": 12.5689
+                }
+            },
+            {
+                "name": "Nadhir Benbouali",
+                "position": "FW",
+                "club": "Győr",
+                "league": "Hungarian NB I",
+                "age": 25,
+                "birthplace": {
+                    "city": "Chlef",
+                    "country": "Algeria",
+                    "lat": 36.1647,
+                    "lng": 1.3317
+                }
+            },
+            {
+                "name": "Farès Ghedjemis",
+                "position": "FW",
+                "club": "Frosinone",
+                "league": "Serie B",
+                "age": 23,
                 "birthplace": {
                     "city": "Algiers",
                     "country": "Algeria",
-                    "lat": 36.9326,
-                    "lng": 2.4063
+                    "lat": 36.1121,
+                    "lng": 3.6606
                 }
             }
         ]
@@ -11143,7 +13367,7 @@ const squadData = {
         "name": "Austria",
         "flag": "🇦🇹",
         "confederation": "UEFA",
-        "fifaRanking": 34,
+        "fifaRanking": 39,
         "players": [
             {
                 "name": "Alexander Schlager",
@@ -11159,16 +13383,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Nikolas Polster",
+                "name": "Tobias Lawal",
                 "position": "GK",
-                "club": "Wolfsberger AC",
-                "league": "Austrian Bundesliga",
-                "age": 23,
+                "club": "Genk",
+                "league": "Belgian Pro League",
+                "age": 25,
                 "birthplace": {
-                    "city": "Vienna",
+                    "city": "Linz",
                     "country": "Austria",
-                    "lat": 47.4617,
-                    "lng": 16.6111
+                    "lat": 48.3058,
+                    "lng": 14.2864
                 }
             },
             {
@@ -11185,29 +13409,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Nicolas Kristof",
+                "name": "Florian Wiegele",
                 "position": "GK",
-                "club": "SV Elversberg",
-                "league": "Bundesliga",
-                "age": 26,
+                "club": "Viktoria Plzeň",
+                "league": "Czech First League",
+                "age": 25,
                 "birthplace": {
-                    "city": "Vienna",
+                    "city": "Graz",
                     "country": "Austria",
-                    "lat": 49.1125,
-                    "lng": 17.1685
+                    "lat": 47.0708,
+                    "lng": 15.4386
                 }
             },
             {
-                "name": "Marco Friedl",
+                "name": "David Affengruber",
                 "position": "DF",
-                "club": "Werder Bremen",
-                "league": "Bundesliga",
-                "age": 27,
+                "club": "Elche",
+                "league": "Segunda División",
+                "age": 25,
                 "birthplace": {
-                    "city": "Kirchbichl",
+                    "city": "Scheibbs",
                     "country": "Austria",
-                    "lat": 47.5167,
-                    "lng": 12.0667
+                    "lat": 48,
+                    "lng": 15.1667
                 }
             },
             {
@@ -11226,8 +13450,8 @@ const squadData = {
             {
                 "name": "Stefan Posch",
                 "position": "DF",
-                "club": "Como",
-                "league": "Serie A",
+                "club": "Mainz 05",
+                "league": "Bundesliga",
                 "age": 28,
                 "birthplace": {
                     "city": "Judenburg",
@@ -11242,19 +13466,6 @@ const squadData = {
                 "club": "Real Madrid",
                 "league": "La Liga",
                 "age": 33,
-                "birthplace": {
-                    "city": "Vienna",
-                    "country": "Austria",
-                    "lat": 48.2083,
-                    "lng": 16.3725
-                }
-            },
-            {
-                "name": "Leopold Querfeld",
-                "position": "DF",
-                "club": "Union Berlin",
-                "league": "Bundesliga",
-                "age": 22,
                 "birthplace": {
                     "city": "Vienna",
                     "country": "Austria",
@@ -11302,6 +13513,45 @@ const squadData = {
                 }
             },
             {
+                "name": "Marco Friedl",
+                "position": "DF",
+                "club": "Werder Bremen",
+                "league": "Bundesliga",
+                "age": 28,
+                "birthplace": {
+                    "city": "Kirchbichl",
+                    "country": "Austria",
+                    "lat": 47.5167,
+                    "lng": 12.0667
+                }
+            },
+            {
+                "name": "Michael Svoboda",
+                "position": "DF",
+                "club": "Venezia",
+                "league": "Serie A",
+                "age": 27,
+                "birthplace": {
+                    "city": "Vienna",
+                    "country": "Austria",
+                    "lat": 48.2083,
+                    "lng": 16.3725
+                }
+            },
+            {
+                "name": "Maximilian Wöber",
+                "position": "DF",
+                "club": "Werder Bremen",
+                "league": "Bundesliga",
+                "age": 28,
+                "birthplace": {
+                    "city": "Vienna",
+                    "country": "Austria",
+                    "lat": 48.2083,
+                    "lng": 16.3725
+                }
+            },
+            {
                 "name": "Xaver Schlager",
                 "position": "MF",
                 "club": "RB Leipzig",
@@ -11332,7 +13582,7 @@ const squadData = {
                 "position": "MF",
                 "club": "Borussia Dortmund",
                 "league": "Bundesliga",
-                "age": 31,
+                "age": 32,
                 "birthplace": {
                     "city": "Wels",
                     "country": "Austria",
@@ -11354,16 +13604,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Marco Grüll",
+                "name": "Carney Chukwuemeka",
                 "position": "MF",
-                "club": "Werder Bremen",
+                "club": "Borussia Dortmund",
                 "league": "Bundesliga",
-                "age": 27,
+                "age": 22,
                 "birthplace": {
-                    "city": "Schwarzach im Pongau",
+                    "city": "Eisenstadt",
                     "country": "Austria",
-                    "lat": 47.3222,
-                    "lng": 13.15
+                    "lat": 47.8456,
+                    "lng": 16.5233
                 }
             },
             {
@@ -11419,6 +13669,19 @@ const squadData = {
                 }
             },
             {
+                "name": "Paul Wanner",
+                "position": "MF",
+                "club": "PSV",
+                "league": "Eredivisie",
+                "age": 20,
+                "birthplace": {
+                    "city": "Dornbirn",
+                    "country": "Austria",
+                    "lat": 47.4167,
+                    "lng": 9.75
+                }
+            },
+            {
                 "name": "Alessandro Schöpf",
                 "position": "MF",
                 "club": "Wolfsberger AC",
@@ -11447,8 +13710,8 @@ const squadData = {
             {
                 "name": "Michael Gregoritsch",
                 "position": "FW",
-                "club": "Brøndby",
-                "league": "Danish Superliga",
+                "club": "Augsburg",
+                "league": "Bundesliga",
                 "age": 31,
                 "birthplace": {
                     "city": "Graz",
@@ -11458,29 +13721,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Nikolaus Wurmbrand",
+                "name": "Saša Kalajdžić",
                 "position": "FW",
-                "club": "Rapid Wien",
+                "club": "LASK",
                 "league": "Austrian Bundesliga",
-                "age": 20,
+                "age": 28,
                 "birthplace": {
-                    "city": "Vienna",
+                    "city": "Horn",
                     "country": "Austria",
-                    "lat": 48.2083,
-                    "lng": 16.3725
-                }
-            },
-            {
-                "name": "Raul Florucz",
-                "position": "FW",
-                "club": "Union Saint-Gilloise",
-                "league": "Belgian Pro League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Vienna",
-                    "country": "Austria",
-                    "lat": 48.2083,
-                    "lng": 16.3725
+                    "lat": 48.6653,
+                    "lng": 15.6558
                 }
             }
         ]
@@ -11489,7 +13739,7 @@ const squadData = {
         "name": "Jordan",
         "flag": "🇯🇴",
         "confederation": "AFC",
-        "fifaRanking": 35,
+        "fifaRanking": 40,
         "players": [
             {
                 "name": "Yazeed Abulaila",
@@ -11505,29 +13755,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Malek Shalabiya",
+                "name": "Abdallah Al-Fakhouri",
                 "position": "GK",
-                "club": "Al-Ramtha",
+                "club": "Al-Wehdat",
                 "league": "Jordanian Pro League",
-                "age": 37,
+                "age": 26,
                 "birthplace": {
-                    "city": "Amman",
+                    "city": "Russeifa",
                     "country": "Jordan",
-                    "lat": 31.95,
-                    "lng": 35.9333
+                    "lat": 32.0178,
+                    "lng": 36.0464
                 }
             },
             {
-                "name": "Nour Bani Attiah",
+                "name": "Abdel Rahman Al-Talalga",
                 "position": "GK",
                 "club": "Al-Faisaly",
                 "league": "Jordanian Pro League",
-                "age": 33,
+                "age": 22,
                 "birthplace": {
                     "city": "Amman",
                     "country": "Jordan",
-                    "lat": 31.95,
-                    "lng": 35.9333
+                    "lat": 31.64,
+                    "lng": 35.6094
                 }
             },
             {
@@ -11535,12 +13785,25 @@ const squadData = {
                 "position": "DF",
                 "club": "Al-Zawraa",
                 "league": "Iraqi Premier League",
-                "age": 31,
+                "age": 32,
                 "birthplace": {
                     "city": "Aqaba",
                     "country": "Jordan",
                     "lat": 29.5322,
                     "lng": 35.0061
+                }
+            },
+            {
+                "name": "Yazan Al-Arab",
+                "position": "DF",
+                "club": "FC Seoul",
+                "league": "K League 1",
+                "age": 30,
+                "birthplace": {
+                    "city": "Amman",
+                    "country": "Jordan",
+                    "lat": 31.95,
+                    "lng": 35.9333
                 }
             },
             {
@@ -11557,29 +13820,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Hadi Al-Hourani",
+                "name": "Mohammad Abualnadi",
                 "position": "DF",
-                "club": "Al-Faisaly",
-                "league": "Jordanian Pro League",
+                "club": "Selangor",
+                "league": "Unknown",
                 "age": 25,
                 "birthplace": {
                     "city": "Amman",
                     "country": "Jordan",
-                    "lat": 32.5572,
-                    "lng": 36.0819
+                    "lat": 31.4273,
+                    "lng": 36.1428
                 }
             },
             {
-                "name": "Ali Hajabi",
+                "name": "Yousef Abu Al-Jazar",
                 "position": "DF",
                 "club": "Al-Hussein",
                 "league": "Jordanian Pro League",
-                "age": 21,
+                "age": 26,
                 "birthplace": {
                     "city": "Amman",
                     "country": "Jordan",
-                    "lat": 32.1802,
-                    "lng": 35.414
+                    "lat": 31.5558,
+                    "lng": 35.8065
                 }
             },
             {
@@ -11596,16 +13859,42 @@ const squadData = {
                 }
             },
             {
-                "name": "Saed Al-Rosan",
+                "name": "Ahmad Assaf",
                 "position": "DF",
                 "club": "Al-Hussein",
                 "league": "Jordanian Pro League",
+                "age": 26,
+                "birthplace": {
+                    "city": "Amman",
+                    "country": "Jordan",
+                    "lat": 31.3826,
+                    "lng": 36.825
+                }
+            },
+            {
+                "name": "Noor Al-Rawabdeh",
+                "position": "MF",
+                "club": "Selangor",
+                "league": "Unknown",
                 "age": 29,
                 "birthplace": {
                     "city": "Amman",
                     "country": "Jordan",
-                    "lat": 31.3844,
-                    "lng": 35.7851
+                    "lat": 31.95,
+                    "lng": 35.9333
+                }
+            },
+            {
+                "name": "Ibrahim Sa'deh",
+                "position": "MF",
+                "club": "Al-Karma",
+                "league": "Iraqi Premier League",
+                "age": 25,
+                "birthplace": {
+                    "city": "Amman",
+                    "country": "Jordan",
+                    "lat": 32.3002,
+                    "lng": 36.0939
                 }
             },
             {
@@ -11622,55 +13911,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Amer Jamous",
+                "name": "Nizar Al-Rashdan",
                 "position": "MF",
-                "club": "Al-Zawraa",
-                "league": "Iraqi Premier League",
-                "age": 23,
+                "club": "Qatar SC",
+                "league": "Qatar Stars League",
+                "age": 27,
                 "birthplace": {
-                    "city": "Jordan",
+                    "city": "Irbid",
                     "country": "Jordan",
-                    "lat": 31.2,
-                    "lng": 36.5
-                }
-            },
-            {
-                "name": "Rajaei Ayed",
-                "position": "MF",
-                "club": "Al-Hussein",
-                "league": "Jordanian Pro League",
-                "age": 32,
-                "birthplace": {
-                    "city": "Amman",
-                    "country": "Jordan",
-                    "lat": 31.95,
-                    "lng": 35.9333
-                }
-            },
-            {
-                "name": "Ibrahim Sadeh",
-                "position": "MF",
-                "club": "Al-Karma",
-                "league": "Iraqi Premier League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Zarqa",
-                    "country": "Jordan",
-                    "lat": 32.0833,
-                    "lng": 36.1
-                }
-            },
-            {
-                "name": "Issam Smeeri",
-                "position": "MF",
-                "club": "Al-Salt",
-                "league": "Jordanian Pro League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Amman",
-                    "country": "Jordan",
-                    "lat": 31.9723,
-                    "lng": 35.6594
+                    "lat": 32.5556,
+                    "lng": 35.85
                 }
             },
             {
@@ -11687,29 +13937,94 @@ const squadData = {
                 }
             },
             {
-                "name": "Nizar Al-Rashdan",
+                "name": "Amer Jamous",
                 "position": "MF",
-                "club": "Qatar",
-                "league": "Qatar Stars League",
-                "age": 26,
+                "club": "Al-Zawraa",
+                "league": "Iraqi Premier League",
+                "age": 23,
                 "birthplace": {
-                    "city": "Irbid",
+                    "city": "Jordan",
                     "country": "Jordan",
-                    "lat": 32.5556,
-                    "lng": 35.85
+                    "lat": 31.2,
+                    "lng": 36.5
                 }
             },
             {
-                "name": "Adham Al-Quraishi",
+                "name": "Mohammad Al-Dawoud",
+                "position": "MF",
+                "club": "Al-Wehdat",
+                "league": "Jordanian Pro League",
+                "age": 33,
+                "birthplace": {
+                    "city": "Ar Ramtha",
+                    "country": "Jordan",
+                    "lat": 32.5592,
+                    "lng": 36.0069
+                }
+            },
+            {
+                "name": "Yousef Qashi",
                 "position": "MF",
                 "club": "Al-Hussein",
                 "league": "Jordanian Pro League",
-                "age": 30,
+                "age": 20,
                 "birthplace": {
                     "city": "Amman",
                     "country": "Jordan",
-                    "lat": 31.2753,
-                    "lng": 34.933
+                    "lat": 32.6796,
+                    "lng": 36.1492
+                }
+            },
+            {
+                "name": "Mohammad Taha",
+                "position": "MF",
+                "club": "Al-Hussein",
+                "league": "Jordanian Pro League",
+                "age": 20,
+                "birthplace": {
+                    "city": "Amman",
+                    "country": "Jordan",
+                    "lat": 31.1425,
+                    "lng": 35.7612
+                }
+            },
+            {
+                "name": "Musa Al-Taamari",
+                "position": "FW",
+                "club": "Rennes",
+                "league": "Ligue 1",
+                "age": 28,
+                "birthplace": {
+                    "city": "Amman",
+                    "country": "Jordan",
+                    "lat": 31.95,
+                    "lng": 35.9333
+                }
+            },
+            {
+                "name": "Mahmoud Al-Mardi",
+                "position": "FW",
+                "club": "Al-Hussein",
+                "league": "Jordanian Pro League",
+                "age": 32,
+                "birthplace": {
+                    "city": "Aqaba",
+                    "country": "Jordan",
+                    "lat": 29.5322,
+                    "lng": 35.0061
+                }
+            },
+            {
+                "name": "Baha' Faisal",
+                "position": "FW",
+                "club": "Al-Waab",
+                "league": "Qatar Stars League",
+                "age": 30,
+                "birthplace": {
+                    "city": "Zarqa",
+                    "country": "Jordan",
+                    "lat": 32.0833,
+                    "lng": 36.1
                 }
             },
             {
@@ -11726,6 +14041,19 @@ const squadData = {
                 }
             },
             {
+                "name": "Ibrahim Sabra",
+                "position": "FW",
+                "club": "Lokomotiva Zagreb",
+                "league": "Croatian First League",
+                "age": 20,
+                "birthplace": {
+                    "city": "Sahab",
+                    "country": "Jordan",
+                    "lat": 31.9158,
+                    "lng": 36.2319
+                }
+            },
+            {
                 "name": "Odeh Al-Fakhouri",
                 "position": "FW",
                 "club": "Pyramids",
@@ -11739,55 +14067,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Ali Olwan",
+                "name": "Ali Azaizeh",
                 "position": "FW",
-                "club": "Al-Sailiya",
-                "league": "Qatar Stars League",
-                "age": 25,
+                "club": "Al-Shabab",
+                "league": "Saudi Pro League",
+                "age": 21,
                 "birthplace": {
-                    "city": "Amman",
-                    "country": "Jordan",
-                    "lat": 31.95,
-                    "lng": 35.9333
-                }
-            },
-            {
-                "name": "Ahmad Ersan",
-                "position": "FW",
-                "club": "Al-Faisaly",
-                "league": "Jordanian Pro League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Irbid",
-                    "country": "Jordan",
-                    "lat": 32.5556,
-                    "lng": 35.85
-                }
-            },
-            {
-                "name": "Yazan Al-Naimat",
-                "position": "FW",
-                "club": "Al-Arabi",
-                "league": "Qatar Stars League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Wadi Al-Seer",
-                    "country": "Jordan",
-                    "lat": 31.9545,
-                    "lng": 35.8183
-                }
-            },
-            {
-                "name": "Mahmoud Al-Mardi",
-                "position": "FW",
-                "club": "Al-Hussein",
-                "league": "Jordanian Pro League",
-                "age": 32,
-                "birthplace": {
-                    "city": "Aqaba",
-                    "country": "Jordan",
-                    "lat": 29.5322,
-                    "lng": 35.0061
+                    "city": "Germany",
+                    "country": "Germany",
+                    "lat": 51,
+                    "lng": 10
                 }
             }
         ]
@@ -11796,19 +14085,19 @@ const squadData = {
         "name": "Portugal",
         "flag": "🇵🇹",
         "confederation": "UEFA",
-        "fifaRanking": 36,
+        "fifaRanking": 41,
         "players": [
             {
-                "name": "Diogo Costa",
+                "name": "Ricardo Velho",
                 "position": "GK",
-                "club": "Porto",
-                "league": "Primeira Liga",
-                "age": 26,
+                "club": "Gençlerbirliği",
+                "league": "Turkish Super Lig",
+                "age": 27,
                 "birthplace": {
-                    "city": "Rothrist",
-                    "country": "Switzerland",
-                    "lat": 47.3028,
-                    "lng": 7.8833
+                    "city": "Vila Nova de Famalicão",
+                    "country": "Portugal",
+                    "lat": 41.4167,
+                    "lng": -8.5167
                 }
             },
             {
@@ -11838,29 +14127,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Nélson Semedo",
+                "name": "Diogo Dalot",
                 "position": "DF",
-                "club": "Fenerbahçe",
-                "league": "Turkish Super Lig",
-                "age": 32,
+                "club": "Manchester United",
+                "league": "Premier League",
+                "age": 27,
                 "birthplace": {
-                    "city": "Lisbon",
+                    "city": "Braga",
                     "country": "Portugal",
-                    "lat": 38.708,
-                    "lng": -9.139
+                    "lat": 41.5333,
+                    "lng": -8.4167
                 }
             },
             {
-                "name": "Rúben Dias",
+                "name": "Tomás Araújo",
                 "position": "DF",
-                "club": "Manchester City",
-                "league": "Premier League",
-                "age": 28,
+                "club": "Benfica",
+                "league": "Primeira Liga",
+                "age": 23,
                 "birthplace": {
-                    "city": "Amadora",
+                    "city": "Vila Nova de Famalicão",
                     "country": "Portugal",
-                    "lat": 38.75,
-                    "lng": -9.2333
+                    "lat": 41.4167,
+                    "lng": -8.5167
                 }
             },
             {
@@ -11874,19 +14163,6 @@ const squadData = {
                     "country": "Portugal",
                     "lat": 40.6575,
                     "lng": -7.9139
-                }
-            },
-            {
-                "name": "Diogo Dalot",
-                "position": "DF",
-                "club": "Manchester United",
-                "league": "Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Braga",
-                    "country": "Portugal",
-                    "lat": 41.5333,
-                    "lng": -8.4167
                 }
             },
             {
@@ -11929,55 +14205,29 @@ const squadData = {
                 }
             },
             {
-                "name": "João Palhinha",
-                "position": "MF",
-                "club": "Tottenham Hotspur",
-                "league": "Premier League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Lisbon",
-                    "country": "Portugal",
-                    "lat": 38.708,
-                    "lng": -9.139
-                }
-            },
-            {
-                "name": "Bruno Fernandes",
-                "position": "MF",
-                "club": "Manchester United",
-                "league": "Premier League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Maia",
-                    "country": "Portugal",
-                    "lat": 41.2333,
-                    "lng": -8.6167
-                }
-            },
-            {
-                "name": "Bernardo Silva",
-                "position": "MF",
-                "club": "Manchester City",
-                "league": "Premier League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Lisbon",
-                    "country": "Portugal",
-                    "lat": 38.708,
-                    "lng": -9.139
-                }
-            },
-            {
-                "name": "João Neves",
-                "position": "MF",
+                "name": "Nuno Mendes",
+                "position": "DF",
                 "club": "Paris Saint-Germain",
                 "league": "Ligue 1",
-                "age": 21,
+                "age": 23,
                 "birthplace": {
-                    "city": "Tavira",
+                    "city": "Sintra",
                     "country": "Portugal",
-                    "lat": 37.1309,
-                    "lng": -7.6506
+                    "lat": 38.7974,
+                    "lng": -9.3904
+                }
+            },
+            {
+                "name": "Samú Costa",
+                "position": "MF",
+                "club": "Mallorca",
+                "league": "La Liga",
+                "age": 25,
+                "birthplace": {
+                    "city": "Aveiro",
+                    "country": "Portugal",
+                    "lat": 40.6389,
+                    "lng": -8.6553
                 }
             },
             {
@@ -11994,11 +14244,63 @@ const squadData = {
                 }
             },
             {
+                "name": "Bruno Fernandes",
+                "position": "MF",
+                "club": "Manchester United",
+                "league": "Premier League",
+                "age": 31,
+                "birthplace": {
+                    "city": "Maia",
+                    "country": "Portugal",
+                    "lat": 41.2333,
+                    "lng": -8.6167
+                }
+            },
+            {
+                "name": "Mateus Fernandes",
+                "position": "MF",
+                "club": "West Ham United",
+                "league": "Premier League",
+                "age": 21,
+                "birthplace": {
+                    "city": "Olhão",
+                    "country": "Portugal",
+                    "lat": 37.0278,
+                    "lng": -7.8389
+                }
+            },
+            {
+                "name": "João Neves",
+                "position": "MF",
+                "club": "Paris Saint-Germain",
+                "league": "Ligue 1",
+                "age": 21,
+                "birthplace": {
+                    "city": "Tavira",
+                    "country": "Portugal",
+                    "lat": 37.1309,
+                    "lng": -7.6506
+                }
+            },
+            {
+                "name": "Francisco Trincão",
+                "position": "MF",
+                "club": "Sporting CP",
+                "league": "Primeira Liga",
+                "age": 26,
+                "birthplace": {
+                    "city": "Viana do Castelo",
+                    "country": "Portugal",
+                    "lat": 41.7,
+                    "lng": -8.8333
+                }
+            },
+            {
                 "name": "Rúben Neves",
                 "position": "MF",
                 "club": "Al-Hilal",
                 "league": "Saudi Pro League",
-                "age": 28,
+                "age": 29,
                 "birthplace": {
                     "city": "Mozelos",
                     "country": "Portugal",
@@ -12011,7 +14313,7 @@ const squadData = {
                 "position": "MF",
                 "club": "Paris Saint-Germain",
                 "league": "Ligue 1",
-                "age": 25,
+                "age": 26,
                 "birthplace": {
                     "city": "Faro",
                     "country": "Portugal",
@@ -12020,16 +14322,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Carlos Forbs",
+                "name": "Gonçalo Guedes",
                 "position": "FW",
-                "club": "Club Brugge",
-                "league": "Belgian Pro League",
-                "age": 21,
+                "club": "Real Sociedad",
+                "league": "La Liga",
+                "age": 29,
                 "birthplace": {
-                    "city": "Sintra",
+                    "city": "Benavente",
                     "country": "Portugal",
-                    "lat": 38.7974,
-                    "lng": -9.3904
+                    "lat": 38.9833,
+                    "lng": -8.8167
                 }
             },
             {
@@ -12059,10 +14361,23 @@ const squadData = {
                 }
             },
             {
-                "name": "Francisco Trincão",
+                "name": "Paulinho",
                 "position": "FW",
-                "club": "Sporting CP",
-                "league": "Primeira Liga",
+                "club": "Toluca",
+                "league": "Liga MX",
+                "age": 33,
+                "birthplace": {
+                    "city": "Barcelos",
+                    "country": "Portugal",
+                    "lat": 41.5333,
+                    "lng": -8.6167
+                }
+            },
+            {
+                "name": "Pedro Neto",
+                "position": "FW",
+                "club": "Chelsea",
+                "league": "Premier League",
                 "age": 26,
                 "birthplace": {
                     "city": "Viana do Castelo",
@@ -12072,16 +14387,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Rafael Leão",
+                "name": "Pedro Gonçalves",
                 "position": "FW",
-                "club": "Milan",
-                "league": "Serie A",
-                "age": 26,
+                "club": "Sporting CP",
+                "league": "Primeira Liga",
+                "age": 27,
                 "birthplace": {
-                    "city": "Almada",
+                    "city": "Chaves",
                     "country": "Portugal",
-                    "lat": 38.6803,
-                    "lng": -9.1583
+                    "lat": 41.7399,
+                    "lng": -7.4707
+                }
+            },
+            {
+                "name": "Ricardo Horta",
+                "position": "FW",
+                "club": "Braga",
+                "league": "Primeira Liga",
+                "age": 31,
+                "birthplace": {
+                    "city": "Sobreda",
+                    "country": "Portugal",
+                    "lat": 38.6496,
+                    "lng": -9.1898
                 }
             },
             {
@@ -12099,23 +14427,369 @@ const squadData = {
             }
         ]
     },
+    "COD": {
+        "name": "DR Congo",
+        "flag": "🇨🇩",
+        "confederation": "CAF",
+        "fifaRanking": 42,
+        "players": [
+            {
+                "name": "Lionel Mpasi",
+                "position": "GK",
+                "club": "Le Havre",
+                "league": "Ligue 1",
+                "age": 31,
+                "birthplace": {
+                    "city": "Meaux",
+                    "country": "France",
+                    "lat": 48.9594,
+                    "lng": 2.8878
+                }
+            },
+            {
+                "name": "Timothy Fayulu",
+                "position": "GK",
+                "club": "Noah",
+                "league": "Unknown",
+                "age": 26,
+                "birthplace": {
+                    "city": "Geneva",
+                    "country": "Switzerland",
+                    "lat": 46.2,
+                    "lng": 6.15
+                }
+            },
+            {
+                "name": "Matthieu Epolo",
+                "position": "GK",
+                "club": "Standard Liège",
+                "league": "Belgian Pro League",
+                "age": 21,
+                "birthplace": {
+                    "city": "Brussels",
+                    "country": "Belgium",
+                    "lat": 50.8467,
+                    "lng": 4.3517
+                }
+            },
+            {
+                "name": "Chancel Mbemba",
+                "position": "DF",
+                "club": "Lille",
+                "league": "Ligue 1",
+                "age": 31,
+                "birthplace": {
+                    "city": "Kisangani",
+                    "country": "Democratic Republic of the Congo",
+                    "lat": 0.5153,
+                    "lng": 25.1911
+                }
+            },
+            {
+                "name": "Arthur Masuaku",
+                "position": "DF",
+                "club": "Lens",
+                "league": "Ligue 1",
+                "age": 32,
+                "birthplace": {
+                    "city": "Lille",
+                    "country": "France",
+                    "lat": 50.6319,
+                    "lng": 3.0575
+                }
+            },
+            {
+                "name": "Joris Kayembe",
+                "position": "DF",
+                "club": "Genk",
+                "league": "Belgian Pro League",
+                "age": 31,
+                "birthplace": {
+                    "city": "Brussels",
+                    "country": "Belgium",
+                    "lat": 50.8467,
+                    "lng": 4.3517
+                }
+            },
+            {
+                "name": "Dylan Batubinsika",
+                "position": "DF",
+                "club": "AEL",
+                "league": "Greek Super League",
+                "age": 30,
+                "birthplace": {
+                    "city": "Cergy-Pontoise",
+                    "country": "France",
+                    "lat": 49.0361,
+                    "lng": 2.0631
+                }
+            },
+            {
+                "name": "Axel Tuanzebe",
+                "position": "DF",
+                "club": "Burnley",
+                "league": "Premier League",
+                "age": 28,
+                "birthplace": {
+                    "city": "Bunia",
+                    "country": "Democratic Republic of the Congo",
+                    "lat": 1.5667,
+                    "lng": 30.25
+                }
+            },
+            {
+                "name": "Aaron Wan-Bissaka",
+                "position": "DF",
+                "club": "West Ham United",
+                "league": "Premier League",
+                "age": 28,
+                "birthplace": {
+                    "city": "Croydon",
+                    "country": "United Kingdom",
+                    "lat": 51.3727,
+                    "lng": -0.1099
+                }
+            },
+            {
+                "name": "Rocky Bushiri",
+                "position": "DF",
+                "club": "Hibernian",
+                "league": "Scottish Premiership",
+                "age": 26,
+                "birthplace": {
+                    "city": "Democratic Republic of the Congo",
+                    "country": "Democratic Republic of the Congo",
+                    "lat": -2.88,
+                    "lng": 23.6561
+                }
+            },
+            {
+                "name": "Brian Bayeye",
+                "position": "DF",
+                "club": "Villefranche",
+                "league": "Ligue 1",
+                "age": 25,
+                "birthplace": {
+                    "city": "Paris",
+                    "country": "France",
+                    "lat": 48.8567,
+                    "lng": 2.3522
+                }
+            },
+            {
+                "name": "Steve Kapuadi",
+                "position": "DF",
+                "club": "Widzew Łódź",
+                "league": "Polish Ekstraklasa",
+                "age": 27,
+                "birthplace": {
+                    "city": "Le Mans",
+                    "country": "France",
+                    "lat": 48.0042,
+                    "lng": 0.1969
+                }
+            },
+            {
+                "name": "Meschak Elia",
+                "position": "MF",
+                "club": "Alanyaspor",
+                "league": "Turkish Super Lig",
+                "age": 28,
+                "birthplace": {
+                    "city": "Kinshasa",
+                    "country": "Democratic Republic of the Congo",
+                    "lat": -4.3219,
+                    "lng": 15.3119
+                }
+            },
+            {
+                "name": "Samuel Moutoussamy",
+                "position": "MF",
+                "club": "Atromitos",
+                "league": "Greek Super League",
+                "age": 29,
+                "birthplace": {
+                    "city": "12th arrondissement of Paris",
+                    "country": "France",
+                    "lat": 48.8408,
+                    "lng": 2.3882
+                }
+            },
+            {
+                "name": "Edo Kayembe",
+                "position": "MF",
+                "club": "Watford",
+                "league": "EFL Championship",
+                "age": 27,
+                "birthplace": {
+                    "city": "Kananga",
+                    "country": "Democratic Republic of the Congo",
+                    "lat": -5.8961,
+                    "lng": 22.4167
+                }
+            },
+            {
+                "name": "Théo Bongonda",
+                "position": "MF",
+                "club": "Spartak Moscow",
+                "league": "Russian Premier League",
+                "age": 30,
+                "birthplace": {
+                    "city": "Charleroi",
+                    "country": "Belgium",
+                    "lat": 50.4167,
+                    "lng": 4.4442
+                }
+            },
+            {
+                "name": "Charles Pickel",
+                "position": "MF",
+                "club": "Espanyol",
+                "league": "La Liga",
+                "age": 28,
+                "birthplace": {
+                    "city": "Solothurn",
+                    "country": "Switzerland",
+                    "lat": 47.2081,
+                    "lng": 7.5375
+                }
+            },
+            {
+                "name": "Noah Sadiki",
+                "position": "MF",
+                "club": "Sunderland",
+                "league": "Premier League",
+                "age": 21,
+                "birthplace": {
+                    "city": "Brussels-Capital Region",
+                    "country": "Belgium",
+                    "lat": 50.8467,
+                    "lng": 4.3525
+                }
+            },
+            {
+                "name": "Nathanaël Mbuku",
+                "position": "MF",
+                "club": "Montpellier",
+                "league": "Ligue 1",
+                "age": 24,
+                "birthplace": {
+                    "city": "Villeneuve-Saint-Georges",
+                    "country": "France",
+                    "lat": 48.7325,
+                    "lng": 2.4497
+                }
+            },
+            {
+                "name": "Ngal'ayel Mukau",
+                "position": "MF",
+                "club": "Lille",
+                "league": "Ligue 1",
+                "age": 21,
+                "birthplace": {
+                    "city": "Antwerp",
+                    "country": "Belgium",
+                    "lat": 51.2211,
+                    "lng": 4.3997
+                }
+            },
+            {
+                "name": "Grady Diangana",
+                "position": "MF",
+                "club": "Elche",
+                "league": "Segunda División",
+                "age": 27,
+                "birthplace": {
+                    "city": "Kinshasa",
+                    "country": "Democratic Republic of the Congo",
+                    "lat": -4.3219,
+                    "lng": 15.3119
+                }
+            },
+            {
+                "name": "Brian Cipenga",
+                "position": "MF",
+                "club": "Castellón",
+                "league": "Segunda División",
+                "age": 28,
+                "birthplace": {
+                    "city": "Kinshasa",
+                    "country": "DR Congo",
+                    "lat": -3.541,
+                    "lng": 15.2106
+                }
+            },
+            {
+                "name": "Cédric Bakambu",
+                "position": "FW",
+                "club": "Betis",
+                "league": "La Liga",
+                "age": 34,
+                "birthplace": {
+                    "city": "Vitry-sur-Seine",
+                    "country": "France",
+                    "lat": 48.7875,
+                    "lng": 2.3928
+                }
+            },
+            {
+                "name": "Fiston Mayele",
+                "position": "FW",
+                "club": "Pyramids",
+                "league": "Egyptian Premier League",
+                "age": 31,
+                "birthplace": {
+                    "city": "Mbuji-Mayi",
+                    "country": "Democratic Republic of the Congo",
+                    "lat": -6.1209,
+                    "lng": 23.5967
+                }
+            },
+            {
+                "name": "Yoane Wissa",
+                "position": "FW",
+                "club": "Newcastle United",
+                "league": "Premier League",
+                "age": 29,
+                "birthplace": {
+                    "city": "Épinay-sous-Sénart",
+                    "country": "France",
+                    "lat": 48.6931,
+                    "lng": 2.5158
+                }
+            },
+            {
+                "name": "Simon Banza",
+                "position": "FW",
+                "club": "Al Jazira",
+                "league": "UAE Pro League",
+                "age": 29,
+                "birthplace": {
+                    "city": "France",
+                    "country": "France",
+                    "lat": 47,
+                    "lng": 2
+                }
+            }
+        ]
+    },
     "UZB": {
         "name": "Uzbekistan",
         "flag": "🇺🇿",
         "confederation": "AFC",
-        "fifaRanking": 37,
+        "fifaRanking": 43,
         "players": [
             {
-                "name": "Vladimir Nazarov",
+                "name": "Utkir Yusupov",
                 "position": "GK",
-                "club": "Pakhtakor",
+                "club": "Navbahor",
                 "league": "Unknown",
-                "age": 23,
+                "age": 35,
                 "birthplace": {
-                    "city": "Tashkent",
-                    "country": "Uzbekistan",
-                    "lat": 41.3111,
-                    "lng": 69.2797
+                    "city": "Sayram",
+                    "country": "Kazakhstan",
+                    "lat": 42.3019,
+                    "lng": 69.7703
                 }
             },
             {
@@ -12123,7 +14797,7 @@ const squadData = {
                 "position": "GK",
                 "club": "Nasaf",
                 "league": "Unknown",
-                "age": 24,
+                "age": 25,
                 "birthplace": {
                     "city": "Jizzakh",
                     "country": "Soviet Union",
@@ -12149,7 +14823,7 @@ const squadData = {
                 "position": "DF",
                 "club": "Manchester City",
                 "league": "Premier League",
-                "age": 21,
+                "age": 22,
                 "birthplace": {
                     "city": "Tashkent",
                     "country": "Uzbekistan",
@@ -12199,7 +14873,7 @@ const squadData = {
             {
                 "name": "Sherzod Nasrullaev",
                 "position": "DF",
-                "club": "Nasaf",
+                "club": "Pakhtakor",
                 "league": "Unknown",
                 "age": 27,
                 "birthplace": {
@@ -12223,29 +14897,42 @@ const squadData = {
                 }
             },
             {
-                "name": "Abdulla Abdullaev",
+                "name": "Bekhruz Karimov",
                 "position": "DF",
-                "club": "Dibba",
-                "league": "UAE Pro League",
-                "age": 28,
+                "club": "Surkhon",
+                "league": "Unknown",
+                "age": 18,
                 "birthplace": {
-                    "city": "Ķürgontepa",
+                    "city": "Tashkent",
                     "country": "Uzbekistan",
-                    "lat": 40.7333,
-                    "lng": 72.7667
+                    "lat": 40.7093,
+                    "lng": 68.8515
                 }
             },
             {
-                "name": "Husniddin Aliqulov",
+                "name": "Mukhammadrasul Abdumazhidov",
                 "position": "DF",
-                "club": "Çaykur Rizespor",
-                "league": "Turkish Super Lig",
-                "age": 26,
+                "club": "Pakhtakor",
+                "league": "Unknown",
+                "age": 21,
                 "birthplace": {
-                    "city": "Kitab",
+                    "city": "Tashkent",
                     "country": "Uzbekistan",
-                    "lat": 39.1336,
-                    "lng": 66.8819
+                    "lat": 41.3727,
+                    "lng": 69.5005
+                }
+            },
+            {
+                "name": "Jakhongir Urozov",
+                "position": "DF",
+                "club": "Dinamo",
+                "league": "Unknown",
+                "age": 21,
+                "birthplace": {
+                    "city": "Jizzakh",
+                    "country": "Soviet Union",
+                    "lat": 40.1167,
+                    "lng": 67.85
                 }
             },
             {
@@ -12305,7 +14992,7 @@ const squadData = {
                 "position": "MF",
                 "club": "Tractor",
                 "league": "Iranian Pro League",
-                "age": 29,
+                "age": 30,
                 "birthplace": {
                     "city": "Uzbekistan",
                     "country": "Uzbekistan",
@@ -12318,7 +15005,7 @@ const squadData = {
                 "position": "MF",
                 "club": "Al Bataeh",
                 "league": "UAE Pro League",
-                "age": 27,
+                "age": 28,
                 "birthplace": {
                     "city": "Uzbekistan",
                     "country": "Uzbekistan",
@@ -12353,55 +15040,42 @@ const squadData = {
                 }
             },
             {
-                "name": "Azizbek Turgunboev",
+                "name": "Alisher Odilov",
+                "position": "MF",
+                "club": "Neftchi",
+                "league": "Unknown",
+                "age": 24,
+                "birthplace": {
+                    "city": "Tashkent",
+                    "country": "Uzbekistan",
+                    "lat": 40.9371,
+                    "lng": 69.5152
+                }
+            },
+            {
+                "name": "Ibrokhim Ibragimov",
                 "position": "MF",
                 "club": "Pakhtakor",
                 "league": "Unknown",
-                "age": 31,
+                "age": 25,
+                "birthplace": {
+                    "city": "Tashkent",
+                    "country": "Uzbekistan",
+                    "lat": 41.8841,
+                    "lng": 68.3827
+                }
+            },
+            {
+                "name": "Umarali Rakhmonaliev",
+                "position": "MF",
+                "club": "Sabah",
+                "league": "Unknown",
+                "age": 22,
                 "birthplace": {
                     "city": "Namangan",
                     "country": "Uzbekistan",
                     "lat": 40.9953,
                     "lng": 71.6725
-                }
-            },
-            {
-                "name": "Khojimat Erkinov",
-                "position": "MF",
-                "club": "Pakhtakor",
-                "league": "Unknown",
-                "age": 24,
-                "birthplace": {
-                    "city": "Tashkent",
-                    "country": "Uzbekistan",
-                    "lat": 41.3111,
-                    "lng": 69.2797
-                }
-            },
-            {
-                "name": "Ruslanbek Jiyanov",
-                "position": "MF",
-                "club": "Navbahor",
-                "league": "Unknown",
-                "age": 24,
-                "birthplace": {
-                    "city": "Tashkent",
-                    "country": "Uzbekistan",
-                    "lat": 41.3111,
-                    "lng": 69.2797
-                }
-            },
-            {
-                "name": "Sardorbek Bakhromov",
-                "position": "MF",
-                "club": "Nasaf",
-                "league": "Unknown",
-                "age": 20,
-                "birthplace": {
-                    "city": "Tashkent",
-                    "country": "Uzbekistan",
-                    "lat": 40.862,
-                    "lng": 69.5069
                 }
             },
             {
@@ -12431,16 +15105,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Khusayin Norchaev",
+                "name": "Sherzod Temirov",
                 "position": "FW",
-                "club": "Nasaf",
-                "league": "Unknown",
-                "age": 24,
+                "club": "Erbil",
+                "league": "Iraqi Premier League",
+                "age": 27,
                 "birthplace": {
-                    "city": "Yakkabog",
+                    "city": "G‘uzor",
                     "country": "Uzbekistan",
-                    "lat": 38.98,
-                    "lng": 66.68
+                    "lat": 38.6208,
+                    "lng": 66.2481
                 }
             }
         ]
@@ -12449,7 +15123,7 @@ const squadData = {
         "name": "Colombia",
         "flag": "🇨🇴",
         "confederation": "CONMEBOL",
-        "fifaRanking": 38,
+        "fifaRanking": 44,
         "players": [
             {
                 "name": "David Ospina",
@@ -12469,7 +15143,7 @@ const squadData = {
                 "position": "GK",
                 "club": "Atlas",
                 "league": "Liga MX",
-                "age": 36,
+                "age": 37,
                 "birthplace": {
                     "city": "Bogotá",
                     "country": "Colombia",
@@ -12480,9 +15154,9 @@ const squadData = {
             {
                 "name": "Álvaro Montero",
                 "position": "GK",
-                "club": "Velez Sarsfield",
+                "club": "Vélez Sarsfield",
                 "league": "Argentine Primera",
-                "age": 30,
+                "age": 31,
                 "birthplace": {
                     "city": "El Molino",
                     "country": "Colombia",
@@ -12530,16 +15204,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Yerry Mina",
+                "name": "Juan Cabal",
                 "position": "DF",
-                "club": "Cagliari",
+                "club": "Juventus",
                 "league": "Serie A",
-                "age": 31,
+                "age": 25,
                 "birthplace": {
-                    "city": "Guachené",
+                    "city": "Cali",
                     "country": "Colombia",
-                    "lat": 3.1336,
-                    "lng": -76.3925
+                    "lat": 3.44,
+                    "lng": -76.5197
+                }
+            },
+            {
+                "name": "Yerson Mosquera",
+                "position": "DF",
+                "club": "Wolverhampton Wanderers",
+                "league": "Premier League",
+                "age": 24,
+                "birthplace": {
+                    "city": "Apartadó",
+                    "country": "Colombia",
+                    "lat": 7.8847,
+                    "lng": -76.635
                 }
             },
             {
@@ -12556,16 +15243,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Carlos Cuesta",
+                "name": "Deiver Machado",
                 "position": "DF",
-                "club": "Vasco da Gama",
-                "league": "Brasileirão",
-                "age": 26,
+                "club": "Nantes",
+                "league": "Ligue 1",
+                "age": 32,
                 "birthplace": {
-                    "city": "Quibdó",
+                    "city": "Tadó",
                     "country": "Colombia",
-                    "lat": 5.6923,
-                    "lng": -76.6582
+                    "lat": 5.2633,
+                    "lng": -76.56
                 }
             },
             {
@@ -12579,19 +15266,6 @@ const squadData = {
                     "country": "Colombia",
                     "lat": 3.0356,
                     "lng": -76.4078
-                }
-            },
-            {
-                "name": "Álvaro Angulo",
-                "position": "DF",
-                "club": "UNAM",
-                "league": "Liga MX",
-                "age": 27,
-                "birthplace": {
-                    "city": "Tumaco",
-                    "country": "Colombia",
-                    "lat": 1.8067,
-                    "lng": -78.7647
                 }
             },
             {
@@ -12673,19 +15347,6 @@ const squadData = {
                 }
             },
             {
-                "name": "Juan Portilla",
-                "position": "MF",
-                "club": "Paranaense",
-                "league": "Brasileirão",
-                "age": 27,
-                "birthplace": {
-                    "city": "Cali",
-                    "country": "Colombia",
-                    "lat": 3.44,
-                    "lng": -76.5197
-                }
-            },
-            {
                 "name": "Jefferson Lerma",
                 "position": "MF",
                 "club": "Crystal Palace",
@@ -12699,16 +15360,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Yáser Asprilla",
+                "name": "Juan Fernando Quintero",
                 "position": "MF",
-                "club": "Galatasaray",
-                "league": "Turkish Super Lig",
-                "age": 22,
+                "club": "River Plate",
+                "league": "Argentine Primera",
+                "age": 33,
                 "birthplace": {
-                    "city": "Bajo Baudó",
+                    "city": "Barranquilla",
                     "country": "Colombia",
-                    "lat": 4.9542,
-                    "lng": -77.3636
+                    "lat": 10.9833,
+                    "lng": -74.8019
+                }
+            },
+            {
+                "name": "Jaminton Campaz",
+                "position": "MF",
+                "club": "Rosario Central",
+                "league": "Argentine Primera",
+                "age": 25,
+                "birthplace": {
+                    "city": "Tumaco",
+                    "country": "Colombia",
+                    "lat": 1.8067,
+                    "lng": -78.7647
                 }
             },
             {
@@ -12795,14 +15469,14 @@ const squadData = {
         "name": "England",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "confederation": "UEFA",
-        "fifaRanking": 39,
+        "fifaRanking": 45,
         "players": [
             {
                 "name": "Jordan Pickford",
                 "position": "GK",
                 "club": "Everton",
                 "league": "Premier League",
-                "age": 31,
+                "age": 32,
                 "birthplace": {
                     "city": "Washington",
                     "country": "United Kingdom",
@@ -12815,7 +15489,7 @@ const squadData = {
                 "position": "GK",
                 "club": "Crystal Palace",
                 "league": "Premier League",
-                "age": 28,
+                "age": 29,
                 "birthplace": {
                     "city": "Whitehaven",
                     "country": "United Kingdom",
@@ -12837,55 +15511,81 @@ const squadData = {
                 }
             },
             {
-                "name": "Jarell Quansah",
-                "position": "DF",
-                "club": "Bayer Leverkusen",
-                "league": "Bundesliga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Warrington",
-                    "country": "United Kingdom",
-                    "lat": 53.3873,
-                    "lng": -2.6029
-                }
-            },
-            {
-                "name": "Reece James",
-                "position": "DF",
-                "club": "Chelsea",
+                "name": "Jason Steele",
+                "position": "GK",
+                "club": "Brighton & Hove Albion",
                 "league": "Premier League",
-                "age": 26,
+                "age": 35,
                 "birthplace": {
-                    "city": "Redbridge",
+                    "city": "Newton Aycliffe",
                     "country": "United Kingdom",
-                    "lat": 51.576,
-                    "lng": 0.052
+                    "lat": 54.62,
+                    "lng": -1.58
                 }
             },
             {
-                "name": "John Stones",
+                "name": "Ezri Konsa",
+                "position": "DF",
+                "club": "Aston Villa",
+                "league": "Premier League",
+                "age": 28,
+                "birthplace": {
+                    "city": "London Borough of Newham",
+                    "country": "United Kingdom",
+                    "lat": 51.5167,
+                    "lng": 0.0333
+                }
+            },
+            {
+                "name": "Nico O'Reilly",
                 "position": "DF",
                 "club": "Manchester City",
                 "league": "Premier League",
-                "age": 31,
+                "age": 21,
                 "birthplace": {
-                    "city": "Barnsley",
+                    "city": "Manchester",
                     "country": "United Kingdom",
-                    "lat": 53.5536,
-                    "lng": -1.4789
+                    "lat": 53.4667,
+                    "lng": -2.2333
                 }
             },
             {
-                "name": "Trevoh Chalobah",
+                "name": "Marc Guéhi",
                 "position": "DF",
-                "club": "Chelsea",
+                "club": "Manchester City",
                 "league": "Premier League",
-                "age": 26,
+                "age": 25,
                 "birthplace": {
-                    "city": "Freetown",
-                    "country": "Sierra Leone",
-                    "lat": 8.4872,
-                    "lng": -13.2356
+                    "city": "Abidjan",
+                    "country": "Ivory Coast",
+                    "lat": 5.3364,
+                    "lng": -4.0267
+                }
+            },
+            {
+                "name": "Harry Maguire",
+                "position": "DF",
+                "club": "Manchester United",
+                "league": "Premier League",
+                "age": 33,
+                "birthplace": {
+                    "city": "Sheffield",
+                    "country": "United Kingdom",
+                    "lat": 53.3808,
+                    "lng": -1.4703
+                }
+            },
+            {
+                "name": "Ben White",
+                "position": "DF",
+                "club": "Arsenal",
+                "league": "Premier League",
+                "age": 28,
+                "birthplace": {
+                    "city": "Poole",
+                    "country": "United Kingdom",
+                    "lat": 50.7167,
+                    "lng": -1.9833
                 }
             },
             {
@@ -12915,55 +15615,68 @@ const squadData = {
                 }
             },
             {
-                "name": "Nico O'Reilly",
+                "name": "Tino Livramento",
                 "position": "DF",
-                "club": "Manchester City",
+                "club": "Newcastle United",
+                "league": "Premier League",
+                "age": 23,
+                "birthplace": {
+                    "city": "Croydon",
+                    "country": "United Kingdom",
+                    "lat": 51.3727,
+                    "lng": -0.1099
+                }
+            },
+            {
+                "name": "Lewis Hall",
+                "position": "DF",
+                "club": "Newcastle United",
+                "league": "Premier League",
+                "age": 21,
+                "birthplace": {
+                    "city": "Slough",
+                    "country": "United Kingdom",
+                    "lat": 51.5097,
+                    "lng": -0.5931
+                }
+            },
+            {
+                "name": "Elliot Anderson",
+                "position": "MF",
+                "club": "Nottingham Forest",
+                "league": "Premier League",
+                "age": 23,
+                "birthplace": {
+                    "city": "Whitley Bay",
+                    "country": "United Kingdom",
+                    "lat": 55.0456,
+                    "lng": -1.4443
+                }
+            },
+            {
+                "name": "Cole Palmer",
+                "position": "MF",
+                "club": "Chelsea",
+                "league": "Premier League",
+                "age": 23,
+                "birthplace": {
+                    "city": "Wythenshawe",
+                    "country": "United Kingdom",
+                    "lat": 53.3923,
+                    "lng": -2.264
+                }
+            },
+            {
+                "name": "Kobbie Mainoo",
+                "position": "MF",
+                "club": "Manchester United",
                 "league": "Premier League",
                 "age": 20,
                 "birthplace": {
-                    "city": "Manchester",
+                    "city": "Stockport",
                     "country": "United Kingdom",
-                    "lat": 53.4667,
-                    "lng": -2.2333
-                }
-            },
-            {
-                "name": "Ezri Konsa",
-                "position": "DF",
-                "club": "Aston Villa",
-                "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "London Borough of Newham",
-                    "country": "United Kingdom",
-                    "lat": 51.5167,
-                    "lng": 0.0333
-                }
-            },
-            {
-                "name": "Declan Rice",
-                "position": "MF",
-                "club": "Arsenal",
-                "league": "Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Kingston upon Thames",
-                    "country": "United Kingdom",
-                    "lat": 51.4103,
-                    "lng": -0.2995
-                }
-            },
-            {
-                "name": "Jordan Henderson",
-                "position": "MF",
-                "club": "Brentford",
-                "league": "Premier League",
-                "age": 35,
-                "birthplace": {
-                    "city": "Sunderland",
-                    "country": "United Kingdom",
-                    "lat": 54.9,
-                    "lng": -1.3803
+                    "lat": 53.4083,
+                    "lng": -2.1494
                 }
             },
             {
@@ -12993,81 +15706,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Adam Wharton",
+                "name": "James Garner",
                 "position": "MF",
-                "club": "Crystal Palace",
+                "club": "Everton",
                 "league": "Premier League",
-                "age": 22,
+                "age": 25,
                 "birthplace": {
-                    "city": "Blackburn",
+                    "city": "Birkenhead",
                     "country": "United Kingdom",
-                    "lat": 53.7449,
-                    "lng": -2.4769
+                    "lat": 53.3833,
+                    "lng": -3.0167
                 }
             },
             {
-                "name": "Elliot Anderson",
+                "name": "Jordan Henderson",
                 "position": "MF",
-                "club": "Nottingham Forest",
+                "club": "Brentford",
                 "league": "Premier League",
-                "age": 23,
+                "age": 35,
                 "birthplace": {
-                    "city": "Whitley Bay",
+                    "city": "Sunderland",
                     "country": "United Kingdom",
-                    "lat": 55.0456,
-                    "lng": -1.4443
-                }
-            },
-            {
-                "name": "Alex Scott",
-                "position": "MF",
-                "club": "Bournemouth",
-                "league": "Premier League",
-                "age": 22,
-                "birthplace": {
-                    "city": "Guernsey",
-                    "country": "Guernsey",
-                    "lat": 49.4558,
-                    "lng": -2.5775
-                }
-            },
-            {
-                "name": "Bukayo Saka",
-                "position": "FW",
-                "club": "Arsenal",
-                "league": "Premier League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Ealing",
-                    "country": "United Kingdom",
-                    "lat": 51.5111,
-                    "lng": -0.3058
-                }
-            },
-            {
-                "name": "Harry Kane",
-                "position": "FW",
-                "club": "Bayern Munich",
-                "league": "Bundesliga",
-                "age": 32,
-                "birthplace": {
-                    "city": "Walthamstow",
-                    "country": "United Kingdom",
-                    "lat": 51.584,
-                    "lng": -0.0211
-                }
-            },
-            {
-                "name": "Marcus Rashford",
-                "position": "FW",
-                "club": "Barcelona",
-                "league": "La Liga",
-                "age": 28,
-                "birthplace": {
-                    "city": "Manchester",
-                    "country": "United Kingdom",
-                    "lat": 53.4667,
-                    "lng": -2.2333
+                    "lat": 54.9,
+                    "lng": -1.3803
                 }
             },
             {
@@ -13084,16 +15745,55 @@ const squadData = {
                 }
             },
             {
-                "name": "Eberechi Eze",
+                "name": "Marcus Rashford",
                 "position": "FW",
-                "club": "Arsenal",
-                "league": "Premier League",
-                "age": 27,
+                "club": "Barcelona",
+                "league": "La Liga",
+                "age": 28,
                 "birthplace": {
-                    "city": "Greenwich",
+                    "city": "Manchester",
                     "country": "United Kingdom",
-                    "lat": 51.48,
-                    "lng": 0
+                    "lat": 53.4667,
+                    "lng": -2.2333
+                }
+            },
+            {
+                "name": "Anthony Gordon",
+                "position": "FW",
+                "club": "Newcastle United",
+                "league": "Premier League",
+                "age": 25,
+                "birthplace": {
+                    "city": "Liverpool",
+                    "country": "United Kingdom",
+                    "lat": 53.4072,
+                    "lng": -2.9917
+                }
+            },
+            {
+                "name": "Dominic Solanke",
+                "position": "FW",
+                "club": "Tottenham Hotspur",
+                "league": "Premier League",
+                "age": 28,
+                "birthplace": {
+                    "city": "Reading",
+                    "country": "United Kingdom",
+                    "lat": 51.4542,
+                    "lng": -0.9731
+                }
+            },
+            {
+                "name": "Harvey Barnes",
+                "position": "FW",
+                "club": "Newcastle United",
+                "league": "Premier League",
+                "age": 28,
+                "birthplace": {
+                    "city": "Burnley",
+                    "country": "United Kingdom",
+                    "lat": 53.7889,
+                    "lng": -2.2481
                 }
             },
             {
@@ -13108,6 +15808,19 @@ const squadData = {
                     "lat": 52.2333,
                     "lng": -2.7333
                 }
+            },
+            {
+                "name": "Harry Kane",
+                "position": "FW",
+                "club": "Bayern Munich",
+                "league": "Bundesliga",
+                "age": 32,
+                "birthplace": {
+                    "city": "Walthamstow",
+                    "country": "United Kingdom",
+                    "lat": 51.584,
+                    "lng": -0.0211
+                }
             }
         ]
     },
@@ -13115,7 +15828,7 @@ const squadData = {
         "name": "Croatia",
         "flag": "🇭🇷",
         "confederation": "UEFA",
-        "fifaRanking": 40,
+        "fifaRanking": 46,
         "players": [
             {
                 "name": "Dominik Livaković",
@@ -13135,12 +15848,25 @@ const squadData = {
                 "position": "GK",
                 "club": "Hull City",
                 "league": "EFL Championship",
-                "age": 25,
+                "age": 26,
                 "birthplace": {
                     "city": "Rijeka",
                     "country": "Croatia",
                     "lat": 45.3333,
                     "lng": 14.4333
+                }
+            },
+            {
+                "name": "Karlo Letica",
+                "position": "GK",
+                "club": "Lausanne-Sport",
+                "league": "Unknown",
+                "age": 29,
+                "birthplace": {
+                    "city": "Split",
+                    "country": "Croatia",
+                    "lat": 43.51,
+                    "lng": 16.44
                 }
             },
             {
@@ -13170,16 +15896,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Joško Gvardiol",
+                "name": "Ivan Smolčić",
                 "position": "DF",
-                "club": "Manchester City",
-                "league": "Premier League",
-                "age": 24,
+                "club": "Como",
+                "league": "Serie A",
+                "age": 25,
                 "birthplace": {
-                    "city": "Zagreb",
+                    "city": "Gospić",
                     "country": "Croatia",
-                    "lat": 45.8131,
-                    "lng": 15.9772
+                    "lat": 44.5469,
+                    "lng": 15.3744
                 }
             },
             {
@@ -13200,12 +15926,25 @@ const squadData = {
                 "position": "DF",
                 "club": "Ajax",
                 "league": "Eredivisie",
-                "age": 25,
+                "age": 26,
                 "birthplace": {
                     "city": "Čapljina",
                     "country": "Bosnia and Herzegovina",
                     "lat": 43.11,
                     "lng": 17.7
+                }
+            },
+            {
+                "name": "Luka Vušković",
+                "position": "DF",
+                "club": "Hamburger SV",
+                "league": "Bundesliga",
+                "age": 19,
+                "birthplace": {
+                    "city": "Split",
+                    "country": "Croatia",
+                    "lat": 43.51,
+                    "lng": 16.44
                 }
             },
             {
@@ -13222,11 +15961,24 @@ const squadData = {
                 }
             },
             {
+                "name": "Lovro Majer",
+                "position": "MF",
+                "club": "VfL Wolfsburg",
+                "league": "Bundesliga",
+                "age": 28,
+                "birthplace": {
+                    "city": "Zagreb",
+                    "country": "Croatia",
+                    "lat": 45.8131,
+                    "lng": 15.9772
+                }
+            },
+            {
                 "name": "Nikola Moro",
                 "position": "MF",
                 "club": "Bologna",
                 "league": "Serie A",
-                "age": 27,
+                "age": 28,
                 "birthplace": {
                     "city": "Solin",
                     "country": "Croatia",
@@ -13265,12 +16017,25 @@ const squadData = {
                 "position": "MF",
                 "club": "Atalanta",
                 "league": "Serie A",
-                "age": 30,
+                "age": 31,
                 "birthplace": {
                     "city": "Mainz",
                     "country": "Germany",
                     "lat": 49.9994,
                     "lng": 8.2736
+                }
+            },
+            {
+                "name": "Martin Baturina",
+                "position": "MF",
+                "club": "Como",
+                "league": "Serie A",
+                "age": 23,
+                "birthplace": {
+                    "city": "Split",
+                    "country": "Croatia",
+                    "lat": 43.51,
+                    "lng": 16.44
                 }
             },
             {
@@ -13313,16 +16078,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Marco Pašalić",
-                "position": "FW",
-                "club": "Orlando City",
-                "league": "MLS",
-                "age": 25,
+                "name": "Luka Sučić",
+                "position": "MF",
+                "club": "Real Sociedad",
+                "league": "La Liga",
+                "age": 23,
                 "birthplace": {
-                    "city": "Karlsruhe",
-                    "country": "Germany",
-                    "lat": 49.0167,
-                    "lng": 8.4
+                    "city": "Linz",
+                    "country": "Austria",
+                    "lat": 48.3058,
+                    "lng": 14.2864
                 }
             },
             {
@@ -13339,16 +16104,16 @@ const squadData = {
                 }
             },
             {
-                "name": "Petar Musa",
+                "name": "Ante Budimir",
                 "position": "FW",
-                "club": "FC Dallas",
-                "league": "MLS",
-                "age": 27,
+                "club": "Osasuna",
+                "league": "La Liga",
+                "age": 34,
                 "birthplace": {
-                    "city": "Zagreb",
-                    "country": "Croatia",
-                    "lat": 45.8131,
-                    "lng": 15.9772
+                    "city": "Zenica",
+                    "country": "Bosnia and Herzegovina",
+                    "lat": 44.2017,
+                    "lng": 17.9039
                 }
             },
             {
@@ -13365,42 +16130,42 @@ const squadData = {
                 }
             },
             {
-                "name": "Mislav Oršić",
-                "position": "FW",
-                "club": "Pafos",
-                "league": "Cypriot First Division",
-                "age": 33,
-                "birthplace": {
-                    "city": "Zagreb",
-                    "country": "Croatia",
-                    "lat": 45.8131,
-                    "lng": 15.9772
-                }
-            },
-            {
-                "name": "Franjo Ivanović",
-                "position": "FW",
-                "club": "Benfica",
-                "league": "Primeira Liga",
-                "age": 22,
-                "birthplace": {
-                    "city": "Schwaz",
-                    "country": "Austria",
-                    "lat": 47.35,
-                    "lng": 11.7
-                }
-            },
-            {
                 "name": "Igor Matanović",
                 "position": "FW",
                 "club": "SC Freiburg",
                 "league": "Bundesliga",
-                "age": 22,
+                "age": 23,
                 "birthplace": {
                     "city": "Germany",
                     "country": "Germany",
                     "lat": 51,
                     "lng": 10
+                }
+            },
+            {
+                "name": "Marco Pašalić",
+                "position": "FW",
+                "club": "Orlando City",
+                "league": "MLS",
+                "age": 25,
+                "birthplace": {
+                    "city": "Karlsruhe",
+                    "country": "Germany",
+                    "lat": 49.0167,
+                    "lng": 8.4
+                }
+            },
+            {
+                "name": "Petar Musa",
+                "position": "FW",
+                "club": "FC Dallas",
+                "league": "MLS",
+                "age": 28,
+                "birthplace": {
+                    "city": "Zagreb",
+                    "country": "Croatia",
+                    "lat": 45.8131,
+                    "lng": 15.9772
                 }
             }
         ]
@@ -13409,7 +16174,7 @@ const squadData = {
         "name": "Ghana",
         "flag": "🇬🇭",
         "confederation": "CAF",
-        "fifaRanking": 41,
+        "fifaRanking": 47,
         "players": [
             {
                 "name": "Lawrence Ati-Zigi",
@@ -13446,60 +16211,8 @@ const squadData = {
                 "birthplace": {
                     "city": "Accra",
                     "country": "Ghana",
-                    "lat": 5.1498,
-                    "lng": -0.0929
-                }
-            },
-            {
-                "name": "Alidu Seidu",
-                "position": "DF",
-                "club": "Rennes",
-                "league": "Ligue 1",
-                "age": 25,
-                "birthplace": {
-                    "city": "Accra",
-                    "country": "Ghana",
-                    "lat": 5.556,
-                    "lng": -0.1969
-                }
-            },
-            {
-                "name": "Caleb Yirenkyi",
-                "position": "DF",
-                "club": "Nordsjælland",
-                "league": "Danish Superliga",
-                "age": 20,
-                "birthplace": {
-                    "city": "Ghana",
-                    "country": "Ghana",
-                    "lat": 7.9465,
-                    "lng": -1.0232
-                }
-            },
-            {
-                "name": "Jonas Adjetey",
-                "position": "DF",
-                "club": "VfL Wolfsburg",
-                "league": "Bundesliga",
-                "age": 22,
-                "birthplace": {
-                    "city": "Accra",
-                    "country": "Ghana",
-                    "lat": 5.556,
-                    "lng": -0.1969
-                }
-            },
-            {
-                "name": "Mohammed Salisu",
-                "position": "DF",
-                "club": "Monaco",
-                "league": "Ligue 1",
-                "age": 26,
-                "birthplace": {
-                    "city": "Accra",
-                    "country": "Ghana",
-                    "lat": 5.556,
-                    "lng": -0.1969
+                    "lat": 5.5861,
+                    "lng": -0.8306
                 }
             },
             {
@@ -13516,16 +16229,29 @@ const squadData = {
                 }
             },
             {
-                "name": "Kojo Peprah Oppong",
+                "name": "Jonas Adjetey",
                 "position": "DF",
-                "club": "Nice",
-                "league": "Ligue 1",
-                "age": 21,
+                "club": "Wolfsburg",
+                "league": "Bundesliga",
+                "age": 22,
                 "birthplace": {
                     "city": "Accra",
                     "country": "Ghana",
                     "lat": 5.556,
                     "lng": -0.1969
+                }
+            },
+            {
+                "name": "Patric Pfeiffer",
+                "position": "DF",
+                "club": "Darmstadt 98",
+                "league": "Bundesliga",
+                "age": 26,
+                "birthplace": {
+                    "city": "Hamburg",
+                    "country": "Germany",
+                    "lat": 53.55,
+                    "lng": 10
                 }
             },
             {
@@ -13555,29 +16281,81 @@ const squadData = {
                 }
             },
             {
-                "name": "Ebenezer Annan",
+                "name": "Kojo Peprah Oppong",
                 "position": "DF",
-                "club": "Saint-Étienne",
+                "club": "Nice",
                 "league": "Ligue 1",
-                "age": 23,
+                "age": 21,
                 "birthplace": {
                     "city": "Accra",
                     "country": "Ghana",
-                    "lat": 6.39,
-                    "lng": -0.3621
+                    "lat": 5.556,
+                    "lng": -0.1969
                 }
             },
             {
-                "name": "Kelvin Nkrumah",
-                "position": "MF",
-                "club": "Medeama",
-                "league": "Ghanaian Premier League",
-                "age": 18,
+                "name": "Alexander Djiku",
+                "position": "DF",
+                "club": "Spartak Moscow",
+                "league": "Russian Premier League",
+                "age": 31,
                 "birthplace": {
-                    "city": "Accra",
+                    "city": "Montpellier",
+                    "country": "France",
+                    "lat": 43.6109,
+                    "lng": 3.8772
+                }
+            },
+            {
+                "name": "Derrick Luckassen",
+                "position": "DF",
+                "club": "Pafos",
+                "league": "Cypriot First Division",
+                "age": 30,
+                "birthplace": {
+                    "city": "Amsterdam",
+                    "country": "Netherlands",
+                    "lat": 52.3667,
+                    "lng": 4.8833
+                }
+            },
+            {
+                "name": "Marvin Senaya",
+                "position": "DF",
+                "club": "Auxerre",
+                "league": "Ligue 1",
+                "age": 25,
+                "birthplace": {
+                    "city": "Saint-Maurice",
+                    "country": "France",
+                    "lat": 48.8183,
+                    "lng": 2.4347
+                }
+            },
+            {
+                "name": "Caleb Yirenkyi",
+                "position": "MF",
+                "club": "Nordsjælland",
+                "league": "Danish Superliga",
+                "age": 20,
+                "birthplace": {
+                    "city": "Ghana",
                     "country": "Ghana",
-                    "lat": 6.4816,
-                    "lng": -1.009
+                    "lat": 7.9465,
+                    "lng": -1.0232
+                }
+            },
+            {
+                "name": "Thomas Partey",
+                "position": "MF",
+                "club": "Villarreal",
+                "league": "La Liga",
+                "age": 32,
+                "birthplace": {
+                    "city": "Odumase Krobo",
+                    "country": "Ghana",
+                    "lat": 7.5456,
+                    "lng": -1.7378
                 }
             },
             {
@@ -13594,49 +16372,10 @@ const squadData = {
                 }
             },
             {
-                "name": "Christopher Bonsu Baah",
+                "name": "Ibrahim Sulemana",
                 "position": "MF",
-                "club": "Al-Qadsiah",
-                "league": "Saudi Pro League",
-                "age": 21,
-                "birthplace": {
-                    "city": "Accra",
-                    "country": "Ghana",
-                    "lat": 5.556,
-                    "lng": -0.1969
-                }
-            },
-            {
-                "name": "Abu Francis",
-                "position": "MF",
-                "club": "Toulouse",
-                "league": "Ligue 1",
-                "age": 24,
-                "birthplace": {
-                    "city": "Ghana",
-                    "country": "Ghana",
-                    "lat": 7.9465,
-                    "lng": -1.0232
-                }
-            },
-            {
-                "name": "Kamaldeen Sulemana",
-                "position": "MF",
-                "club": "Atalanta",
+                "club": "Cagliari",
                 "league": "Serie A",
-                "age": 23,
-                "birthplace": {
-                    "city": "Ghana",
-                    "country": "Ghana",
-                    "lat": 7.9465,
-                    "lng": -1.0232
-                }
-            },
-            {
-                "name": "Prince Kwabena Adu",
-                "position": "MF",
-                "club": "Viktoria Plzeň",
-                "league": "Czech First League",
                 "age": 22,
                 "birthplace": {
                     "city": "Sunyani",
@@ -13646,42 +16385,42 @@ const squadData = {
                 }
             },
             {
-                "name": "Prince Owusu",
+                "name": "Elisha Owusu",
                 "position": "MF",
-                "club": "Medeama",
-                "league": "Ghanaian Premier League",
-                "age": 21,
+                "club": "Auxerre",
+                "league": "Ligue 1",
+                "age": 28,
                 "birthplace": {
-                    "city": "Accra",
+                    "city": "Montreuil",
+                    "country": "France",
+                    "lat": 48.8603,
+                    "lng": 2.4431
+                }
+            },
+            {
+                "name": "Abdul Fatawu",
+                "position": "FW",
+                "club": "Leicester City",
+                "league": "Premier League",
+                "age": 22,
+                "birthplace": {
+                    "city": "Tamale",
                     "country": "Ghana",
-                    "lat": 6.4853,
-                    "lng": -1.0306
+                    "lat": 9.4075,
+                    "lng": -0.8533
                 }
             },
             {
-                "name": "Prince Osei Owusu",
+                "name": "Jordan Ayew",
                 "position": "FW",
-                "club": "Montréal",
-                "league": "MLS",
-                "age": 29,
+                "club": "Leicester City",
+                "league": "Premier League",
+                "age": 34,
                 "birthplace": {
-                    "city": "Wertheim",
-                    "country": "Germany",
-                    "lat": 49.75,
-                    "lng": 9.5167
-                }
-            },
-            {
-                "name": "Brandon Thomas-Asante",
-                "position": "FW",
-                "club": "Coventry City",
-                "league": "EFL Championship",
-                "age": 27,
-                "birthplace": {
-                    "city": "Milton Keynes",
-                    "country": "United Kingdom",
-                    "lat": 52.0333,
-                    "lng": -0.7667
+                    "city": "Marseille",
+                    "country": "France",
+                    "lat": 43.2967,
+                    "lng": 5.3764
                 }
             },
             {
@@ -13696,6 +16435,97 @@ const squadData = {
                     "lat": 51.5072,
                     "lng": -0.1275
                 }
+            },
+            {
+                "name": "Christopher Bonsu Baah",
+                "position": "FW",
+                "club": "Al-Qadsiah",
+                "league": "Saudi Pro League",
+                "age": 21,
+                "birthplace": {
+                    "city": "Accra",
+                    "country": "Ghana",
+                    "lat": 5.556,
+                    "lng": -0.1969
+                }
+            },
+            {
+                "name": "Prince Kwabena Adu",
+                "position": "FW",
+                "club": "Viktoria Plzeň",
+                "league": "Czech First League",
+                "age": 22,
+                "birthplace": {
+                    "city": "Sunyani",
+                    "country": "Ghana",
+                    "lat": 7.3399,
+                    "lng": -2.3268
+                }
+            },
+            {
+                "name": "Kamaldeen Sulemana",
+                "position": "FW",
+                "club": "Atalanta",
+                "league": "Serie A",
+                "age": 24,
+                "birthplace": {
+                    "city": "Ghana",
+                    "country": "Ghana",
+                    "lat": 7.9465,
+                    "lng": -1.0232
+                }
+            },
+            {
+                "name": "Ransford-Yeboah Königsdörffer",
+                "position": "FW",
+                "club": "Hamburg",
+                "league": "Bundesliga",
+                "age": 24,
+                "birthplace": {
+                    "city": "Berlin",
+                    "country": "Germany",
+                    "lat": 52.5167,
+                    "lng": 13.3833
+                }
+            },
+            {
+                "name": "Dan Agyei",
+                "position": "FW",
+                "club": "Kocaelispor",
+                "league": "Turkish Super Lig",
+                "age": 28,
+                "birthplace": {
+                    "city": "Royal Borough of Kingston upon Thames",
+                    "country": "United Kingdom",
+                    "lat": 51.4083,
+                    "lng": -0.3053
+                }
+            },
+            {
+                "name": "Iñaki Williams",
+                "position": "FW",
+                "club": "Athletic Bilbao",
+                "league": "La Liga",
+                "age": 31,
+                "birthplace": {
+                    "city": "Bilbao",
+                    "country": "Spain",
+                    "lat": 43.2631,
+                    "lng": -2.935
+                }
+            },
+            {
+                "name": "Brandon Thomas-Asante",
+                "position": "FW",
+                "club": "Coventry City",
+                "league": "EFL Championship",
+                "age": 27,
+                "birthplace": {
+                    "city": "Milton Keynes",
+                    "country": "United Kingdom",
+                    "lat": 52.0333,
+                    "lng": -0.7667
+                }
             }
         ]
     },
@@ -13703,27 +16533,14 @@ const squadData = {
         "name": "Panama",
         "flag": "🇵🇦",
         "confederation": "CONCACAF",
-        "fifaRanking": 42,
+        "fifaRanking": 48,
         "players": [
             {
-                "name": "Eddie Roberts",
+                "name": "Luis Mejía",
                 "position": "GK",
-                "club": "Estudiantes",
-                "league": "Unknown",
-                "age": 31,
-                "birthplace": {
-                    "city": "Panama City",
-                    "country": "Panama",
-                    "lat": 8.1115,
-                    "lng": -79.4898
-                }
-            },
-            {
-                "name": "John Gunn",
-                "position": "GK",
-                "club": "New England Revolution",
-                "league": "MLS",
-                "age": 26,
+                "club": "Nacional",
+                "league": "Uruguayan Primera",
+                "age": 35,
                 "birthplace": {
                     "city": "Panama City",
                     "country": "Panama",
@@ -13732,11 +16549,115 @@ const squadData = {
                 }
             },
             {
-                "name": "Richard Peralta",
-                "position": "DF",
-                "club": "Monagas",
+                "name": "César Samudio",
+                "position": "GK",
+                "club": "Marathón",
                 "league": "Unknown",
                 "age": 32,
+                "birthplace": {
+                    "city": "Panama City",
+                    "country": "Panama",
+                    "lat": 8.9711,
+                    "lng": -79.5347
+                }
+            },
+            {
+                "name": "Orlando Mosquera",
+                "position": "GK",
+                "club": "Al-Fayha",
+                "league": "Saudi Pro League",
+                "age": 31,
+                "birthplace": {
+                    "city": "Panama City",
+                    "country": "Panama",
+                    "lat": 8.9711,
+                    "lng": -79.5347
+                }
+            },
+            {
+                "name": "César Blackman",
+                "position": "DF",
+                "club": "Slovan Bratislava",
+                "league": "Unknown",
+                "age": 27,
+                "birthplace": {
+                    "city": "Panama City",
+                    "country": "Panama",
+                    "lat": 8.9711,
+                    "lng": -79.5347
+                }
+            },
+            {
+                "name": "José Córdoba",
+                "position": "DF",
+                "club": "Norwich City",
+                "league": "EFL Championship",
+                "age": 24,
+                "birthplace": {
+                    "city": "Panama City",
+                    "country": "Panama",
+                    "lat": 8.9711,
+                    "lng": -79.5347
+                }
+            },
+            {
+                "name": "Martín Krug",
+                "position": "DF",
+                "club": "Atlético Levante",
+                "league": "La Liga",
+                "age": 19,
+                "birthplace": {
+                    "city": "Chicago",
+                    "country": "United States",
+                    "lat": 41.8819,
+                    "lng": -87.6278
+                }
+            },
+            {
+                "name": "Roderick Miller",
+                "position": "DF",
+                "club": "Turan Tovuz",
+                "league": "Unknown",
+                "age": 33,
+                "birthplace": {
+                    "city": "Panama City",
+                    "country": "Panama",
+                    "lat": 8.9711,
+                    "lng": -79.5347
+                }
+            },
+            {
+                "name": "Jiovany Ramos",
+                "position": "DF",
+                "club": "Puerto Cabello",
+                "league": "Unknown",
+                "age": 29,
+                "birthplace": {
+                    "city": "Panama City",
+                    "country": "Panama",
+                    "lat": 8.9711,
+                    "lng": -79.5347
+                }
+            },
+            {
+                "name": "Eric Davis",
+                "position": "DF",
+                "club": "Plaza Amador",
+                "league": "Unknown",
+                "age": 35,
+                "birthplace": {
+                    "city": "Colón City",
+                    "country": "Panama",
+                    "lat": 9.3598,
+                    "lng": -79.9004
+                }
+            },
+            {
+                "name": "Andrés Andrade",
+                "position": "DF",
+                "club": "LASK",
+                "league": "Austrian Bundesliga",
+                "age": 27,
                 "birthplace": {
                     "city": "Panama City",
                     "country": "Panama",
@@ -13758,11 +16679,11 @@ const squadData = {
                 }
             },
             {
-                "name": "Omar Córdoba",
+                "name": "Michael Amir Murillo",
                 "position": "DF",
-                "club": "Plaza Amador",
-                "league": "Unknown",
-                "age": 31,
+                "club": "Beşiktaş",
+                "league": "Turkish Super Lig",
+                "age": 30,
                 "birthplace": {
                     "city": "Panama City",
                     "country": "Panama",
@@ -13771,114 +16692,62 @@ const squadData = {
                 }
             },
             {
-                "name": "Kevin Galván",
-                "position": "DF",
-                "club": "San Francisco",
-                "league": "Unknown",
+                "name": "Cristian Martínez",
+                "position": "MF",
+                "club": "Ironi Kiryat Shmona",
+                "league": "Israeli Premier League",
                 "age": 29,
                 "birthplace": {
                     "city": "Panama City",
                     "country": "Panama",
-                    "lat": 9.1776,
-                    "lng": -79.597
+                    "lat": 8.9711,
+                    "lng": -79.5347
                 }
             },
             {
-                "name": "Luis Asprilla",
-                "position": "DF",
-                "club": "Tauro",
-                "league": "Unknown",
-                "age": 24,
-                "birthplace": {
-                    "city": "Panama City",
-                    "country": "Panama",
-                    "lat": 8.6643,
-                    "lng": -79.0657
-                }
-            },
-            {
-                "name": "Orman Davis",
-                "position": "DF",
-                "club": "Independiente",
-                "league": "Unknown",
-                "age": 23,
-                "birthplace": {
-                    "city": "Panama City",
-                    "country": "Panama",
-                    "lat": 8.2878,
-                    "lng": -80.3259
-                }
-            },
-            {
-                "name": "Javier Rivera",
-                "position": "DF",
-                "club": "Marathón",
-                "league": "Unknown",
+                "name": "José Luis Rodríguez",
+                "position": "MF",
+                "club": "Juárez",
+                "league": "Liga MX",
                 "age": 27,
                 "birthplace": {
                     "city": "Panama City",
                     "country": "Panama",
-                    "lat": 9.2774,
-                    "lng": -80.11
+                    "lat": 8.9711,
+                    "lng": -79.5347
                 }
             },
             {
-                "name": "Daniel Aparicio",
-                "position": "DF",
-                "club": "Real España",
-                "league": "Unknown",
-                "age": 25,
-                "birthplace": {
-                    "city": "Panama City",
-                    "country": "Panama",
-                    "lat": 9.2309,
-                    "lng": -79.9029
-                }
-            },
-            {
-                "name": "Ariel Arroyo",
-                "position": "DF",
-                "club": "Árabe Unido",
-                "league": "Unknown",
-                "age": 21,
-                "birthplace": {
-                    "city": "Panama City",
-                    "country": "Panama",
-                    "lat": 8.3483,
-                    "lng": -79.8294
-                }
-            },
-            {
-                "name": "Aimar Sánchez",
-                "position": "DF",
-                "club": "New York Red Bulls II",
-                "league": "MLS",
-                "age": 20,
-                "birthplace": {
-                    "city": "Panama City",
-                    "country": "Panama",
-                    "lat": 8.0245,
-                    "lng": -78.8336
-                }
-            },
-            {
-                "name": "Juan Carlos Hall",
-                "position": "DF",
-                "club": "Sporting San Miguelito",
-                "league": "Primeira Liga",
-                "age": 19,
-                "birthplace": {
-                    "city": "Panama City",
-                    "country": "Panama",
-                    "lat": 8.6,
-                    "lng": -79.8908
-                }
-            },
-            {
-                "name": "Jovani Welch",
+                "name": "Adalberto Carrasquilla",
                 "position": "MF",
-                "club": "Monagas",
-                "league": "Unknown",
+                "club": "UNAM",
+                "league": "Liga MX",
+                "age": 27,
+                "birthplace": {
+                    "city": "Panama City",
+                    "country": "Panama",
+                    "lat": 8.9711,
+                    "lng": -79.5347
+                }
+            },
+            {
+                "name": "Yoel Bárcenas",
+                "position": "MF",
+                "club": "Mazatlán",
+                "league": "Liga MX",
+                "age": 32,
+                "birthplace": {
+                    "city": "Colón City",
+                    "country": "Panama",
+                    "lat": 9.3598,
+                    "lng": -79.9004
+                }
+            },
+            {
+                "name": "Carlos Harvey",
+                "position": "MF",
+                "club": "Minnesota United",
+                "league": "MLS",
                 "age": 26,
                 "birthplace": {
                     "city": "Panama City",
@@ -13888,7394 +16757,81 @@ const squadData = {
                 }
             },
             {
-                "name": "José Murillo",
+                "name": "Aníbal Godoy",
                 "position": "MF",
-                "club": "Plaza Amador",
+                "club": "San Diego",
+                "league": "MLS",
+                "age": 36,
+                "birthplace": {
+                    "city": "Panama City",
+                    "country": "Panama",
+                    "lat": 8.9711,
+                    "lng": -79.5347
+                }
+            },
+            {
+                "name": "César Yanis",
+                "position": "MF",
+                "club": "Cobresal",
                 "league": "Unknown",
                 "age": 30,
                 "birthplace": {
-                    "city": "Panama",
-                    "country": "Panama",
-                    "lat": 8.6167,
-                    "lng": -80.3667
-                }
-            },
-            {
-                "name": "Kahiser Lenis",
-                "position": "MF",
-                "club": "Jaguares",
-                "league": "Colombian Primera A",
-                "age": 25,
-                "birthplace": {
                     "city": "Panama City",
                     "country": "Panama",
                     "lat": 8.9711,
                     "lng": -79.5347
-                }
-            },
-            {
-                "name": "Ricardo Phillips",
-                "position": "MF",
-                "club": "Plaza Amador",
-                "league": "Unknown",
-                "age": 24,
-                "birthplace": {
-                    "city": "Panama City",
-                    "country": "Panama",
-                    "lat": 8.9711,
-                    "lng": -79.5347
-                }
-            },
-            {
-                "name": "Giovany Herbert",
-                "position": "MF",
-                "club": "Árabe Unido",
-                "league": "Unknown",
-                "age": 20,
-                "birthplace": {
-                    "city": "Colón City",
-                    "country": "Panama",
-                    "lat": 9.3598,
-                    "lng": -79.9004
-                }
-            },
-            {
-                "name": "Ángel Caicedo",
-                "position": "MF",
-                "club": "Independiente",
-                "league": "Unknown",
-                "age": 26,
-                "birthplace": {
-                    "city": "Panama City",
-                    "country": "Panama",
-                    "lat": 9.7558,
-                    "lng": -78.9749
-                }
-            },
-            {
-                "name": "Abdul Knight",
-                "position": "MF",
-                "club": "Plaza Amador",
-                "league": "Unknown",
-                "age": 24,
-                "birthplace": {
-                    "city": "Panama City",
-                    "country": "Panama",
-                    "lat": 8.5111,
-                    "lng": -79.0411
-                }
-            },
-            {
-                "name": "Héctor Hurtado",
-                "position": "MF",
-                "club": "Sporting San Miguelito",
-                "league": "Primeira Liga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Panama City",
-                    "country": "Panama",
-                    "lat": 9.933,
-                    "lng": -79.9341
-                }
-            },
-            {
-                "name": "Gustavo Herrera",
-                "position": "FW",
-                "club": "Sporting San Miguelito",
-                "league": "Primeira Liga",
-                "age": 20,
-                "birthplace": {
-                    "city": "Colón City",
-                    "country": "Panama",
-                    "lat": 9.3598,
-                    "lng": -79.9004
                 }
             },
             {
                 "name": "Kadir Barría",
                 "position": "FW",
-                "club": "Botafogo U20",
+                "club": "Botafogo",
                 "league": "Brasileirão",
                 "age": 18,
                 "birthplace": {
                     "city": "Panama City",
                     "country": "Panama",
-                    "lat": 8.333,
-                    "lng": -79.443
+                    "lat": 9.4181,
+                    "lng": -79.6653
                 }
             },
             {
-                "name": "Saed Díaz",
+                "name": "Ismael Díaz",
                 "position": "FW",
-                "club": "Tauro",
-                "league": "Unknown",
-                "age": 26,
+                "club": "León",
+                "league": "Liga MX",
+                "age": 28,
                 "birthplace": {
                     "city": "Panama City",
                     "country": "Panama",
                     "lat": 8.9711,
                     "lng": -79.5347
                 }
-            }
-        ]
-    },
-    "ITA": {
-        "name": "Italy",
-        "flag": "🇮🇹",
-        "confederation": "UEFA",
-        "fifaRanking": 43,
-        "players": [
-            {
-                "name": "Gianluigi Donnarumma",
-                "position": "GK",
-                "club": "Manchester City",
-                "league": "Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Castellammare di Stabia",
-                    "country": "Italy",
-                    "lat": 40.6947,
-                    "lng": 14.4803
-                }
-            },
-            {
-                "name": "Marco Carnesecchi",
-                "position": "GK",
-                "club": "Atalanta",
-                "league": "Serie A",
-                "age": 25,
-                "birthplace": {
-                    "city": "Rimini",
-                    "country": "Italy",
-                    "lat": 44.0594,
-                    "lng": 12.5683
-                }
-            },
-            {
-                "name": "Guglielmo Vicario",
-                "position": "GK",
-                "club": "Tottenham Hotspur",
-                "league": "Premier League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Udine",
-                    "country": "Italy",
-                    "lat": 46.0667,
-                    "lng": 13.2333
-                }
-            },
-            {
-                "name": "Elia Caprile",
-                "position": "GK",
-                "club": "Cagliari",
-                "league": "Serie A",
-                "age": 24,
-                "birthplace": {
-                    "city": "Verona",
-                    "country": "Italy",
-                    "lat": 45.4386,
-                    "lng": 10.9928
-                }
-            },
-            {
-                "name": "Raoul Bellanova",
-                "position": "DF",
-                "club": "Atalanta",
-                "league": "Serie A",
-                "age": 25,
-                "birthplace": {
-                    "city": "Rho",
-                    "country": "Italy",
-                    "lat": 45.5333,
-                    "lng": 9.0333
-                }
-            },
-            {
-                "name": "Federico Dimarco",
-                "position": "DF",
-                "club": "Inter Milan",
-                "league": "Serie A",
-                "age": 28,
-                "birthplace": {
-                    "city": "Milan",
-                    "country": "Italy",
-                    "lat": 45.4669,
-                    "lng": 9.19
-                }
-            },
-            {
-                "name": "Alessandro Buongiorno",
-                "position": "DF",
-                "club": "Napoli",
-                "league": "Serie A",
-                "age": 26,
-                "birthplace": {
-                    "city": "Turin",
-                    "country": "Italy",
-                    "lat": 45.0792,
-                    "lng": 7.6761
-                }
-            },
-            {
-                "name": "Matteo Gabbia",
-                "position": "DF",
-                "club": "AC Milan",
-                "league": "Serie A",
-                "age": 26,
-                "birthplace": {
-                    "city": "Busto Arsizio",
-                    "country": "Italy",
-                    "lat": 45.612,
-                    "lng": 8.8518
-                }
-            },
-            {
-                "name": "Andrea Cambiaso",
-                "position": "DF",
-                "club": "Juventus",
-                "league": "Serie A",
-                "age": 25,
-                "birthplace": {
-                    "city": "Genoa",
-                    "country": "Italy",
-                    "lat": 44.4072,
-                    "lng": 8.934
-                }
-            },
-            {
-                "name": "Alessandro Bastoni",
-                "position": "DF",
-                "club": "Inter Milan",
-                "league": "Serie A",
-                "age": 26,
-                "birthplace": {
-                    "city": "Casalmaggiore",
-                    "country": "Italy",
-                    "lat": 44.9858,
-                    "lng": 10.4147
-                }
-            },
-            {
-                "name": "Giovanni Di Lorenzo",
-                "position": "DF",
-                "club": "Napoli",
-                "league": "Serie A",
-                "age": 32,
-                "birthplace": {
-                    "city": "Castelnuovo di Garfagnana",
-                    "country": "Italy",
-                    "lat": 44.1219,
-                    "lng": 10.4056
-                }
-            },
-            {
-                "name": "Gianluca Mancini",
-                "position": "DF",
-                "club": "Roma",
-                "league": "Serie A",
-                "age": 29,
-                "birthplace": {
-                    "city": "Pontedera",
-                    "country": "Italy",
-                    "lat": 43.6625,
-                    "lng": 10.6328
-                }
-            },
-            {
-                "name": "Manuel Locatelli",
-                "position": "MF",
-                "club": "Juventus",
-                "league": "Serie A",
-                "age": 28,
-                "birthplace": {
-                    "city": "Lecco",
-                    "country": "Italy",
-                    "lat": 45.8533,
-                    "lng": 9.3905
-                }
-            },
-            {
-                "name": "Samuele Ricci",
-                "position": "MF",
-                "club": "AC Milan",
-                "league": "Serie A",
-                "age": 24,
-                "birthplace": {
-                    "city": "Pisa",
-                    "country": "Italy",
-                    "lat": 43.7167,
-                    "lng": 10.4
-                }
-            },
-            {
-                "name": "Davide Frattesi",
-                "position": "MF",
-                "club": "Inter Milan",
-                "league": "Serie A",
-                "age": 26,
-                "birthplace": {
-                    "city": "Rome",
-                    "country": "Italy",
-                    "lat": 41.8931,
-                    "lng": 12.4828
-                }
-            },
-            {
-                "name": "Bryan Cristante",
-                "position": "MF",
-                "club": "Roma",
-                "league": "Serie A",
-                "age": 30,
-                "birthplace": {
-                    "city": "San Vito al Tagliamento",
-                    "country": "Italy",
-                    "lat": 45.9153,
-                    "lng": 12.8556
-                }
-            },
-            {
-                "name": "Nicolò Barella",
-                "position": "MF",
-                "club": "Inter Milan",
-                "league": "Serie A",
-                "age": 29,
-                "birthplace": {
-                    "city": "Cagliari",
-                    "country": "Italy",
-                    "lat": 39.2167,
-                    "lng": 9.1167
-                }
-            },
-            {
-                "name": "Sandro Tonali",
-                "position": "MF",
-                "club": "Newcastle United",
-                "league": "Premier League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Lodi",
-                    "country": "Italy",
-                    "lat": 45.3167,
-                    "lng": 9.5
-                }
-            },
-            {
-                "name": "Matteo Politano",
-                "position": "FW",
-                "club": "Napoli",
-                "league": "Serie A",
-                "age": 32,
-                "birthplace": {
-                    "city": "Rome",
-                    "country": "Italy",
-                    "lat": 41.8931,
-                    "lng": 12.4828
-                }
-            },
-            {
-                "name": "Mateo Retegui",
-                "position": "FW",
-                "club": "Al-Qadsiah",
-                "league": "Saudi Pro League",
-                "age": 26,
-                "birthplace": {
-                    "city": "San Fernando",
-                    "country": "Argentina",
-                    "lat": -34.4407,
-                    "lng": -58.5575
-                }
-            },
-            {
-                "name": "Giacomo Raspadori",
-                "position": "FW",
-                "club": "Atalanta",
-                "league": "Serie A",
-                "age": 25,
-                "birthplace": {
-                    "city": "Bentivoglio",
-                    "country": "Italy",
-                    "lat": 44.6353,
-                    "lng": 11.4189
-                }
-            },
-            {
-                "name": "Gianluca Scamacca",
-                "position": "FW",
-                "club": "Atalanta",
-                "league": "Serie A",
-                "age": 27,
-                "birthplace": {
-                    "city": "Rome",
-                    "country": "Italy",
-                    "lat": 41.8931,
-                    "lng": 12.4828
-                }
-            },
-            {
-                "name": "Pio Esposito",
-                "position": "FW",
-                "club": "Inter Milan",
-                "league": "Serie A",
-                "age": 20,
-                "birthplace": {
-                    "city": "Castellammare di Stabia",
-                    "country": "Italy",
-                    "lat": 40.6947,
-                    "lng": 14.4803
-                }
-            },
-            {
-                "name": "Riccardo Orsolini",
-                "position": "FW",
-                "club": "Bologna",
-                "league": "Serie A",
-                "age": 29,
-                "birthplace": {
-                    "city": "Ascoli Piceno",
-                    "country": "Italy",
-                    "lat": 42.8547,
-                    "lng": 13.5753
-                }
-            },
-            {
-                "name": "Mattia Zaccagni",
-                "position": "FW",
-                "club": "Lazio",
-                "league": "Serie A",
-                "age": 30,
-                "birthplace": {
-                    "city": "Cesena",
-                    "country": "Italy",
-                    "lat": 44.1333,
-                    "lng": 12.2333
-                }
-            }
-        ]
-    },
-    "WAL": {
-        "name": "Wales",
-        "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
-        "confederation": "UEFA",
-        "fifaRanking": 44,
-        "players": [
-            {
-                "name": "Karl Darlow",
-                "position": "GK",
-                "club": "Leeds United",
-                "league": "Premier League",
-                "age": 35,
-                "birthplace": {
-                    "city": "Northampton",
-                    "country": "United Kingdom",
-                    "lat": 52.2333,
-                    "lng": -0.9
-                }
-            },
-            {
-                "name": "Adam Davies",
-                "position": "GK",
-                "club": "Sheffield United",
-                "league": "EFL Championship",
-                "age": 33,
-                "birthplace": {
-                    "city": "Rinteln",
-                    "country": "Germany",
-                    "lat": 52.186,
-                    "lng": 9.0792
-                }
-            },
-            {
-                "name": "Tom King",
-                "position": "GK",
-                "club": "Everton",
-                "league": "Premier League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Plymouth",
-                    "country": "United Kingdom",
-                    "lat": 50.3714,
-                    "lng": -4.1422
-                }
-            },
-            {
-                "name": "Joe Rodon",
-                "position": "DF",
-                "club": "Leeds United",
-                "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Swansea",
-                    "country": "United Kingdom",
-                    "lat": 51.6167,
-                    "lng": -3.95
-                }
-            },
-            {
-                "name": "Chris Mepham",
-                "position": "DF",
-                "club": "West Bromwich Albion",
-                "league": "EFL Championship",
-                "age": 28,
-                "birthplace": {
-                    "city": "Hammersmith",
-                    "country": "United Kingdom",
-                    "lat": 51.4928,
-                    "lng": -0.2229
-                }
-            },
-            {
-                "name": "Neco Williams",
-                "position": "DF",
-                "club": "Nottingham Forest",
-                "league": "Premier League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Wrexham",
-                    "country": "United Kingdom",
-                    "lat": 53.0467,
-                    "lng": -2.9936
-                }
-            },
-            {
-                "name": "Rhys Norrington-Davies",
-                "position": "DF",
-                "club": "Queens Park Rangers",
-                "league": "EFL Championship",
-                "age": 26,
-                "birthplace": {
-                    "city": "Riyadh",
-                    "country": "Saudi Arabia",
-                    "lat": 24.65,
-                    "lng": 46.71
-                }
-            },
-            {
-                "name": "Jay Dasilva",
-                "position": "DF",
-                "club": "Coventry City",
-                "league": "EFL Championship",
-                "age": 27,
-                "birthplace": {
-                    "city": "Luton",
-                    "country": "United Kingdom",
-                    "lat": 51.8783,
-                    "lng": -0.4147
-                }
-            },
-            {
-                "name": "Ronan Kpakio",
-                "position": "DF",
-                "club": "Cardiff City",
-                "league": "EFL League One",
-                "age": 18,
-                "birthplace": {
-                    "city": "Cardiff",
-                    "country": "United Kingdom",
-                    "lat": 51.4817,
-                    "lng": -3.1792
-                }
-            },
-            {
-                "name": "Dylan Lawlor",
-                "position": "DF",
-                "club": "Cardiff City",
-                "league": "EFL League One",
-                "age": 20,
-                "birthplace": {
-                    "city": "Caerphilly",
-                    "country": "United Kingdom",
-                    "lat": 51.578,
-                    "lng": -3.218
-                }
-            },
-            {
-                "name": "Josh Sheehan",
-                "position": "MF",
-                "club": "Bolton Wanderers",
-                "league": "Premier League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Llanelli",
-                    "country": "United Kingdom",
-                    "lat": 51.6833,
-                    "lng": -4.15
-                }
-            },
-            {
-                "name": "Liam Cullen",
-                "position": "MF",
-                "club": "Swansea City",
-                "league": "EFL Championship",
-                "age": 26,
-                "birthplace": {
-                    "city": "Swansea",
-                    "country": "United Kingdom",
-                    "lat": 51.6167,
-                    "lng": -3.95
-                }
-            },
-            {
-                "name": "Rubin Colwill",
-                "position": "MF",
-                "club": "Cardiff City",
-                "league": "EFL League One",
-                "age": 23,
-                "birthplace": {
-                    "city": "Neath",
-                    "country": "United Kingdom",
-                    "lat": 51.66,
-                    "lng": -3.81
-                }
-            },
-            {
-                "name": "Joel Colwill",
-                "position": "MF",
-                "club": "Cardiff City",
-                "league": "EFL League One",
-                "age": 21,
-                "birthplace": {
-                    "city": "Cardiff",
-                    "country": "Wales",
-                    "lat": 50.7727,
-                    "lng": -3.8174
-                }
-            },
-            {
-                "name": "Harry Wilson",
-                "position": "FW",
-                "club": "Fulham",
-                "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Wrexham",
-                    "country": "United Kingdom",
-                    "lat": 53.0467,
-                    "lng": -2.9936
-                }
-            },
-            {
-                "name": "Daniel James",
-                "position": "FW",
-                "club": "Leeds United",
-                "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Kingston upon Hull",
-                    "country": "Kingdom of England",
-                    "lat": 53.7444,
-                    "lng": -0.3325
-                }
-            },
-            {
-                "name": "Brennan Johnson",
-                "position": "FW",
-                "club": "Crystal Palace",
-                "league": "Premier League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Nottingham",
-                    "country": "United Kingdom",
-                    "lat": 52.955,
-                    "lng": -1.1492
-                }
-            },
-            {
-                "name": "David Brooks",
-                "position": "FW",
-                "club": "Bournemouth",
-                "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Warrington",
-                    "country": "United Kingdom",
-                    "lat": 53.3873,
-                    "lng": -2.6029
-                }
-            },
-            {
-                "name": "Sorba Thomas",
-                "position": "FW",
-                "club": "Stoke City",
-                "league": "EFL Championship",
-                "age": 27,
-                "birthplace": {
-                    "city": "London Borough of Newham",
-                    "country": "United Kingdom",
-                    "lat": 51.5167,
-                    "lng": 0.0333
-                }
-            },
-            {
-                "name": "Nathan Broadhead",
-                "position": "FW",
-                "club": "Wrexham",
-                "league": "Welsh Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Bangor",
-                    "country": "United Kingdom",
-                    "lat": 53.228,
-                    "lng": -4.128
-                }
-            },
-            {
-                "name": "Mark Harris",
-                "position": "FW",
-                "club": "Oxford United",
-                "league": "EFL Championship",
-                "age": 27,
-                "birthplace": {
-                    "city": "Swansea",
-                    "country": "United Kingdom",
-                    "lat": 51.6167,
-                    "lng": -3.95
-                }
-            },
-            {
-                "name": "Lewis Koumas",
-                "position": "FW",
-                "club": "Hull City",
-                "league": "EFL Championship",
-                "age": 20,
-                "birthplace": {
-                    "city": "Chester",
-                    "country": "United Kingdom",
-                    "lat": 53.2,
-                    "lng": -2.8833
-                }
-            },
-            {
-                "name": "Isaak Davies",
-                "position": "FW",
-                "club": "Cardiff City",
-                "league": "EFL League One",
-                "age": 24,
-                "birthplace": {
-                    "city": "Aberdare",
-                    "country": "United Kingdom",
-                    "lat": 51.7131,
-                    "lng": -3.445
-                }
-            }
-        ]
-    },
-    "BIH": {
-        "name": "Bosnia & Herz.",
-        "flag": "🇧🇦",
-        "confederation": "UEFA",
-        "fifaRanking": 45,
-        "players": [
-            {
-                "name": "Nikola Vasilj",
-                "position": "GK",
-                "club": "FC St. Pauli",
-                "league": "Bundesliga",
-                "age": 30,
-                "birthplace": {
-                    "city": "Mostar",
-                    "country": "Bosnia and Herzegovina",
-                    "lat": 43.3436,
-                    "lng": 17.8075
-                }
-            },
-            {
-                "name": "Osman Hadžikić",
-                "position": "GK",
-                "club": "Slaven Belupo",
-                "league": "Croatian First League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Klosterneuburg",
-                    "country": "Austria",
-                    "lat": 48.3042,
-                    "lng": 16.3167
-                }
-            },
-            {
-                "name": "Martin Zlomislić",
-                "position": "GK",
-                "club": "Rijeka",
-                "league": "Croatian First League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Posušje",
-                    "country": "Bosnia and Herzegovina",
-                    "lat": 43.4722,
-                    "lng": 17.3267
-                }
-            },
-            {
-                "name": "Nihad Mujakić",
-                "position": "DF",
-                "club": "Gaziantep",
-                "league": "Turkish Super Lig",
-                "age": 27,
-                "birthplace": {
-                    "city": "Sarajevo",
-                    "country": "Bosnia and Herzegovina",
-                    "lat": 43.8564,
-                    "lng": 18.4131
-                }
-            },
-            {
-                "name": "Dennis Hadžikadunić",
-                "position": "DF",
-                "club": "Sampdoria",
-                "league": "Serie B",
-                "age": 27,
-                "birthplace": {
-                    "city": "Malmö",
-                    "country": "Sweden",
-                    "lat": 55.5833,
-                    "lng": 13
-                }
-            },
-            {
-                "name": "Tarik Muharemović",
-                "position": "DF",
-                "club": "Sassuolo",
-                "league": "Serie A",
-                "age": 22,
-                "birthplace": {
-                    "city": "Ljubljana",
-                    "country": "Slovenia",
-                    "lat": 46.0514,
-                    "lng": 14.5061
-                }
-            },
-            {
-                "name": "Sead Kolašinac",
-                "position": "DF",
-                "club": "Atalanta",
-                "league": "Serie A",
-                "age": 32,
-                "birthplace": {
-                    "city": "Karlsruhe",
-                    "country": "Germany",
-                    "lat": 49.0167,
-                    "lng": 8.4
-                }
-            },
-            {
-                "name": "Amar Dedić",
-                "position": "DF",
-                "club": "Benfica",
-                "league": "Primeira Liga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Zell am See",
-                    "country": "Austria",
-                    "lat": 47.3233,
-                    "lng": 12.7981
-                }
-            },
-            {
-                "name": "Emir Karić",
-                "position": "DF",
-                "club": "Sturm Graz",
-                "league": "Austrian Bundesliga",
-                "age": 28,
-                "birthplace": {
-                    "city": "Linz",
-                    "country": "Austria",
-                    "lat": 48.3058,
-                    "lng": 14.2864
-                }
-            },
-            {
-                "name": "Arjan Malić",
-                "position": "DF",
-                "club": "Sturm Graz",
-                "league": "Austrian Bundesliga",
-                "age": 20,
-                "birthplace": {
-                    "city": "Jesenice",
-                    "country": "Slovenia",
-                    "lat": 46.4366,
-                    "lng": 14.0602
-                }
-            },
-            {
-                "name": "Nikola Katić",
-                "position": "DF",
-                "club": "Schalke 04",
-                "league": "2. Bundesliga",
-                "age": 29,
-                "birthplace": {
-                    "city": "Ljubuški",
-                    "country": "Bosnia and Herzegovina",
-                    "lat": 43.1981,
-                    "lng": 17.5467
-                }
-            },
-            {
-                "name": "Benjamin Tahirović",
-                "position": "MF",
-                "club": "Brøndby",
-                "league": "Danish Superliga",
-                "age": 22,
-                "birthplace": {
-                    "city": "Spånga-Tensta city district",
-                    "country": "Sweden",
-                    "lat": 59.3942,
-                    "lng": 17.9011
-                }
-            },
-            {
-                "name": "Armin Gigović",
-                "position": "MF",
-                "club": "Young Boys",
-                "league": "Swiss Super League",
-                "age": 23,
-                "birthplace": {
-                    "city": "Lund",
-                    "country": "Sweden",
-                    "lat": 55.7083,
-                    "lng": 13.1992
-                }
-            },
-            {
-                "name": "Ivan Bašić",
-                "position": "MF",
-                "club": "Astana",
-                "league": "Unknown",
-                "age": 23,
-                "birthplace": {
-                    "city": "Imotski",
-                    "country": "Croatia",
-                    "lat": 43.45,
-                    "lng": 17.2167
-                }
-            },
-            {
-                "name": "Ivan Šunjić",
-                "position": "MF",
-                "club": "Pafos",
-                "league": "Cypriot First Division",
-                "age": 29,
-                "birthplace": {
-                    "city": "Zenica",
-                    "country": "Bosnia and Herzegovina",
-                    "lat": 44.2017,
-                    "lng": 17.9039
-                }
-            },
-            {
-                "name": "Amar Memić",
-                "position": "MF",
-                "club": "Viktoria Plzeň",
-                "league": "Czech First League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Sarajevo",
-                    "country": "Bosnia and Herzegovina",
-                    "lat": 43.8564,
-                    "lng": 18.4131
-                }
-            },
-            {
-                "name": "Amir Hadžiahmetović",
-                "position": "MF",
-                "club": "Hull City",
-                "league": "EFL Championship",
-                "age": 28,
-                "birthplace": {
-                    "city": "Nexø",
-                    "country": "Denmark",
-                    "lat": 55.0625,
-                    "lng": 15.1319
-                }
-            },
-            {
-                "name": "Dario Šarić",
-                "position": "MF",
-                "club": "Antalyaspor",
-                "league": "Turkish Super Lig",
-                "age": 28,
-                "birthplace": {
-                    "city": "Cento",
-                    "country": "Italy",
-                    "lat": 44.7333,
-                    "lng": 11.2833
-                }
-            },
-            {
-                "name": "Esmir Bajraktarević",
-                "position": "MF",
-                "club": "PSV",
-                "league": "Eredivisie",
-                "age": 20,
-                "birthplace": {
-                    "city": "Appleton",
-                    "country": "United States",
-                    "lat": 44.2822,
-                    "lng": -88.4183
-                }
-            },
-            {
-                "name": "Kerim Alajbegović",
-                "position": "MF",
-                "club": "Red Bull Salzburg",
-                "league": "Austrian Bundesliga",
-                "age": 18,
-                "birthplace": {
-                    "city": "Cologne",
-                    "country": "Germany",
-                    "lat": 50.9422,
-                    "lng": 6.9578
-                }
-            },
-            {
-                "name": "Dženis Burnić",
-                "position": "MF",
-                "club": "Karlsruher SC",
-                "league": "Bundesliga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Hamm",
-                    "country": "Germany",
-                    "lat": 51.6814,
-                    "lng": 7.8192
-                }
-            },
-            {
-                "name": "Samed Baždar",
-                "position": "FW",
-                "club": "Jagiellonia Białystok",
-                "league": "Polish Ekstraklasa",
-                "age": 22,
-                "birthplace": {
-                    "city": "Novi Pazar",
-                    "country": "Serbia",
-                    "lat": 43.15,
-                    "lng": 20.5167
-                }
-            },
-            {
-                "name": "Haris Tabaković",
-                "position": "FW",
-                "club": "Borussia Mönchengladbach",
-                "league": "Bundesliga",
-                "age": 31,
-                "birthplace": {
-                    "city": "Grenchen",
-                    "country": "Switzerland",
-                    "lat": 47.1931,
-                    "lng": 7.3958
-                }
-            },
-            {
-                "name": "Edin Džeko",
-                "position": "FW",
-                "club": "Schalke 04",
-                "league": "2. Bundesliga",
-                "age": 39,
-                "birthplace": {
-                    "city": "Sarajevo",
-                    "country": "Bosnia and Herzegovina",
-                    "lat": 43.8564,
-                    "lng": 18.4131
-                }
-            }
-        ]
-    },
-    "NIR": {
-        "name": "N. Ireland",
-        "flag": "🇬🇧",
-        "confederation": "UEFA",
-        "fifaRanking": 46,
-        "players": [
-            {
-                "name": "Josh Clarke",
-                "position": "GK",
-                "club": "Partick Thistle",
-                "league": "Scottish Premiership",
-                "age": 21,
-                "birthplace": {
-                    "city": "London",
-                    "country": "United Kingdom",
-                    "lat": 51.5072,
-                    "lng": -0.1275
-                }
-            },
-            {
-                "name": "Conor Hazard",
-                "position": "GK",
-                "club": "Plymouth Argyle",
-                "league": "EFL League One",
-                "age": 27,
-                "birthplace": {
-                    "city": "Downpatrick",
-                    "country": "United Kingdom",
-                    "lat": 54.322,
-                    "lng": -5.703
-                }
-            },
-            {
-                "name": "Luke Southwood",
-                "position": "GK",
-                "club": "Bristol Rovers",
-                "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Oxford",
-                    "country": "United Kingdom",
-                    "lat": 51.7519,
-                    "lng": -1.2578
-                }
-            },
-            {
-                "name": "Bailey Peacock-Farrell",
-                "position": "GK",
-                "club": "Blackpool",
-                "league": "Premier League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Darlington",
-                    "country": "United Kingdom",
-                    "lat": 54.5228,
-                    "lng": -1.5572
-                }
-            },
-            {
-                "name": "Conor Bradley",
-                "position": "DF",
-                "club": "Liverpool",
-                "league": "Premier League",
-                "age": 22,
-                "birthplace": {
-                    "city": "Castlederg",
-                    "country": "United Kingdom",
-                    "lat": 54.7083,
-                    "lng": -7.5934
-                }
-            },
-            {
-                "name": "Jamal Lewis",
-                "position": "DF",
-                "club": "Preston North End",
-                "league": "EFL Championship",
-                "age": 28,
-                "birthplace": {
-                    "city": "Luton",
-                    "country": "United Kingdom",
-                    "lat": 51.8783,
-                    "lng": -0.4147
-                }
-            },
-            {
-                "name": "Eoin Toal",
-                "position": "DF",
-                "club": "Bolton Wanderers",
-                "league": "Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Armagh",
-                    "country": "United Kingdom",
-                    "lat": 54.3494,
-                    "lng": -6.6544
-                }
-            },
-            {
-                "name": "Ryan Johnson",
-                "position": "DF",
-                "club": "AFC Wimbledon",
-                "league": "Premier League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Birmingham",
-                    "country": "United Kingdom",
-                    "lat": 52.48,
-                    "lng": -1.9025
-                }
-            },
-            {
-                "name": "Terry Devlin",
-                "position": "DF",
-                "club": "Portsmouth",
-                "league": "EFL Championship",
-                "age": 22,
-                "birthplace": {
-                    "city": "Cookstown",
-                    "country": "United Kingdom",
-                    "lat": 54.647,
-                    "lng": -6.745
-                }
-            },
-            {
-                "name": "Ruairi McConville",
-                "position": "DF",
-                "club": "Norwich City",
-                "league": "EFL Championship",
-                "age": 20,
-                "birthplace": {
-                    "city": "Belfast",
-                    "country": "United Kingdom",
-                    "lat": 54.5967,
-                    "lng": -5.93
-                }
-            },
-            {
-                "name": "Paddy McNair",
-                "position": "DF",
-                "club": "Hull City",
-                "league": "EFL Championship",
-                "age": 30,
-                "birthplace": {
-                    "city": "Ballyclare",
-                    "country": "United Kingdom",
-                    "lat": 54.751,
-                    "lng": -5.999
-                }
-            },
-            {
-                "name": "Ciaron Brown",
-                "position": "DF",
-                "club": "Oxford United",
-                "league": "EFL Championship",
-                "age": 28,
-                "birthplace": {
-                    "city": "England",
-                    "country": "United Kingdom",
-                    "lat": 53,
-                    "lng": -1
-                }
-            },
-            {
-                "name": "Daniel Ballard",
-                "position": "DF",
-                "club": "Sunderland",
-                "league": "Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Stevenage",
-                    "country": "United Kingdom",
-                    "lat": 51.9017,
-                    "lng": -0.2019
-                }
-            },
-            {
-                "name": "Trai Hume",
-                "position": "DF",
-                "club": "Sunderland",
-                "league": "Premier League",
-                "age": 23,
-                "birthplace": {
-                    "city": "Ballymena",
-                    "country": "United Kingdom",
-                    "lat": 54.862,
-                    "lng": -6.268
-                }
-            },
-            {
-                "name": "Ethan Galbraith",
-                "position": "MF",
-                "club": "Swansea City",
-                "league": "EFL Championship",
-                "age": 24,
-                "birthplace": {
-                    "city": "Belfast",
-                    "country": "United Kingdom",
-                    "lat": 54.5967,
-                    "lng": -5.93
-                }
-            },
-            {
-                "name": "Jamie Donley",
-                "position": "MF",
-                "club": "Oxford United",
-                "league": "EFL Championship",
-                "age": 21,
-                "birthplace": {
-                    "city": "Antrim",
-                    "country": "United Kingdom",
-                    "lat": 54.7173,
-                    "lng": -6.2055
-                }
-            },
-            {
-                "name": "Paul Smyth",
-                "position": "MF",
-                "club": "Queens Park Rangers",
-                "league": "EFL Championship",
-                "age": 28,
-                "birthplace": {
-                    "city": "Belfast",
-                    "country": "United Kingdom",
-                    "lat": 54.5967,
-                    "lng": -5.93
-                }
-            },
-            {
-                "name": "Isaac Price",
-                "position": "MF",
-                "club": "West Bromwich Albion",
-                "league": "EFL Championship",
-                "age": 22,
-                "birthplace": {
-                    "city": "Pontefract",
-                    "country": "Kingdom of England",
-                    "lat": 53.691,
-                    "lng": -1.312
-                }
-            },
-            {
-                "name": "Justin Devenny",
-                "position": "MF",
-                "club": "Crystal Palace",
-                "league": "Premier League",
-                "age": 22,
-                "birthplace": {
-                    "city": "Irvine",
-                    "country": "United Kingdom",
-                    "lat": 55.6194,
-                    "lng": -4.6611
-                }
-            },
-            {
-                "name": "Brad Lyons",
-                "position": "MF",
-                "club": "Kilmarnock",
-                "league": "Scottish Premiership",
-                "age": 28,
-                "birthplace": {
-                    "city": "Ballymoney",
-                    "country": "United Kingdom",
-                    "lat": 55.071,
-                    "lng": -6.508
-                }
-            },
-            {
-                "name": "Ross McCausland",
-                "position": "MF",
-                "club": "Aris Limassol",
-                "league": "Cypriot First Division",
-                "age": 22,
-                "birthplace": {
-                    "city": "County Antrim",
-                    "country": "United Kingdom",
-                    "lat": 54.865,
-                    "lng": -6.28
-                }
-            },
-            {
-                "name": "Patrick Kelly",
-                "position": "MF",
-                "club": "Barnsley",
-                "league": "Premier League",
-                "age": 21,
-                "birthplace": {
-                    "city": "Belfast",
-                    "country": "Northern Ireland",
-                    "lat": 53.8728,
-                    "lng": -6.4765
-                }
-            },
-            {
-                "name": "Jamie McDonnell",
-                "position": "MF",
-                "club": "Oxford United",
-                "league": "EFL Championship",
-                "age": 21,
-                "birthplace": {
-                    "city": "Belfast",
-                    "country": "Northern Ireland",
-                    "lat": 54.4335,
-                    "lng": -5.193
-                }
-            },
-            {
-                "name": "George Saville",
-                "position": "MF",
-                "club": "Luton Town",
-                "league": "EFL League One",
-                "age": 32,
-                "birthplace": {
-                    "city": "Camberley",
-                    "country": "United Kingdom",
-                    "lat": 51.335,
-                    "lng": -0.742
-                }
-            },
-            {
-                "name": "Callum Marshall",
-                "position": "FW",
-                "club": "VfL Bochum",
-                "league": "Bundesliga",
-                "age": 21,
-                "birthplace": {
-                    "city": "Belfast",
-                    "country": "Northern Ireland",
-                    "lat": 54.6216,
-                    "lng": -5.2438
-                }
-            },
-            {
-                "name": "Dion Charles",
-                "position": "FW",
-                "club": "Huddersfield Town",
-                "league": "Premier League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Preston",
-                    "country": "United Kingdom",
-                    "lat": 53.7594,
-                    "lng": -2.6981
-                }
-            },
-            {
-                "name": "Josh Magennis",
-                "position": "FW",
-                "club": "Exeter City",
-                "league": "Premier League",
-                "age": 35,
-                "birthplace": {
-                    "city": "Bangor",
-                    "country": "United Kingdom",
-                    "lat": 54.66,
-                    "lng": -5.67
-                }
-            },
-            {
-                "name": "Jamie Reid",
-                "position": "FW",
-                "club": "Stevenage",
-                "league": "Premier League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Torquay",
-                    "country": "United Kingdom",
-                    "lat": 50.4625,
-                    "lng": -3.5281
-                }
-            }
-        ]
-    },
-    "UKR": {
-        "name": "Ukraine",
-        "flag": "🇺🇦",
-        "confederation": "UEFA",
-        "fifaRanking": 47,
-        "players": [
-            {
-                "name": "Yevhen Volynets",
-                "position": "GK",
-                "club": "Polissya Zhytomyr",
-                "league": "Ukrainian Premier League",
-                "age": 32,
-                "birthplace": {
-                    "city": "Kaniv",
-                    "country": "Ukraine",
-                    "lat": 49.7447,
-                    "lng": 31.4558
-                }
-            },
-            {
-                "name": "Anatoliy Trubin",
-                "position": "GK",
-                "club": "Benfica",
-                "league": "Primeira Liga",
-                "age": 24,
-                "birthplace": {
-                    "city": "Donetsk",
-                    "country": "Ukraine",
-                    "lat": 48.0158,
-                    "lng": 37.8028
-                }
-            },
-            {
-                "name": "Dmytro Riznyk",
-                "position": "GK",
-                "club": "Shakhtar Donetsk",
-                "league": "Ukrainian Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Poltava",
-                    "country": "Ukraine",
-                    "lat": 49.5894,
-                    "lng": 34.5514
-                }
-            },
-            {
-                "name": "Yukhym Konoplya",
-                "position": "DF",
-                "club": "Shakhtar Donetsk",
-                "league": "Ukrainian Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Donetsk",
-                    "country": "Ukraine",
-                    "lat": 48.0158,
-                    "lng": 37.8028
-                }
-            },
-            {
-                "name": "Bohdan Mykhaylichenko",
-                "position": "DF",
-                "club": "Polissya Zhytomyr",
-                "league": "Ukrainian Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Boryspil",
-                    "country": "Ukraine",
-                    "lat": 50.35,
-                    "lng": 30.95
-                }
-            },
-            {
-                "name": "Oleksandr Svatok",
-                "position": "DF",
-                "club": "Austin FC",
-                "league": "MLS",
-                "age": 31,
-                "birthplace": {
-                    "city": "Kamyanske",
-                    "country": "Ukraine",
-                    "lat": 48.5167,
-                    "lng": 34.6133
-                }
-            },
-            {
-                "name": "Valeriy Bondar",
-                "position": "DF",
-                "club": "Shakhtar Donetsk",
-                "league": "Ukrainian Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Kharkiv",
-                    "country": "Ukraine",
-                    "lat": 49.9925,
-                    "lng": 36.2311
-                }
-            },
-            {
-                "name": "Illia Zabarnyi",
-                "position": "DF",
-                "club": "Paris Saint-Germain",
-                "league": "Ligue 1",
-                "age": 23,
-                "birthplace": {
-                    "city": "Kyiv",
-                    "country": "Ukraine",
-                    "lat": 50.45,
-                    "lng": 30.5236
-                }
-            },
-            {
-                "name": "Taras Mykhavko",
-                "position": "DF",
-                "club": "Dynamo Kyiv",
-                "league": "Ukrainian Premier League",
-                "age": 20,
-                "birthplace": {
-                    "city": "Dobrohostiv",
-                    "country": "Austrian Empire",
-                    "lat": 49.2569,
-                    "lng": 23.5925
-                }
-            },
-            {
-                "name": "Vitaliy Mykolenko",
-                "position": "DF",
-                "club": "Everton",
-                "league": "Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Cherkasy",
-                    "country": "Ukraine",
-                    "lat": 49.4444,
-                    "lng": 32.0597
-                }
-            },
-            {
-                "name": "Oleksandr Karavayev",
-                "position": "DF",
-                "club": "Dynamo Kyiv",
-                "league": "Ukrainian Premier League",
-                "age": 33,
-                "birthplace": {
-                    "city": "Kherson",
-                    "country": "Ukraine",
-                    "lat": 46.6425,
-                    "lng": 32.625
-                }
-            },
-            {
-                "name": "Mykola Matviyenko",
-                "position": "DF",
-                "club": "Shakhtar Donetsk",
-                "league": "Ukrainian Premier League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Saky",
-                    "country": "Ukraine",
-                    "lat": 45.1336,
-                    "lng": 33.5772
-                }
-            },
-            {
-                "name": "Ivan Kalyuzhnyi",
-                "position": "MF",
-                "club": "Metalist 1925 Kharkiv",
-                "league": "Ukrainian Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Dovzhyk",
-                    "country": "Ukraine",
-                    "lat": 50.2097,
-                    "lng": 35.9697
-                }
-            },
-            {
-                "name": "Ruslan Malinovskyi",
-                "position": "MF",
-                "club": "Genoa",
-                "league": "Serie A",
-                "age": 32,
-                "birthplace": {
-                    "city": "Zhytomyr",
-                    "country": "Ukraine",
-                    "lat": 50.2544,
-                    "lng": 28.6578
-                }
-            },
-            {
-                "name": "Mykola Shaparenko",
-                "position": "MF",
-                "club": "Dynamo Kyiv",
-                "league": "Ukrainian Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Rozdolne",
-                    "country": "Ukraine",
-                    "lat": 47.9039,
-                    "lng": 36.9136
-                }
-            },
-            {
-                "name": "Oleksiy Hutsulyak",
-                "position": "MF",
-                "club": "Polissya Zhytomyr",
-                "league": "Ukrainian Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Krasyliv",
-                    "country": "Ukraine",
-                    "lat": 49.65,
-                    "lng": 26.9667
-                }
-            },
-            {
-                "name": "Viktor Tsyhankov",
-                "position": "MF",
-                "club": "Girona",
-                "league": "La Liga",
-                "age": 28,
-                "birthplace": {
-                    "city": "Nahariya",
-                    "country": "Israel",
-                    "lat": 33.0036,
-                    "lng": 35.0925
-                }
-            },
-            {
-                "name": "Yehor Nazaryna",
-                "position": "MF",
-                "club": "Shakhtar Donetsk",
-                "league": "Ukrainian Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Pryluky",
-                    "country": "Ukraine",
-                    "lat": 50.6,
-                    "lng": 32.4
-                }
-            },
-            {
-                "name": "Yehor Yarmolyuk",
-                "position": "MF",
-                "club": "Brentford",
-                "league": "Premier League",
-                "age": 21,
-                "birthplace": {
-                    "city": "Verkhnodniprovsk",
-                    "country": "Ukraine",
-                    "lat": 48.6561,
-                    "lng": 34.3283
-                }
-            },
-            {
-                "name": "Nazar Voloshyn",
-                "position": "MF",
-                "club": "Dynamo Kyiv",
-                "league": "Ukrainian Premier League",
-                "age": 22,
-                "birthplace": {
-                    "city": "Kremenchuk",
-                    "country": "Ukraine",
-                    "lat": 49.0631,
-                    "lng": 33.4039
-                }
-            },
-            {
-                "name": "Oleksandr Zubkov",
-                "position": "MF",
-                "club": "Trabzonspor",
-                "league": "Turkish Super Lig",
-                "age": 29,
-                "birthplace": {
-                    "city": "Makiivka",
-                    "country": "Ukraine",
-                    "lat": 48.0556,
-                    "lng": 37.9611
-                }
-            },
-            {
-                "name": "Vladyslav Vanat",
-                "position": "FW",
-                "club": "Girona",
-                "league": "La Liga",
-                "age": 24,
-                "birthplace": {
-                    "city": "Kamianets-Podilskyi",
-                    "country": "Ukraine",
-                    "lat": 48.6806,
-                    "lng": 26.5806
-                }
-            },
-            {
-                "name": "Roman Yaremchuk",
-                "position": "FW",
-                "club": "Lyon",
-                "league": "Ligue 1",
-                "age": 30,
-                "birthplace": {
-                    "city": "Lviv",
-                    "country": "Ukraine",
-                    "lat": 49.8425,
-                    "lng": 24.0322
-                }
-            }
-        ]
-    },
-    "SWE": {
-        "name": "Sweden",
-        "flag": "🇸🇪",
-        "confederation": "UEFA",
-        "fifaRanking": 48,
-        "players": [
-            {
-                "name": "Jacob Widell Zetterström",
-                "position": "GK",
-                "club": "Derby County",
-                "league": "EFL Championship",
-                "age": 27,
-                "birthplace": {
-                    "city": "Stockholm",
-                    "country": "Sweden",
-                    "lat": 59.3294,
-                    "lng": 18.0686
-                }
-            },
-            {
-                "name": "Noel Törnqvist",
-                "position": "GK",
-                "club": "Como",
-                "league": "Serie A",
-                "age": 24,
-                "birthplace": {
-                    "city": "Stockholm",
-                    "country": "Sweden",
-                    "lat": 58.4264,
-                    "lng": 18.8133
-                }
-            },
-            {
-                "name": "Kristoffer Nordfeldt",
-                "position": "GK",
-                "club": "AIK",
-                "league": "Swedish Allsvenskan",
-                "age": 36,
-                "birthplace": {
-                    "city": "Stockholm",
-                    "country": "Sweden",
-                    "lat": 59.3294,
-                    "lng": 18.0686
-                }
-            },
-            {
-                "name": "Viktor Johansson",
-                "position": "GK",
-                "club": "Stoke City",
-                "league": "EFL Championship",
-                "age": 27,
-                "birthplace": {
-                    "city": "Stockholm",
-                    "country": "Sweden",
-                    "lat": 59.3294,
-                    "lng": 18.0686
-                }
-            },
-            {
-                "name": "Gustaf Lagerbielke",
-                "position": "DF",
-                "club": "Braga",
-                "league": "Primeira Liga",
-                "age": 25,
-                "birthplace": {
-                    "city": "Stockholm",
-                    "country": "Sweden",
-                    "lat": 59.3294,
-                    "lng": 18.0686
-                }
-            },
-            {
-                "name": "Victor Lindelöf",
-                "position": "DF",
-                "club": "Aston Villa",
-                "league": "Premier League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Västerås",
-                    "country": "Sweden",
-                    "lat": 59.6173,
-                    "lng": 16.5422
-                }
-            },
-            {
-                "name": "Isak Hien",
-                "position": "DF",
-                "club": "Atalanta",
-                "league": "Serie A",
-                "age": 27,
-                "birthplace": {
-                    "city": "Kista",
-                    "country": "Sweden",
-                    "lat": 59.4014,
-                    "lng": 17.9425
-                }
-            },
-            {
-                "name": "Gabriel Gudmundsson",
-                "position": "DF",
-                "club": "Leeds United",
-                "league": "Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Malmö",
-                    "country": "Sweden",
-                    "lat": 55.5833,
-                    "lng": 13
-                }
-            },
-            {
-                "name": "Herman Johansson",
-                "position": "DF",
-                "club": "FC Dallas",
-                "league": "MLS",
-                "age": 28,
-                "birthplace": {
-                    "city": "Örnsköldsvik",
-                    "country": "Sweden",
-                    "lat": 63.2655,
-                    "lng": 18.6762
-                }
-            },
-            {
-                "name": "Daniel Svensson",
-                "position": "DF",
-                "club": "Borussia Dortmund",
-                "league": "Bundesliga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Stockholm",
-                    "country": "Sweden",
-                    "lat": 59.3294,
-                    "lng": 18.0686
-                }
-            },
-            {
-                "name": "Ken Sema",
-                "position": "DF",
-                "club": "Pafos",
-                "league": "Cypriot First Division",
-                "age": 32,
-                "birthplace": {
-                    "city": "Norrköping Matteus church parish",
-                    "country": "Sweden",
-                    "lat": 58.5931,
-                    "lng": 16.1719
-                }
-            },
-            {
-                "name": "Carl Starfelt",
-                "position": "DF",
-                "club": "Celta Vigo",
-                "league": "La Liga",
-                "age": 30,
-                "birthplace": {
-                    "city": "Stockholm",
-                    "country": "Sweden",
-                    "lat": 59.3294,
-                    "lng": 18.0686
-                }
-            },
-            {
-                "name": "Emil Krafth",
-                "position": "DF",
-                "club": "Newcastle United",
-                "league": "Premier League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Ljungby",
-                    "country": "Sweden",
-                    "lat": 56.8354,
-                    "lng": 13.941
-                }
-            },
-            {
-                "name": "Emil Forsberg",
-                "position": "MF",
-                "club": "New York Red Bulls",
-                "league": "MLS",
-                "age": 34,
-                "birthplace": {
-                    "city": "Sundsvall",
-                    "country": "Sweden",
-                    "lat": 62.3955,
-                    "lng": 17.286
-                }
-            },
-            {
-                "name": "Gustav Lundgren",
-                "position": "MF",
-                "club": "GAIS",
-                "league": "Swedish Allsvenskan",
-                "age": 30,
-                "birthplace": {
-                    "city": "Stockholm",
-                    "country": "Sweden",
-                    "lat": 58.5333,
-                    "lng": 18.0372
-                }
-            },
-            {
-                "name": "Jesper Karlström",
-                "position": "MF",
-                "club": "Udinese",
-                "league": "Serie A",
-                "age": 30,
-                "birthplace": {
-                    "city": "Stockholm",
-                    "country": "Sweden",
-                    "lat": 59.3294,
-                    "lng": 18.0686
-                }
-            },
-            {
-                "name": "Yasin Ayari",
-                "position": "MF",
-                "club": "Brighton & Hove Albion",
-                "league": "Premier League",
-                "age": 22,
-                "birthplace": {
-                    "city": "Sweden",
-                    "country": "Unknown",
-                    "lat": 61,
-                    "lng": 15
-                }
-            },
-            {
-                "name": "Mattias Svanberg",
-                "position": "MF",
-                "club": "VfL Wolfsburg",
-                "league": "Bundesliga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Malmö",
-                    "country": "Sweden",
-                    "lat": 55.5833,
-                    "lng": 13
-                }
-            },
-            {
-                "name": "Besfort Zeneli",
-                "position": "MF",
-                "club": "Union Saint-Gilloise",
-                "league": "Belgian Pro League",
-                "age": 23,
-                "birthplace": {
-                    "city": "Stockholm",
-                    "country": "Sweden",
-                    "lat": 59.3986,
-                    "lng": 18.1331
-                }
-            },
-            {
-                "name": "Benjamin Nygren",
-                "position": "FW",
-                "club": "Celtic",
-                "league": "Scottish Premiership",
-                "age": 24,
-                "birthplace": {
-                    "city": "Gothenburg",
-                    "country": "Sweden",
-                    "lat": 57.7075,
-                    "lng": 11.9675
-                }
-            },
-            {
-                "name": "Alexander Isak",
-                "position": "FW",
-                "club": "Liverpool",
-                "league": "Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Solna Municipality",
-                    "country": "Sweden",
-                    "lat": 59.3667,
-                    "lng": 18.0167
-                }
-            },
-            {
-                "name": "Roony Bardghji",
-                "position": "FW",
-                "club": "Barcelona",
-                "league": "La Liga",
-                "age": 20,
-                "birthplace": {
-                    "city": "Kuwait City",
-                    "country": "Kuwait",
-                    "lat": 29.375,
-                    "lng": 47.98
-                }
-            },
-            {
-                "name": "Isac Lidberg",
-                "position": "FW",
-                "club": "Darmstadt 98",
-                "league": "Bundesliga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Stockholm",
-                    "country": "Sweden",
-                    "lat": 59.3294,
-                    "lng": 18.0686
-                }
-            },
-            {
-                "name": "Alexander Bernhardsson",
-                "position": "FW",
-                "club": "Holstein Kiel",
-                "league": "Bundesliga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Gothenburg",
-                    "country": "Sweden",
-                    "lat": 57.7075,
-                    "lng": 11.9675
-                }
-            }
-        ]
-    },
-    "POL": {
-        "name": "Poland",
-        "flag": "🇵🇱",
-        "confederation": "UEFA",
-        "fifaRanking": 49,
-        "players": [
-            {
-                "name": "Mateusz Kochalski",
-                "position": "GK",
-                "club": "Qarabağ",
-                "league": "Unknown",
-                "age": 25,
-                "birthplace": {
-                    "city": "Świdnik",
-                    "country": "Poland",
-                    "lat": 51.2333,
-                    "lng": 22.7
-                }
-            },
-            {
-                "name": "Kamil Grabara",
-                "position": "GK",
-                "club": "VfL Wolfsburg",
-                "league": "Bundesliga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Ruda Śląska",
-                    "country": "Poland",
-                    "lat": 50.2701,
-                    "lng": 18.8742
-                }
-            },
-            {
-                "name": "Bartłomiej Drągowski",
-                "position": "GK",
-                "club": "Widzew Łódź",
-                "league": "Polish Ekstraklasa",
-                "age": 28,
-                "birthplace": {
-                    "city": "Białystok",
-                    "country": "Poland",
-                    "lat": 53.1324,
-                    "lng": 23.1687
-                }
-            },
-            {
-                "name": "Kacper Tobiasz",
-                "position": "GK",
-                "club": "Legia Warsaw",
-                "league": "Polish Ekstraklasa",
-                "age": 23,
-                "birthplace": {
-                    "city": "Płock",
-                    "country": "Poland",
-                    "lat": 52.55,
-                    "lng": 19.7
-                }
-            },
-            {
-                "name": "Matty Cash",
-                "position": "DF",
-                "club": "Aston Villa",
-                "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Slough",
-                    "country": "United Kingdom",
-                    "lat": 51.5097,
-                    "lng": -0.5931
-                }
-            },
-            {
-                "name": "Przemysław Wiśniewski",
-                "position": "DF",
-                "club": "Widzew Łódź",
-                "league": "Polish Ekstraklasa",
-                "age": 27,
-                "birthplace": {
-                    "city": "Zabrze",
-                    "country": "Poland",
-                    "lat": 50.3,
-                    "lng": 18.7833
-                }
-            },
-            {
-                "name": "Tomasz Kędziora",
-                "position": "DF",
-                "club": "PAOK",
-                "league": "Greek Super League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Sulechów",
-                    "country": "Poland",
-                    "lat": 52.0833,
-                    "lng": 15.6167
-                }
-            },
-            {
-                "name": "Jan Ziółkowski",
-                "position": "DF",
-                "club": "Roma",
-                "league": "Serie A",
-                "age": 20,
-                "birthplace": {
-                    "city": "Warsaw",
-                    "country": "Poland",
-                    "lat": 52.23,
-                    "lng": 21.0111
-                }
-            },
-            {
-                "name": "Kryspin Szcześniak",
-                "position": "DF",
-                "club": "Górnik Zabrze",
-                "league": "Polish Ekstraklasa",
-                "age": 25,
-                "birthplace": {
-                    "city": "Gorzów Wielkopolski",
-                    "country": "Poland",
-                    "lat": 52.7333,
-                    "lng": 15.25
-                }
-            },
-            {
-                "name": "Jakub Kiwior",
-                "position": "DF",
-                "club": "Porto",
-                "league": "Primeira Liga",
-                "age": 25,
-                "birthplace": {
-                    "city": "Tychy",
-                    "country": "Poland",
-                    "lat": 50.1236,
-                    "lng": 18.9867
-                }
-            },
-            {
-                "name": "Paweł Wszołek",
-                "position": "DF",
-                "club": "Legia Warsaw",
-                "league": "Polish Ekstraklasa",
-                "age": 33,
-                "birthplace": {
-                    "city": "Tczew",
-                    "country": "Poland",
-                    "lat": 54.0911,
-                    "lng": 18.7864
-                }
-            },
-            {
-                "name": "Bartosz Bereszyński",
-                "position": "DF",
-                "club": "Palermo",
-                "league": "Serie B",
-                "age": 33,
-                "birthplace": {
-                    "city": "Poznań",
-                    "country": "Poland",
-                    "lat": 52.4083,
-                    "lng": 16.9336
-                }
-            },
-            {
-                "name": "Bartosz Kapustka",
-                "position": "MF",
-                "club": "Legia Warsaw",
-                "league": "Polish Ekstraklasa",
-                "age": 29,
-                "birthplace": {
-                    "city": "Tarnów",
-                    "country": "Poland",
-                    "lat": 50.0125,
-                    "lng": 20.9883
-                }
-            },
-            {
-                "name": "Piotr Zieliński",
-                "position": "MF",
-                "club": "Internazionale",
-                "league": "Serie A",
-                "age": 31,
-                "birthplace": {
-                    "city": "Ząbkowice Śląskie",
-                    "country": "Poland",
-                    "lat": 50.5897,
-                    "lng": 16.8124
-                }
-            },
-            {
-                "name": "Kamil Grosicki",
-                "position": "MF",
-                "club": "Pogoń Szczecin",
-                "league": "Polish Ekstraklasa",
-                "age": 37,
-                "birthplace": {
-                    "city": "Szczecin",
-                    "country": "Poland",
-                    "lat": 53.4247,
-                    "lng": 14.5553
-                }
-            },
-            {
-                "name": "Jakub Kamiński",
-                "position": "MF",
-                "club": "1. FC Köln",
-                "league": "Bundesliga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Ruda Śląska",
-                    "country": "Poland",
-                    "lat": 50.2701,
-                    "lng": 18.8742
-                }
-            },
-            {
-                "name": "Bartosz Slisz",
-                "position": "MF",
-                "club": "Brøndby",
-                "league": "Danish Superliga",
-                "age": 26,
-                "birthplace": {
-                    "city": "Rybnik",
-                    "country": "Poland",
-                    "lat": 50.0833,
-                    "lng": 18.5
-                }
-            },
-            {
-                "name": "Michał Skóraś",
-                "position": "MF",
-                "club": "Gent",
-                "league": "Belgian Pro League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Jastrzębie-Zdrój",
-                    "country": "Poland",
-                    "lat": 49.95,
-                    "lng": 18.5833
-                }
-            },
-            {
-                "name": "Filip Rózga",
-                "position": "MF",
-                "club": "Sturm Graz",
-                "league": "Austrian Bundesliga",
-                "age": 19,
-                "birthplace": {
-                    "city": "Skawina",
-                    "country": "Poland",
-                    "lat": 49.9753,
-                    "lng": 19.8275
-                }
-            },
-            {
-                "name": "Nicola Zalewski",
-                "position": "MF",
-                "club": "Atalanta",
-                "league": "Serie A",
-                "age": 24,
-                "birthplace": {
-                    "city": "Tivoli",
-                    "country": "Italy",
-                    "lat": 41.9667,
-                    "lng": 12.8
-                }
-            },
-            {
-                "name": "Kacper Kozłowski",
-                "position": "MF",
-                "club": "Gaziantep",
-                "league": "Turkish Super Lig",
-                "age": 22,
-                "birthplace": {
-                    "city": "Koszalin",
-                    "country": "Poland",
-                    "lat": 54.1903,
-                    "lng": 16.1817
-                }
-            },
-            {
-                "name": "Karol Świderski",
-                "position": "FW",
-                "club": "Panathinaikos",
-                "league": "Greek Super League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Rawicz",
-                    "country": "Poland",
-                    "lat": 51.6092,
-                    "lng": 16.8575
-                }
-            },
-            {
-                "name": "Robert Lewandowski",
-                "position": "FW",
-                "club": "Barcelona",
-                "league": "La Liga",
-                "age": 37,
-                "birthplace": {
-                    "city": "Warsaw",
-                    "country": "Poland",
-                    "lat": 52.23,
-                    "lng": 21.0111
-                }
-            },
-            {
-                "name": "Adam Buksa",
-                "position": "FW",
-                "club": "Udinese",
-                "league": "Serie A",
-                "age": 29,
-                "birthplace": {
-                    "city": "Kraków",
-                    "country": "Poland",
-                    "lat": 50.0614,
-                    "lng": 19.9372
-                }
-            }
-        ]
-    },
-    "ALB": {
-        "name": "Albania",
-        "flag": "🇦🇱",
-        "confederation": "UEFA",
-        "fifaRanking": 50,
-        "players": [
-            {
-                "name": "Thomas Strakosha",
-                "position": "GK",
-                "club": "AEK Athens",
-                "league": "Greek Super League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Athens",
-                    "country": "Greece",
-                    "lat": 37.9842,
-                    "lng": 23.7281
-                }
-            },
-            {
-                "name": "Mario Dajsinani",
-                "position": "GK",
-                "club": "Egnatia",
-                "league": "Unknown",
-                "age": 27,
-                "birthplace": {
-                    "city": "Durrës",
-                    "country": "Albania",
-                    "lat": 41.3133,
-                    "lng": 19.4458
-                }
-            },
-            {
-                "name": "Simon Simoni",
-                "position": "GK",
-                "club": "1. FC Kaiserslautern",
-                "league": "2. Bundesliga",
-                "age": 21,
-                "birthplace": {
-                    "city": "Lezhë",
-                    "country": "Albania",
-                    "lat": 41.7805,
-                    "lng": 19.6434
-                }
-            },
-            {
-                "name": "Iván Balliu",
-                "position": "DF",
-                "club": "Rayo Vallecano",
-                "league": "La Liga",
-                "age": 34,
-                "birthplace": {
-                    "city": "Caldes de Malavella",
-                    "country": "Spain",
-                    "lat": 41.8387,
-                    "lng": 2.8089
-                }
-            },
-            {
-                "name": "Klisman Cake",
-                "position": "DF",
-                "club": "Akhmat Grozny",
-                "league": "Russian Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Pogradec",
-                    "country": "Albania",
-                    "lat": 40.9,
-                    "lng": 20.65
-                }
-            },
-            {
-                "name": "Elseid Hysaj",
-                "position": "DF",
-                "club": "Lazio",
-                "league": "Serie A",
-                "age": 32,
-                "birthplace": {
-                    "city": "Shkodër",
-                    "country": "Albania",
-                    "lat": 42.0681,
-                    "lng": 19.5121
-                }
-            },
-            {
-                "name": "Arlind Ajeti",
-                "position": "DF",
-                "club": "Bodrum",
-                "league": "Turkish Super Lig",
-                "age": 32,
-                "birthplace": {
-                    "city": "Basel",
-                    "country": "Switzerland",
-                    "lat": 47.5606,
-                    "lng": 7.5906
-                }
-            },
-            {
-                "name": "Berat Gjimshiti",
-                "position": "DF",
-                "club": "Atalanta",
-                "league": "Serie A",
-                "age": 32,
-                "birthplace": {
-                    "city": "Zurich",
-                    "country": "Switzerland",
-                    "lat": 47.3744,
-                    "lng": 8.5411
-                }
-            },
-            {
-                "name": "Naser Aliji",
-                "position": "DF",
-                "club": "Dinamo City",
-                "league": "Unknown",
-                "age": 32,
-                "birthplace": {
-                    "city": "Kumanovo",
-                    "country": "North Macedonia",
-                    "lat": 42.1322,
-                    "lng": 21.7144
-                }
-            },
-            {
-                "name": "Ardian Ismajli",
-                "position": "DF",
-                "club": "Torino",
-                "league": "Serie A",
-                "age": 29,
-                "birthplace": {
-                    "city": "Majac",
-                    "country": "Kosovo",
-                    "lat": 42.8133,
-                    "lng": 21.1347
-                }
-            },
-            {
-                "name": "Kristjan Asllani",
-                "position": "MF",
-                "club": "Beşiktaş",
-                "league": "Turkish Super Lig",
-                "age": 23,
-                "birthplace": {
-                    "city": "Elbasan",
-                    "country": "Albania",
-                    "lat": 41.1131,
-                    "lng": 20.0818
-                }
-            },
-            {
-                "name": "Nedim Bajrami",
-                "position": "MF",
-                "club": "Rangers",
-                "league": "Scottish Premiership",
-                "age": 26,
-                "birthplace": {
-                    "city": "Tetovo",
-                    "country": "North Macedonia",
-                    "lat": 42.0103,
-                    "lng": 20.9714
-                }
-            },
-            {
-                "name": "Qazim Laçi",
-                "position": "MF",
-                "club": "Çaykur Rizespor",
-                "league": "Turkish Super Lig",
-                "age": 30,
-                "birthplace": {
-                    "city": "Peshkopi",
-                    "country": "Albania",
-                    "lat": 41.6831,
-                    "lng": 20.4289
-                }
-            },
-            {
-                "name": "Adrion Pajaziti",
-                "position": "MF",
-                "club": "Hajduk Split",
-                "league": "Croatian First League",
-                "age": 23,
-                "birthplace": {
-                    "city": "London",
-                    "country": "United Kingdom",
-                    "lat": 51.5072,
-                    "lng": -0.1275
-                }
-            },
-            {
-                "name": "Medon Berisha",
-                "position": "MF",
-                "club": "Lecce",
-                "league": "Serie A",
-                "age": 22,
-                "birthplace": {
-                    "city": "Münsingen",
-                    "country": "Switzerland",
-                    "lat": 46.873,
-                    "lng": 7.561
-                }
-            },
-            {
-                "name": "Ylber Ramadani",
-                "position": "MF",
-                "club": "Lecce",
-                "league": "Serie A",
-                "age": 29,
-                "birthplace": {
-                    "city": "Starnberg",
-                    "country": "Germany",
-                    "lat": 47.9972,
-                    "lng": 11.3406
-                }
-            },
-            {
-                "name": "Arbër Hoxha",
-                "position": "MF",
-                "club": "Dinamo Zagreb",
-                "league": "Croatian First League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Heidelberg",
-                    "country": "Germany",
-                    "lat": 49.4122,
-                    "lng": 8.71
-                }
-            },
-            {
-                "name": "Rey Manaj",
-                "position": "FW",
-                "club": "Sivasspor",
-                "league": "Turkish Super Lig",
-                "age": 28,
-                "birthplace": {
-                    "city": "Lushnjë",
-                    "country": "Albania",
-                    "lat": 40.9333,
-                    "lng": 19.7
-                }
-            },
-            {
-                "name": "Jasir Asani",
-                "position": "FW",
-                "club": "Esteghlal",
-                "league": "Iranian Pro League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Myrto Uzuni",
-                "position": "FW",
-                "club": "Austin FC",
-                "league": "MLS",
-                "age": 30,
-                "birthplace": {
-                    "city": "Berat",
-                    "country": "Albania",
-                    "lat": 40.7049,
-                    "lng": 19.9497
-                }
-            },
-            {
-                "name": "Indrit Tuci",
-                "position": "FW",
-                "club": "Kayserispor",
-                "league": "Turkish Super Lig",
-                "age": 25,
-                "birthplace": {
-                    "city": "Lezhë",
-                    "country": "Albania",
-                    "lat": 41.7805,
-                    "lng": 19.6434
-                }
-            },
-            {
-                "name": "Mirlind Daku",
-                "position": "FW",
-                "club": "Rubin Kazan",
-                "league": "Russian Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Gjilan",
-                    "country": "Kosovo",
-                    "lat": 42.4667,
-                    "lng": 21.4667
-                }
-            },
-            {
-                "name": "Armando Broja",
-                "position": "FW",
-                "club": "Burnley",
-                "league": "Premier League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Slough",
-                    "country": "United Kingdom",
-                    "lat": 51.5097,
-                    "lng": -0.5931
-                }
-            }
-        ]
-    },
-    "TUR": {
-        "name": "Turkey",
-        "flag": "🇹🇷",
-        "confederation": "UEFA",
-        "fifaRanking": 51,
-        "players": [
-            {
-                "name": "Mert Günok",
-                "position": "GK",
-                "club": "Beşiktaş",
-                "league": "Turkish Super Lig",
-                "age": 36,
-                "birthplace": {
-                    "city": "Karabük",
-                    "country": "Turkey",
-                    "lat": 41.2,
-                    "lng": 32.6333
-                }
-            },
-            {
-                "name": "Altay Bayındır",
-                "position": "GK",
-                "club": "Manchester United",
-                "league": "Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Osmangazi",
-                    "country": "Turkey",
-                    "lat": 40.2192,
-                    "lng": 29.0414
-                }
-            },
-            {
-                "name": "Uğurcan Çakır",
-                "position": "GK",
-                "club": "Galatasaray",
-                "league": "Turkish Super Lig",
-                "age": 29,
-                "birthplace": {
-                    "city": "Antalya",
-                    "country": "Turkey",
-                    "lat": 36.9081,
-                    "lng": 30.6956
-                }
-            },
-            {
-                "name": "Muhammed Şengezer",
-                "position": "GK",
-                "club": "İstanbul Başakşehir",
-                "league": "Turkish Super Lig",
-                "age": 29,
-                "birthplace": {
-                    "city": "Osmangazi",
-                    "country": "Turkey",
-                    "lat": 40.2192,
-                    "lng": 29.0414
-                }
-            },
-            {
-                "name": "Zeki Çelik",
-                "position": "DF",
-                "club": "Roma",
-                "league": "Serie A",
-                "age": 28,
-                "birthplace": {
-                    "city": "Yıldırım district",
-                    "country": "Turkey",
-                    "lat": 40.1901,
-                    "lng": 29.0977
-                }
-            },
-            {
-                "name": "Merih Demiral",
-                "position": "DF",
-                "club": "Al-Ahli",
-                "league": "Saudi Pro League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Karamürsel district",
-                    "country": "Turkey",
-                    "lat": 40.6914,
-                    "lng": 29.6156
-                }
-            },
-            {
-                "name": "Çağlar Söyüncü",
-                "position": "DF",
-                "club": "Fenerbahçe",
-                "league": "Turkish Super Lig",
-                "age": 29,
-                "birthplace": {
-                    "city": "İzmir",
-                    "country": "Turkey",
-                    "lat": 38.4127,
-                    "lng": 27.1384
-                }
-            },
-            {
-                "name": "Yusuf Akçiçek",
-                "position": "DF",
-                "club": "Al-Hilal",
-                "league": "Saudi Pro League",
-                "age": 20,
-                "birthplace": {
-                    "city": "Bakırköy",
-                    "country": "Turkey",
-                    "lat": 40.9831,
-                    "lng": 28.8536
-                }
-            },
-            {
-                "name": "Samet Akaydin",
-                "position": "DF",
-                "club": "Çaykur Rizespor",
-                "league": "Turkish Super Lig",
-                "age": 31,
-                "birthplace": {
-                    "city": "Trabzon",
-                    "country": "Turkey",
-                    "lat": 41.005,
-                    "lng": 39.7225
-                }
-            },
-            {
-                "name": "Mert Müldür",
-                "position": "DF",
-                "club": "Fenerbahçe",
-                "league": "Turkish Super Lig",
-                "age": 26,
-                "birthplace": {
-                    "city": "Vienna",
-                    "country": "Austria",
-                    "lat": 48.2083,
-                    "lng": 16.3725
-                }
-            },
-            {
-                "name": "Ferdi Kadıoğlu",
-                "position": "DF",
-                "club": "Brighton & Hove Albion",
-                "league": "Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Arnhem",
-                    "country": "Netherlands",
-                    "lat": 51.9833,
-                    "lng": 5.9167
-                }
-            },
-            {
-                "name": "Mustafa Eskihellaç",
-                "position": "DF",
-                "club": "Trabzonspor",
-                "league": "Turkish Super Lig",
-                "age": 28,
-                "birthplace": {
-                    "city": "Trabzon",
-                    "country": "Turkey",
-                    "lat": 41.005,
-                    "lng": 39.7225
-                }
-            },
-            {
-                "name": "Emirhan Topçu",
-                "position": "DF",
-                "club": "Beşiktaş",
-                "league": "Turkish Super Lig",
-                "age": 25,
-                "birthplace": {
-                    "city": "Bandırma",
-                    "country": "Turkey",
-                    "lat": 40.3542,
-                    "lng": 27.9725
-                }
-            },
-            {
-                "name": "Salih Özcan",
-                "position": "MF",
-                "club": "Borussia Dortmund",
-                "league": "Bundesliga",
-                "age": 28,
-                "birthplace": {
-                    "city": "Cologne",
-                    "country": "Germany",
-                    "lat": 50.9422,
-                    "lng": 6.9578
-                }
-            },
-            {
-                "name": "Orkun Kökçü",
-                "position": "MF",
-                "club": "Beşiktaş",
-                "league": "Turkish Super Lig",
-                "age": 25,
-                "birthplace": {
-                    "city": "Haarlem",
-                    "country": "Netherlands",
-                    "lat": 52.3803,
-                    "lng": 4.6406
-                }
-            },
-            {
-                "name": "İsak Vural",
-                "position": "MF",
-                "club": "Pisa",
-                "league": "Serie A",
-                "age": 19,
-                "birthplace": {
-                    "city": "Stockholm",
-                    "country": "Sweden",
-                    "lat": 59.3294,
-                    "lng": 18.0686
-                }
-            },
-            {
-                "name": "Atakan Karazor",
-                "position": "MF",
-                "club": "VfB Stuttgart",
-                "league": "Bundesliga",
-                "age": 29,
-                "birthplace": {
-                    "city": "Essen",
-                    "country": "Germany",
-                    "lat": 51.4508,
-                    "lng": 7.0131
-                }
-            },
-            {
-                "name": "Yusuf Sarı",
-                "position": "FW",
-                "club": "İstanbul Başakşehir",
-                "league": "Turkish Super Lig",
-                "age": 27,
-                "birthplace": {
-                    "city": "Martigues",
-                    "country": "France",
-                    "lat": 43.4053,
-                    "lng": 5.0475
-                }
-            },
-            {
-                "name": "Barış Alper Yılmaz",
-                "position": "FW",
-                "club": "Galatasaray",
-                "league": "Turkish Super Lig",
-                "age": 25,
-                "birthplace": {
-                    "city": "İkizdere",
-                    "country": "Turkey",
-                    "lat": 40.7772,
-                    "lng": 40.5608
-                }
-            },
-            {
-                "name": "Arda Güler",
-                "position": "FW",
-                "club": "Real Madrid",
-                "league": "La Liga",
-                "age": 20,
-                "birthplace": {
-                    "city": "Altındağ",
-                    "country": "Turkey",
-                    "lat": 39.9458,
-                    "lng": 32.8561
-                }
-            },
-            {
-                "name": "Kenan Yıldız",
-                "position": "FW",
-                "club": "Juventus",
-                "league": "Serie A",
-                "age": 20,
-                "birthplace": {
-                    "city": "Regensburg",
-                    "country": "Germany",
-                    "lat": 49.0167,
-                    "lng": 12.0833
-                }
-            },
-            {
-                "name": "Ahmed Kutucu",
-                "position": "FW",
-                "club": "Galatasaray",
-                "league": "Turkish Super Lig",
-                "age": 25,
-                "birthplace": {
-                    "city": "Gelsenkirchen",
-                    "country": "Germany",
-                    "lat": 51.5103,
-                    "lng": 7.0942
-                }
-            },
-            {
-                "name": "İrfan Can Kahveci",
-                "position": "FW",
-                "club": "Fenerbahçe",
-                "league": "Turkish Super Lig",
-                "age": 30,
-                "birthplace": {
-                    "city": "Bayat",
-                    "country": "Turkey",
-                    "lat": 40.185,
-                    "lng": 32.437
-                }
-            },
-            {
-                "name": "Oğuz Aydın",
-                "position": "FW",
-                "club": "Fenerbahçe",
-                "league": "Turkish Super Lig",
-                "age": 25,
-                "birthplace": {
-                    "city": "The Hague",
-                    "country": "Netherlands",
-                    "lat": 52.08,
-                    "lng": 4.31
-                }
-            },
-            {
-                "name": "Deniz Gül",
-                "position": "FW",
-                "club": "Porto",
-                "league": "Primeira Liga",
-                "age": 21,
-                "birthplace": {
-                    "city": "Stockholm",
-                    "country": "Sweden",
-                    "lat": 59.3294,
-                    "lng": 18.0686
-                }
-            }
-        ]
-    },
-    "ROU": {
-        "name": "Romania",
-        "flag": "🇷🇴",
-        "confederation": "UEFA",
-        "fifaRanking": 52,
-        "players": [
-            {
-                "name": "Ionuț Radu",
-                "position": "GK",
-                "club": "Celta Vigo",
-                "league": "La Liga",
-                "age": 28,
-                "birthplace": {
-                    "city": "Bucharest",
-                    "country": "Romania",
-                    "lat": 44.4134,
-                    "lng": 26.0978
-                }
-            },
-            {
-                "name": "Ștefan Târnovanu",
-                "position": "GK",
-                "club": "FCSB",
-                "league": "Romanian SuperLiga",
-                "age": 25,
-                "birthplace": {
-                    "city": "Iași",
-                    "country": "Romania",
-                    "lat": 47.1622,
-                    "lng": 27.5889
-                }
-            },
-            {
-                "name": "Marian Aioani",
-                "position": "GK",
-                "club": "Rapid București",
-                "league": "Romanian SuperLiga",
-                "age": 26,
-                "birthplace": {
-                    "city": "Buftea",
-                    "country": "Romania",
-                    "lat": 44.57,
-                    "lng": 25.95
-                }
-            },
-            {
-                "name": "Andrei Rațiu",
-                "position": "DF",
-                "club": "Rayo Vallecano",
-                "league": "La Liga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Aiud",
-                    "country": "Romania",
-                    "lat": 46.3103,
-                    "lng": 23.7167
-                }
-            },
-            {
-                "name": "Bogdan Racovițan",
-                "position": "DF",
-                "club": "Raków Częstochowa",
-                "league": "Polish Ekstraklasa",
-                "age": 25,
-                "birthplace": {
-                    "city": "Dijon",
-                    "country": "France",
-                    "lat": 47.3231,
-                    "lng": 5.0419
-                }
-            },
-            {
-                "name": "Adrian Rus",
-                "position": "DF",
-                "club": "Universitatea Craiova",
-                "league": "Romanian SuperLiga",
-                "age": 29,
-                "birthplace": {
-                    "city": "Satu Mare",
-                    "country": "Romania",
-                    "lat": 47.79,
-                    "lng": 22.89
-                }
-            },
-            {
-                "name": "Virgil Ghiță",
-                "position": "DF",
-                "club": "Hannover 96",
-                "league": "2. Bundesliga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Pitești",
-                    "country": "Romania",
-                    "lat": 44.8667,
-                    "lng": 24.8833
-                }
-            },
-            {
-                "name": "Vladimir Screciu",
-                "position": "DF",
-                "club": "Universitatea Craiova",
-                "league": "Romanian SuperLiga",
-                "age": 26,
-                "birthplace": {
-                    "city": "Corabia",
-                    "country": "Romania",
-                    "lat": 43.7736,
-                    "lng": 24.5033
-                }
-            },
-            {
-                "name": "Alexandru Chipciu",
-                "position": "DF",
-                "club": "Universitatea Cluj",
-                "league": "Romanian SuperLiga",
-                "age": 36,
-                "birthplace": {
-                    "city": "Brăila",
-                    "country": "Romania",
-                    "lat": 45.2692,
-                    "lng": 27.9575
-                }
-            },
-            {
-                "name": "Nicușor Bancu",
-                "position": "DF",
-                "club": "Universitatea Craiova",
-                "league": "Romanian SuperLiga",
-                "age": 33,
-                "birthplace": {
-                    "city": "Crâmpoia",
-                    "country": "Romania",
-                    "lat": 44.2958,
-                    "lng": 24.7252
-                }
-            },
-            {
-                "name": "Lisav Eissat",
-                "position": "DF",
-                "club": "Maccabi Haifa",
-                "league": "Israeli Premier League",
-                "age": 21,
-                "birthplace": {
-                    "city": "Haifa",
-                    "country": "Israel",
-                    "lat": 32.8192,
-                    "lng": 34.9992
-                }
-            },
-            {
-                "name": "Deian Sorescu",
-                "position": "DF",
-                "club": "Gaziantep",
-                "league": "Turkish Super Lig",
-                "age": 28,
-                "birthplace": {
-                    "city": "Moldova Nouă",
-                    "country": "Romania",
-                    "lat": 44.7347,
-                    "lng": 21.6664
-                }
-            },
-            {
-                "name": "Ștefan Baiaram",
-                "position": "MF",
-                "club": "Universitatea Craiova",
-                "league": "Romanian SuperLiga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Craiova",
-                    "country": "Romania",
-                    "lat": 44.3333,
-                    "lng": 23.8167
-                }
-            },
-            {
-                "name": "Ianis Hagi",
-                "position": "MF",
-                "club": "Alanyaspor",
-                "league": "Turkish Super Lig",
-                "age": 27,
-                "birthplace": {
-                    "city": "Istanbul",
-                    "country": "Turkey",
-                    "lat": 41.01,
-                    "lng": 28.9603
-                }
-            },
-            {
-                "name": "Darius Olaru",
-                "position": "MF",
-                "club": "FCSB",
-                "league": "Romanian SuperLiga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Mediaș",
-                    "country": "Romania",
-                    "lat": 46.1639,
-                    "lng": 24.3508
-                }
-            },
-            {
-                "name": "David Miculescu",
-                "position": "MF",
-                "club": "FCSB",
-                "league": "Romanian SuperLiga",
-                "age": 24,
-                "birthplace": {
-                    "city": "Arad",
-                    "country": "Romania",
-                    "lat": 46.1667,
-                    "lng": 21.3167
-                }
-            },
-            {
-                "name": "Răzvan Marin",
-                "position": "MF",
-                "club": "AEK Athens",
-                "league": "Greek Super League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Bucharest",
-                    "country": "Romania",
-                    "lat": 44.4134,
-                    "lng": 26.0978
-                }
-            },
-            {
-                "name": "Florin Tănase",
-                "position": "MF",
-                "club": "FCSB",
-                "league": "Romanian SuperLiga",
-                "age": 31,
-                "birthplace": {
-                    "city": "Găești",
-                    "country": "Romania",
-                    "lat": 44.7208,
-                    "lng": 25.3147
-                }
-            },
-            {
-                "name": "Dennis Man",
-                "position": "MF",
-                "club": "PSV",
-                "league": "Eredivisie",
-                "age": 27,
-                "birthplace": {
-                    "city": "Vladimirescu",
-                    "country": "Romania",
-                    "lat": 46.1674,
-                    "lng": 21.4616
-                }
-            },
-            {
-                "name": "Claudiu Petrila",
-                "position": "MF",
-                "club": "Rapid București",
-                "league": "Romanian SuperLiga",
-                "age": 25,
-                "birthplace": {
-                    "city": "Sânnicolau Român",
-                    "country": "Romania",
-                    "lat": 46.95,
-                    "lng": 21.7333
-                }
-            },
-            {
-                "name": "Vlad Dragomir",
-                "position": "MF",
-                "club": "Pafos",
-                "league": "Cypriot First Division",
-                "age": 26,
-                "birthplace": {
-                    "city": "Timișoara",
-                    "country": "Romania",
-                    "lat": 45.7597,
-                    "lng": 21.23
-                }
-            },
-            {
-                "name": "Marius Marin",
-                "position": "MF",
-                "club": "Pisa",
-                "league": "Serie A",
-                "age": 27,
-                "birthplace": {
-                    "city": "Timișoara",
-                    "country": "Romania",
-                    "lat": 45.7597,
-                    "lng": 21.23
-                }
-            },
-            {
-                "name": "Valentin Mihăilă",
-                "position": "MF",
-                "club": "Çaykur Rizespor",
-                "league": "Turkish Super Lig",
-                "age": 26,
-                "birthplace": {
-                    "city": "Finta",
-                    "country": "Romania",
-                    "lat": 44.7903,
-                    "lng": 25.795
-                }
-            },
-            {
-                "name": "Daniel Bîrligea",
-                "position": "FW",
-                "club": "FCSB",
-                "league": "Romanian SuperLiga",
-                "age": 25,
-                "birthplace": {
-                    "city": "Brăila",
-                    "country": "Romania",
-                    "lat": 45.2692,
-                    "lng": 27.9575
-                }
-            },
-            {
-                "name": "Louis Munteanu",
-                "position": "FW",
-                "club": "D.C. United",
-                "league": "MLS",
-                "age": 23,
-                "birthplace": {
-                    "city": "Vaslui",
-                    "country": "Romania",
-                    "lat": 46.6383,
-                    "lng": 27.7292
-                }
-            }
-        ]
-    },
-    "SVK": {
-        "name": "Slovakia",
-        "flag": "🇸🇰",
-        "confederation": "UEFA",
-        "fifaRanking": 53,
-        "players": [
-            {
-                "name": "Martin Dúbravka",
-                "position": "GK",
-                "club": "Burnley",
-                "league": "Premier League",
-                "age": 37,
-                "birthplace": {
-                    "city": "Žilina",
-                    "country": "Slovakia",
-                    "lat": 49.2167,
-                    "lng": 18.7333
-                }
-            },
-            {
-                "name": "Marek Rodák",
-                "position": "GK",
-                "club": "Al-Ettifaq",
-                "league": "Saudi Pro League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Košice",
-                    "country": "Slovakia",
-                    "lat": 48.7167,
-                    "lng": 21.25
-                }
-            },
-            {
-                "name": "Dominik Takáč",
-                "position": "GK",
-                "club": "Slovan Bratislava",
-                "league": "Unknown",
-                "age": 27,
-                "birthplace": {
-                    "city": "Galanta",
-                    "country": "Slovakia",
-                    "lat": 48.1914,
-                    "lng": 17.7308
-                }
-            },
-            {
-                "name": "Peter Pekarík",
-                "position": "DF",
-                "club": "Hertha BSC II",
-                "league": "Regionalliga",
-                "age": 39,
-                "birthplace": {
-                    "city": "Žilina",
-                    "country": "Slovakia",
-                    "lat": 49.2167,
-                    "lng": 18.7333
-                }
-            },
-            {
-                "name": "Denis Vavro",
-                "position": "DF",
-                "club": "VfL Wolfsburg",
-                "league": "Bundesliga",
-                "age": 29,
-                "birthplace": {
-                    "city": "Partizánske",
-                    "country": "Slovakia",
-                    "lat": 48.6333,
-                    "lng": 18.3667
-                }
-            },
-            {
-                "name": "Adam Obert",
-                "position": "DF",
-                "club": "Cagliari",
-                "league": "Serie A",
-                "age": 23,
-                "birthplace": {
-                    "city": "Bratislava",
-                    "country": "Slovakia",
-                    "lat": 48.1447,
-                    "lng": 17.1128
-                }
-            },
-            {
-                "name": "Ľubomír Šatka",
-                "position": "DF",
-                "club": "Samsunspor",
-                "league": "Turkish Super Lig",
-                "age": 30,
-                "birthplace": {
-                    "city": "Ilava",
-                    "country": "Slovakia",
-                    "lat": 48.9994,
-                    "lng": 18.2361
-                }
-            },
-            {
-                "name": "Norbert Gyömbér",
-                "position": "DF",
-                "club": "Al-Kholood",
-                "league": "Saudi Pro League",
-                "age": 33,
-                "birthplace": {
-                    "city": "Revúca",
-                    "country": "Slovakia",
-                    "lat": 48.6833,
-                    "lng": 20.1167
-                }
-            },
-            {
-                "name": "Milan Škriniar",
-                "position": "DF",
-                "club": "Fenerbahçe",
-                "league": "Turkish Super Lig",
-                "age": 30,
-                "birthplace": {
-                    "city": "Žiar nad Hronom",
-                    "country": "Slovakia",
-                    "lat": 48.5919,
-                    "lng": 18.8533
-                }
-            },
-            {
-                "name": "Dávid Hancko",
-                "position": "DF",
-                "club": "Atlético Madrid",
-                "league": "La Liga",
-                "age": 28,
-                "birthplace": {
-                    "city": "Prievidza",
-                    "country": "Slovakia",
-                    "lat": 48.7714,
-                    "lng": 18.6242
-                }
-            },
-            {
-                "name": "Ivan Mesík",
-                "position": "DF",
-                "club": "Heracles Almelo",
-                "league": "Eredivisie",
-                "age": 24,
-                "birthplace": {
-                    "city": "Banská Bystrica",
-                    "country": "Slovakia",
-                    "lat": 48.7353,
-                    "lng": 19.1453
-                }
-            },
-            {
-                "name": "Ondrej Duda",
-                "position": "MF",
-                "club": "Al-Ettifaq",
-                "league": "Saudi Pro League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Snina",
-                    "country": "Slovakia",
-                    "lat": 48.9881,
-                    "lng": 22.1567
-                }
-            },
-            {
-                "name": "László Bénes",
-                "position": "MF",
-                "club": "Kayserispor",
-                "league": "Turkish Super Lig",
-                "age": 28,
-                "birthplace": {
-                    "city": "Dunajská Streda",
-                    "country": "Slovakia",
-                    "lat": 47.9961,
-                    "lng": 17.6147
-                }
-            },
-            {
-                "name": "Patrik Hrošovský",
-                "position": "MF",
-                "club": "Genk",
-                "league": "Belgian Pro League",
-                "age": 33,
-                "birthplace": {
-                    "city": "Prievidza",
-                    "country": "Slovakia",
-                    "lat": 48.7714,
-                    "lng": 18.6242
-                }
-            },
-            {
-                "name": "Tomáš Rigo",
-                "position": "MF",
-                "club": "Stoke City",
-                "league": "EFL Championship",
-                "age": 23,
-                "birthplace": {
-                    "city": "Poprad",
-                    "country": "Slovakia",
-                    "lat": 49.05,
-                    "lng": 20.3
-                }
-            },
-            {
-                "name": "Matúš Bero",
-                "position": "MF",
-                "club": "VfL Bochum",
-                "league": "Bundesliga",
-                "age": 30,
-                "birthplace": {
-                    "city": "Ilava",
-                    "country": "Slovakia",
-                    "lat": 48.9994,
-                    "lng": 18.2361
-                }
-            },
-            {
-                "name": "Stanislav Lobotka",
-                "position": "MF",
-                "club": "Napoli",
-                "league": "Serie A",
-                "age": 31,
-                "birthplace": {
-                    "city": "Messina",
-                    "country": "Italy",
-                    "lat": 38.1936,
-                    "lng": 15.5542
-                }
-            },
-            {
-                "name": "Mário Sauer",
-                "position": "MF",
-                "club": "Toulouse",
-                "league": "Ligue 1",
-                "age": 21,
-                "birthplace": {
-                    "city": "Slovakia",
-                    "country": "Slovakia",
-                    "lat": 48.7,
-                    "lng": 19.7
-                }
-            },
-            {
-                "name": "Leo Sauer",
-                "position": "FW",
-                "club": "Feyenoord",
-                "league": "Eredivisie",
-                "age": 20,
-                "birthplace": {
-                    "city": "Bratislava",
-                    "country": "Slovakia",
-                    "lat": 48.1447,
-                    "lng": 17.1128
-                }
-            },
-            {
-                "name": "Róbert Boženík",
-                "position": "FW",
-                "club": "Stoke City",
-                "league": "EFL Championship",
-                "age": 26,
-                "birthplace": {
-                    "city": "Terchová",
-                    "country": "Slovakia",
-                    "lat": 49.2575,
-                    "lng": 19.0311
-                }
-            },
-            {
-                "name": "Tomáš Bobček",
-                "position": "FW",
-                "club": "Lechia Gdańsk",
-                "league": "Polish Ekstraklasa",
-                "age": 24,
-                "birthplace": {
-                    "city": "Ružomberok",
-                    "country": "Slovakia",
-                    "lat": 49.0786,
-                    "lng": 19.3083
-                }
-            },
-            {
-                "name": "David Strelec",
-                "position": "FW",
-                "club": "Middlesbrough",
-                "league": "EFL Championship",
-                "age": 24,
-                "birthplace": {
-                    "city": "Nové Zámky",
-                    "country": "Slovakia",
-                    "lat": 47.986,
-                    "lng": 18.1632
-                }
-            },
-            {
-                "name": "Lukáš Haraslín",
-                "position": "FW",
-                "club": "Sparta Prague",
-                "league": "Czech First League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Bratislava",
-                    "country": "Slovakia",
-                    "lat": 48.1447,
-                    "lng": 17.1128
-                }
-            },
-            {
-                "name": "Ivan Schranz",
-                "position": "FW",
-                "club": "Slavia Prague",
-                "league": "Czech First League",
-                "age": 32,
-                "birthplace": {
-                    "city": "Bratislava",
-                    "country": "Slovakia",
-                    "lat": 48.1447,
-                    "lng": 17.1128
-                }
-            },
-            {
-                "name": "Dávid Ďuriš",
-                "position": "FW",
-                "club": "Rosenborg",
-                "league": "Norwegian Eliteserien",
-                "age": 26,
-                "birthplace": {
-                    "city": "Žilina",
-                    "country": "Slovakia",
-                    "lat": 49.2167,
-                    "lng": 18.7333
-                }
-            },
-            {
-                "name": "Adrián Kaprálik",
-                "position": "FW",
-                "club": "Holstein Kiel",
-                "league": "Bundesliga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Trstená",
-                    "country": "Slovakia",
-                    "lat": 49.3667,
-                    "lng": 19.6167
-                }
-            },
-            {
-                "name": "Ľubomír Tupta",
-                "position": "FW",
-                "club": "AEL",
-                "league": "Greek Super League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Prešov",
-                    "country": "Slovakia",
-                    "lat": 49,
-                    "lng": 21.2333
-                }
-            }
-        ]
-    },
-    "KOS": {
-        "name": "Kosovo",
-        "flag": "🇽🇰",
-        "confederation": "UEFA",
-        "fifaRanking": 54,
-        "players": [
-            {
-                "name": "Arijanet Muric",
-                "position": "GK",
-                "club": "Sassuolo",
-                "league": "Serie A",
-                "age": 27,
-                "birthplace": {
-                    "city": "Schlieren",
-                    "country": "Switzerland",
-                    "lat": 47.3989,
-                    "lng": 8.4497
-                }
-            },
-            {
-                "name": "Visar Bekaj",
-                "position": "GK",
-                "club": "Tirana",
-                "league": "Unknown",
-                "age": 28,
-                "birthplace": {
-                    "city": "Pristina",
-                    "country": "Kosovo",
-                    "lat": 42.6667,
-                    "lng": 21.1667
-                }
-            },
-            {
-                "name": "Amir Saipi",
-                "position": "GK",
-                "club": "Lugano",
-                "league": "Swiss Super League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Schaffhausen",
-                    "country": "Switzerland",
-                    "lat": 47.6965,
-                    "lng": 8.6339
-                }
-            },
-            {
-                "name": "Kreshnik Hajrizi",
-                "position": "DF",
-                "club": "Sion",
-                "league": "Swiss Super League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Sierre",
-                    "country": "Switzerland",
-                    "lat": 46.2918,
-                    "lng": 7.532
-                }
-            },
-            {
-                "name": "Fidan Aliti",
-                "position": "DF",
-                "club": "Alanyaspor",
-                "league": "Turkish Super Lig",
-                "age": 32,
-                "birthplace": {
-                    "city": "Preševo",
-                    "country": "Serbia",
-                    "lat": 42.3067,
-                    "lng": 21.65
-                }
-            },
-            {
-                "name": "Ilir Krasniqi",
-                "position": "DF",
-                "club": "Polissya Zhytomyr",
-                "league": "Ukrainian Premier League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Bocholt",
-                    "country": "Germany",
-                    "lat": 51.8333,
-                    "lng": 6.6167
-                }
-            },
-            {
-                "name": "Lumbardh Dellova",
-                "position": "DF",
-                "club": "CSKA Sofia",
-                "league": "Bulgarian First League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Krushë e Madhe",
-                    "country": "Kosovo",
-                    "lat": 42.3181,
-                    "lng": 20.6361
-                }
-            },
-            {
-                "name": "Amir Rrahmani",
-                "position": "DF",
-                "club": "Napoli",
-                "league": "Serie A",
-                "age": 31,
-                "birthplace": {
-                    "city": "Pristina",
-                    "country": "Kosovo",
-                    "lat": 42.6667,
-                    "lng": 21.1667
-                }
-            },
-            {
-                "name": "Mërgim Vojvoda",
-                "position": "DF",
-                "club": "Como",
-                "league": "Serie A",
-                "age": 31,
-                "birthplace": {
-                    "city": "Hof",
-                    "country": "Germany",
-                    "lat": 50.3167,
-                    "lng": 11.9167
-                }
-            },
-            {
-                "name": "Dion Gallapeni",
-                "position": "DF",
-                "club": "Widzew Łódź",
-                "league": "Polish Ekstraklasa",
-                "age": 21,
-                "birthplace": {
-                    "city": "Pristina",
-                    "country": "Kosovo",
-                    "lat": 43.5813,
-                    "lng": 20.4203
-                }
-            },
-            {
-                "name": "Elvis Rexhbeçaj",
-                "position": "MF",
-                "club": "FC Augsburg",
-                "league": "Bundesliga",
-                "age": 28,
-                "birthplace": {
-                    "city": "Prizren",
-                    "country": "Kosovo",
-                    "lat": 42.23,
-                    "lng": 20.74
-                }
-            },
-            {
-                "name": "Florent Muslija",
-                "position": "MF",
-                "club": "Fortuna Düsseldorf",
-                "league": "2. Bundesliga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Achern",
-                    "country": "Germany",
-                    "lat": 48.6314,
-                    "lng": 8.0739
-                }
-            },
-            {
-                "name": "Edon Zhegrova",
-                "position": "MF",
-                "club": "Juventus",
-                "league": "Serie A",
-                "age": 26,
-                "birthplace": {
-                    "city": "Herford",
-                    "country": "Germany",
-                    "lat": 52.1146,
-                    "lng": 8.6734
-                }
-            },
-            {
-                "name": "Valon Berisha",
-                "position": "MF",
-                "club": "LASK",
-                "league": "Austrian Bundesliga",
-                "age": 33,
-                "birthplace": {
-                    "city": "Malmö",
-                    "country": "Sweden",
-                    "lat": 55.5833,
-                    "lng": 13
-                }
-            },
-            {
-                "name": "Veldin Hodža",
-                "position": "MF",
-                "club": "Rubin Kazan",
-                "league": "Russian Premier League",
-                "age": 23,
-                "birthplace": {
-                    "city": "Rijeka",
-                    "country": "Croatia",
-                    "lat": 45.3333,
-                    "lng": 14.4333
-                }
-            },
-            {
-                "name": "Lindon Emërllahu",
-                "position": "MF",
-                "club": "Polissya Zhytomyr",
-                "league": "Ukrainian Premier League",
-                "age": 23,
-                "birthplace": {
-                    "city": "Suva Reka",
-                    "country": "Kosovo",
-                    "lat": 42.38,
-                    "lng": 20.8219
-                }
-            },
-            {
-                "name": "Muharrem Jashari",
-                "position": "MF",
-                "club": "LNZ Cherkasy",
-                "league": "Ukrainian Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Mitrovica",
-                    "country": "Kosovo",
-                    "lat": 42.8833,
-                    "lng": 20.8667
-                }
-            },
-            {
-                "name": "Milot Rashica",
-                "position": "FW",
-                "club": "Beşiktaş",
-                "league": "Turkish Super Lig",
-                "age": 29,
-                "birthplace": {
-                    "city": "Vushtrri",
-                    "country": "Kosovo",
-                    "lat": 42.8222,
-                    "lng": 20.9667
-                }
-            },
-            {
-                "name": "Albion Rrahmani",
-                "position": "FW",
-                "club": "Sparta Prague",
-                "league": "Czech First League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Podujeva",
-                    "country": "Kosovo",
-                    "lat": 42.9117,
-                    "lng": 21.1917
-                }
-            },
-            {
-                "name": "Fisnik Asllani",
-                "position": "FW",
-                "club": "TSG Hoffenheim",
-                "league": "Bundesliga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Berlin",
-                    "country": "Germany",
-                    "lat": 52.5167,
-                    "lng": 13.3833
-                }
-            },
-            {
-                "name": "Ermal Krasniqi",
-                "position": "FW",
-                "club": "Legia Warsaw",
-                "league": "Polish Ekstraklasa",
-                "age": 27,
-                "birthplace": {
-                    "city": "Malisheva",
-                    "country": "Federal Republic of Yugoslavia",
-                    "lat": 42.4828,
-                    "lng": 20.7461
-                }
-            },
-            {
-                "name": "Vedat Muriqi",
-                "position": "FW",
-                "club": "Mallorca",
-                "league": "La Liga",
-                "age": 31,
-                "birthplace": {
-                    "city": "Prizren",
-                    "country": "Kosovo",
-                    "lat": 42.23,
-                    "lng": 20.74
-                }
-            },
-            {
-                "name": "Baton Zabërgja",
-                "position": "FW",
-                "club": "Metalist 1925 Kharkiv",
-                "league": "Ukrainian Premier League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Pristina",
-                    "country": "Kosovo",
-                    "lat": 42.4312,
-                    "lng": 21.1146
-                }
-            }
-        ]
-    },
-    "DEN": {
-        "name": "Denmark",
-        "flag": "🇩🇰",
-        "confederation": "UEFA",
-        "fifaRanking": 55,
-        "players": [
-            {
-                "name": "Kasper Schmeichel",
-                "position": "GK",
-                "club": "Celtic",
-                "league": "Scottish Premiership",
-                "age": 39,
-                "birthplace": {
-                    "city": "Copenhagen",
-                    "country": "Denmark",
-                    "lat": 55.6761,
-                    "lng": 12.5689
-                }
-            },
-            {
-                "name": "Mads Hermansen",
-                "position": "GK",
-                "club": "West Ham United",
-                "league": "Premier League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Odense",
-                    "country": "Denmark",
-                    "lat": 55.4,
-                    "lng": 10.3833
-                }
-            },
-            {
-                "name": "Filip Jörgensen",
-                "position": "GK",
-                "club": "Chelsea",
-                "league": "Premier League",
-                "age": 23,
-                "birthplace": {
-                    "city": "Lomma",
-                    "country": "Sweden",
-                    "lat": 55.6747,
-                    "lng": 13.0801
-                }
-            },
-            {
-                "name": "Joachim Andersen",
-                "position": "DF",
-                "club": "Fulham",
-                "league": "Premier League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Frederiksberg",
-                    "country": "Denmark",
-                    "lat": 55.6779,
-                    "lng": 12.5327
-                }
-            },
-            {
-                "name": "Jannik Vestergaard",
-                "position": "DF",
-                "club": "Leicester City",
-                "league": "Premier League",
-                "age": 33,
-                "birthplace": {
-                    "city": "Copenhagen",
-                    "country": "Denmark",
-                    "lat": 55.6761,
-                    "lng": 12.5689
-                }
-            },
-            {
-                "name": "Lucas Høgsberg",
-                "position": "DF",
-                "club": "Strasbourg",
-                "league": "Ligue 1",
-                "age": 19,
-                "birthplace": {
-                    "city": "Farum",
-                    "country": "Denmark",
-                    "lat": 55.8083,
-                    "lng": 12.3581
-                }
-            },
-            {
-                "name": "Nikolas Nartey",
-                "position": "DF",
-                "club": "VfB Stuttgart",
-                "league": "Bundesliga",
-                "age": 25,
-                "birthplace": {
-                    "city": "Bagsværd",
-                    "country": "Denmark",
-                    "lat": 55.76,
-                    "lng": 12.455
-                }
-            },
-            {
-                "name": "Andreas Christensen",
-                "position": "DF",
-                "club": "Barcelona",
-                "league": "La Liga",
-                "age": 29,
-                "birthplace": {
-                    "city": "Lillerød",
-                    "country": "Denmark",
-                    "lat": 55.8708,
-                    "lng": 12.356
-                }
-            },
-            {
-                "name": "Rasmus Kristensen",
-                "position": "DF",
-                "club": "Eintracht Frankfurt",
-                "league": "Bundesliga",
-                "age": 28,
-                "birthplace": {
-                    "city": "Brande",
-                    "country": "Denmark",
-                    "lat": 55.9439,
-                    "lng": 9.1236
-                }
-            },
-            {
-                "name": "Patrick Dorgu",
-                "position": "DF",
-                "club": "Manchester United",
-                "league": "Premier League",
-                "age": 21,
-                "birthplace": {
-                    "city": "Copenhagen",
-                    "country": "Denmark",
-                    "lat": 55.6761,
-                    "lng": 12.5689
-                }
-            },
-            {
-                "name": "Victor Nelsson",
-                "position": "DF",
-                "club": "Hellas Verona",
-                "league": "Serie A",
-                "age": 27,
-                "birthplace": {
-                    "city": "Hornbæk",
-                    "country": "Denmark",
-                    "lat": 56.0875,
-                    "lng": 12.4587
-                }
-            },
-            {
-                "name": "Matt O'Riley",
-                "position": "MF",
-                "club": "Brighton & Hove Albion",
-                "league": "Premier League",
-                "age": 25,
-                "birthplace": {
-                    "city": "London Borough of Hounslow",
-                    "country": "United Kingdom",
-                    "lat": 51.4736,
-                    "lng": -0.3656
-                }
-            },
-            {
-                "name": "Christian Eriksen",
-                "position": "MF",
-                "club": "VfL Wolfsburg",
-                "league": "Bundesliga",
-                "age": 33,
-                "birthplace": {
-                    "city": "Middelfart",
-                    "country": "Denmark",
-                    "lat": 55.5058,
-                    "lng": 9.7306
-                }
-            },
-            {
-                "name": "Victor Froholdt",
-                "position": "MF",
-                "club": "Porto",
-                "league": "Primeira Liga",
-                "age": 19,
-                "birthplace": {
-                    "city": "Vallensbæk",
-                    "country": "Denmark",
-                    "lat": 55.6239,
-                    "lng": 12.3869
-                }
-            },
-            {
-                "name": "Mikkel Damsgaard",
-                "position": "MF",
-                "club": "Brentford",
-                "league": "Premier League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Jyllinge",
-                    "country": "Denmark",
-                    "lat": 55.7514,
-                    "lng": 12.1039
-                }
-            },
-            {
-                "name": "Christian Nørgaard",
-                "position": "MF",
-                "club": "Arsenal",
-                "league": "Premier League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Copenhagen",
-                    "country": "Denmark",
-                    "lat": 55.6761,
-                    "lng": 12.5689
-                }
-            },
-            {
-                "name": "Philip Billing",
-                "position": "MF",
-                "club": "Midtjylland",
-                "league": "Danish Superliga",
-                "age": 29,
-                "birthplace": {
-                    "city": "Copenhagen",
-                    "country": "Denmark",
-                    "lat": 55.6761,
-                    "lng": 12.5689
-                }
-            },
-            {
-                "name": "Morten Hjulmand",
-                "position": "MF",
-                "club": "Sporting CP",
-                "league": "Primeira Liga",
-                "age": 26,
-                "birthplace": {
-                    "city": "Kastrup",
-                    "country": "Denmark",
-                    "lat": 55.6375,
-                    "lng": 12.6417
-                }
-            },
-            {
-                "name": "Pierre-Emile Højbjerg",
-                "position": "MF",
-                "club": "Marseille",
-                "league": "Ligue 1",
-                "age": 30,
-                "birthplace": {
-                    "city": "Copenhagen",
-                    "country": "Denmark",
-                    "lat": 55.6761,
-                    "lng": 12.5689
-                }
-            },
-            {
-                "name": "Gustav Isaksen",
-                "position": "FW",
-                "club": "Lazio",
-                "league": "Serie A",
-                "age": 24,
-                "birthplace": {
-                    "city": "Over Hjerk",
-                    "country": "Denmark",
-                    "lat": 56.6916,
-                    "lng": 8.9207
-                }
-            },
-            {
-                "name": "Rasmus Højlund",
-                "position": "FW",
-                "club": "Napoli",
-                "league": "Serie A",
-                "age": 23,
-                "birthplace": {
-                    "city": "Copenhagen",
-                    "country": "Denmark",
-                    "lat": 55.6761,
-                    "lng": 12.5689
-                }
-            },
-            {
-                "name": "Jacob Bruun Larsen",
-                "position": "FW",
-                "club": "Burnley",
-                "league": "Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Kongens Lyngby",
-                    "country": "Denmark",
-                    "lat": 55.77,
-                    "lng": 12.5
-                }
-            },
-            {
-                "name": "Jonas Wind",
-                "position": "FW",
-                "club": "VfL Wolfsburg",
-                "league": "Bundesliga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Hvidovre",
-                    "country": "Denmark",
-                    "lat": 55.6564,
-                    "lng": 12.4686
-                }
-            },
-            {
-                "name": "Mika Biereth",
-                "position": "FW",
-                "club": "Monaco",
-                "league": "Ligue 1",
-                "age": 23,
-                "birthplace": {
-                    "city": "London",
-                    "country": "United Kingdom",
-                    "lat": 51.5072,
-                    "lng": -0.1275
-                }
-            }
-        ]
-    },
-    "CZE": {
-        "name": "Czechia",
-        "flag": "🇨🇿",
-        "confederation": "UEFA",
-        "fifaRanking": 56,
-        "players": [
-            {
-                "name": "Matěj Kovář",
-                "position": "GK",
-                "club": "PSV Eindhoven",
-                "league": "Eredivisie",
-                "age": 25,
-                "birthplace": {
-                    "city": "Uherské Hradiště",
-                    "country": "Czech Republic",
-                    "lat": 49.0698,
-                    "lng": 17.4597
-                }
-            },
-            {
-                "name": "Martin Jedlička",
-                "position": "GK",
-                "club": "Baník Ostrava",
-                "league": "Czech First League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Příbram",
-                    "country": "Czech Republic",
-                    "lat": 49.69,
-                    "lng": 14.0105
-                }
-            },
-            {
-                "name": "Jakub Markovič",
-                "position": "GK",
-                "club": "Slavia Prague",
-                "league": "Czech First League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Přerov",
-                    "country": "Czech Republic",
-                    "lat": 49.4556,
-                    "lng": 17.4511
-                }
-            },
-            {
-                "name": "Štěpán Chaloupek",
-                "position": "DF",
-                "club": "Slavia Prague",
-                "league": "Czech First League",
-                "age": 22,
-                "birthplace": {
-                    "city": "Meziboří",
-                    "country": "Czech Republic",
-                    "lat": 50.6212,
-                    "lng": 13.5988
-                }
-            },
-            {
-                "name": "Robin Hranáč",
-                "position": "DF",
-                "club": "TSG Hoffenheim",
-                "league": "Bundesliga",
-                "age": 26,
-                "birthplace": {
-                    "city": "Plzeň",
-                    "country": "Czech Republic",
-                    "lat": 49.7414,
-                    "lng": 13.3825
-                }
-            },
-            {
-                "name": "Vladimír Coufal",
-                "position": "DF",
-                "club": "TSG Hoffenheim",
-                "league": "Bundesliga",
-                "age": 33,
-                "birthplace": {
-                    "city": "Prague",
-                    "country": "Czech Republic",
-                    "lat": 50.0875,
-                    "lng": 14.4214
-                }
-            },
-            {
-                "name": "David Douděra",
-                "position": "DF",
-                "club": "Slavia Prague",
-                "league": "Czech First League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Brandýs nad Labem-Stará Boleslav",
-                    "country": "Czech Republic",
-                    "lat": 50.1872,
-                    "lng": 14.6633
-                }
-            },
-            {
-                "name": "David Jurásek",
-                "position": "DF",
-                "club": "Slavia Prague",
-                "league": "Czech First League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Dolní Němčí",
-                    "country": "Czech Republic",
-                    "lat": 48.9684,
-                    "lng": 17.5859
-                }
-            },
-            {
-                "name": "Jaroslav Zelený",
-                "position": "DF",
-                "club": "Sparta Prague",
-                "league": "Czech First League",
-                "age": 33,
-                "birthplace": {
-                    "city": "Hradec Králové",
-                    "country": "Czech Republic",
-                    "lat": 50.2092,
-                    "lng": 15.8319
-                }
-            },
-            {
-                "name": "Martin Vitík",
-                "position": "DF",
-                "club": "Bologna",
-                "league": "Serie A",
-                "age": 23,
-                "birthplace": {
-                    "city": "Czech Republic",
-                    "country": "Czech Republic",
-                    "lat": 50,
-                    "lng": 15
-                }
-            },
-            {
-                "name": "Matěj Ryneš",
-                "position": "MF",
-                "club": "Sparta Prague",
-                "league": "Czech First League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Horní Planá",
-                    "country": "Czech Republic",
-                    "lat": 48.7674,
-                    "lng": 14.0326
-                }
-            },
-            {
-                "name": "Adam Karabec",
-                "position": "MF",
-                "club": "Lyon",
-                "league": "Ligue 1",
-                "age": 22,
-                "birthplace": {
-                    "city": "Czech Republic",
-                    "country": "Czech Republic",
-                    "lat": 50,
-                    "lng": 15
-                }
-            },
-            {
-                "name": "Michal Sadílek",
-                "position": "MF",
-                "club": "Slavia Prague",
-                "league": "Czech First League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Uherské Hradiště",
-                    "country": "Czech Republic",
-                    "lat": 49.0698,
-                    "lng": 17.4597
-                }
-            },
-            {
-                "name": "Tomáš Ladra",
-                "position": "MF",
-                "club": "Viktoria Plzeň",
-                "league": "Czech First League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Česká Lípa",
-                    "country": "Czech Republic",
-                    "lat": 50.6856,
-                    "lng": 14.5377
-                }
-            },
-            {
-                "name": "Lukáš Červ",
-                "position": "MF",
-                "club": "Viktoria Plzeň",
-                "league": "Czech First League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Prague",
-                    "country": "Czech Republic",
-                    "lat": 50.0875,
-                    "lng": 14.4214
-                }
-            },
-            {
-                "name": "Patrik Hellebrand",
-                "position": "MF",
-                "club": "Górnik Zabrze",
-                "league": "Polish Ekstraklasa",
-                "age": 26,
-                "birthplace": {
-                    "city": "Czech Republic",
-                    "country": "Czech Republic",
-                    "lat": 50,
-                    "lng": 15
-                }
-            },
-            {
-                "name": "Kryštof Daněk",
-                "position": "MF",
-                "club": "LASK",
-                "league": "Austrian Bundesliga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Olomouc",
-                    "country": "Czech Republic",
-                    "lat": 49.5939,
-                    "lng": 17.2508
-                }
-            },
-            {
-                "name": "Michal Beran",
-                "position": "MF",
-                "club": "Sigma Olomouc",
-                "league": "Czech First League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Czech Republic",
-                    "country": "Czech Republic",
-                    "lat": 50,
-                    "lng": 15
-                }
-            },
-            {
-                "name": "Tomáš Souček",
-                "position": "MF",
-                "club": "West Ham United",
-                "league": "Premier League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Havlíčkův Brod",
-                    "country": "Czech Republic",
-                    "lat": 49.6079,
-                    "lng": 15.5807
-                }
-            },
-            {
-                "name": "Lukáš Provod",
-                "position": "MF",
-                "club": "Slavia Prague",
-                "league": "Czech First League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Plzeň",
-                    "country": "Czech Republic",
-                    "lat": 49.7414,
-                    "lng": 13.3825
-                }
-            },
-            {
-                "name": "Patrik Schick",
-                "position": "FW",
-                "club": "Bayer Leverkusen",
-                "league": "Bundesliga",
-                "age": 30,
-                "birthplace": {
-                    "city": "Prague",
-                    "country": "Czech Republic",
-                    "lat": 50.0875,
-                    "lng": 14.4214
-                }
-            },
-            {
-                "name": "Václav Sejk",
-                "position": "FW",
-                "club": "Sigma Olomouc",
-                "league": "Czech First League",
-                "age": 23,
-                "birthplace": {
-                    "city": "Děčín",
-                    "country": "Czech Republic",
-                    "lat": 50.7736,
-                    "lng": 14.1961
-                }
-            },
-            {
-                "name": "Mojmír Chytil",
-                "position": "FW",
-                "club": "Slavia Prague",
-                "league": "Czech First League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Skalka",
-                    "country": "Czech Republic",
-                    "lat": 49.4031,
-                    "lng": 17.1698
-                }
-            },
-            {
-                "name": "Tomáš Chorý",
-                "position": "FW",
-                "club": "Slavia Prague",
-                "league": "Czech First League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Olomouc",
-                    "country": "Czech Republic",
-                    "lat": 49.5939,
-                    "lng": 17.2508
-                }
-            }
-        ]
-    },
-    "IRL": {
-        "name": "Rep. of Ireland",
-        "flag": "🇮🇪",
-        "confederation": "UEFA",
-        "fifaRanking": 57,
-        "players": [
-            {
-                "name": "Caoimhín Kelleher",
-                "position": "GK",
-                "club": "Brentford",
-                "league": "Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Cork",
-                    "country": "Ireland",
-                    "lat": 51.9,
-                    "lng": -8.4731
-                }
-            },
-            {
-                "name": "Gavin Bazunu",
-                "position": "GK",
-                "club": "Stoke City",
-                "league": "EFL Championship",
-                "age": 23,
-                "birthplace": {
-                    "city": "Dublin",
-                    "country": "Ireland",
-                    "lat": 53.3497,
-                    "lng": -6.2603
-                }
-            },
-            {
-                "name": "Mark Travers",
-                "position": "GK",
-                "club": "Everton",
-                "league": "Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "West Yorkshire",
-                    "country": "United Kingdom",
-                    "lat": 53.75,
-                    "lng": -1.6667
-                }
-            },
-            {
-                "name": "Séamus Coleman",
-                "position": "DF",
-                "club": "Everton",
-                "league": "Premier League",
-                "age": 37,
-                "birthplace": {
-                    "city": "Donegal",
-                    "country": "Ireland",
-                    "lat": 54.65,
-                    "lng": -8.117
-                }
-            },
-            {
-                "name": "Liam Scales",
-                "position": "DF",
-                "club": "Celtic",
-                "league": "Scottish Premiership",
-                "age": 27,
-                "birthplace": {
-                    "city": "Dublin",
-                    "country": "Ireland",
-                    "lat": 53.3497,
-                    "lng": -6.2603
-                }
-            },
-            {
-                "name": "Dara O'Shea",
-                "position": "DF",
-                "club": "Ipswich Town",
-                "league": "Premier League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Dublin",
-                    "country": "Ireland",
-                    "lat": 53.3497,
-                    "lng": -6.2603
-                }
-            },
-            {
-                "name": "Jake O'Brien",
-                "position": "DF",
-                "club": "Everton",
-                "league": "Premier League",
-                "age": 24,
-                "birthplace": {
-                    "city": "County Cork",
-                    "country": "Ireland",
-                    "lat": 52,
-                    "lng": -8.75
-                }
-            },
-            {
-                "name": "Jimmy Dunne",
-                "position": "DF",
-                "club": "Queens Park Rangers",
-                "league": "EFL Championship",
-                "age": 28,
-                "birthplace": {
-                    "city": "Drogheda",
-                    "country": "Ireland",
-                    "lat": 53.715,
-                    "lng": -6.3525
-                }
-            },
-            {
-                "name": "John Egan",
-                "position": "DF",
-                "club": "Hull City",
-                "league": "EFL Championship",
-                "age": 33,
-                "birthplace": {
-                    "city": "Cork",
-                    "country": "Ireland",
-                    "lat": 51.9,
-                    "lng": -8.4731
-                }
-            },
-            {
-                "name": "Ryan Manning",
-                "position": "DF",
-                "club": "Southampton",
-                "league": "Premier League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Galway",
-                    "country": "Ireland",
-                    "lat": 53.2719,
-                    "lng": -9.0488
-                }
-            },
-            {
-                "name": "Festy Ebosele",
-                "position": "DF",
-                "club": "İstanbul Başakşehir",
-                "league": "Turkish Super Lig",
-                "age": 23,
-                "birthplace": {
-                    "city": "Enniscorthy",
-                    "country": "Ireland",
-                    "lat": 52.5021,
-                    "lng": -6.5659
-                }
-            },
-            {
-                "name": "Nathan Collins",
-                "position": "DF",
-                "club": "Brentford",
-                "league": "Premier League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Leixlip",
-                    "country": "Ireland",
-                    "lat": 53.3636,
-                    "lng": -6.4864
-                }
-            },
-            {
-                "name": "Josh Cullen",
-                "position": "MF",
-                "club": "Burnley",
-                "league": "Premier League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Southend-on-Sea",
-                    "country": "United Kingdom",
-                    "lat": 51.5379,
-                    "lng": 0.7138
-                }
-            },
-            {
-                "name": "Jayson Molumby",
-                "position": "MF",
-                "club": "West Bromwich Albion",
-                "league": "EFL Championship",
-                "age": 26,
-                "birthplace": {
-                    "city": "Cappoquin",
-                    "country": "Ireland",
-                    "lat": 52.15,
-                    "lng": -7.95
-                }
-            },
-            {
-                "name": "Finn Azaz",
-                "position": "MF",
-                "club": "Southampton",
-                "league": "Premier League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Westminster",
-                    "country": "United Kingdom",
-                    "lat": 51.4995,
-                    "lng": -0.1333
-                }
-            },
-            {
-                "name": "Conor Coventry",
-                "position": "MF",
-                "club": "Charlton Athletic",
-                "league": "Premier League",
-                "age": 25,
-                "birthplace": {
-                    "city": "London Borough of Waltham Forest",
-                    "country": "United Kingdom",
-                    "lat": 51.5912,
-                    "lng": -0.0135
-                }
-            },
-            {
-                "name": "Jack Taylor",
-                "position": "MF",
-                "club": "Ipswich Town",
-                "league": "Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Hammersmith",
-                    "country": "United Kingdom",
-                    "lat": 51.4928,
-                    "lng": -0.2229
-                }
-            },
-            {
-                "name": "Jamie McGrath",
-                "position": "MF",
-                "club": "Hibernian",
-                "league": "Scottish Premiership",
-                "age": 29,
-                "birthplace": {
-                    "city": "Athboy",
-                    "country": "Ireland",
-                    "lat": 53.6167,
-                    "lng": -6.9167
-                }
-            },
-            {
-                "name": "Troy Parrott",
-                "position": "FW",
-                "club": "AZ",
-                "league": "Eredivisie",
-                "age": 24,
-                "birthplace": {
-                    "city": "Dublin",
-                    "country": "Ireland",
-                    "lat": 53.3497,
-                    "lng": -6.2603
-                }
-            },
-            {
-                "name": "Johnny Kenny",
-                "position": "FW",
-                "club": "Bolton Wanderers",
-                "league": "Premier League",
-                "age": 22,
-                "birthplace": {
-                    "city": "Riverstown",
-                    "country": "Ireland",
-                    "lat": 54.1317,
-                    "lng": -8.3944
-                }
-            },
-            {
-                "name": "Adam Idah",
-                "position": "FW",
-                "club": "Swansea City",
-                "league": "EFL Championship",
-                "age": 24,
-                "birthplace": {
-                    "city": "Cork",
-                    "country": "Ireland",
-                    "lat": 51.9,
-                    "lng": -8.4731
-                }
-            },
-            {
-                "name": "Mikey Johnston",
-                "position": "FW",
-                "club": "West Bromwich Albion",
-                "league": "EFL Championship",
-                "age": 26,
-                "birthplace": {
-                    "city": "Glasgow",
-                    "country": "United Kingdom",
-                    "lat": 55.8611,
-                    "lng": -4.25
-                }
-            },
-            {
-                "name": "Chiedozie Ogbene",
-                "position": "FW",
-                "club": "Sheffield United",
-                "league": "EFL Championship",
-                "age": 28,
-                "birthplace": {
-                    "city": "Lagos",
-                    "country": "Nigeria",
-                    "lat": 6.4561,
-                    "lng": 3.3936
-                }
-            }
-        ]
-    },
-    "MKD": {
-        "name": "N. Macedonia",
-        "flag": "🇲🇰",
-        "confederation": "UEFA",
-        "fifaRanking": 58,
-        "players": [
-            {
-                "name": "Dejan Iliev",
-                "position": "GK",
-                "club": "Rapid",
-                "league": "Romanian SuperLiga",
-                "age": 30,
-                "birthplace": {
-                    "city": "Strumica",
-                    "country": "North Macedonia",
-                    "lat": 41.4375,
-                    "lng": 22.6431
-                }
-            },
-            {
-                "name": "Igor Aleksovski",
-                "position": "GK",
-                "club": "Flamurtari",
-                "league": "Unknown",
-                "age": 30,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Stole Dimitrievski",
-                "position": "GK",
-                "club": "Valencia",
-                "league": "La Liga",
-                "age": 32,
-                "birthplace": {
-                    "city": "Kumanovo",
-                    "country": "North Macedonia",
-                    "lat": 42.1322,
-                    "lng": 21.7144
-                }
-            },
-            {
-                "name": "Damjan Shishkovski",
-                "position": "GK",
-                "club": "Borac",
-                "league": "Unknown",
-                "age": 30,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Bojan Ilievski",
-                "position": "DF",
-                "club": "Struga",
-                "league": "Unknown",
-                "age": 26,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.6553,
-                    "lng": 20.5589
-                }
-            },
-            {
-                "name": "Stefan Ashkovski",
-                "position": "DF",
-                "club": "Mes Rafsanjan",
-                "league": "Iranian Pro League",
-                "age": 33,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Nikola Serafimov",
-                "position": "DF",
-                "club": "Levski",
-                "league": "Bulgarian First League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Gjoko Zajkov",
-                "position": "DF",
-                "club": "Ajman",
-                "league": "UAE Pro League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Andrej Stojchevski",
-                "position": "DF",
-                "club": "Slovácko",
-                "league": "Czech First League",
-                "age": 22,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Stefan Despotovski",
-                "position": "DF",
-                "club": "Beograd",
-                "league": "Serbian SuperLiga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Serbia and Montenegro",
-                    "country": "Serbia and Montenegro",
-                    "lat": 43.15,
-                    "lng": 19.78
-                }
-            },
-            {
-                "name": "Darko Velkovski",
-                "position": "DF",
-                "club": "Vardar",
-                "league": "Unknown",
-                "age": 30,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Bojan Dimoski",
-                "position": "DF",
-                "club": "TSC",
-                "league": "Serbian SuperLiga",
-                "age": 24,
-                "birthplace": {
-                    "city": "Prilep",
-                    "country": "North Macedonia",
-                    "lat": 41.3464,
-                    "lng": 21.5542
-                }
-            },
-            {
-                "name": "Eljif Elmas",
-                "position": "MF",
-                "club": "Napoli",
-                "league": "Serie A",
-                "age": 26,
-                "birthplace": {
-                    "city": "Čair Municipality",
-                    "country": "North Macedonia",
-                    "lat": 42.0019,
-                    "lng": 21.4381
-                }
-            },
-            {
-                "name": "David Babunski",
-                "position": "MF",
-                "club": "Vardar",
-                "league": "Unknown",
-                "age": 31,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Enis Bardhi",
-                "position": "MF",
-                "club": "Konyaspor",
-                "league": "Turkish Super Lig",
-                "age": 30,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Isnik Alimi",
-                "position": "MF",
-                "club": "Dalian Yingbo",
-                "league": "Chinese Super League",
-                "age": 32,
-                "birthplace": {
-                    "city": "Delogoždi",
-                    "country": "North Macedonia",
-                    "lat": 41.2579,
-                    "lng": 20.7227
-                }
-            },
-            {
-                "name": "Tihomir Kostadinov",
-                "position": "MF",
-                "club": "Sigma",
-                "league": "Czech First League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Valandovo",
-                    "country": "North Macedonia",
-                    "lat": 41.3169,
-                    "lng": 22.5611
-                }
-            },
-            {
-                "name": "Jani Atanasov",
-                "position": "MF",
-                "club": "AEL",
-                "league": "Greek Super League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Strumica",
-                    "country": "North Macedonia",
-                    "lat": 41.4375,
-                    "lng": 22.6431
-                }
-            },
-            {
-                "name": "Reshat Ramadani",
-                "position": "MF",
-                "club": "Shkëndija",
-                "league": "Unknown",
-                "age": 22,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 42.961,
-                    "lng": 22.1307
-                }
-            },
-            {
-                "name": "Luka Stankovski",
-                "position": "MF",
-                "club": "Radnički 1923",
-                "league": "Serbian SuperLiga",
-                "age": 23,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Aleksandar Trajkovski",
-                "position": "FW",
-                "club": "Lokomotiva",
-                "league": "Croatian First League",
-                "age": 33,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Darko Churlinov",
-                "position": "FW",
-                "club": "Kocaelispor",
-                "league": "Turkish Super Lig",
-                "age": 25,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Elmin Rastoder",
-                "position": "FW",
-                "club": "Thun",
-                "league": "Swiss Super League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Wetzikon",
-                    "country": "Switzerland",
-                    "lat": 47.3208,
-                    "lng": 8.7931
-                }
-            },
-            {
-                "name": "Lirim Qamili",
-                "position": "FW",
-                "club": "Sønderjyske",
-                "league": "Danish Superliga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Glostrup",
-                    "country": "Denmark",
-                    "lat": 55.6628,
-                    "lng": 12.3972
-                }
-            },
-            {
-                "name": "Milan Ristovski",
-                "position": "FW",
-                "club": "Bohemians",
-                "league": "Czech First League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Skopje",
-                    "country": "North Macedonia",
-                    "lat": 41.9961,
-                    "lng": 21.4317
-                }
-            },
-            {
-                "name": "Bojan Miovski",
-                "position": "FW",
-                "club": "Rangers",
-                "league": "Scottish Premiership",
-                "age": 26,
-                "birthplace": {
-                    "city": "Štip",
-                    "country": "North Macedonia",
-                    "lat": 41.7358,
-                    "lng": 22.1914
-                }
-            },
-            {
-                "name": "Kristijan Trapanovski",
-                "position": "FW",
-                "club": "Dundee United",
-                "league": "Scottish Premiership",
-                "age": 26,
-                "birthplace": {
-                    "city": "Bitola",
-                    "country": "North Macedonia",
-                    "lat": 41.0319,
-                    "lng": 21.3347
-                }
-            }
-        ]
-    },
-    "COD": {
-        "name": "DR Congo",
-        "flag": "🇨🇩",
-        "confederation": "CAF",
-        "fifaRanking": 59,
-        "players": [
-            {
-                "name": "Lionel Mpasi",
-                "position": "GK",
-                "club": "Le Havre",
-                "league": "Ligue 1",
-                "age": 31,
-                "birthplace": {
-                    "city": "Meaux",
-                    "country": "France",
-                    "lat": 48.9594,
-                    "lng": 2.8878
-                }
-            },
-            {
-                "name": "Timothy Fayulu",
-                "position": "GK",
-                "club": "Noah",
-                "league": "Unknown",
-                "age": 26,
-                "birthplace": {
-                    "city": "Geneva",
-                    "country": "Switzerland",
-                    "lat": 46.2,
-                    "lng": 6.15
-                }
-            },
-            {
-                "name": "Matthieu Epolo",
-                "position": "GK",
-                "club": "Standard Liège",
-                "league": "Belgian Pro League",
-                "age": 21,
-                "birthplace": {
-                    "city": "City of Brussels",
-                    "country": "Belgium",
-                    "lat": 50.8467,
-                    "lng": 4.3517
-                }
-            },
-            {
-                "name": "Dimitry Bertaud",
-                "position": "GK",
-                "club": "Forge",
-                "league": "MLS",
-                "age": 27,
-                "birthplace": {
-                    "city": "Montpellier",
-                    "country": "France",
-                    "lat": 43.6109,
-                    "lng": 3.8772
-                }
-            },
-            {
-                "name": "Aaron Wan-Bissaka",
-                "position": "DF",
-                "club": "West Ham United",
-                "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Croydon",
-                    "country": "United Kingdom",
-                    "lat": 51.3727,
-                    "lng": -0.1099
-                }
-            },
-            {
-                "name": "Steve Kapuadi",
-                "position": "DF",
-                "club": "Legia Warsaw",
-                "league": "Polish Ekstraklasa",
-                "age": 27,
-                "birthplace": {
-                    "city": "Le Mans",
-                    "country": "France",
-                    "lat": 48.0042,
-                    "lng": 0.1969
-                }
-            },
-            {
-                "name": "Axel Tuanzebe",
-                "position": "DF",
-                "club": "Burnley",
-                "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Bunia",
-                    "country": "Democratic Republic of the Congo",
-                    "lat": 1.5667,
-                    "lng": 30.25
-                }
-            },
-            {
-                "name": "Dylan Batubinsika",
-                "position": "DF",
-                "club": "AEL",
-                "league": "Greek Super League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Cergy-Pontoise",
-                    "country": "France",
-                    "lat": 49.0361,
-                    "lng": 2.0631
-                }
-            },
-            {
-                "name": "Joris Kayembe",
-                "position": "DF",
-                "club": "Genk",
-                "league": "Belgian Pro League",
-                "age": 31,
-                "birthplace": {
-                    "city": "City of Brussels",
-                    "country": "Belgium",
-                    "lat": 50.8467,
-                    "lng": 4.3517
-                }
-            },
-            {
-                "name": "Rocky Bushiri",
-                "position": "DF",
-                "club": "Hibernian",
-                "league": "Scottish Premiership",
-                "age": 26,
-                "birthplace": {
-                    "city": "Democratic Republic of the Congo",
-                    "country": "Democratic Republic of the Congo",
-                    "lat": -2.88,
-                    "lng": 23.6561
-                }
-            },
-            {
-                "name": "Chancel Mbemba",
-                "position": "DF",
-                "club": "Lille",
-                "league": "Ligue 1",
-                "age": 31,
-                "birthplace": {
-                    "city": "Kisangani",
-                    "country": "Democratic Republic of the Congo",
-                    "lat": 0.5153,
-                    "lng": 25.1911
-                }
-            },
-            {
-                "name": "Gédéon Kalulu",
-                "position": "DF",
-                "club": "Aris Limassol",
-                "league": "Cypriot First Division",
-                "age": 28,
-                "birthplace": {
-                    "city": "8th arrondissement of Lyon",
-                    "country": "France",
-                    "lat": 45.7348,
-                    "lng": 4.8681
-                }
-            },
-            {
-                "name": "Arthur Masuaku",
-                "position": "DF",
-                "club": "Lens",
-                "league": "Ligue 1",
-                "age": 32,
-                "birthplace": {
-                    "city": "Lille",
-                    "country": "France",
-                    "lat": 50.6319,
-                    "lng": 3.0575
-                }
-            },
-            {
-                "name": "Ngal'ayel Mukau",
-                "position": "MF",
-                "club": "Lille",
-                "league": "Ligue 1",
-                "age": 21,
-                "birthplace": {
-                    "city": "Antwerp",
-                    "country": "Belgium",
-                    "lat": 51.2211,
-                    "lng": 4.3997
-                }
-            },
-            {
-                "name": "Samuel Moutoussamy",
-                "position": "MF",
-                "club": "Atromitos",
-                "league": "Greek Super League",
-                "age": 29,
-                "birthplace": {
-                    "city": "12th arrondissement of Paris",
-                    "country": "France",
-                    "lat": 48.8408,
-                    "lng": 2.3882
-                }
-            },
-            {
-                "name": "Gaël Kakuta",
-                "position": "MF",
-                "club": "Sakaryaspor",
-                "league": "Turkish Super Lig",
-                "age": 34,
-                "birthplace": {
-                    "city": "Lille",
-                    "country": "France",
-                    "lat": 50.6319,
-                    "lng": 3.0575
-                }
-            },
-            {
-                "name": "Noah Sadiki",
-                "position": "MF",
-                "club": "Sunderland",
-                "league": "Premier League",
-                "age": 21,
-                "birthplace": {
-                    "city": "Brussels-Capital Region",
-                    "country": "Belgium",
-                    "lat": 50.8467,
-                    "lng": 4.3525
-                }
-            },
-            {
-                "name": "Charles Pickel",
-                "position": "MF",
-                "club": "Espanyol",
-                "league": "La Liga",
-                "age": 28,
-                "birthplace": {
-                    "city": "Solothurn",
-                    "country": "Switzerland",
-                    "lat": 47.2081,
-                    "lng": 7.5375
-                }
-            },
-            {
-                "name": "Edo Kayembe",
-                "position": "MF",
-                "club": "Watford",
-                "league": "EFL Championship",
-                "age": 27,
-                "birthplace": {
-                    "city": "Kananga",
-                    "country": "Democratic Republic of the Congo",
-                    "lat": -5.8961,
-                    "lng": 22.4167
-                }
-            },
-            {
-                "name": "Nathanaël Mbuku",
-                "position": "FW",
-                "club": "Montpellier",
-                "league": "Ligue 1",
-                "age": 23,
-                "birthplace": {
-                    "city": "Villeneuve-Saint-Georges",
-                    "country": "France",
-                    "lat": 48.7325,
-                    "lng": 2.4497
-                }
-            },
-            {
-                "name": "Samuel Essende",
-                "position": "FW",
-                "club": "FC Augsburg",
-                "league": "Bundesliga",
-                "age": 28,
-                "birthplace": {
-                    "city": "Montfermeil",
-                    "country": "France",
-                    "lat": 48.8983,
-                    "lng": 2.5647
-                }
-            },
-            {
-                "name": "Théo Bongonda",
-                "position": "FW",
-                "club": "Spartak Moscow",
-                "league": "Russian Premier League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Charleroi",
-                    "country": "Belgium",
-                    "lat": 50.4167,
-                    "lng": 4.4442
-                }
-            },
-            {
-                "name": "Meschak Elia",
-                "position": "FW",
-                "club": "Alanyaspor",
-                "league": "Turkish Super Lig",
-                "age": 28,
-                "birthplace": {
-                    "city": "Kinshasa",
-                    "country": "Democratic Republic of the Congo",
-                    "lat": -4.3219,
-                    "lng": 15.3119
-                }
-            },
-            {
-                "name": "Cédric Bakambu",
-                "position": "FW",
-                "club": "Betis",
-                "league": "La Liga",
-                "age": 34,
-                "birthplace": {
-                    "city": "Vitry-sur-Seine",
-                    "country": "France",
-                    "lat": 48.7875,
-                    "lng": 2.3928
-                }
-            },
-            {
-                "name": "Fiston Mayele",
-                "position": "FW",
-                "club": "Pyramids",
-                "league": "Egyptian Premier League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Mbuji-Mayi",
-                    "country": "Democratic Republic of the Congo",
-                    "lat": -6.1209,
-                    "lng": 23.5967
-                }
-            },
-            {
-                "name": "Brian Cipenga",
-                "position": "FW",
-                "club": "Castellón",
-                "league": "Segunda División",
-                "age": 27,
-                "birthplace": {
-                    "city": "Kinshasa",
-                    "country": "DR Congo",
-                    "lat": -4.8225,
-                    "lng": 15.1578
-                }
-            },
-            {
-                "name": "Simon Banza",
-                "position": "FW",
-                "club": "Al Jazira",
-                "league": "UAE Pro League",
-                "age": 29,
-                "birthplace": {
-                    "city": "France",
-                    "country": "France",
-                    "lat": 47,
-                    "lng": 2
-                }
-            },
-            {
-                "name": "Michel-Ange Balikwisha",
-                "position": "FW",
-                "club": "Celtic",
-                "league": "Scottish Premiership",
-                "age": 24,
-                "birthplace": {
-                    "city": "Ghent",
-                    "country": "Belgium",
-                    "lat": 51.0536,
-                    "lng": 3.7253
-                }
-            }
-        ]
-    },
-    "JAM": {
-        "name": "Jamaica",
-        "flag": "🇯🇲",
-        "confederation": "CONCACAF",
-        "fifaRanking": 60,
-        "players": [
-            {
-                "name": "Kemar Foster",
-                "position": "GK",
-                "club": "Mount Pleasant",
-                "league": "Unknown",
-                "age": 33,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 18.4423,
-                    "lng": -76.5793
-                }
-            },
-            {
-                "name": "Daniel Russell",
-                "position": "GK",
-                "club": "Portmore United",
-                "league": "Unknown",
-                "age": 24,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.4715,
-                    "lng": -76.5332
-                }
-            },
-            {
-                "name": "Tafari Chambers",
-                "position": "GK",
-                "club": "Mount Pleasant",
-                "league": "Unknown",
-                "age": 25,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.7313,
-                    "lng": -76.5733
-                }
-            },
-            {
-                "name": "Damion Lowe",
-                "position": "DF",
-                "club": "Houston Dynamo",
-                "league": "MLS",
-                "age": 32,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.9714,
-                    "lng": -76.7931
-                }
-            },
-            {
-                "name": "Javain Brown",
-                "position": "DF",
-                "club": "Real Salt Lake",
-                "league": "MLS",
-                "age": 26,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.9714,
-                    "lng": -76.7931
-                }
-            },
-            {
-                "name": "Kyle Ming",
-                "position": "DF",
-                "club": "Mount Pleasant",
-                "league": "Unknown",
-                "age": 27,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 18.5967,
-                    "lng": -76.1051
-                }
-            },
-            {
-                "name": "Ronaldo Webster",
-                "position": "DF",
-                "club": "Shkëndija",
-                "league": "Unknown",
-                "age": 24,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.2346,
-                    "lng": -76.3074
-                }
-            },
-            {
-                "name": "Christopher Ainsworth",
-                "position": "DF",
-                "club": "Cavalier",
-                "league": "Unknown",
-                "age": 20,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.691,
-                    "lng": -76.6761
-                }
-            },
-            {
-                "name": "Fitzroy Cummings",
-                "position": "DF",
-                "club": "Mount Pleasant",
-                "league": "Unknown",
-                "age": 28,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.0159,
-                    "lng": -76.0688
-                }
-            },
-            {
-                "name": "Robinho Gordon",
-                "position": "DF",
-                "club": "Chapelton Maroons",
-                "league": "Unknown",
-                "age": 20,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.6311,
-                    "lng": -76.2858
-                }
-            },
-            {
-                "name": "Stephen Young",
-                "position": "DF",
-                "club": "Portmore United",
-                "league": "Unknown",
-                "age": 24,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.8577,
-                    "lng": -75.8197
-                }
-            },
-            {
-                "name": "Tyreek Magee",
-                "position": "MF",
-                "club": "Mount Pleasant",
-                "league": "Unknown",
-                "age": 25,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.9714,
-                    "lng": -76.7931
-                }
-            },
-            {
-                "name": "Jahshaun Anglin",
-                "position": "MF",
-                "club": "Mount Pleasant",
-                "league": "Unknown",
-                "age": 24,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.9714,
-                    "lng": -76.7931
-                }
-            },
-            {
-                "name": "Dwayne Atkinson",
-                "position": "MF",
-                "club": "Rhode Island FC",
-                "league": "MLS",
-                "age": 23,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.9714,
-                    "lng": -76.7931
-                }
-            },
-            {
-                "name": "Andre Lewis",
-                "position": "MF",
-                "club": "Spokane Velocity",
-                "league": "MLS",
-                "age": 31,
-                "birthplace": {
-                    "city": "Spanish Town",
-                    "country": "Jamaica",
-                    "lat": 17.9961,
-                    "lng": -76.9547
-                }
-            },
-            {
-                "name": "Nickyle Ellis",
-                "position": "MF",
-                "club": "Racing United",
-                "league": "Unknown",
-                "age": 21,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.2459,
-                    "lng": -76.5769
-                }
-            },
-            {
-                "name": "Adrian Reid",
-                "position": "MF",
-                "club": "Cavalier",
-                "league": "Unknown",
-                "age": 19,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.9681,
-                    "lng": -76.2382
-                }
-            },
-            {
-                "name": "Jaheim Thomas",
-                "position": "MF",
-                "club": "Arnett Gardens",
-                "league": "Unknown",
-                "age": 22,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.6141,
-                    "lng": -76.6346
-                }
-            },
-            {
-                "name": "Shamar Watson",
-                "position": "MF",
-                "club": "Cavalier",
-                "league": "Unknown",
-                "age": 21,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.5307,
-                    "lng": -77.3118
-                }
-            },
-            {
-                "name": "Romario Williams",
-                "position": "FW",
-                "club": "Indy Eleven",
-                "league": "MLS",
-                "age": 31,
-                "birthplace": {
-                    "city": "Portmore",
-                    "country": "Jamaica",
-                    "lat": 17.9667,
-                    "lng": -76.8667
-                }
-            },
-            {
-                "name": "Warner Brown",
-                "position": "FW",
-                "club": "Mount Pleasant",
-                "league": "Unknown",
-                "age": 23,
-                "birthplace": {
-                    "city": "Jamaica",
-                    "country": "Jamaica",
-                    "lat": 18.18,
-                    "lng": -77.4
-                }
-            },
-            {
-                "name": "Jourdaine Fletcher",
-                "position": "FW",
-                "club": "Montego Bay United",
-                "league": "Unknown",
-                "age": 28,
-                "birthplace": {
-                    "city": "Saint James Parish",
-                    "country": "Jamaica",
-                    "lat": 18.3833,
-                    "lng": -77.8833
-                }
-            },
-            {
-                "name": "Daniel Green",
-                "position": "FW",
-                "club": "Mount Pleasant",
-                "league": "Unknown",
-                "age": 28,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.4724,
-                    "lng": -75.9415
-                }
-            },
-            {
-                "name": "Trayvone Reid",
-                "position": "FW",
-                "club": "Oakland Roots SC",
-                "league": "MLS",
-                "age": 25,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 18.011,
-                    "lng": -75.9906
-                }
-            },
-            {
-                "name": "Nickalia Fuller",
-                "position": "FW",
-                "club": "Tivoli Gardens FC",
-                "league": "Unknown",
-                "age": 21,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.9822,
-                    "lng": -75.967
-                }
-            },
-            {
-                "name": "Andre Blake",
-                "position": "GK",
-                "club": "Philadelphia Union",
-                "league": "MLS",
-                "age": 35,
-                "birthplace": {
-                    "city": "May Pen",
-                    "country": "Jamaica",
-                    "lat": 17.95,
-                    "lng": -77.25
-                }
-            },
-            {
-                "name": "Jahmali Waite",
-                "position": "GK",
-                "club": "Tampa Bay Rowdies",
-                "league": "MLS",
-                "age": 27,
-                "birthplace": {
-                    "city": "Jamaica",
-                    "country": "Jamaica",
-                    "lat": 18.18,
-                    "lng": -77.4
-                }
-            },
-            {
-                "name": "Amal Knight",
-                "position": "GK",
-                "club": "Charlotte Independence",
-                "league": "MLS",
-                "age": 32,
-                "birthplace": {
-                    "city": "Jamaica",
-                    "country": "Jamaica",
-                    "lat": 18.18,
-                    "lng": -77.4
-                }
-            },
-            {
-                "name": "Jayden Hibbert",
-                "position": "GK",
-                "club": "Atlanta United FC",
-                "league": "MLS",
-                "age": 21,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 17.4611,
-                    "lng": -77.1254
-                }
-            },
-            {
-                "name": "Corey Addai",
-                "position": "GK",
-                "club": "Stockport County",
-                "league": "Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Kingston",
-                    "country": "Jamaica",
-                    "lat": 18.3964,
-                    "lng": -77.0827
-                }
-            }
-        ]
-    },
-    "NCL": {
-        "name": "New Caledonia",
-        "flag": "🇳🇨",
-        "confederation": "OFC",
-        "fifaRanking": 61,
-        "players": [
-            {
-                "name": "Rocky Nyikeine",
-                "position": "GK",
-                "club": "Gaïca",
-                "league": "Unknown",
-                "age": 33,
-                "birthplace": {
-                    "city": "New Caledonia",
-                    "country": "France",
-                    "lat": -21.25,
-                    "lng": 165.3
-                }
-            },
-            {
-                "name": "Thomas Schmidt",
-                "position": "GK",
-                "club": "Tiga Sport",
-                "league": "Unknown",
-                "age": 29,
-                "birthplace": {
-                    "city": "New Caledonia",
-                    "country": "France",
-                    "lat": -21.25,
-                    "lng": 165.3
-                }
-            },
-            {
-                "name": "Warren Hlupa",
-                "position": "GK",
-                "club": "Vertou",
-                "league": "Ligue 1",
-                "age": 21,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -21.5465,
-                    "lng": 166.1422
-                }
-            },
-            {
-                "name": "Morgan Mathelon",
-                "position": "DF",
-                "club": "Tiga Sport",
-                "league": "Unknown",
-                "age": 34,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -21.3372,
-                    "lng": 166.8177
-                }
-            },
-            {
-                "name": "Bernard Iwa",
-                "position": "DF",
-                "club": "Lössi",
-                "league": "Unknown",
-                "age": 25,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -22.9181,
-                    "lng": 166.9616
-                }
-            },
-            {
-                "name": "Fonzy Ranchain",
-                "position": "DF",
-                "club": "Vertou",
-                "league": "Ligue 1",
-                "age": 31,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -22.6024,
-                    "lng": 166.2769
-                }
-            },
-            {
-                "name": "Didier Simane",
-                "position": "DF",
-                "club": "ASPTT Dijon",
-                "league": "Ligue 1",
-                "age": 29,
-                "birthplace": {
-                    "city": "New Caledonia",
-                    "country": "France",
-                    "lat": -21.25,
-                    "lng": 165.3
-                }
-            },
-            {
-                "name": "William Rokuad",
-                "position": "DF",
-                "club": "Magenta",
-                "league": "Unknown",
-                "age": 24,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -21.3633,
-                    "lng": 165.7938
-                }
-            },
-            {
-                "name": "Henry Wélépane",
-                "position": "DF",
-                "club": "Tiga Sport",
-                "league": "Unknown",
-                "age": 25,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -22.1088,
-                    "lng": 166.7727
-                }
-            },
-            {
-                "name": "César Zeoula",
-                "position": "MF",
-                "club": "Chauvigny",
-                "league": "Ligue 1",
-                "age": 36,
-                "birthplace": {
-                    "city": "Lifou",
-                    "country": "France",
-                    "lat": -20.9,
-                    "lng": 167.2667
-                }
-            },
-            {
-                "name": "Shene Wélépane",
-                "position": "MF",
-                "club": "Tiga Sport",
-                "league": "Unknown",
-                "age": 28,
-                "birthplace": {
-                    "city": "New Caledonia",
-                    "country": "France",
-                    "lat": -21.25,
-                    "lng": 165.3
-                }
-            },
-            {
-                "name": "Joseph Athale",
-                "position": "MF",
-                "club": "Olympique Saint-Quentin",
-                "league": "Ligue 1",
-                "age": 30,
-                "birthplace": {
-                    "city": "Ouvéa Island",
-                    "country": "France",
-                    "lat": -20.6522,
-                    "lng": 166.562
-                }
-            },
-            {
-                "name": "Jekob Jeno",
-                "position": "MF",
-                "club": "Unirea Slobozia",
-                "league": "Unknown",
-                "age": 25,
-                "birthplace": {
-                    "city": "New Caledonia",
-                    "country": "France",
-                    "lat": -21.25,
-                    "lng": 165.3
-                }
-            },
-            {
-                "name": "Joris Kenon",
-                "position": "MF",
-                "club": "Saint-Philbert-de-Grand-Lieu",
-                "league": "Ligue 1",
-                "age": 28,
-                "birthplace": {
-                    "city": "New Caledonia",
-                    "country": "France",
-                    "lat": -21.25,
-                    "lng": 165.3
-                }
-            },
-            {
-                "name": "Titouan Richard",
-                "position": "MF",
-                "club": "Olympique Salaise Rhodia",
-                "league": "Ligue 1",
-                "age": 25,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -23.0865,
-                    "lng": 167.4935
-                }
-            },
-            {
-                "name": "Pierre Bako",
-                "position": "MF",
-                "club": "Vertou",
-                "league": "Ligue 1",
-                "age": 24,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -22.6035,
-                    "lng": 166.3981
-                }
-            },
-            {
-                "name": "Yoan Béaruné",
-                "position": "MF",
-                "club": "Horizon Patho",
-                "league": "Unknown",
-                "age": 23,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -22.414,
-                    "lng": 165.6311
-                }
-            },
-            {
-                "name": "Jean-Jacques Katrawa",
-                "position": "FW",
-                "club": "Lucciana",
-                "league": "Ligue 1",
-                "age": 26,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -21.8823,
-                    "lng": 167.1547
-                }
-            },
-            {
-                "name": "Gérard Waia",
-                "position": "FW",
-                "club": "Tiga Sport",
-                "league": "Unknown",
-                "age": 21,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -21.8181,
-                    "lng": 166.8229
-                }
-            },
-            {
-                "name": "Lues Waya",
-                "position": "FW",
-                "club": "Vertou",
-                "league": "Ligue 1",
-                "age": 24,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -21.9917,
-                    "lng": 166.0001
-                }
-            },
-            {
-                "name": "Germain Haewegene",
-                "position": "FW",
-                "club": "Tahiti United",
-                "league": "Unknown",
-                "age": 29,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -23.0222,
-                    "lng": 166.926
-                }
-            },
-            {
-                "name": "Bryan Ausu",
-                "position": "FW",
-                "club": "Sud",
-                "league": "Ligue 1",
-                "age": 28,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -21.7523,
-                    "lng": 166.7888
-                }
-            },
-            {
-                "name": "Pierre Iékawé",
-                "position": "FW",
-                "club": "Tiga Sport",
-                "league": "Unknown",
-                "age": 28,
-                "birthplace": {
-                    "city": "Nouméa",
-                    "country": "New Caledonia",
-                    "lat": -21.778,
-                    "lng": 167.0604
-                }
-            }
-        ]
-    },
-    "IRQ": {
-        "name": "Iraq",
-        "flag": "🇮🇶",
-        "confederation": "AFC",
-        "fifaRanking": 62,
-        "players": [
-            {
-                "name": "Fahad Talib",
-                "position": "GK",
-                "club": "Al-Talaba",
-                "league": "Iraqi Premier League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Baghdad",
-                    "country": "Iraq",
-                    "lat": 33.3153,
-                    "lng": 44.3661
-                }
-            },
-            {
-                "name": "Jalal Hassan",
-                "position": "GK",
-                "club": "Al-Zawraa",
-                "league": "Iraqi Premier League",
-                "age": 34,
-                "birthplace": {
-                    "city": "Al Diwaniyah",
-                    "country": "Iraq",
-                    "lat": 31.9892,
-                    "lng": 44.9247
-                }
-            },
-            {
-                "name": "Ahmed Basil Fadhil",
-                "position": "GK",
-                "club": "Al-Shorta",
-                "league": "Iraqi Premier League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Baghdad",
-                    "country": "Iraq",
-                    "lat": 33.4863,
-                    "lng": 43.5123
-                }
-            },
-            {
-                "name": "Maitham Jabbar",
-                "position": "DF",
-                "club": "Al-Zawraa",
-                "league": "Iraqi Premier League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Nasiriyah",
-                    "country": "Iraq",
-                    "lat": 31.0439,
-                    "lng": 46.2575
-                }
-            },
-            {
-                "name": "Mustafa Saadoon",
-                "position": "DF",
-                "club": "Al-Shorta",
-                "league": "Iraqi Premier League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Iraq",
-                    "country": "Iraq",
-                    "lat": 33,
-                    "lng": 43
-                }
-            },
-            {
-                "name": "Saad Natiq",
-                "position": "DF",
-                "club": "Duhok",
-                "league": "Iraqi Premier League",
-                "age": 31,
-                "birthplace": {
-                    "city": "Baghdad",
-                    "country": "Iraq",
-                    "lat": 33.3153,
-                    "lng": 44.3661
-                }
-            },
-            {
-                "name": "Akam Hashim",
-                "position": "DF",
-                "club": "Al-Zawraa",
-                "league": "Iraqi Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Erbil",
-                    "country": "Iraq",
-                    "lat": 36.1911,
-                    "lng": 44.0094
-                }
-            },
-            {
-                "name": "Manaf Younis",
-                "position": "DF",
-                "club": "Al-Shorta",
-                "league": "Iraqi Premier League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Tikrit",
-                    "country": "Iraq",
-                    "lat": 34.6,
-                    "lng": 43.6833
-                }
-            },
-            {
-                "name": "Ahmed Yahya",
-                "position": "DF",
-                "club": "Al-Shorta",
-                "league": "Iraqi Premier League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Basra",
-                    "country": "Iraq",
-                    "lat": 30.515,
-                    "lng": 47.81
-                }
-            },
-            {
-                "name": "Ahmed Maknzi",
-                "position": "DF",
-                "club": "Al-Karma",
-                "league": "Iraqi Premier League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Baghdad",
-                    "country": "Iraq",
-                    "lat": 33.3153,
-                    "lng": 44.3661
-                }
-            },
-            {
-                "name": "Hussein Ali Al-Saedi",
-                "position": "MF",
-                "club": "Al-Shorta",
-                "league": "Iraqi Premier League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Baghdad",
-                    "country": "Iraq",
-                    "lat": 33.3153,
-                    "lng": 44.3661
-                }
-            },
-            {
-                "name": "Amjad Attwan",
-                "position": "MF",
-                "club": "Zakho",
-                "league": "Iraqi Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Karbala",
-                    "country": "Iraq",
-                    "lat": 32.6167,
-                    "lng": 44.0333
-                }
-            },
-            {
-                "name": "Hasan Abdulkareem",
-                "position": "MF",
-                "club": "Al-Zawraa",
-                "league": "Iraqi Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Baghdad",
-                    "country": "Iraq",
-                    "lat": 33.3153,
-                    "lng": 44.3661
-                }
-            },
-            {
-                "name": "Sajjad Jassim",
-                "position": "MF",
-                "club": "Al-Karma",
-                "league": "Iraqi Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Iraq",
-                    "country": "Iraq",
-                    "lat": 33,
-                    "lng": 43
-                }
-            },
-            {
-                "name": "Sherko Karim",
-                "position": "MF",
-                "club": "Zakho",
-                "league": "Iraqi Premier League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Kirkuk",
-                    "country": "Iraq",
-                    "lat": 35.4667,
-                    "lng": 44.4
-                }
-            },
-            {
-                "name": "Ali Jasim",
-                "position": "MF",
-                "club": "Al-Najma",
-                "league": "Saudi Pro League",
-                "age": 22,
-                "birthplace": {
-                    "city": "Baghdad",
-                    "country": "Iraq",
-                    "lat": 33.3153,
-                    "lng": 44.3661
-                }
-            },
-            {
-                "name": "Karrar Nabeel",
-                "position": "MF",
-                "club": "Al-Zawraa",
-                "league": "Iraqi Premier League",
-                "age": 28,
-                "birthplace": {
-                    "city": "Baghdad",
-                    "country": "Iraq",
-                    "lat": 34.144,
-                    "lng": 44.9403
-                }
-            },
-            {
-                "name": "Zaid Ismail",
-                "position": "MF",
-                "club": "Al-Talaba",
-                "league": "Iraqi Premier League",
-                "age": 24,
-                "birthplace": {
-                    "city": "Baghdad",
-                    "country": "Iraq",
-                    "lat": 32.8749,
-                    "lng": 43.6154
-                }
-            },
-            {
-                "name": "Marko Farji",
-                "position": "MF",
-                "club": "Venezia",
-                "league": "Serie A",
-                "age": 21,
-                "birthplace": {
-                    "city": "Grimstad",
-                    "country": "Norway",
-                    "lat": 58.3519,
-                    "lng": 8.5444
-                }
-            },
-            {
-                "name": "Mohammed Jawad",
-                "position": "FW",
-                "club": "Al-Quwa Al-Jawiya",
-                "league": "Iraqi Premier League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Baghdad",
-                    "country": "Iraq",
-                    "lat": 32.6244,
-                    "lng": 45.3101
-                }
-            },
-            {
-                "name": "Mohanad Ali",
-                "position": "FW",
-                "club": "Dibba",
-                "league": "UAE Pro League",
-                "age": 25,
-                "birthplace": {
-                    "city": "Baghdad",
-                    "country": "Iraq",
-                    "lat": 33.3153,
-                    "lng": 44.3661
-                }
-            },
-            {
-                "name": "Amar Muhsin",
-                "position": "FW",
-                "club": "Gimpo",
-                "league": "K League 1",
-                "age": 28,
-                "birthplace": {
-                    "city": "Gothenburg",
-                    "country": "Sweden",
-                    "lat": 57.7075,
-                    "lng": 11.9675
-                }
-            },
-            {
-                "name": "Aymen Hussein",
-                "position": "FW",
-                "club": "Al-Karma",
-                "league": "Iraqi Premier League",
-                "age": 29,
-                "birthplace": {
-                    "city": "Hawija",
-                    "country": "Iraq",
-                    "lat": 35.3232,
-                    "lng": 43.774
-                }
-            }
-        ]
-    },
-    "BOL": {
-        "name": "Bolivia",
-        "flag": "🇧🇴",
-        "confederation": "CONMEBOL",
-        "fifaRanking": 63,
-        "players": [
-            {
-                "name": "Carlos Lampe",
-                "position": "GK",
-                "club": "Bolívar",
-                "league": "Unknown",
-                "age": 38,
-                "birthplace": {
-                    "city": "Santa Cruz de la Sierra",
-                    "country": "Bolivia",
-                    "lat": -17.7892,
-                    "lng": -63.1975
-                }
-            },
-            {
-                "name": "Gerónimo Govea",
-                "position": "GK",
-                "club": "Montevideo Wanderers",
-                "league": "Uruguayan Primera",
-                "age": 17,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -15.8148,
-                    "lng": -68.9398
-                }
-            },
-            {
-                "name": "Bruno Poveda",
-                "position": "GK",
-                "club": "Universitario de Vinto",
-                "league": "Unknown",
-                "age": 22,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -16.1056,
-                    "lng": -68.1537
-                }
-            },
-            {
-                "name": "Luis Paz",
-                "position": "DF",
-                "club": "Bolívar",
-                "league": "Unknown",
-                "age": 21,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -15.7507,
-                    "lng": -69.008
-                }
-            },
-            {
-                "name": "Leonardo Zabala",
-                "position": "DF",
-                "club": "Cancún",
-                "league": "Liga MX",
-                "age": 23,
-                "birthplace": {
-                    "city": "Santa Cruz de la Sierra",
-                    "country": "Bolivia",
-                    "lat": -17.7892,
-                    "lng": -63.1975
-                }
-            },
-            {
-                "name": "Marcelo Torrez",
-                "position": "DF",
-                "club": "Santos U20",
-                "league": "Brasileirão",
-                "age": 19,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -17.3729,
-                    "lng": -67.7976
-                }
-            },
-            {
-                "name": "Richet Gómez",
-                "position": "DF",
-                "club": "Always Ready",
-                "league": "Unknown",
-                "age": 27,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -17.0906,
-                    "lng": -67.9431
-                }
-            },
-            {
-                "name": "Lucas Macazaga",
-                "position": "DF",
-                "club": "Leganés B",
-                "league": "La Liga",
-                "age": 19,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -17.0914,
-                    "lng": -67.5042
-                }
-            },
-            {
-                "name": "Leonardo Justiniano",
-                "position": "DF",
-                "club": "Rayong",
-                "league": "Unknown",
-                "age": 24,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -16.7434,
-                    "lng": -68.6854
-                }
-            },
-            {
-                "name": "Escleizon Freita",
-                "position": "DF",
-                "club": "Bolívar",
-                "league": "Unknown",
-                "age": 19,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -15.6421,
-                    "lng": -67.5701
-                }
-            },
-            {
-                "name": "Dieguito Rodríguez",
-                "position": "DF",
-                "club": "Always Ready",
-                "league": "Unknown",
-                "age": 22,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -17.4667,
-                    "lng": -67.4934
-                }
-            },
-            {
-                "name": "Nicolás Villarroel",
-                "position": "DF",
-                "club": "Always Ready",
-                "league": "Unknown",
-                "age": 18,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -16.4091,
-                    "lng": -69.0482
-                }
-            },
-            {
-                "name": "Ramiro Vaca",
-                "position": "MF",
-                "club": "Wydad Casablanca",
-                "league": "Botola Pro",
-                "age": 26,
-                "birthplace": {
-                    "city": "Tarija",
-                    "country": "Bolivia",
-                    "lat": -21.5339,
-                    "lng": -64.7342
-                }
-            },
-            {
-                "name": "Moisés Villarroel",
-                "position": "MF",
-                "club": "Blooming",
-                "league": "Unknown",
-                "age": 27,
-                "birthplace": {
-                    "city": "Santa Cruz de la Sierra",
-                    "country": "Bolivia",
-                    "lat": -17.7892,
-                    "lng": -63.1975
-                }
-            },
-            {
-                "name": "Robson Matheus",
-                "position": "MF",
-                "club": "Bolívar",
-                "league": "Unknown",
-                "age": 23,
-                "birthplace": {
-                    "city": "Santa Cruz de la Sierra",
-                    "country": "Bolivia",
-                    "lat": -17.7892,
-                    "lng": -63.1975
-                }
-            },
-            {
-                "name": "Ervin Vaca",
-                "position": "MF",
-                "club": "Bolívar",
-                "league": "Unknown",
-                "age": 21,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -16.4958,
-                    "lng": -68.1333
-                }
-            },
-            {
-                "name": "Carlos Melgar",
-                "position": "MF",
-                "club": "Bolívar",
-                "league": "Unknown",
-                "age": 31,
-                "birthplace": {
-                    "city": "Santa Cruz de la Sierra",
-                    "country": "Bolivia",
-                    "lat": -17.7892,
-                    "lng": -63.1975
-                }
-            },
-            {
-                "name": "Julio Herrera",
-                "position": "MF",
-                "club": "San Antonio Bulo Bulo",
-                "league": "Unknown",
-                "age": 26,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -16.8453,
-                    "lng": -67.6953
-                }
             },
             {
-                "name": "Bruno Miranda",
+                "name": "José Fajardo",
                 "position": "FW",
-                "club": "Aucas",
+                "club": "Universidad Católica",
                 "league": "Ecuadorian Serie A",
-                "age": 27,
-                "birthplace": {
-                    "city": "Santa Cruz de la Sierra",
-                    "country": "Bolivia",
-                    "lat": -17.7892,
-                    "lng": -63.1975
-                }
-            },
-            {
-                "name": "Lucas Chávez",
-                "position": "FW",
-                "club": "Bolívar",
-                "league": "Unknown",
-                "age": 22,
-                "birthplace": {
-                    "city": "Santa Cruz de la Sierra",
-                    "country": "Bolivia",
-                    "lat": -17.7892,
-                    "lng": -63.1975
-                }
-            },
-            {
-                "name": "Fernando Nava",
-                "position": "FW",
-                "club": "Oriente Petrolero",
-                "league": "Unknown",
-                "age": 21,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -15.9128,
-                    "lng": -67.2278
-                }
-            },
-            {
-                "name": "William Álvarez",
-                "position": "FW",
-                "club": "Nacional Potosí",
-                "league": "Unknown",
-                "age": 30,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -16.197,
-                    "lng": -68.4445
-                }
-            },
-            {
-                "name": "Máximo Mamani",
-                "position": "FW",
-                "club": "Always Ready",
-                "league": "Unknown",
-                "age": 20,
-                "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -17.0838,
-                    "lng": -67.7542
-                }
-            },
-            {
-                "name": "Juan Godoy",
-                "position": "FW",
-                "club": "Always Ready",
-                "league": "Unknown",
                 "age": 32,
                 "birthplace": {
-                    "city": "La Paz",
-                    "country": "Bolivia",
-                    "lat": -16.3248,
-                    "lng": -67.9004
-                }
-            }
-        ]
-    },
-    "SUR": {
-        "name": "Suriname",
-        "flag": "🇸🇷",
-        "confederation": "CONMEBOL",
-        "fifaRanking": 64,
-        "players": [
-            {
-                "name": "Warner Hahn",
-                "position": "GK",
-                "club": "Hammarby",
-                "league": "Swedish Allsvenskan",
-                "age": 33,
-                "birthplace": {
-                    "city": "Rotterdam",
-                    "country": "Netherlands",
-                    "lat": 51.92,
-                    "lng": 4.48
+                    "city": "Colón City",
+                    "country": "Panama",
+                    "lat": 9.3598,
+                    "lng": -79.9004
                 }
             },
             {
-                "name": "Jonathan Fonkel",
-                "position": "GK",
-                "club": "Robinhood",
+                "name": "Cecilio Waterman",
+                "position": "FW",
+                "club": "Universidad de Concepción",
                 "league": "Unknown",
-                "age": 20,
+                "age": 34,
                 "birthplace": {
-                    "city": "Paramaribo",
-                    "country": "Suriname",
-                    "lat": 5.9429,
-                    "lng": -54.9365
-                }
-            },
-            {
-                "name": "Etienne Vaessen",
-                "position": "GK",
-                "club": "Groningen",
-                "league": "Eredivisie",
-                "age": 30,
-                "birthplace": {
-                    "city": "Breda",
-                    "country": "Netherlands",
-                    "lat": 51.5889,
-                    "lng": 4.7758
-                }
-            },
-            {
-                "name": "Anfernee Dijksteel",
-                "position": "DF",
-                "club": "Kocaelispor",
-                "league": "Turkish Super Lig",
-                "age": 29,
-                "birthplace": {
-                    "city": "Netherlands",
-                    "country": "Kingdom of the Netherlands",
-                    "lat": 52.3167,
-                    "lng": 5.55
-                }
-            },
-            {
-                "name": "Radinio Balker",
-                "position": "DF",
-                "club": "Huddersfield Town",
-                "league": "Premier League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Amsterdam",
-                    "country": "Netherlands",
-                    "lat": 52.3667,
-                    "lng": 4.8833
-                }
-            },
-            {
-                "name": "Stefano Denswil",
-                "position": "DF",
-                "club": "Kayserispor",
-                "league": "Turkish Super Lig",
-                "age": 32,
-                "birthplace": {
-                    "city": "Zaandam",
-                    "country": "Netherlands",
-                    "lat": 52.4417,
-                    "lng": 4.8422
-                }
-            },
-            {
-                "name": "Ridgeciano Haps",
-                "position": "DF",
-                "club": "Venezia",
-                "league": "Serie A",
-                "age": 32,
-                "birthplace": {
-                    "city": "Utrecht",
-                    "country": "Netherlands",
-                    "lat": 52.0908,
-                    "lng": 5.1217
-                }
-            },
-            {
-                "name": "Myenty Abena",
-                "position": "DF",
-                "club": "Gaziantep",
-                "league": "Turkish Super Lig",
-                "age": 31,
-                "birthplace": {
-                    "city": "Paramaribo",
-                    "country": "Suriname",
-                    "lat": 5.8667,
-                    "lng": -55.1667
-                }
-            },
-            {
-                "name": "Djavan Anderson",
-                "position": "DF",
-                "club": "Al-Ittifaq",
-                "league": "UAE Pro League",
-                "age": 30,
-                "birthplace": {
-                    "city": "Amsterdam",
-                    "country": "Netherlands",
-                    "lat": 52.3667,
-                    "lng": 4.8833
-                }
-            },
-            {
-                "name": "Djevencio van der Kust",
-                "position": "DF",
-                "club": "Heracles Almelo",
-                "league": "Eredivisie",
-                "age": 24,
-                "birthplace": {
-                    "city": "Netherlands",
-                    "country": "Kingdom of the Netherlands",
-                    "lat": 52.3167,
-                    "lng": 5.55
-                }
-            },
-            {
-                "name": "Shaquille Pinas",
-                "position": "DF",
-                "club": "Al-Kholood",
-                "league": "Saudi Pro League",
-                "age": 27,
-                "birthplace": {
-                    "city": "Rotterdam",
-                    "country": "Netherlands",
-                    "lat": 51.92,
-                    "lng": 4.48
-                }
-            },
-            {
-                "name": "Dion Malone",
-                "position": "DF",
-                "club": "Telstar",
-                "league": "Eredivisie",
-                "age": 36,
-                "birthplace": {
-                    "city": "Paramaribo",
-                    "country": "Suriname",
-                    "lat": 5.8667,
-                    "lng": -55.1667
-                }
-            },
-            {
-                "name": "Dhoraso Klas",
-                "position": "MF",
-                "club": "Sheriff Tiraspol",
-                "league": "Unknown",
-                "age": 25,
-                "birthplace": {
-                    "city": "Amsterdam",
-                    "country": "Netherlands",
-                    "lat": 52.3667,
-                    "lng": 4.8833
-                }
-            },
-            {
-                "name": "Justin Lonwijk",
-                "position": "MF",
-                "club": "Fortuna Sittard",
-                "league": "Eredivisie",
-                "age": 26,
-                "birthplace": {
-                    "city": "Tilburg",
-                    "country": "Netherlands",
-                    "lat": 51.5572,
-                    "lng": 5.0911
-                }
-            },
-            {
-                "name": "Denzel Jubitana",
-                "position": "MF",
-                "club": "Atromitos",
-                "league": "Greek Super League",
-                "age": 26,
-                "birthplace": {
-                    "city": "Namur",
-                    "country": "Belgium",
-                    "lat": 50.4667,
-                    "lng": 4.8667
-                }
-            },
-            {
-                "name": "Jean-Paul Boëtius",
-                "position": "MF",
-                "club": "Darmstadt 98",
-                "league": "Bundesliga",
-                "age": 31,
-                "birthplace": {
-                    "city": "Rotterdam",
-                    "country": "Netherlands",
-                    "lat": 51.92,
-                    "lng": 4.48
-                }
-            },
-            {
-                "name": "Tjaronn Chery",
-                "position": "MF",
-                "club": "NEC",
-                "league": "Eredivisie",
-                "age": 37,
-                "birthplace": {
-                    "city": "Enschede",
-                    "country": "Netherlands",
-                    "lat": 52.2225,
-                    "lng": 6.8925
-                }
-            },
-            {
-                "name": "Kenneth Paal",
-                "position": "MF",
-                "club": "Antalyaspor",
-                "league": "Turkish Super Lig",
-                "age": 28,
-                "birthplace": {
-                    "city": "Netherlands",
-                    "country": "Kingdom of the Netherlands",
-                    "lat": 52.3167,
-                    "lng": 5.55
-                }
-            },
-            {
-                "name": "Virgil Misidjan",
-                "position": "FW",
-                "club": "NEC",
-                "league": "Eredivisie",
-                "age": 32,
-                "birthplace": {
-                    "city": "Goirle",
-                    "country": "Netherlands",
-                    "lat": 51.5203,
-                    "lng": 5.0671
-                }
-            },
-            {
-                "name": "Richonell Margaret",
-                "position": "FW",
-                "club": "Go Ahead Eagles",
-                "league": "Eredivisie",
-                "age": 25,
-                "birthplace": {
-                    "city": "Heerhugowaard",
-                    "country": "Netherlands",
-                    "lat": 52.668,
-                    "lng": 4.841
-                }
-            },
-            {
-                "name": "Sheraldo Becker",
-                "position": "FW",
-                "club": "Mainz 05",
-                "league": "Bundesliga",
-                "age": 30,
-                "birthplace": {
-                    "city": "Amsterdam",
-                    "country": "Netherlands",
-                    "lat": 52.3667,
-                    "lng": 4.8833
-                }
-            },
-            {
-                "name": "Jaden Montnor",
-                "position": "FW",
-                "club": "Aris Limassol",
-                "league": "Cypriot First Division",
-                "age": 23,
-                "birthplace": {
-                    "city": "Amsterdam",
-                    "country": "Netherlands",
-                    "lat": 52.3667,
-                    "lng": 4.8833
-                }
-            },
-            {
-                "name": "Gleofilo Vlijter",
-                "position": "FW",
-                "club": "Újpest",
-                "league": "Hungarian NB I",
-                "age": 26,
-                "birthplace": {
-                    "city": "Paramaribo",
-                    "country": "Suriname",
-                    "lat": 5.8667,
-                    "lng": -55.1667
-                }
-            },
-            {
-                "name": "Jay-Roy Grot",
-                "position": "FW",
-                "club": "OB",
-                "league": "Danish Superliga",
-                "age": 27,
-                "birthplace": {
-                    "city": "Arnhem",
-                    "country": "Netherlands",
-                    "lat": 51.9833,
-                    "lng": 5.9167
-                }
-            },
-            {
-                "name": "Jahnoah Markelo",
-                "position": "FW",
-                "club": "Coventry City",
-                "league": "EFL Championship",
-                "age": 23,
-                "birthplace": {
-                    "city": "Amsterdam",
-                    "country": "Netherlands",
-                    "lat": 52.3667,
-                    "lng": 4.8833
+                    "city": "Panama City",
+                    "country": "Panama",
+                    "lat": 8.9711,
+                    "lng": -79.5347
                 }
             }
         ]
@@ -21333,12 +16889,4 @@ function getBirthplaceData(teamCode) {
         name: player.name,
         ...player.birthplace
     }));
-}
-
-function getPositionDistribution(teamCode) {
-    const team = squadData[teamCode];
-    if (!team) return { GK: 0, DF: 0, MF: 0, FW: 0 };
-    const dist = { GK: 0, DF: 0, MF: 0, FW: 0 };
-    team.players.forEach(p => { dist[p.position] = (dist[p.position] || 0) + 1; });
-    return dist;
 }

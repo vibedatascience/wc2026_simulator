@@ -12,94 +12,69 @@ const fs = require('fs');
 const path = require('path');
 
 // ─── Team List ──────────────────────────────────────────────────────
-// 40 confirmed group stage teams + 22 playoff candidates = 62 total
-// Must match data.js exactly.
+// All 48 qualified teams. Must match data.js groups exactly.
 
 const teams = [
-    // Group A
+    // Group A: Mexico, South Africa, South Korea, Czechia
     { code: 'MEX', name: 'Mexico', wiki: 'Mexico_national_football_team', flag: '🇲🇽', country: 'Mexico' },
     { code: 'RSA', name: 'South Africa', wiki: 'South_Africa_national_soccer_team', flag: '🇿🇦', country: 'South Africa' },
     { code: 'KOR', name: 'South Korea', wiki: 'South_Korea_national_football_team', flag: '🇰🇷', country: 'South Korea' },
-    // Group B
+    { code: 'CZE', name: 'Czechia', wiki: 'Czech_Republic_national_football_team', flag: '🇨🇿', country: 'Czech Republic' },
+    // Group B: Canada, Bosnia & Herz., Qatar, Switzerland
     { code: 'CAN', name: 'Canada', wiki: 'Canada_men%27s_national_soccer_team', flag: '🇨🇦', country: 'Canada' },
+    { code: 'BIH', name: 'Bosnia & Herz.', wiki: 'Bosnia_and_Herzegovina_national_football_team', flag: '🇧🇦', country: 'Bosnia and Herzegovina' },
     { code: 'QAT', name: 'Qatar', wiki: 'Qatar_national_football_team', flag: '🇶🇦', country: 'Qatar' },
     { code: 'SUI', name: 'Switzerland', wiki: 'Switzerland_national_football_team', flag: '🇨🇭', country: 'Switzerland' },
-    // Group C
+    // Group C: Brazil, Morocco, Haiti, Scotland
     { code: 'BRA', name: 'Brazil', wiki: 'Brazil_national_football_team', flag: '🇧🇷', country: 'Brazil' },
     { code: 'MAR', name: 'Morocco', wiki: 'Morocco_national_football_team', flag: '🇲🇦', country: 'Morocco' },
     { code: 'HAI', name: 'Haiti', wiki: 'Haiti_national_football_team', flag: '🇭🇹', country: 'Haiti' },
     { code: 'SCO', name: 'Scotland', wiki: 'Scotland_national_football_team', flag: '🏴\u{E0067}\u{E0062}\u{E0073}\u{E0063}\u{E0074}\u{E007F}', country: 'Scotland' },
-    // Group D
+    // Group D: United States, Paraguay, Australia, Turkey
     { code: 'USA', name: 'United States', wiki: 'United_States_men%27s_national_soccer_team', flag: '🇺🇸', country: 'USA' },
     { code: 'PAR', name: 'Paraguay', wiki: 'Paraguay_national_football_team', flag: '🇵🇾', country: 'Paraguay' },
     { code: 'AUS', name: 'Australia', wiki: 'Australia_men%27s_national_soccer_team', flag: '🇦🇺', country: 'Australia' },
-    // Group E
+    { code: 'TUR', name: 'Turkey', wiki: 'Turkey_national_football_team', flag: '🇹🇷', country: 'Turkey' },
+    // Group E: Germany, Curaçao, Ivory Coast, Ecuador
     { code: 'GER', name: 'Germany', wiki: 'Germany_national_football_team', flag: '🇩🇪', country: 'Germany' },
     { code: 'CUW', name: 'Curaçao', wiki: 'Cura%C3%A7ao_national_football_team', flag: '🇨🇼', country: 'Curaçao' },
     { code: 'CIV', name: 'Ivory Coast', wiki: 'Ivory_Coast_national_football_team', flag: '🇨🇮', country: 'Ivory Coast' },
     { code: 'ECU', name: 'Ecuador', wiki: 'Ecuador_national_football_team', flag: '🇪🇨', country: 'Ecuador' },
-    // Group F
+    // Group F: Netherlands, Japan, Sweden, Tunisia
     { code: 'NED', name: 'Netherlands', wiki: 'Netherlands_national_football_team', flag: '🇳🇱', country: 'Netherlands' },
     { code: 'JPN', name: 'Japan', wiki: 'Japan_national_football_team', flag: '🇯🇵', country: 'Japan' },
+    { code: 'SWE', name: 'Sweden', wiki: 'Sweden_men%27s_national_football_team', flag: '🇸🇪', country: 'Sweden' },
     { code: 'TUN', name: 'Tunisia', wiki: 'Tunisia_national_football_team', flag: '🇹🇳', country: 'Tunisia' },
-    // Group G
+    // Group G: Belgium, Egypt, Iran, New Zealand
     { code: 'BEL', name: 'Belgium', wiki: 'Belgium_national_football_team', flag: '🇧🇪', country: 'Belgium' },
     { code: 'EGY', name: 'Egypt', wiki: 'Egypt_national_football_team', flag: '🇪🇬', country: 'Egypt' },
     { code: 'IRN', name: 'Iran', wiki: 'Iran_national_football_team', flag: '🇮🇷', country: 'Iran' },
     { code: 'NZL', name: 'New Zealand', wiki: 'New_Zealand_men%27s_national_football_team', flag: '🇳🇿', country: 'New Zealand' },
-    // Group H
+    // Group H: Spain, Cape Verde, Saudi Arabia, Uruguay
     { code: 'ESP', name: 'Spain', wiki: 'Spain_national_football_team', flag: '🇪🇸', country: 'Spain' },
     { code: 'CPV', name: 'Cape Verde', wiki: 'Cape_Verde_national_football_team', flag: '🇨🇻', country: 'Cape Verde' },
     { code: 'KSA', name: 'Saudi Arabia', wiki: 'Saudi_Arabia_national_football_team', flag: '🇸🇦', country: 'Saudi Arabia' },
     { code: 'URU', name: 'Uruguay', wiki: 'Uruguay_national_football_team', flag: '🇺🇾', country: 'Uruguay' },
-    // Group I
+    // Group I: France, Senegal, Iraq, Norway
     { code: 'FRA', name: 'France', wiki: 'France_national_football_team', flag: '🇫🇷', country: 'France' },
     { code: 'SEN', name: 'Senegal', wiki: 'Senegal_national_football_team', flag: '🇸🇳', country: 'Senegal' },
+    { code: 'IRQ', name: 'Iraq', wiki: 'Iraq_national_football_team', flag: '🇮🇶', country: 'Iraq' },
     { code: 'NOR', name: 'Norway', wiki: 'Norway_national_football_team', flag: '🇳🇴', country: 'Norway' },
-    // Group J
+    // Group J: Argentina, Algeria, Austria, Jordan
     { code: 'ARG', name: 'Argentina', wiki: 'Argentina_national_football_team', flag: '🇦🇷', country: 'Argentina' },
     { code: 'ALG', name: 'Algeria', wiki: 'Algeria_national_football_team', flag: '🇩🇿', country: 'Algeria' },
     { code: 'AUT', name: 'Austria', wiki: 'Austria_national_football_team', flag: '🇦🇹', country: 'Austria' },
     { code: 'JOR', name: 'Jordan', wiki: 'Jordan_national_football_team', flag: '🇯🇴', country: 'Jordan' },
-    // Group K
+    // Group K: Portugal, DR Congo, Uzbekistan, Colombia
     { code: 'POR', name: 'Portugal', wiki: 'Portugal_national_football_team', flag: '🇵🇹', country: 'Portugal' },
+    { code: 'COD', name: 'DR Congo', wiki: 'DR_Congo_national_football_team', flag: '🇨🇩', country: 'DR Congo' },
     { code: 'UZB', name: 'Uzbekistan', wiki: 'Uzbekistan_national_football_team', flag: '🇺🇿', country: 'Uzbekistan' },
     { code: 'COL', name: 'Colombia', wiki: 'Colombia_national_football_team', flag: '🇨🇴', country: 'Colombia' },
-    // Group L
+    // Group L: England, Croatia, Ghana, Panama
     { code: 'ENG', name: 'England', wiki: 'England_national_football_team', flag: '🏴\u{E0067}\u{E0062}\u{E0065}\u{E006E}\u{E0067}\u{E007F}', country: 'England' },
     { code: 'CRO', name: 'Croatia', wiki: 'Croatia_national_football_team', flag: '🇭🇷', country: 'Croatia' },
     { code: 'GHA', name: 'Ghana', wiki: 'Ghana_national_football_team', flag: '🇬🇭', country: 'Ghana' },
     { code: 'PAN', name: 'Panama', wiki: 'Panama_national_football_team', flag: '🇵🇦', country: 'Panama' },
-
-    // ── Playoff candidates ──
-    // UEFA Path A
-    { code: 'ITA', name: 'Italy', wiki: 'Italy_national_football_team', flag: '🇮🇹', country: 'Italy' },
-    { code: 'WAL', name: 'Wales', wiki: 'Wales_national_football_team', flag: '🏴\u{E0067}\u{E0062}\u{E0077}\u{E006C}\u{E0073}\u{E007F}', country: 'Wales' },
-    { code: 'BIH', name: 'Bosnia & Herz.', wiki: 'Bosnia_and_Herzegovina_national_football_team', flag: '🇧🇦', country: 'Bosnia and Herzegovina' },
-    { code: 'NIR', name: 'N. Ireland', wiki: 'Northern_Ireland_national_football_team', flag: '🇬🇧', country: 'Northern Ireland' },
-    // UEFA Path B
-    { code: 'UKR', name: 'Ukraine', wiki: 'Ukraine_national_football_team', flag: '🇺🇦', country: 'Ukraine' },
-    { code: 'SWE', name: 'Sweden', wiki: 'Sweden_men%27s_national_football_team', flag: '🇸🇪', country: 'Sweden' },
-    { code: 'POL', name: 'Poland', wiki: 'Poland_national_football_team', flag: '🇵🇱', country: 'Poland' },
-    { code: 'ALB', name: 'Albania', wiki: 'Albania_national_football_team', flag: '🇦🇱', country: 'Albania' },
-    // UEFA Path C
-    { code: 'TUR', name: 'Turkey', wiki: 'Turkey_national_football_team', flag: '🇹🇷', country: 'Turkey' },
-    { code: 'ROU', name: 'Romania', wiki: 'Romania_national_football_team', flag: '🇷🇴', country: 'Romania' },
-    { code: 'SVK', name: 'Slovakia', wiki: 'Slovakia_national_football_team', flag: '🇸🇰', country: 'Slovakia' },
-    { code: 'KOS', name: 'Kosovo', wiki: 'Kosovo_national_football_team', flag: '🇽🇰', country: 'Kosovo' },
-    // UEFA Path D
-    { code: 'DEN', name: 'Denmark', wiki: 'Denmark_national_football_team', flag: '🇩🇰', country: 'Denmark' },
-    { code: 'CZE', name: 'Czechia', wiki: 'Czech_Republic_national_football_team', flag: '🇨🇿', country: 'Czech Republic' },
-    { code: 'IRL', name: 'Rep. of Ireland', wiki: 'Republic_of_Ireland_national_football_team', flag: '🇮🇪', country: 'Ireland' },
-    { code: 'MKD', name: 'N. Macedonia', wiki: 'North_Macedonia_national_football_team', flag: '🇲🇰', country: 'North Macedonia' },
-    // IC Playoff 1
-    { code: 'COD', name: 'DR Congo', wiki: 'DR_Congo_national_football_team', flag: '🇨🇩', country: 'DR Congo' },
-    { code: 'JAM', name: 'Jamaica', wiki: 'Jamaica_national_football_team', flag: '🇯🇲', country: 'Jamaica' },
-    { code: 'NCL', name: 'New Caledonia', wiki: 'New_Caledonia_national_football_team', flag: '🇳🇨', country: 'New Caledonia' },
-    // IC Playoff 2
-    { code: 'IRQ', name: 'Iraq', wiki: 'Iraq_national_football_team', flag: '🇮🇶', country: 'Iraq' },
-    { code: 'BOL', name: 'Bolivia', wiki: 'Bolivia_national_football_team', flag: '🇧🇴', country: 'Bolivia' },
-    { code: 'SUR', name: 'Suriname', wiki: 'Suriname_national_football_team', flag: '🇸🇷', country: 'Suriname' },
 ];
 
 // ─── Capital city coordinates (fallback for birthplace) ─────────────
