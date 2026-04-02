@@ -2803,11 +2803,42 @@ main {
 }
 
 .map-wrapper {
+    position: relative;
     background: var(--bg-primary);
     border: 1px solid var(--border-color);
     border-radius: 6px;
     overflow: hidden;
     min-height: 400px;
+}
+
+.map-zoom-controls {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 10;
+}
+
+.map-zoom-btn {
+    width: 28px;
+    height: 28px;
+    background: #1e293b;
+    color: #fff;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease;
+}
+
+.map-zoom-btn:hover {
+    background: #334155;
 }
 
 .map-wrapper svg {

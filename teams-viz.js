@@ -768,25 +768,13 @@ async function updateMap() {
     const path = d3.geoPath().projection(projection);
     const countries = topojson.feature(world, world.objects.countries);
 
-    // Draw countries
-    svg.append('g')
-        .selectAll('path')
-        .data(countries.features)
-        .join('path')
-        .attr('d', path)
-        .attr('fill', '#f1f5f9')
-        .attr('stroke', '#e2e8f0')
-        .attr('stroke-width', 0.5);
+    // Filter out Antarctica (features below -55° latitude)
+    const filteredFeatures = countries.features.filter(f => {
+        const bounds = d3.geoBounds(f);
+        return bounds[1][1] > -55; // keep if northernmost point is above -55°
+    });
 
-    // Country borders
-    svg.append('path')
-        .datum(topojson.mesh(world, world.objects.countries, (a, b) => a !== b))
-        .attr('d', path)
-        .attr('fill', 'none')
-        .attr('stroke', '#cbd5e1')
-        .attr('stroke-width', 0.5);
-
-    // Drop shadow filter
+    // Drop shadow filter (in defs, outside zoomable group)
     const defs = svg.append('defs');
     const filter = defs.append('filter').attr('id', 'dot-shadow');
     filter.append('feDropShadow')
@@ -794,8 +782,31 @@ async function updateMap() {
         .attr('stdDeviation', 1.5)
         .attr('flood-opacity', 0.2);
 
+    // Zoomable group for all map content
+    const g = svg.append('g');
+
+    // Draw countries
+    g.append('g')
+        .attr('class', 'countries')
+        .selectAll('path')
+        .data(filteredFeatures)
+        .join('path')
+        .attr('d', path)
+        .attr('fill', '#f1f5f9')
+        .attr('stroke', '#e2e8f0')
+        .attr('stroke-width', 0.5);
+
+    // Country borders
+    g.append('path')
+        .datum(topojson.mesh(world, world.objects.countries, (a, b) => a !== b))
+        .attr('d', path)
+        .attr('fill', 'none')
+        .attr('stroke', '#cbd5e1')
+        .attr('stroke-width', 0.5);
+
     // Player dots colored by position
-    svg.selectAll('circle')
+    const baseDotRadius = 6;
+    const dots = g.selectAll('circle')
         .data(players)
         .join('circle')
         .attr('cx', d => {
@@ -816,19 +827,52 @@ async function updateMap() {
         .transition()
         .duration(400)
         .delay((d, i) => i * 30)
-        .attr('r', 6);
+        .attr('r', baseDotRadius);
 
     // Tooltips using shared tooltip
-    svg.selectAll('circle')
+    g.selectAll('circle')
         .on('mouseenter', function(event, d) {
-            d3.select(this).transition().duration(150).attr('r', 10);
+            const currentR = +d3.select(this).attr('r');
+            d3.select(this).transition().duration(150).attr('r', currentR * 1.6);
             showTooltip(event, `<strong>${d.name}</strong>${d.position} &mdash; ${d.club}<br>${d.birthplace.city}, ${d.birthplace.country}`);
         })
         .on('mousemove', moveTooltip)
         .on('mouseleave', function() {
-            d3.select(this).transition().duration(150).attr('r', 6);
+            const k = currentZoomScale;
+            d3.select(this).transition().duration(150).attr('r', baseDotRadius / k);
             hideTooltip();
         });
+
+    // Zoom behavior
+    let currentZoomScale = 1;
+    const zoom = d3.zoom()
+        .scaleExtent([1, 8])
+        .translateExtent([[0, 0], [width, height]])
+        .on('zoom', (event) => {
+            const { transform } = event;
+            currentZoomScale = transform.k;
+            g.attr('transform', transform);
+            // Scale strokes and dots inversely so they don't bloat
+            g.selectAll('.countries path').attr('stroke-width', 0.5 / transform.k);
+            g.selectAll('circle')
+                .attr('r', baseDotRadius / transform.k)
+                .attr('stroke-width', 2 / transform.k);
+        });
+
+    svg.call(zoom);
+
+    // Zoom control buttons
+    const controls = document.createElement('div');
+    controls.className = 'map-zoom-controls';
+    controls.innerHTML = '<button class="map-zoom-btn" data-zoom="in">+</button><button class="map-zoom-btn" data-zoom="out">&minus;</button>';
+    container.appendChild(controls);
+
+    controls.querySelector('[data-zoom="in"]').addEventListener('click', () => {
+        svg.transition().duration(300).call(zoom.scaleBy, 1.5);
+    });
+    controls.querySelector('[data-zoom="out"]').addEventListener('click', () => {
+        svg.transition().duration(300).call(zoom.scaleBy, 1 / 1.5);
+    });
 
     // Position legend inside map wrapper (below SVG)
     const legendDiv = document.createElement('div');
