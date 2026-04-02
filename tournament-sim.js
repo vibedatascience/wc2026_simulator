@@ -1406,7 +1406,7 @@ function downloadBracketAsImage() {
     });
 }
 
-// Initialize on DOM ready
+// Initialize on DOM ready — auto-simulate on load
 document.addEventListener('DOMContentLoaded', () => {
     const simulateBtn = document.getElementById('simulateAllBtn');
     if (simulateBtn) {
@@ -1415,6 +1415,10 @@ document.addEventListener('DOMContentLoaded', () => {
             simulateBtn.textContent = 'Re-simulate Tournament';
         });
     }
+
+    // Auto-simulate so users see results immediately
+    simulator.simulate();
+    if (simulateBtn) simulateBtn.textContent = 'Re-simulate Tournament';
 });
 
 // Settings panel functions
