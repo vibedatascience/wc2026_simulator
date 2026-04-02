@@ -1321,6 +1321,19 @@ function switchGroupView(view) {
     allBtns.forEach(id => document.getElementById(id)?.classList.remove('active'));
     document.getElementById(btnMap[view])?.classList.add('active');
 
+    // Update contextual hint
+    const hint = document.getElementById('groupViewHint');
+    if (hint) {
+        const hints = {
+            standings: 'View individual matches by group, city, or date',
+            byGroup: 'Showing all matches within each group',
+            byCity: 'Matches organized by host city',
+            calendar: 'Matches in chronological order',
+            byTeam: 'See each team\'s full schedule'
+        };
+        hint.textContent = hints[view] || '';
+    }
+
     if (Object.keys(simulator.groupStandings).length > 0) {
         simulator.renderGroupStage();
     }

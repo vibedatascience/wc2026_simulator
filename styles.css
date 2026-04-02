@@ -932,6 +932,20 @@ main {
     box-shadow: var(--shadow-sm);
 }
 
+.view-hint-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+}
+
+.view-hint {
+    font-size: 0.55rem;
+    color: var(--text-muted);
+    letter-spacing: 0.01em;
+    opacity: 0.8;
+}
+
 /* ============================
    MATCH SCHEDULE VIEWS (City/Calendar/Team)
    ============================ */
