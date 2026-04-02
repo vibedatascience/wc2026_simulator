@@ -202,7 +202,7 @@ const groups = {
 const r32Matches = [
     { id: 73, team1: "2A", team2: "2B", date: "June 28", city: "Inglewood" },
     { id: 74, team1: "1E", team2: "3_74", date: "June 29", city: "Foxborough" },
-    { id: 75, team1: "1F", team2: "2C", date: "June 29", city: "Guadalajara" },
+    { id: 75, team1: "1F", team2: "2C", date: "June 29", city: "Guadalupe" },
     { id: 76, team1: "1C", team2: "2F", date: "June 29", city: "Houston" },
     { id: 77, team1: "1I", team2: "3_77", date: "June 30", city: "East Rutherford" },
     { id: 78, team1: "2E", team2: "2I", date: "June 30", city: "Arlington" },

@@ -628,6 +628,15 @@ class TournamentSimulator {
         const venue = matchInfo?.venue || matchInfo?.city || '';
         const date = matchInfo?.date || '';
 
+        // Country color dot for venue
+        const mexCities = ['Mexico City', 'Zapopan', 'Guadalupe'];
+        const canCities = ['Toronto', 'Vancouver'];
+        const venueStr = venue;
+        const venueCountry = mexCities.some(c => venueStr.includes(c)) ? 'mex'
+            : canCities.some(c => venueStr.includes(c)) ? 'can' : 'usa';
+        const venueDotColor = venueCountry === 'mex' ? '#047857' : venueCountry === 'can' ? '#dc2626' : '#2563eb';
+        const venueDot = `<span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:${venueDotColor};margin-right:3px;vertical-align:middle;opacity:0.7;"></span>`;
+
         const cardBorder = isFinal ? '2px solid var(--gold)' : '1px solid #eee';
         const cardBg = isFinal ? 'linear-gradient(180deg, #fffbeb 0%, #fff 100%)' : (idx % 2 === 0 ? '#fafafa' : '#fff');
 
@@ -643,7 +652,7 @@ class TournamentSimulator {
                 <div class="schedule-match-meta">
                     <span class="schedule-match-num">M${matchNum}</span>
                     ${extra}
-                    <span>${venue}</span>
+                    <span>${venueDot}${venue}</span>
                     <span>${date}</span>
                 </div>
                 <div style="display: flex; align-items: center; justify-content: space-between;">
@@ -691,10 +700,15 @@ class TournamentSimulator {
             const { matches, venue } = byCity[city];
             matches.sort((a, b) => (a.matchInfo?.match || 999) - (b.matchInfo?.match || 999));
 
+            const mx = ['Mexico City','Zapopan','Guadalupe'];
+            const ca = ['Toronto','Vancouver'];
+            const cityDotCol = mx.some(x => city.includes(x)) ? '#047857' : ca.some(x => city.includes(x)) ? '#dc2626' : '#2563eb';
+            const cityDot = `<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${cityDotCol};margin-right:5px;opacity:0.7;"></span>`;
+
             html += `
                 <div class="schedule-card">
                     <div class="schedule-card-header">
-                        <div>${city}</div>
+                        <div>${cityDot}${city}</div>
                         <div style="font-size: 0.6rem; font-weight: 400; color: var(--text-muted);">${matches.length} matches</div>
                     </div>
                     <div class="schedule-card-body">
@@ -1015,7 +1029,7 @@ class TournamentSimulator {
             <div class="bracket-node ${hasWinner ? 'has-winner' : ''}" data-match-id="${matchId}">
                 <div class="bracket-node-header">
                     <span>M${matchId}</span>
-                    <span>${match.city || ''}</span>
+                    <span>${(() => { const c = match.city || ''; const mx = ['Mexico City','Zapopan','Guadalupe']; const ca = ['Toronto','Vancouver']; const col = mx.some(x => c.includes(x)) ? '#047857' : ca.some(x => c.includes(x)) ? '#dc2626' : '#2563eb'; return `<span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:${col};margin-right:3px;vertical-align:middle;opacity:0.7;"></span>${c}`; })()}</span>
                 </div>
                 <div class="bracket-node-teams">
                     <div class="bracket-team ${team1Class}">
@@ -1276,14 +1290,15 @@ function switchGroupView(view) {
     // Update contextual hint
     const hint = document.getElementById('groupViewHint');
     if (hint) {
+        const venueLegend = ' · <span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:#2563eb;vertical-align:middle;opacity:0.7;"></span> USA <span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:#047857;vertical-align:middle;opacity:0.7;"></span> MEX <span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:#dc2626;vertical-align:middle;opacity:0.7;"></span> CAN';
         const hints = {
             standings: 'View individual matches by group, city, or date',
-            byGroup: 'Showing all matches within each group',
-            byCity: 'Matches organized by host city',
-            calendar: 'Matches in chronological order',
-            byTeam: 'See each team\'s full schedule'
+            byGroup: 'Showing all matches within each group' + venueLegend,
+            byCity: 'Matches organized by host city' + venueLegend,
+            calendar: 'Matches in chronological order' + venueLegend,
+            byTeam: 'See each team\'s full schedule' + venueLegend
         };
-        hint.textContent = hints[view] || '';
+        hint.innerHTML = hints[view] || '';
     }
 
     if (Object.keys(simulator.groupStandings).length > 0) {
